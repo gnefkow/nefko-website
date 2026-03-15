@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Work on Kyle Becker</title>
+    <link>http://localhost:1313/categories/work/</link>
+    <description>Recent content in Work on Kyle Becker</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/categories/work/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Institutional assets on-chain at J.P. Morgan.</title>
+      <link>http://localhost:1313/case-studies/jpm-onyx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/jpm-onyx/</guid>
+      <description>&lt;p&gt;I was super excited to see J.P. Morgan and Blackrock&amp;rsquo;s public announcement about their on-chain collateral management pilot.&lt;/p&gt;&#xA;&lt;p&gt;I worked on the interface for the initial pilot of this product during my time with J.P. Morgan Onyx—the company&amp;rsquo;s blockchain-focused division. This particular project solved a major (and expensive) painpoint for complex trading organizations: collateral management.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./assets/Ref-block_Lawrence.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;High-frequency investors managing large portfolios need to maintain collateral for their leveraged positions (usually risk-free assets like bonds). Each day as the market value of their portfolios change, they need to increase or decrease the collateral that backs those positions. This collateral management task requires hundreds of people who set values for assets, manage yields on them, and move them back and forth between different custodians.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Onboarding to Cryptocurrency</title>
+      <link>http://localhost:1313/case-studies/cradl-onboarding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/cradl-onboarding/</guid>
+      <description>&lt;p&gt;Onboarding to Cryptocurrency was a human-centric report I led with researchers from the Crypto Research and Design lab. in the report, we focused on the human side of what it was like to onboard to crypto through two key frameworks and three example vignettes from the field.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1TSmH-0PNfF7vlHTT0IK5eCWDZzw1U0ZSaqeoE7wLjDw/edit?usp=sharing&#34;&gt;Read the full report →&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;onboarding-is-outside-the-interface&#34;&gt;&lt;strong&gt;Onboarding is outside the interface.&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;It is critical for product designers to understand that onboarding to a new technology requires a mental shift that happens outside of app interfaces. Onboarding of new financial technologies has a heavy social element. We explore several real-life examples of this in our report.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>UX in Cryptocurrency</title>
+      <link>http://localhost:1313/case-studies/cradl-ux-in-cryptocurrency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/cradl-ux-in-cryptocurrency/</guid>
+      <description>&lt;p&gt;The UX in Cryptocurrency Report was published with the Crypto Research and Design Lab (Cradl) in 2022. Through an analysis of more than 30 apps, we formed high-level frameworks for understanding the current state (and future challenges) of UX in the web3 industry.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./assets/ux-in-crypto_key-takeaways_799x1024.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1NjQVNM8dvxU35Zg4Mr2rjMKTnGOAFAZy1uINdSeMZFo/edit?usp=sharing&#34;&gt;Read the full report here &amp;ndash;&amp;gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;executive-summary&#34;&gt;&lt;strong&gt;Executive Summary&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;CRADL believed that cryptocurrency adoption (if done well) has the potential to drive positive change in the world. Most of our research focuses on how the design of cryptocurrency products—and the cryptocurrency industry as a whole—may positively or negatively affect the financial health of everyday people. &lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

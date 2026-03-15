@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Kyle Becker</title>
+    <link>http://localhost:1313/blog/</link>
+    <description>Recent content in Blogs on Kyle Becker</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 May 2024 04:51:30 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Will there be a shift from Web2 to Web3 in 2023?</title>
+      <link>http://localhost:1313/blog/my-custom-url/</link>
+      <pubDate>Wed, 15 Nov 2023 08:22:31 +0000</pubDate>
+      <guid>http://localhost:1313/blog/my-custom-url/</guid>
+      <description>&lt;p&gt;&lt;em&gt;I originally posted this article on &lt;a href=&#34;https://mirror.xyz/nefko.eth/4d8PTfVBh3d2RF9Vmak4GUSt10nZl6WbUnnpFTBVwMs&#34;&gt;Mirror in February 2023&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;You should read this if…&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;You&amp;rsquo;re a part of the wider tech &amp;amp; design industry&lt;/strong&gt; and have been curious about the Web3 industry from afar, but find it a little difficult to differentiate the signal from the noise. You wonder if this is something you should care about.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;You&amp;rsquo;re a part of the Web3 industry&lt;/strong&gt; and you&amp;rsquo;re interested in an experienced UX strategist&amp;rsquo;s view on what innovation in the coming year might look like. (Some of my explanations you may want to skip past, since they&amp;rsquo;re explaining concepts that you may already be familiar with in simplified ways).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

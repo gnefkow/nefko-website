@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Finance on Kyle Becker</title>
+    <link>http://localhost:1313/categories/finance/</link>
+    <description>Recent content in Finance on Kyle Becker</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/categories/finance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Digital Transformation in a Burmese Bank</title>
+      <link>http://localhost:1313/case-studies/yoma-digital-transformation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/yoma-digital-transformation/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;./assets/myanmar-street_1024x683.jpg&#34; alt=&#34;&#34;&gt;&#xA;At the time I lived there, Myanmar was primarily a cash-based society with only around 30% of the population regularly using banks. Remittances and cash-in-cash-out (CICO) services were the highest-priority touchpoints.&lt;/p&gt;&#xA;&lt;p&gt;Emerging market finance is my favorite space to work in, so when my friend and frequent colleague, Lauren Serota invited me to build and lead a UX team at Yoma Bank in Yangon, Myanmar (Burma), I was quick to say yes.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
