@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{/* This template defines the "main" block for the home page only. Hugo uses it when rendering the site root (/) because this file is named home.html. The base layout (baseof.html) wraps this in the full page (header, nav, footer). */}}
+
+<!-- PART 1: Hero / intro content (always shown) -->
+<!-- Read alignment from [params.nefkoPortfolio.home] in config. If missing, alignment stays "center" (tc-l). -->
+  {{- $config := site.Params.nefkoPortfolio.home -}}
+  {{- $text_alignment := "tc-l" -}}
+  {{- if eq $config.content_alignment "left" -}}
+    {{- $text_alignment = "tl-l" -}}
+  {{- else if eq $config.content_alignment "right" -}}
+    {{- $text_alignment = "tr-l" -}}
+  {{- end -}}
+
+<!-- The content of content/_index.md is rendered here; it does not depend on any params. -->
+  <article class="cf ph3 ph5-l pv3 pv4-l f4 {{ $text_alignment }} center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
+    {{ .Content }}
+  </article>
+{{ end }}

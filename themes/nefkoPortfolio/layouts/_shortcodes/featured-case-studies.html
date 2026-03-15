@@ -1,0 +1,66 @@
+{{/*
+  featured-case-studies: Renders a section title, optional intro text, and a list of
+  featured pages as cards (image, title, description). Each card links to the page.
+
+  Parameters:
+  - title (optional): Section heading.
+  - text (optional): Intro paragraph below the title.
+  - pages (required): Comma-separated list of page paths (e.g. /case-studies/foo,/blog/bar).
+*/}}
+{{ $title := .Get "title" }}
+{{ $text := .Get "text" }}
+{{ $pagesParam := .Get "pages" }}
+{{ $pagePaths := split $pagesParam "," }}
+{{ $textColor := .Page.Param "text_color" | default "mid-gray" }}
+
+<div class="featured-block cf ph3 ph5-l pv3 pv4-l center measure-wide {{ $textColor }}">
+  {{ with $title }}
+    <h2 class="featured-block__title f3 fw2 mb3">{{ . }}</h2>
+  {{ end }}
+  {{ with $text }}
+    <p class="featured-block__text f4 lh-copy mb4">{{ . }}</p>
+  {{ end }}
+  <ul class="featured-block__list list pl0 mt0">
+    {{ range $pagePaths }}
+      {{ $pageRef := trim . " " }}
+      {{ if $pageRef }}
+        {{ $page := $.Page.Site.GetPage $pageRef }}
+        {{ if not $page }}
+          {{ $targetPath := strings.TrimPrefix "/" (strings.TrimSuffix "/" $pageRef) }}
+          {{ $matches := collections.Where $.Page.Site.RegularPages "Path" $targetPath }}
+          {{ if gt (len $matches) 0 }}
+            {{ $page = index $matches 0 }}
+          {{ end }}
+        {{ end }}
+        {{ if $page }}
+          {{ $featured_image := partial "func/GetFeaturedImage.html" $page }}
+          <li class="featured-block__item mb4">
+            <a href="{{ $page.RelPermalink }}" class="featured-block__card link db dim no-underline color-inherit">
+              <div class="featured-block__card-inner flex flex-row-ns flex-column items-start-ns">
+                {{ if $featured_image }}
+                  <div class="featured-block__card-image w-100 w-40-ns mr0 mr4-ns mb3 mb0-ns">
+                    <img src="{{ $featured_image }}" alt="" class="w-100 db obj-fit-cover" style="aspect-ratio: 16/10;" />
+                  </div>
+                {{ end }}
+                <div class="featured-block__card-body flex-auto">
+                  <h3 class="featured-block__card-title f4 f3-ns fw2 mt0 mb2">{{ $page.Title }}</h3>
+                  {{ with or $page.Params.description $page.Summary }}
+                    <p class="featured-block__card-description f5 lh-copy mt0 mb0">{{ . }}</p>
+                  {{ end }}
+                </div>
+              </div>
+            </a>
+          </li>
+        {{ else }}
+          <li class="featured-block__item mb4">
+            <a href="{{ $pageRef | relLangURL }}" class="featured-block__card link db dim no-underline color-inherit">
+              <div class="featured-block__card-inner">
+                <h3 class="featured-block__card-title f4 f3-ns fw2 mt0 mb2">{{ $pageRef }}</h3>
+              </div>
+            </a>
+          </li>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </ul>
+</div>
