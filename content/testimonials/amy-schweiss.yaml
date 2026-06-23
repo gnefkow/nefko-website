@@ -1,0 +1,23 @@
+first-name: Amy
+last-name: Schweiss
+photo: /images/testimonial-avatars/Amy-Schweiss.jpeg
+worked-together: 
+  - title: Senior Product Operations Manager
+    company: Quantified AI
+    relationship: Client
+tags: Startup, Product, AI
+full-quote: |
+  I had the pleasure of working with Kyle to launch reporting functionality for our B2B AI product. As a Product Manager, I was impressed by Kyle's quick grasp of our business needs and his unique ability to manage both the long-term vision and the intricate details of our database structure. Throughout our collaboration, he consistently demonstrated a deep understanding of our business objectives and adeptly worked within our technical constraints without sacrificing user value.
+
+  Beyond his technical abilities, Kyle's collaborative nature made him a vital part of our team. He worked effectively across both product and engineering teams, fostering a cooperative atmosphere that boosted our productivity. His proactive communication style and ability to engage with multiple stakeholders streamlined the translation of UX/UI designs into development tasks.
+
+  Kyle also made significant contributions beyond his designated responsibilities, notably championing a phased design system that enhanced both our visual consistency and development efficiency. His strategic approach to the rollout of this system ensured it complemented our evolving processes without causing disruptions.
+
+  Working with Kyle has been highly rewarding. His consistent delivery of high-quality work, along with his adaptability and strategic acumen, make him an exceptional UX designer. I strongly recommend Kyle to any team looking for UX support!
+key-quotes:
+  - home-quote: |
+      As a Product Manager, I was impressed by Kyle's quick grasp of our business needs and his unique ability to manage both the long-term vision and the intricate details of our database structure... he consistently demonstrated a deep understanding of our business objectives and adeptly worked within our technical constraints without sacrificing user value.
+  - collaboration: |
+      Kyle's collaborative nature made him a vital part of our team. He worked effectively across both product and engineering teams, fostering a cooperative atmosphere that boosted our productivity. His proactive communication style and ability to engage with multiple stakeholders streamlined the translation of UX/UI designs into development tasks.
+  - strategy: |
+      As a Product Manager, I was impressed by Kyle's quick grasp of our business needs and his unique ability to manage both the long-term vision and the intricate details of our database structure... he consistently demonstrated a deep understanding of our business objectives and adeptly worked within our technical constraints without sacrificing user value.

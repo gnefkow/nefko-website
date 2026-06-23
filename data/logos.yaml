@@ -1,0 +1,136 @@
+tabs:
+  - id: all
+    label: "All"
+  - id: ai
+    label: "AI"
+  - id: web3
+    label: "Web3"
+  - id: finance
+    label: "Finance"
+
+logos:
+  - id: jpm-onyx
+    name: "JPMorgan Onyx"
+    image: "/images/logos/Onyx-by-JPM-digital-identities.jpeg"
+    importance: 1
+    categories:
+      - finance
+
+  - id: capital-one
+    name: "Capital One"
+    image: "/images/logos/Logo_square_250_Capital_One.png"
+    importance: 1
+    categories:
+      - finance
+
+  - id: protect-ai
+    name: "Protect AI"
+    image: "/images/logos/Logo_protect_ai.jpg"
+    importance: 2
+    categories:
+      - ai
+
+  - id: pytorch-lightning
+    name: "PyTorch Lightning"
+    image: "/images/logos/Logo-square_pytorch_lightning.jpg"
+    importance: 2
+    categories:
+      - ai
+
+  - id: rebind
+    name: "Rebind"
+    image: "/images/logos/Logo_Rebind.jpg"
+    importance: 2
+    categories:
+      - web3
+
+  - id: ey
+    name: "EY"
+    image: "/images/logos/Logo_square_250_EY.png"
+    importance: 2
+    categories:
+      - finance
+
+  - id: att
+    name: "AT&T"
+    image: "/images/logos/Logo_square_250_ATT.png"
+    importance: 2
+    categories:
+      - finance
+
+  - id: zartico
+    name: "Zartico"
+    image: "/images/logos/Logo_square_Zartico.png"
+    importance: 3
+    categories:
+      - ai
+
+  - id: quantified
+    name: "Quantified"
+    image: "/images/logos/Logo_square_250_Quantified.png"
+    importance: 3
+    categories:
+      - ai
+
+  - id: vidoso
+    name: "Vidoso"
+    image: "/images/logos/Logo_Vidoso.jpg"
+    importance: 3
+    categories:
+      - web3
+
+  - id: zeconomy
+    name: "Zeconomy"
+    image: "/images/logos/Logo_square_250_Zeconomy.jpg"
+    importance: 3
+    categories:
+      - finance
+
+  - id: honeywell
+    name: "Honeywell"
+    image: "/images/logos/Logo_square_250_Honeywell.png"
+    importance: 3
+    categories:
+      - finance
+
+  - id: citrix
+    name: "Citrix"
+    image: "/images/logos/Logo_square_250_Citrix.png"
+    importance: 3
+    categories:
+      - finance
+
+  - id: loreal
+    name: "L'Oreal"
+    image: "/images/logos/Logo_square_250_loreal.png"
+    importance: 4
+    categories:
+      - finance
+
+  - id: aia
+    name: "AIA"
+    image: "/images/logos/Logo_square_250_aia.png"
+    importance: 4
+    categories:
+      - finance
+
+  - id: evcard
+    name: "EVCARD"
+    image: "/images/logos/Logo_square_250_evcard.png"
+    importance: 4
+    categories:
+      - finance
+
+  - id: pedigree
+    name: "Pedigree"
+    image: "/images/logos/Logo_square_250_Pedigree.png"
+    importance: 4
+    categories:
+      - finance
+
+  - id: petmate
+    name: "PetMate"
+    image: "/images/logos/Logo_square_250_PetMate.png"
+    importance: 4
+    categories:
+      - finance

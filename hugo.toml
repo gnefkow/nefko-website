@@ -7,6 +7,9 @@ theme = 'nefkoPortfolio'
 [params]
 mainSections = ["blog", "case-studies"]
 
+[params.nefkoPortfolio.home]
+content_alignment = "left"
+
 # ------------------------------------------------------------
 # GLOBAL NAV BAR -------------------
 [[menu.main]]

@@ -1,6 +1,6 @@
 {{/*
   style/GetResource
-  Get a style asset stored at `/assets/ananke/css`
+  Get a style asset stored at `/assets/nefkoPortfolio/css`
 
   @author @regisphilibert
 
@@ -12,7 +12,7 @@
 
 */}}
 {{ $resource := dict }}
-{{ with resources.Get (fmt.Print "/ananke/css/" .) }}
+{{ with resources.Get (fmt.Print "/nefkoPortfolio/css/" .) }}
   {{ $resource = . }}
 {{ end }}
 

@@ -59,7 +59,7 @@
   {{- $environment := hugo.Environment | default "production" -}}
 
   {{/* Generate dynamic classes for the body tag */}}
-  {{- $body_classes := slice "ma0" ($.Param "body_classes" | default "avenir bg-near-white") $environment -}}
+  {{- $body_classes := slice "ma0 bg-primary text-primary" ($.Param "body_classes" | default "") $environment -}}
   {{- $body_classes = $body_classes | append (printf "is-%s" .Kind) -}}
 
   {{- if .IsPage -}}

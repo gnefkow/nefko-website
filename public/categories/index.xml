@@ -2,80 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Kyle Becker</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://example.org/categories/</link>
     <description>Recent content in Categories on Kyle Becker</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 29 May 2024 04:51:30 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Thoughts</title>
-      <link>http://localhost:1313/categories/thoughts/</link>
+      <link>https://example.org/categories/thoughts/</link>
       <pubDate>Wed, 15 Nov 2023 08:22:31 +0000</pubDate>
-      <guid>http://localhost:1313/categories/thoughts/</guid>
+      <guid>https://example.org/categories/thoughts/</guid>
       <description></description>
     </item>
     <item>
       <title>Blockchain</title>
-      <link>http://localhost:1313/categories/blockchain/</link>
+      <link>https://example.org/categories/blockchain/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/blockchain/</guid>
+      <guid>https://example.org/categories/blockchain/</guid>
       <description></description>
     </item>
     <item>
       <title>Crypto</title>
-      <link>http://localhost:1313/categories/crypto/</link>
+      <link>https://example.org/categories/crypto/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/crypto/</guid>
+      <guid>https://example.org/categories/crypto/</guid>
       <description></description>
     </item>
     <item>
       <title>Emerging Markets</title>
-      <link>http://localhost:1313/categories/emerging-markets/</link>
+      <link>https://example.org/categories/emerging-markets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/emerging-markets/</guid>
+      <guid>https://example.org/categories/emerging-markets/</guid>
       <description></description>
     </item>
     <item>
       <title>Finance</title>
-      <link>http://localhost:1313/categories/finance/</link>
+      <link>https://example.org/categories/finance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/finance/</guid>
+      <guid>https://example.org/categories/finance/</guid>
       <description></description>
     </item>
     <item>
       <title>Managment</title>
-      <link>http://localhost:1313/categories/managment/</link>
+      <link>https://example.org/categories/managment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/managment/</guid>
+      <guid>https://example.org/categories/managment/</guid>
       <description></description>
     </item>
     <item>
       <title>Research</title>
-      <link>http://localhost:1313/categories/research/</link>
+      <link>https://example.org/categories/research/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/research/</guid>
+      <guid>https://example.org/categories/research/</guid>
       <description></description>
     </item>
     <item>
       <title>Ux Design</title>
-      <link>http://localhost:1313/categories/ux-design/</link>
+      <link>https://example.org/categories/ux-design/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/ux-design/</guid>
+      <guid>https://example.org/categories/ux-design/</guid>
       <description></description>
     </item>
     <item>
       <title>Web3</title>
-      <link>http://localhost:1313/categories/web3/</link>
+      <link>https://example.org/categories/web3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/web3/</guid>
+      <guid>https://example.org/categories/web3/</guid>
       <description></description>
     </item>
     <item>
       <title>Work</title>
-      <link>http://localhost:1313/categories/work/</link>
+      <link>https://example.org/categories/work/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/work/</guid>
+      <guid>https://example.org/categories/work/</guid>
       <description></description>
     </item>
   </channel>

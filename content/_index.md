@@ -4,8 +4,21 @@
 
 
 
-# UX Strategy, Research, and Design
-I help fintech & web3 product teams understand users and align product experiences with their value propositions.
+# UX Strategy, Research, and Design Consultant
+I help early stage teams align on product definition and launch.
+
+
+
+
+{{< testimonials-carousel >}}
+
+
+
+<!-- {{< logos-block >}}-->
+<!-- Doing a static logos block for now -->
+![Client logos](/images/logos-static.png)
+
+
 
 {{< featured-case-studies
   title="I help finance & web3 product teams explore new ideas through UX research & design."
@@ -21,4 +34,8 @@ Experience Strategy (also known as UX Strategy) is a strategic approach to produ
 - **Early-stage prototyping** for user feedback, investor conversations, and internal alignment.
 - **Streamlined integration** with product/ UI/UX designers who will carry projects through detailed implementation.
 I focus on being a partner to (often very busy) product managers to help them develop robust strategies for their organizations.
+
+
+
+
 

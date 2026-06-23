@@ -1,0 +1,218 @@
+{{/*
+  logos-block: Renders a filterable grid of company logos.
+  
+  Data source: data/logos.yaml
+  - tabs: list of filter tabs (id, label)
+  - logos: list of logos (id, name, image, importance, categories)
+  
+  Behavior:
+  - "All" tab shows logos at their importance-based sizes
+  - Category tabs emphasize matching logos and shrink/fade non-matching ones
+  - Smooth CSS transitions between states
+*/}}
+
+{{ $data := site.Data.logos }}
+
+<style>
+.logos-block {
+  padding: 2rem 0;
+}
+
+.logos-block__tabs {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.logos-block__tab {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.logos-block__tab:hover {
+  color: #333;
+}
+
+.logos-block__tab--active {
+  color: #000;
+  font-weight: 500;
+}
+
+.logos-block__tab--active::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #000;
+}
+
+.logos-block__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logos-block__item {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  flex-shrink: 0;
+}
+
+.logos-block__item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(0%);
+  transition: filter 0.3s ease;
+}
+
+/* Importance-based sizing */
+.logos-block__item[data-importance="1"] {
+  width: 120px;
+  height: 120px;
+}
+
+.logos-block__item[data-importance="2"] {
+  width: 100px;
+  height: 100px;
+}
+
+.logos-block__item[data-importance="3"] {
+  width: 80px;
+  height: 80px;
+}
+
+.logos-block__item[data-importance="4"] {
+  width: 60px;
+  height: 60px;
+}
+
+.logos-block__item[data-importance="5"] {
+  width: 50px;
+  height: 50px;
+}
+
+/* De-emphasized state (shrink + fade) */
+.logos-block__item.de-emphasized {
+  transform: scale(0.6);
+  opacity: 0.25;
+}
+
+.logos-block__item.de-emphasized img {
+  filter: grayscale(100%);
+}
+
+/* Emphasized state (slightly larger, ensure full visibility) */
+.logos-block__item.emphasized {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .logos-block__item[data-importance="1"] {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .logos-block__item[data-importance="2"] {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .logos-block__item[data-importance="3"] {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .logos-block__item[data-importance="4"],
+  .logos-block__item[data-importance="5"] {
+    width: 50px;
+    height: 50px;
+  }
+}
+</style>
+
+<div class="logos-block">
+  <!-- Tabs -->
+  <div class="logos-block__tabs" role="tablist">
+    {{ range $index, $tab := $data.tabs }}
+      <button 
+        class="logos-block__tab{{ if eq $index 0 }} logos-block__tab--active{{ end }}"
+        data-tab="{{ $tab.id }}"
+        role="tab"
+        aria-selected="{{ if eq $index 0 }}true{{ else }}false{{ end }}"
+      >
+        {{ $tab.label }}
+      </button>
+    {{ end }}
+  </div>
+
+  <!-- Logo Grid -->
+  <div class="logos-block__grid" role="tabpanel">
+    {{ range $data.logos }}
+      <div 
+        class="logos-block__item"
+        data-categories="{{ delimit .categories "," }}"
+        data-importance="{{ .importance }}"
+        title="{{ .name }}"
+      >
+        <img src="{{ .image }}" alt="{{ .name }} logo" loading="lazy" />
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+<script>
+(function() {
+  const tabs = document.querySelectorAll('.logos-block__tab');
+  const items = document.querySelectorAll('.logos-block__item');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Update active tab
+      tabs.forEach(t => {
+        t.classList.remove('logos-block__tab--active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('logos-block__tab--active');
+      tab.setAttribute('aria-selected', 'true');
+
+      const selectedTab = tab.dataset.tab;
+
+      // Update logo states
+      items.forEach(item => {
+        const categories = item.dataset.categories.split(',');
+        
+        // Remove existing states
+        item.classList.remove('emphasized', 'de-emphasized');
+
+        if (selectedTab === 'all') {
+          // "All" tab: show everything at normal size
+          return;
+        }
+
+        // Category tab: emphasize matches, de-emphasize non-matches
+        if (categories.includes(selectedTab)) {
+          item.classList.add('emphasized');
+        } else {
+          item.classList.add('de-emphasized');
+        }
+      });
+    });
+  });
+})();
+</script>

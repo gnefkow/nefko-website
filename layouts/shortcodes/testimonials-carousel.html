@@ -1,0 +1,726 @@
+{{/*
+  testimonials-carousel: Filterable carousel of testimonials with full-quote modal.
+
+  Data source: content/testimonials/*.yaml (read via readDir + transform.Unmarshal)
+  Categories: hardcoded below (Leadership, Product, Engineers, Designers)
+
+  Sub-components:
+  1. Filter bar — "Working with" label + scrollable category tabs
+  2. Slide viewport — one testimonial card visible at a time
+  3. Navigation — arrow buttons + pagination dots
+  4. Modal — full-quote overlay triggered by "Read Full quote"
+*/}}
+
+{{ $dir := "content/testimonials" }}
+{{ $testimonials := slice }}
+{{ range readDir $dir }}
+  {{ if and (not .IsDir) (strings.HasSuffix .Name ".yaml") }}
+    {{ $raw := readFile (printf "%s/%s" $dir .Name) }}
+    {{ $data := $raw | transform.Unmarshal }}
+    {{ $testimonials = $testimonials | append $data }}
+  {{ end }}
+{{ end }}
+
+{{ $categories := slice "Leadership" "Product" "Engineers" "Designers" }}
+
+<style>
+/* ==========================================================================
+   TESTIMONIALS CAROUSEL
+   All colors reference design tokens from _styles.css :root.
+   Pagination dot colors are hardcoded (no semantic token equivalent).
+   ========================================================================== */
+
+.testimonials-carousel {
+  background-color: var(--bg-inverse-primary);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 0 0 1.5rem;
+  box-sizing: border-box;
+}
+
+.testimonials-carousel__inner {
+  max-width: 34em;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Filter Bar --- */
+
+.testimonials-carousel__filter {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid var(--border-tertiary);
+}
+
+/* --- Quote area narrower than filter bar --- */
+
+.testimonials-carousel__viewport,
+.testimonials-carousel__nav {
+  max-width: 30em;
+}
+
+.testimonials-carousel__filter-label {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-heavy);
+  color: var(--text-inverse-primary);
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding-right: 0.25rem;
+}
+
+.testimonials-carousel__tabs-wrap {
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex: 1;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.testimonials-carousel__tabs-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonials-carousel__tabs {
+  display: flex;
+}
+
+.testimonials-carousel__tab {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-heavy);
+  color: var(--text-inverse-secondary);
+  background: none;
+  border: none;
+  border-right: 0.5px solid var(--border-tertiary);
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.testimonials-carousel__tab:last-child {
+  border-right: none;
+}
+
+.testimonials-carousel__tab:hover {
+  color: var(--text-inverse-primary);
+}
+
+.testimonials-carousel__tab--active {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 0.5px solid var(--border-primary);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Slide Viewport --- */
+
+.testimonials-carousel__viewport {
+  overflow: hidden;
+  padding: 2rem 0 1.5rem;
+}
+
+.testimonials-carousel__strip {
+  display: flex;
+  gap: 3rem;
+  will-change: transform;
+}
+
+.testimonials-carousel__slide {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* --- Quote Mark --- */
+
+.testimonials-carousel__quote-mark {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--text-inverse-primary);
+  display: block;
+  height: 2.5rem;
+  overflow: hidden;
+}
+
+/* --- Quote Body --- */
+
+.testimonials-carousel__quote-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.testimonials-carousel__quote-text {
+  font-family: var(--font-family-body);
+  font-size: 1.625rem;
+  font-style: italic;
+  font-weight: var(--font-weight-regular);
+  line-height: 1.35;
+  color: var(--text-inverse-primary);
+  margin: 0;
+}
+
+.testimonials-carousel__read-more {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-p);
+  color: var(--text-inverse-secondary);
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+.testimonials-carousel__read-more:hover {
+  color: var(--text-inverse-primary);
+}
+
+/* --- Attribution --- */
+
+.testimonials-carousel__attribution {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.testimonials-carousel__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.testimonials-carousel__person {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonials-carousel__name {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-heavy);
+  color: var(--text-inverse-primary);
+  line-height: var(--line-height-heading);
+}
+
+.testimonials-carousel__context {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-p);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-inverse-tertiary);
+  line-height: var(--line-height-heading);
+}
+
+/* --- Navigation (arrows + dots) --- */
+
+.testimonials-carousel__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+.testimonials-carousel__arrow {
+  background: none;
+  border: none;
+  color: var(--text-inverse-secondary);
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease;
+}
+.testimonials-carousel__arrow:hover {
+  color: var(--text-inverse-primary);
+}
+.testimonials-carousel__arrow:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+.testimonials-carousel__arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+.testimonials-carousel__dots {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.testimonials-carousel__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #2b2b2b;
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+  transition: width 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  padding: 0;
+}
+
+.testimonials-carousel__dot--active {
+  width: 20px;
+  background: #d9d9d9;
+  border-color: #d9d9d9;
+}
+
+/* --- Modal --- */
+
+.testimonials-carousel__modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials-carousel__modal--open {
+  display: flex;
+}
+
+.testimonials-carousel__modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+}
+
+.testimonials-carousel__modal-panel {
+  position: relative;
+  max-width: 600px;
+  max-height: 85vh;
+  width: 90%;
+  overflow-y: auto;
+  background-color: var(--bg-inverse-primary);
+  border: 1px solid var(--border-tertiary);
+  padding: 2.5rem 2rem 2rem;
+}
+
+.testimonials-carousel__modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  color: var(--text-inverse-secondary);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+.testimonials-carousel__modal-close:hover {
+  color: var(--text-inverse-primary);
+}
+
+.testimonials-carousel__modal-body .modal-name {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-heavy);
+  color: var(--text-inverse-primary);
+  margin-bottom: 0.25rem;
+}
+
+.testimonials-carousel__modal-body .modal-context {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  color: var(--text-inverse-tertiary);
+  margin-bottom: 1.5rem;
+}
+
+.testimonials-carousel__modal-body .modal-text {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-p);
+  color: var(--text-inverse-primary);
+  line-height: var(--line-height-body);
+}
+.testimonials-carousel__modal-body .modal-text p {
+  margin: 0 0 1em;
+}
+.testimonials-carousel__modal-body .modal-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 480px) {
+  .testimonials-carousel__quote-text {
+    font-size: 1.375rem;
+  }
+  .testimonials-carousel__inner {
+    padding: 0 20px;
+  }
+}
+</style>
+
+
+<div class="testimonials-carousel">
+  <div class="testimonials-carousel__inner">
+
+    {{/* ---- Filter Bar ---- */}}
+    <div class="testimonials-carousel__filter">
+      <span class="testimonials-carousel__filter-label">Working with</span>
+      <div class="testimonials-carousel__tabs-wrap">
+        <div class="testimonials-carousel__tabs" role="tablist">
+          {{ range $i, $cat := $categories }}
+            <button class="testimonials-carousel__tab{{ if eq $i 0 }} testimonials-carousel__tab--active{{ end }}"
+                    data-category="{{ $cat }}"
+                    role="tab"
+                    aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}">
+              {{ $cat }}
+            </button>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    {{/* ---- Slide Viewport ---- */}}
+    <div class="testimonials-carousel__viewport">
+      <div class="testimonials-carousel__strip">
+      {{ range $i, $t := $testimonials }}
+
+        {{/* Extract home-quote from key-quotes list */}}
+        {{ $homeQuote := "" }}
+        {{ with index $t "key-quotes" }}
+          {{ range . }}
+            {{ with index . "home-quote" }}
+              {{ $homeQuote = strings.TrimSpace . }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+
+        {{/* First worked-together entry for attribution context */}}
+        {{ $work := index (index $t "worked-together") 0 }}
+        {{ $firstName := strings.TrimSpace (index $t "first-name") }}
+        {{ $lastName  := strings.TrimSpace (index $t "last-name") }}
+        {{ $fullName  := printf "%s %s" $firstName $lastName }}
+
+        <div class="testimonials-carousel__slide"
+             data-tags="{{ index $t "tags" }}"
+             data-index="{{ $i }}">
+
+          <span class="testimonials-carousel__quote-mark" aria-hidden="true">&ldquo;</span>
+
+          <div class="testimonials-carousel__quote-body">
+            <p class="testimonials-carousel__quote-text">{{ $homeQuote }}</p>
+            <button class="testimonials-carousel__read-more" type="button">Read Full quote</button>
+          </div>
+
+          <div class="testimonials-carousel__attribution">
+            <img class="testimonials-carousel__avatar"
+                 src="{{ index $t "photo" }}"
+                 alt="{{ $fullName }}"
+                 loading="lazy" />
+            <div class="testimonials-carousel__person">
+              <span class="testimonials-carousel__name">{{ $fullName }}</span>
+              <span class="testimonials-carousel__context">{{ $firstName }} was a {{ $work.title }} when I worked with them at {{ $work.company }}</span>
+            </div>
+          </div>
+
+          {{/* Hidden full-quote content for modal */}}
+          <div class="testimonials-carousel__full-quote" hidden>
+            <div class="modal-name">{{ $fullName }}</div>
+            <div class="modal-context">{{ $firstName }} was a {{ $work.title }} when I worked with them at {{ $work.company }}</div>
+            <div class="modal-text">{{ (index $t "full-quote") | markdownify }}</div>
+          </div>
+
+        </div>
+      {{ end }}
+      </div>
+    </div>
+
+    {{/* ---- Navigation ---- */}}
+    <div class="testimonials-carousel__nav">
+      <button class="testimonials-carousel__arrow testimonials-carousel__arrow--prev"
+              aria-label="Previous testimonial" disabled>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="testimonials-carousel__dots"></div>
+      <button class="testimonials-carousel__arrow testimonials-carousel__arrow--next"
+              aria-label="Next testimonial">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+
+  </div>
+
+  {{/* ---- Modal ---- */}}
+  <div class="testimonials-carousel__modal" aria-hidden="true">
+    <div class="testimonials-carousel__modal-backdrop"></div>
+    <div class="testimonials-carousel__modal-panel">
+      <button class="testimonials-carousel__modal-close" aria-label="Close">&times;</button>
+      <div class="testimonials-carousel__modal-body"></div>
+    </div>
+  </div>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var root = document.querySelector('.testimonials-carousel');
+  if (!root) return;
+
+  gsap.registerPlugin(Draggable, InertiaPlugin);
+
+  var tabs       = root.querySelectorAll('.testimonials-carousel__tab');
+  var allSlides  = root.querySelectorAll('.testimonials-carousel__slide');
+  var strip      = root.querySelector('.testimonials-carousel__strip');
+  var dotsWrap   = root.querySelector('.testimonials-carousel__dots');
+  var prevBtn    = root.querySelector('.testimonials-carousel__arrow--prev');
+  var nextBtn    = root.querySelector('.testimonials-carousel__arrow--next');
+  var modal      = root.querySelector('.testimonials-carousel__modal');
+  var modalClose = root.querySelector('.testimonials-carousel__modal-close');
+  var modalBody  = root.querySelector('.testimonials-carousel__modal-body');
+  var viewport   = root.querySelector('.testimonials-carousel__viewport');
+
+  var filtered = [];
+  var pos = 0;
+  var draggableInstance = null;
+  var animating = false;
+
+  /* ---- Filtering ---- */
+
+  function getFiltered(category) {
+    var result = [];
+    var cat = category.toLowerCase();
+    allSlides.forEach(function (slide, i) {
+      var tags = slide.getAttribute('data-tags')
+        .split(',')
+        .map(function (t) { return t.trim().toLowerCase(); })
+        .filter(function (t) { return t !== ''; });
+      if (tags.indexOf(cat) !== -1) {
+        result.push(i);
+      }
+    });
+    return result;
+  }
+
+  /* ---- Strip layout ---- */
+
+  function stripGap() {
+    return parseFloat(getComputedStyle(strip).gap) || 0;
+  }
+
+  function slideStep() {
+    return viewport.offsetWidth + stripGap();
+  }
+
+  function snapPoints() {
+    var pts = [];
+    for (var i = 0; i < filtered.length; i++) {
+      pts.push(-i * slideStep());
+    }
+    return pts;
+  }
+
+  function posFromX(x) {
+    var sw = slideStep();
+    if (sw === 0) return 0;
+    return Math.round(-x / sw);
+  }
+
+  function buildStrip() {
+    allSlides.forEach(function (s) { s.style.display = 'none'; });
+    filtered.forEach(function (idx) { allSlides[idx].style.display = ''; });
+  }
+
+  /* ---- Navigate to slide ---- */
+
+  function goToSlide(newPos, animate) {
+    var len = filtered.length;
+    if (len === 0) return;
+    newPos = ((newPos % len) + len) % len;
+    pos = newPos;
+    var targetX = -pos * slideStep();
+
+    if (animate) {
+      animating = true;
+      gsap.to(strip, {
+        x: targetX,
+        duration: 0.4,
+        ease: 'power2.inOut',
+        onComplete: function () {
+          animating = false;
+          if (draggableInstance) draggableInstance.update();
+        }
+      });
+    } else {
+      gsap.set(strip, { x: targetX });
+      if (draggableInstance) draggableInstance.update();
+    }
+
+    renderDots();
+    updateArrows();
+  }
+
+  /* ---- Draggable setup ---- */
+
+  function initDraggable() {
+    if (draggableInstance) {
+      draggableInstance.kill();
+      draggableInstance = null;
+    }
+
+    if (filtered.length <= 1) return;
+
+    var sw = slideStep();
+    var minX = -(filtered.length - 1) * sw;
+    var pts = snapPoints();
+
+    draggableInstance = Draggable.create(strip, {
+      type: 'x',
+      bounds: { minX: minX - sw * 0.3, maxX: sw * 0.3 },
+      edgeResistance: 0.85,
+      onDragEnd: function () {
+        var currentX = gsap.getProperty(strip, 'x');
+        var sw2 = slideStep();
+        var newPos = Math.round(-currentX / sw2);
+        var len = filtered.length;
+        newPos = Math.max(0, Math.min(newPos, len - 1));
+        pos = newPos;
+        gsap.to(strip, {
+          x: -pos * sw2,
+          duration: 0.3,
+          ease: 'power2.out',
+          onComplete: function () {
+            if (draggableInstance) draggableInstance.update();
+          }
+        });
+        renderDots();
+        updateArrows();
+      }
+    })[0];
+  }
+
+  /* ---- Dots + Arrows ---- */
+
+  function renderDots() {
+    dotsWrap.innerHTML = '';
+    filtered.forEach(function (_, i) {
+      var dot = document.createElement('button');
+      dot.className = 'testimonials-carousel__dot' +
+        (i === pos ? ' testimonials-carousel__dot--active' : '');
+      dot.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
+      dot.addEventListener('click', function () {
+        if (i === pos || animating) return;
+        goToSlide(i, true);
+      });
+      dotsWrap.appendChild(dot);
+    });
+  }
+
+  function updateArrows() {
+    prevBtn.disabled = (filtered.length <= 1);
+    nextBtn.disabled = (filtered.length <= 1);
+  }
+
+  /* ---- Tab clicks ---- */
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      tabs.forEach(function (t) {
+        t.classList.remove('testimonials-carousel__tab--active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('testimonials-carousel__tab--active');
+      tab.setAttribute('aria-selected', 'true');
+      filtered = getFiltered(tab.getAttribute('data-category'));
+      pos = 0;
+      buildStrip();
+      goToSlide(0, false);
+      initDraggable();
+    });
+  });
+
+  /* ---- Arrow clicks (wrap-around) ---- */
+
+  prevBtn.addEventListener('click', function () {
+    if (animating || filtered.length <= 1) return;
+    var newPos = pos - 1;
+    if (newPos < 0) newPos = filtered.length - 1;
+    goToSlide(newPos, true);
+  });
+  nextBtn.addEventListener('click', function () {
+    if (animating || filtered.length <= 1) return;
+    var newPos = pos + 1;
+    if (newPos >= filtered.length) newPos = 0;
+    goToSlide(newPos, true);
+  });
+
+  /* ---- Modal ---- */
+
+  root.querySelectorAll('.testimonials-carousel__read-more').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var slide = btn.closest('.testimonials-carousel__slide');
+      var source = slide.querySelector('.testimonials-carousel__full-quote');
+      modalBody.innerHTML = source.innerHTML;
+      modal.classList.add('testimonials-carousel__modal--open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeModal() {
+    modal.classList.remove('testimonials-carousel__modal--open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  modalClose.addEventListener('click', closeModal);
+  root.querySelector('.testimonials-carousel__modal-backdrop')
+    .addEventListener('click', closeModal);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.classList.contains('testimonials-carousel__modal--open')) {
+      closeModal();
+    }
+  });
+
+  /* ---- Keyboard nav (wrap-around) ---- */
+
+  document.addEventListener('keydown', function (e) {
+    if (modal.classList.contains('testimonials-carousel__modal--open')) return;
+    if (animating) return;
+    if (e.key === 'ArrowLeft') {
+      var p = pos - 1;
+      if (p < 0) p = filtered.length - 1;
+      goToSlide(p, true);
+    }
+    if (e.key === 'ArrowRight') {
+      var n = pos + 1;
+      if (n >= filtered.length) n = 0;
+      goToSlide(n, true);
+    }
+  });
+
+  /* ---- Recalc on resize ---- */
+
+  window.addEventListener('resize', function () {
+    goToSlide(pos, false);
+    if (draggableInstance) {
+      draggableInstance.update();
+    }
+  });
+
+  /* ---- Init ---- */
+
+  var activeTab = root.querySelector('.testimonials-carousel__tab--active');
+  if (activeTab) {
+    filtered = getFiltered(activeTab.getAttribute('data-category'));
+    buildStrip();
+    goToSlide(0, false);
+    initDraggable();
+  }
+});
+</script>
