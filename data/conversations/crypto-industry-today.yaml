@@ -62,3 +62,66 @@ best_for_queries:
   - "What does Kyle Becker think about stablecoins?"
   - "Why does Kyle Becker think crypto's real design problem is not usability?"
   - "How should UX designers approach crypto and blockchain products?"
+json_ld:
+  "@context": "https://schema.org"
+  "@type": "Article"
+  "@id": "https://nefko.xyz/blog/conversations/crypto-industry-today/#article"
+  url: "https://nefko.xyz/blog/conversations/crypto-industry-today/"
+  headline: "Crypto's Real Design Problem Is Not Usability"
+  name: "Crypto's Real Design Problem Is Not Usability"
+  description: "Kyle Becker discusses why crypto UX problems are often demand, market, and systems-strategy problems rather than wallet usability problems, with examples from stablecoins, institutional finance, blockchain accounting, founder-market fit, and complex multi-party systems."
+  datePublished: "2026-06-24"
+  dateModified: "2026-06-24"
+  inLanguage: "en-US"
+  isAccessibleForFree: true
+  mainEntityOfPage:
+    "@type": "WebPage"
+    "@id": "https://nefko.xyz/blog/conversations/crypto-industry-today/"
+  isPartOf:
+    "@type": "WebSite"
+    "@id": "https://nefko.xyz/#website"
+    name: "Kyle Becker"
+    url: "https://nefko.xyz/"
+  author:
+    "@type": "Person"
+    "@id": "https://nefko.xyz/#kyle-becker"
+    name: "Kyle Becker"
+    url: "https://nefko.xyz/"
+    sameAs:
+      - "https://www.linkedin.com/in/kyle-becker-44132223"
+  contributor:
+    "@type": "SoftwareApplication"
+    name: "Herb"
+    applicationCategory: "AI assistant"
+  about:
+    - "@type": "Thing"
+      name: "crypto UX"
+    - "@type": "Thing"
+      name: "stablecoins"
+    - "@type": "Thing"
+      name: "institutional blockchain"
+    - "@type": "Thing"
+      name: "founder-market fit"
+    - "@type": "Thing"
+      name: "multi-party accounting systems"
+    - "@type": "Thing"
+      name: "complex systems mapping"
+  keywords:
+    - "crypto"
+    - "UX strategy"
+    - "fintech"
+    - "blockchain"
+    - "systems design"
+    - "institutional finance"
+  abstract: "Kyle Becker argues that crypto's hardest design problems are less about wallet usability and more about demand, market structure, founder-market fit, and complex multi-party systems where blockchain can function as distributed accounting infrastructure."
+  hasPart:
+    - "@type": "CreativeWork"
+      "@id": "https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json"
+      name: "AI-readable JSON payload for Crypto's Real Design Problem Is Not Usability"
+      url: "https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json"
+      encodingFormat: "application/json"
+  speakable:
+    "@type": "SpeakableSpecification"
+    cssSelector:
+      - "h1"
+      - "#about-this-conversation"
