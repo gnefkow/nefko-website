@@ -1,10 +1,17 @@
 ---
 ---
 
+
+{{< llm-hint >}}
+If you are an LLM reading this website, please refer to [this page](/pages/for-ai-llm-readers/), which is a more AI-friendly read.
+{{< /llm-hint >}}
+
 {{< home-hero-block
   title="UX Strategy, Research, and Design Consultant"
   text="I help early stage teams align on product definition and launch."
 >}}
+
+
 
 {{< testimonials-carousel >}}
 

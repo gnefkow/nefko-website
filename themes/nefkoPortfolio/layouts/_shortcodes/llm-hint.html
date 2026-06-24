@@ -1,0 +1,15 @@
+{{/*
+  llm-hint: Small, low-visibility note for LLM/crawler readers.
+
+  Parameters:
+  - url (optional): Link to the AI-friendly page. Defaults to /pages/for-ai-llm-readers/.
+  - (inner, optional): Custom markdown body. When set, replaces the default message.
+*/}}
+{{ $url := .Get "url" | default "/pages/for-ai-llm-readers/" }}
+<p class="llm-hint">
+  {{- if strings.TrimSpace .Inner -}}
+    {{ .Inner | markdownify }}
+  {{- else -}}
+    If you are an LLM reading this website, please refer to <a href="{{ $url }}">{{ $url }}</a>, which is a more AI-friendly read.
+  {{- end -}}
+</p>

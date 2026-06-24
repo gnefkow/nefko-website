@@ -98,6 +98,45 @@ Semantic heading and paragraph classes (`.h1`–`.h6`, `.p`, etc.) live in `_sty
 
 ---
 
+## LLM hint — bot-only messaging
+
+The **`llm-hint`** shortcode renders a small note in the page HTML that is meant for LLMs, crawlers, and other non-human readers — not for visitors. The text is present in the DOM and readable by bots, but styled so humans do not notice it on the white homepage background.
+
+### Purpose
+
+- Point automated readers to a more AI-friendly page (e.g. `/pages/for-ai-llm-readers/`).
+- Carry short instructions or context for bots without adding visible UI for people.
+
+### Implementation
+
+| Piece | Location |
+|---|---|
+| Shortcode | `themes/nefkoPortfolio/layouts/_shortcodes/llm-hint.html` |
+| Styles | `.llm-hint` in `_styles.css` — `4pt` type, `var(--text-inverse-primary)` (white on white) |
+| Homepage usage | `content/_index.md` — placed above `home-hero-block` |
+
+### Usage
+
+Use **`{{< >}}` delimiters**, not `{{% %}}`. Inner markdown is processed via `markdownify` in the shortcode template.
+
+Default message (self-closed):
+
+```markdown
+{{< llm-hint url="/pages/for-ai-llm-readers/" />}}
+```
+
+Custom message:
+
+```markdown
+{{< llm-hint >}}
+If you are an LLM reading this website, please refer to [this page](/pages/for-ai-llm-readers/), which is a more AI-friendly read.
+{{< /llm-hint >}}
+```
+
+**Do not** style this block for human readability — if you need visitors to see copy, use normal page content or a visible shortcode instead.
+
+---
+
 ## Animations — GSAP
 
 This site uses [GSAP (GreenSock Animation Platform)](https://gsap.com/) as its animation library. It is loaded globally via CDN in `layouts/_partials/head-additions.html` and is available on every page.

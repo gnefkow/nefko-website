@@ -6,21 +6,48 @@ keywords:
   - site-header
   - site-navigation
   - nav bar
+  - header
   - scroll state
+  - is-scrolled
   - home header
   - child page header
   - back button
   - logo mark
+  - KB monogram
   - sticky header
+  - white header
+  - bg-inverse-primary removal
   - design tokens
+  - shadow-header-scrolled
   - GSAP Observer
+  - site-nav-scroll
+  - short-title
+  - short_title
+  - page-header
+  - case study hero
+  - page-hero
+  - home-hero-block
+  - home page hero
+  - home.html
+  - Lato font
+  - icon-arrow-left
+  - testimonials-carousel spacing
 scope:
   - themes/nefkoPortfolio/layouts/_partials/site-header.html
   - themes/nefkoPortfolio/layouts/_partials/site-navigation.html
   - themes/nefkoPortfolio/layouts/_partials/page-header.html
+  - themes/nefkoPortfolio/layouts/single.html
+  - themes/nefkoPortfolio/layouts/page/single.html
+  - themes/nefkoPortfolio/layouts/404.html
+  - themes/nefkoPortfolio/layouts/home.html
+  - themes/nefkoPortfolio/layouts/_shortcodes/home-hero-block.html
   - themes/nefkoPortfolio/assets/nefkoPortfolio/css/_styles.css
-  - layouts/_partials/site-nav-scroll.js
+  - layouts/_partials/head-additions.html
+  - static/js/site-nav-scroll.js
   - static/images/logo-mark.svg
+  - static/images/icon-arrow-left.svg
+  - content/_index.md
+  - content/case-studies/*/index.md
 depends-on:
   - 002_css-semantic-tokens
 blocks: []
@@ -28,9 +55,88 @@ blocks: []
 
 # 005: Simple, Clean Header
 
-Replace the current black inverse header with a minimal white header that matches Figma. Four visual states driven by **page type** (home vs child) and **scroll position** (≥ 40px).
+Replace the black inverse header with a minimal white header that matches Figma. Four visual states driven by **page type** (home vs child) and **scroll position** (≥ 40px).
+
+During implementation we also extracted the home page intro into a **`home-hero-block`** shortcode and adjusted home layout spacing.
 
 **Status: built**
+
+---
+
+## What We Built
+
+### Site header (nav bar)
+
+White sticky header with BEM classes `.site-header`, `.site-header--home` / `.site-header--child`, and `.is-scrolled` toggled at 40px scroll via GSAP Observer.
+
+| Page type | Not scrolled | Scrolled (≥ 40px) |
+|---|---|---|
+| **Home** (`/`) | Logo mark → `/` | Logo + “Kyle Becker” + bottom shadow |
+| **Child** (everything else) | Back arrow + short title → `/` | Same + bottom shadow |
+
+**Removed from nav markup (deferred to future ticket):** `menu.main` links, social icons, i18n list. Partials still exist; not included in `site-navigation.html`.
+
+**Case studies:** Nav pulled out of hero cover. `page-header.html` renders image-only `.page-hero` div below the white site header. Templates that used `page-header.html` alone now include `site-header.html` first (`single.html`, `page/single.html`, `404.html`).
+
+### Assets
+
+| File | Purpose |
+|---|---|
+| `static/images/logo-mark.svg` | 24×24 KB monogram (two bars), home brand link |
+| `static/images/icon-arrow-left.svg` | 18×14 back arrow, `currentColor` fill |
+
+### Scroll script
+
+`static/js/site-nav-scroll.js` — registers GSAP Observer, toggles `.is-scrolled` on `.site-header` when `window.scrollY >= 40`. Loaded globally via `layouts/_partials/head-additions.html` (alongside existing GSAP CDN scripts).
+
+### Fonts
+
+Added Google Fonts Lato (weights 300, 400, 500, 700) to `head-additions.html` so nav typography (`fw3`, `fw5`) renders correctly.
+
+### Child nav short titles
+
+Template reads front matter in this order:
+
+```go
+.Params.short_title | default (index .Params "short-title") | default .Title
+```
+
+Nefko added `short-title` on case studies (YAML values with colons must be quoted):
+
+```yaml
+short-title: "Case Study: Yoma Bank"
+```
+
+Fallback to `.Title` works until all pages have a short title.
+
+### Home hero block (follow-on, same session)
+
+Extracted home intro copy from raw markdown into shortcode `{{< home-hero-block >}}`.
+
+**Shortcode params:** `title` (h1), `text` (h3 subtitle).
+
+**Usage in `content/_index.md`:**
+
+```markdown
+{{< home-hero-block
+  title="UX Strategy, Research, and Design Consultant"
+  text="I help early stage teams align on product definition and launch."
+>}}
+```
+
+**Layout change (`home.html`):** Dropped `<article class="pv3 pv4-l …">` wrapper so blocks own their spacing. Structure is now `page-gutter` → `measure-wide` → shortcodes (matches architecture doc: gutter outside, reading width inside).
+
+**`.home-hero-block` spacing (final):**
+
+| Side | rem | px |
+|---|---|---|
+| Top | `6rem` | 96 |
+| Bottom | `8rem` (`pb6`) | 128 |
+| Right | `3rem` | 48 |
+
+Block uses `display: block; width: 100%; box-sizing: border-box` so padding visibly expands the container within `measure-wide`.
+
+**Typography:** Title = `.h1`. Subtitle = semantic `<h3 class="h3">` (not `.p`).
 
 ---
 
@@ -333,20 +439,22 @@ Shadow transition: CSS `transition: box-shadow 0.2s ease` on `.site-header` — 
 
 | # | Question | Decision |
 |---|---|---|
-| **Q1** | Page short title source | Nefko will add `short_title` to page front matter. Template reads `Params.short_title`, falls back to `.Title` until every page has one. |
+| **Q1** | Page short title source | Nefko adds `short-title` in front matter (quoted when value contains `: `). Template also accepts `short_title`; falls back to `.Title`. |
 | **Q2** | Back button destination | Link to home: `href="/"` |
 | **Q3** | Case study hero layout | White bar above hero (matches Figma). Nav extracted from cover in `page-header.html`. |
 
 ### Front matter convention
 
+Nefko uses hyphenated `short-title` in content files. Template also accepts `short_title` (underscore). Quote values that contain `: ` (colon + space):
+
 ```yaml
 ---
 title: A Digital Transformation in a Burmese Bank
-short_title: Yoma Bank
+short-title: "Case Study: Yoma Bank"
 ---
 ```
 
-Nefko owns the content pass. Implementation can ship before all pages have `short_title`; fallback keeps things working.
+Nefko owns the content pass. Fallback to `.Title` keeps nav working on pages without a short title.
 
 ---
 
@@ -362,23 +470,25 @@ Nefko owns the content pass. Implementation can ship before all pages have `shor
 
 ---
 
-## Test Plan (for implementation phase)
+## Test Plan
 
-- [ ] **Home `/`:** logo only at top; after scrolling 40px, name appears + shadow
-- [ ] **Child page** (e.g. `/pages/contact/`): back control + title; shadow after 40px
-- [ ] **Case study with hero:** white nav above hero image; no black overlay nav
-- [ ] **Case study without hero / plain page:** same child variant
-- [ ] **Scroll back to top:** shadow and home name hide again
-- [ ] **Keyboard:** back link and logo link focus-visible
-- [ ] **No regressions:** page content still uses `.page-gutter` / `measure-wide` below header
+- [x] **Home `/`:** logo only at top; after scrolling 40px, name appears + shadow
+- [x] **Child page** (e.g. `/pages/contact/`): back control + title; shadow after 40px
+- [x] **Case study with hero:** white nav above hero image; no black overlay nav
+- [x] **Case study without hero / plain page:** same child variant
+- [x] **Scroll back to top:** shadow and home name hide again
+- [x] **Keyboard:** back link and logo link focus-visible
+- [x] **No regressions:** page content still uses `.page-gutter` / `measure-wide` below header
+- [x] **Home hero block:** padding and h3 subtitle render correctly in `measure-wide` column
 
 ---
 
-## Implementation Order (when approved)
+## Implementation Order (completed)
 
 1. Add CSS tokens + `.site-header` styles to `_styles.css`
 2. Add logo + arrow SVG assets
 3. Rewrite `site-navigation.html` + `site-header.html`
-4. Update `page-header.html` (extract nav from hero)
-5. Add scroll script + wire into global scripts
-6. Visual QA against Figma mobile frames (Nefko adds `short_title` to content on his own schedule)
+4. Update `page-header.html` (extract nav from hero); wire `site-header` in single/page/404 templates
+5. Add scroll script + Lato font + wire in `head-additions.html`
+6. Visual QA against Figma mobile frames
+7. *(Follow-on)* Add `home-hero-block` shortcode, restructure `home.html`, set hero padding + h3 subtitle

@@ -266,6 +266,16 @@
   gap: 0.25rem;
 }
 
+.llm-hint {
+  font-size: 4pt;
+  color: var(--text-inverse-primary);
+  margin: 0;
+}
+
+.llm-hint a {
+  color: inherit;
+}
+
 .home-hero-block {
   display: block;
   width: 100%;

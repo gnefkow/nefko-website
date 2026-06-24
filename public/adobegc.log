@@ -1,0 +1,777 @@
+06/21/26 19:34:35:208 | [INFO] | 823 | agcinvokerutility |  | AdobeGCInvokerUtilityHelper |  |  | 7917 | inside getLatestGCApplication
+06/21/26 19:34:35:289 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdater |  |  | 7917 | ***********AdobeGC Updater library invoked = 9.1.0.50 ************
+06/21/26 19:34:35:289 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 7917 | Perform WF started
+06/21/26 19:34:35:289 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 7917 | Perform WF completed
+06/21/26 19:34:35:289 | [DEBUG] | 823 | agcinvokerutility |  | AdobeGCInvokerUtilityHelper |  |  | 7917 | inside waitForCFUCallBack.
+06/21/26 19:34:35:314 | [DEBUG] | 823 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 9070 | Trying to acquire the semaphore
+06/21/26 19:34:35:314 | [DEBUG] | 823 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 9070 | Semaphore acquired
+06/21/26 19:34:35:314 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 9070 | Threaded CFU Started
+06/21/26 19:34:35:314 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdater |  |  | 9070 | Get client install path Started
+06/21/26 19:34:35:324 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdater |  |  | 9070 | Get client install path Ended
+06/21/26 19:34:35:326 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 9070 | Client sanitization started
+06/21/26 19:34:35:326 | [DEBUG] | 823 | agcinvokerutility |  | AdobeGCCodeSignWrapper |  |  | 9070 | Invoked VerifyCodeSign for app: /Library/Application Support/Adobe/AdobeGCClient/AdobeGCClient.app
+06/21/26 19:34:39:948 | [DEBUG] | 823 | agcinvokerutility |  | AdobeGCCodeSignWrapper |  |  | 9070 | Status returned is 0 
+06/21/26 19:34:39:948 | [DEBUG] | 823 | agcinvokerutility |  | AdobeGCCodeSignWrapper |  |  | 9070 | Code signature is OK. 
+06/21/26 19:34:39:948 | [DEBUG] | 823 | agcinvokerutility |  | AdobeGCCodeSignWrapper |  |  | 9070 | Completed VerifyCodeSign. 
+06/21/26 19:34:39:950 | [INFO] | 823 | agcinvokerutility |  | AdobeGCVersionWrapper |  |  | 9070 | Getting version of package at /Library/Application Support/Adobe/AdobeGCClient/AdobeGCClient.app
+06/21/26 19:34:39:950 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 9070 | Client sanitization ended
+06/21/26 19:34:39:950 | [INFO] | 823 | agcinvokerutility |  | AdobeGCClientHealthUtil |  |  | 9070 | Checking CEF dependencies
+06/21/26 19:34:39:951 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 9070 | Threaded CFU Ended
+06/21/26 19:34:39:951 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 9070 | Semaphore signalled
+06/21/26 19:34:40:529 | [INFO] | 823 | agcinvokerutility |  | AdobeGCInvokerUtilityHelper |  |  | 7917 | AdobeGC_CFUCallbackFn is invoked
+06/21/26 19:34:40:529 | [DEBUG] | 823 | agcinvokerutility |  | AdobeGCInvokerUtilityHelper |  |  | 7917 | inside invokeGCApplication.
+06/21/26 19:34:40:529 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdater |  |  | 7917 | ***********AdobeGC Updater library invoked = 9.1.0.50 ************
+06/21/26 19:34:40:529 | [DEBUG] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | Trying to acquire the semaphore
+06/21/26 19:34:40:529 | [DEBUG] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | Semaphore acquired
+06/21/26 19:34:40:529 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | Perform WF started
+06/21/26 19:34:40:593 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | isOOCTargeted flag read
+06/21/26 19:34:40:616 | [ERROR] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | Time flag read
+06/21/26 19:34:40:616 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | GCInvokerNextClientLaunchTimestamp from cache 1782020947
+06/21/26 19:34:40:616 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | GCInvokerNextClientLaunchTimestamp cached 1782020947 , curr 1782088480 res = 1
+06/21/26 19:34:40:616 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterXMLWrapper |  |  | 7917 | Get XML path Started
+06/21/26 19:34:40:616 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterXMLWrapper |  |  | 7917 | Create XML Started
+06/21/26 19:34:40:616 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterXMLWrapper |  |  | 7917 | Adding generic details Started
+06/21/26 19:34:40:616 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterXMLWrapper |  |  | 7917 | Adding generic details Ended
+06/21/26 19:34:40:616 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterXMLWrapper |  |  | 7917 | Create XML Ended
+06/21/26 19:34:40:616 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterXMLWrapper |  |  | 7917 | Storing XML Started
+06/21/26 19:34:40:617 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterXMLWrapper |  |  | 7917 | Storing XML Ended
+06/21/26 19:34:40:617 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterXMLWrapper |  |  | 7917 | Get XML path Ended
+06/21/26 19:34:40:617 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | Invoking GC client started
+06/21/26 19:34:40:617 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | override path for acrobat is 0
+06/21/26 19:34:40:617 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdater |  |  | 7917 | Get client install path Started
+06/21/26 19:34:40:617 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdater |  |  | 7917 | Get client install path Ended
+06/21/26 19:34:40:617 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | path found is  /Library/Application Support/Adobe/AdobeGCClient/AdobeGCClient.app
+06/21/26 19:34:40:617 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | Invoking GC Client for caller id 11
+06/21/26 19:34:40:617 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | GC Client path = /Library/Application Support/Adobe/AdobeGCClient/AdobeGCClient.app/Contents/MacOS/AdobeGCClient
+06/21/26 19:34:40:617 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | Argument 1 is  = --xmlFilePath=/tmp/adobegc_chYcjz
+06/21/26 19:34:40:617 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | Argument 2 is = --workflowInitiator=GCInvokerUtility
+06/21/26 19:34:40:638 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | Invoking GC client completed
+06/21/26 19:34:40:638 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | SaveGCInvokerNextLaunchTimestamp 
+06/21/26 19:34:40:639 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | SaveGCInvokerNextLaunchTimestamp Wait Period 86400
+06/21/26 19:34:40:639 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | SaveGCInvokerNextLaunchTimestamp Wait Period Xtnd 1782174880
+06/21/26 19:34:40:639 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | Perform WF completed
+06/21/26 19:34:40:639 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 7917 | Semaphore signalled
+06/21/26 19:34:40:639 | [INFO] | 823 | agcinvokerutility |  | AdobeGCUpdater |  |  | 7917 | ***********AdobeGC Updater library End*******************
+06/21/26 19:34:40:639 | [DEBUG] | 823 | agcinvokerutility |  | AdobeGCInvokerUtilityHelper |  |  | 7917 | AdobeGC_ReleaseRef called.
+06/21/26 19:34:40:882 | [INFO] | 1151 | AdobeGCClient |  | GCClientMain |  |  | 10555 | *********** Adobe GCClient Launched = 9.1.0.50 ************
+06/21/26 19:34:40:882 | [INFO] | 1151 | AdobeGCClient |  | GCClientMain |  |  | 10555 | Initiating workflow
+06/21/26 19:34:40:882 | [INFO] | 1151 | AdobeGCClient |  | GCClientMain |  |  | 10555 | Client request processing started
+06/21/26 19:34:40:882 | [INFO] | 1151 | AdobeGCClient |  | GCClientMain |  |  | 10555 | Lock acquired, continue with the workflow
+06/21/26 19:34:40:883 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCClientImpl |  |  | 10555 | Initializing client workflow
+06/21/26 19:34:40:883 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCClientImpl |  |  | 10555 | Trying to acquire the semaphore
+06/21/26 19:34:40:883 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCClientImpl |  |  | 10555 | Semaphore acquired
+06/21/26 19:34:40:883 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCClientImpl |  |  | 10555 | AdobeGCClient invoked from Scheduler entry, sleeping for 10 minutes to avoid disk overusage
+06/21/26 19:44:41:337 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCClientImpl |  |  | 10555 | Country is allowllisted
+06/21/26 19:44:41:337 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCClientImpl |  |  | 10555 | Performing state data access test on all dbs
+06/21/26 19:44:41:338 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 10555 | State data access test started
+06/21/26 19:44:41:338 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 10555 | Performing a query to read data from AdobeNGLAppIDMap.db
+06/21/26 19:44:41:339 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 10555 | Query succeeded in reading data from AdobeNGLAppIDMap.db
+06/21/26 19:44:41:339 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 10555 | Performing a query to write test data into AdobeNGLAppIDMap.db
+06/21/26 19:44:41:344 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 10555 | Query succeeded in writing test data into AdobeNGLAppIDMap.db
+06/21/26 19:44:41:344 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 10555 | Performing a query to delete previosuly written test data from AdobeNGLAppIDMap.db
+06/21/26 19:44:41:348 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 10555 | Query succeeded in delete test data from AdobeNGLAppIDMap.db
+06/21/26 19:44:41:349 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 10555 | Reading test data from PrimaryPCD
+06/21/26 19:44:41:365 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 10555 | Succeeded in reading test data into PrimaryPCD
+06/21/26 19:44:41:365 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 10555 | Reading list of subdomains from CachePCD
+06/21/26 19:44:41:391 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 10555 | Succeeded in reading subdomains from CachePCD
+06/21/26 19:44:41:391 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 10555 | Writing test data into CachePCD
+06/21/26 19:44:41:391 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 10555 | Succeeded in writing test data into CachePCD
+06/21/26 19:44:41:391 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 10555 | Deleting test data previously written to CachePCD
+06/21/26 19:44:41:392 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 10555 | Succeeded in deleting test data from CachePCD
+06/21/26 19:44:41:392 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCNotifAuditEvents |  |  | 10555 | Sending notification audit evens
+06/21/26 19:44:41:393 | [ERROR] | 1151 | AdobeGCClient |  | AdobeGCNotifAuditEvents |  |  | 10555 | Failed to fetch NextNotifAuditEventsTimestamp. Error: 3
+06/21/26 19:44:41:393 | [ERROR] | 1151 | AdobeGCClient |  | SQLiteServiceManagerLog |  |  | 10555 | sqlite3_get_table failed error code: 1, extended error code:1, error message: no such table: NotifAuditEvents
+06/21/26 19:44:41:393 | [ERROR] | 1151 | AdobeGCClient |  | AdobeGCNotifAuditEvents |  |  | 10555 | Failed to fetch notification audit events. Error: 2
+06/21/26 19:44:41:395 | [INFO] | 1151 | AdobeGCClient |  | UMIUtils |  |  | 10555 | Successfully fetched UMI json string
+06/21/26 19:44:41:395 | [INFO] | 1151 | AdobeGCClient |  | UMIUtils |  |  | 10555 | Parsing of UMI data successful
+06/21/26 19:44:41:397 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCWorkflowImpl |  |  | 10555 | istargeted flag read
+06/21/26 19:44:41:470 | [INFO] | 1151 | AdobeGCClient |  | AIDWrapper |  |  | 10555 | AID library loaded successfully
+06/21/26 19:44:41:471 | [INFO] | 1151 | AdobeGCClient |  | AIDWrapper |  |  | 10555 | Getting list of NGL based installed products
+06/21/26 19:44:41:500 | [WARN] | 1151 | AdobeGCClient |  | AIDWrapper |  |  | 10555 | Memory not sufficient for fetching installed products from hyperdrive, size req = 2571
+06/21/26 19:44:41:510 | [INFO] | 1151 | AdobeGCClient |  | AIDWrapper |  |  | 10555 | Successfully fetched list of installed products in updated memory.
+06/21/26 19:44:41:510 | [INFO] | 1151 | AdobeGCClient |  | AIDWrapper |  |  | 10555 | AID response parsing started with filter: HD
+06/21/26 19:44:41:510 | [WARN] | 1151 | AdobeGCClient |  | AIDWrapper |  |  | 10555 | Skipping non-HD InstallerType 'PIM', SAPCode:KCCCADS
+06/21/26 19:44:41:510 | [INFO] | 1151 | AdobeGCClient |  | AIDWrapper |  |  | 10555 | AID response parsing completed
+06/21/26 19:44:41:510 | [INFO] | 1151 | AdobeGCClient |  | NGLAppIDLookup |  |  | 10555 | Getting NGLAppId
+06/21/26 19:44:41:510 | [INFO] | 1151 | AdobeGCClient |  | NGLAppIDLookup |  |  | 10555 | NGL App ID Not Found in local Database
+06/21/26 19:44:41:510 | [INFO] | 1151 | AdobeGCClient |  | NGLAppIDLookup |  |  | 10555 | Returning NGLAppId
+06/21/26 19:44:41:510 | [INFO] | 1151 | AdobeGCClient |  | NGLAppIDLookup |  |  | 10555 | Getting NGLAppId
+06/21/26 19:44:41:511 | [INFO] | 1151 | AdobeGCClient |  | NGLAppIDLookup |  |  | 10555 | NGL App ID Not Found in local Database
+06/21/26 19:44:41:511 | [INFO] | 1151 | AdobeGCClient |  | NGLAppIDLookup |  |  | 10555 | Returning NGLAppId
+06/21/26 19:44:41:514 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 10555 | Getting machine id
+06/21/26 19:44:41:514 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Starting up SLCore 2.0 Release (build 2.0.1.360321).
+06/21/26 19:44:41:514 | [ERROR] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | user based licensing: 0
+06/21/26 19:44:41:514 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Service construction took 0.0 ms and succeed.
+06/21/26 19:44:41:515 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Shutting down SLCore 2.0 Release (build 2.0.1.360321).
+06/21/26 19:44:41:515 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Service destruction took 0.0 ms and succeed.
+06/21/26 19:44:41:515 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 10555 | machine id is lvDX0jLK0gbZyF+P50wexKoQAyVqjuma
+06/21/26 19:44:41:515 | [INFO] | 1151 | AdobeGCClient |  | OSUtilitiesMac |  |  | 10555 | arm64 architecture value = 1
+06/21/26 19:44:41:515 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 10555 | Reading AGS service status
+06/21/26 19:44:41:519 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 10555 | Reading AGM service status
+06/21/26 19:44:41:523 | [ERROR] | 1151 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 10555 | Last updateCheck request status read : Success
+06/21/26 19:44:41:523 | [ERROR] | 1151 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 10555 | Last update check attempted timestamp read : 1782067236000
+06/21/26 19:44:41:523 | [ERROR] | 1151 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 10555 | Failed to read client source of installation: 3
+06/21/26 19:44:41:524 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 10555 | Successfully fetched all replay write status records
+06/21/26 19:44:41:524 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 10555 | Products installed on the machine, sending fetch rules
+06/21/26 19:44:41:524 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | Fetching Rules started
+06/21/26 19:44:41:536 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | __OOBELIB_LOG_FILE__
+06/21/26 19:44:41:536 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Dispatch table loaded from path: /Library/Application Support/Adobe/AdobeGCClient/AdobeGCClient.app/..//dispatchtable.xml 
+06/21/26 19:44:41:542 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | (re)load Local Dispatch Table status-[0].
+06/21/26 19:44:41:542 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Scope : [2]
+06/21/26 19:44:41:542 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Setting scope to GM
+06/21/26 19:44:41:542 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | AdobeIALClient 1.0 Release (build 1.0.6.3) initializing session...
+06/21/26 19:44:41:542 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCClientNSLookup |  |  | 10555 | Verifying if server domain is blocked
+06/21/26 19:44:41:543 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | EndPoint requested: [FetchRulesV2]
+06/21/26 19:44:41:543 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Length of the URL: [30]
+06/21/26 19:44:41:543 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Returning from getEndpointAddr: [0]
+06/21/26 19:44:41:543 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | EndPoint requested: [FetchRulesV2]
+06/21/26 19:44:41:543 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Length of the URL: [30]
+06/21/26 19:44:41:543 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | URL found [https://gcos.adobe.io/rules/v2]
+06/21/26 19:44:41:543 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Returning from getEndpointAddr: [0]
+06/21/26 19:44:41:546 | [INFO] | 1151 | AdobeGCClient |  | ReplayDataWrapper |  |  | 10555 | ReplayData guid:7e9a06d0-396b-4002-91db-e8514d25f392, replay:1807a26b-50b6-431e-b8cf-143939dd45f5, time:1781934548000
+06/21/26 19:44:41:547 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | HTTPCommunicationAgent::processMessage Type:[POST] URI:[https://gcos.adobe.io/rules/v2] extURL:[].
+06/21/26 19:44:42:174 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | HTTP Request Status code 200.
+06/21/26 19:44:42:176 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | HTTPCommunicationAgent- Return Code:[0] response size-[3373] time taken-[629.01]ms.
+06/21/26 19:44:42:193 | [INFO] | 1151 | AdobeGCClient |  | IALClient |  |  | 10555 | successfully cleared replay write status from database
+06/21/26 19:44:42:214 | [INFO] | 1151 | AdobeGCClient |  | IALClient |  |  | 10555 | Parsing FetchRule response successful
+06/21/26 19:44:42:214 | [INFO] | 1151 | AdobeGCClient |  | IALClient |  |  | 10555 | Parsing successful
+06/21/26 19:44:42:215 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | AdobeGC Fetching rules status - [0] took - [672.18]ms.
+06/21/26 19:44:42:215 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | Rules successfully fetched
+06/21/26 19:44:42:215 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | Closing AdobeIALClient 1.0 Release (build 1.0.6.3) session.
+06/21/26 19:44:42:215 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | Fetching Rules ended
+06/21/26 19:44:42:215 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCUtilities |  |  | 10555 | Setting flag UninstallAGM
+06/21/26 19:44:42:215 | [INFO] | 1151 | AdobeGCClient |  | UMIUtils |  |  | 10555 | Successfully fetched UMI json string
+06/21/26 19:44:42:215 | [INFO] | 1151 | AdobeGCClient |  | UMIUtils |  |  | 10555 | Parsing of UMI data successful
+06/21/26 19:44:42:217 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 10555 | Checking if update is required or not
+06/21/26 19:44:42:217 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 10555 | Latest Client version: 9.1.0.50
+06/21/26 19:44:42:217 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCVersionWrapper |  |  | 10555 | File at /Library/Application Support/Adobe/AdobeGCClient/gcupdater.dylib is not a package
+06/21/26 19:44:42:217 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCVersionWrapper |  |  | 10555 | Version of file 9.1.0.50
+06/21/26 19:44:42:217 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCVersionWrapper |  |  | 10555 | File at /Library/Application Support/Adobe/AdobeGCClient/AGSService is not a package
+06/21/26 19:44:42:218 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCVersionWrapper |  |  | 10555 | Version of file 9.1.0.50
+06/21/26 19:44:42:218 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCVersionWrapper |  |  | 10555 | File at /Library/Application Support/Adobe/AdobeGCClient/Adobe Genuine Software Monitor Service is not a package
+06/21/26 19:44:42:218 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCVersionWrapper |  |  | 10555 | Version of file 9.1.0.50
+06/21/26 19:44:42:218 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCClientHealthUtil |  |  | 10555 | Checking CEF dependencies
+06/21/26 19:44:42:218 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 10555 | Client Health Status is 0
+06/21/26 19:44:42:218 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 10555 | Update not Required
+06/21/26 19:44:42:219 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 10555 | SetNextUpdateCheckDate 
+06/21/26 19:44:42:219 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 10555 | SetNextUpdateCheckDate Wait Period 86400
+06/21/26 19:44:42:221 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 10555 | SetNextUpdateCheckDate Wait Period Xtnd 1782175482
+06/21/26 19:44:42:223 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCPostRulesWorkflowImpl |  |  | 10555 | Machine is non- targeted; SaveIsTargetFlagInSLCache 
+06/21/26 19:44:42:223 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCPostRulesWorkflowImpl |  |  | 10555 | Machine is non-OOC targeted; SaveIsTargetFlagInSLCache 
+06/21/26 19:44:42:225 | [ERROR] | 1151 | AdobeGCClient |  | AdobeGCCheckSuppressPostRule |  |  | 10555 | Post Rule Request Time flag read
+06/21/26 19:44:42:225 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCCheckSuppressPostRule |  |  | 10555 | LastPostRuleRequestDurationPassed from cache 1781956149
+06/21/26 19:44:42:225 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCCheckSuppressPostRule |  |  | 10555 | LastPostRuleRequestDurationPassed cached 1781956149 , curr 1782089082 res = 1
+06/21/26 19:44:42:225 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCWorkflowImpl |  |  | 10555 | No Active LEID found
+06/21/26 19:44:42:225 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCOOCImpl |  |  | 10555 | checking if valid ooc invocation
+06/21/26 19:44:42:225 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCOOCImpl |  |  | 10555 | checking if ooc enabled
+06/21/26 19:44:42:225 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCOOCImpl |  |  | 10555 | checking if ooc enabled
+06/21/26 19:44:42:226 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 10555 | Processing of rules started
+06/21/26 19:44:42:226 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Starting up SLCore 2.0 Release (build 2.0.1.360321).
+06/21/26 19:44:42:226 | [ERROR] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | user based licensing: 0
+06/21/26 19:44:42:226 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Service construction took 0.0 ms and succeed.
+06/21/26 19:44:42:226 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Syncing to license store...
+06/21/26 19:44:42:230 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Dispatch table loaded from path: /Library/Application Support/Adobe/AdobeGCClient/AdobeGCClient.app/..//dispatchtable.xml 
+06/21/26 19:44:42:230 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | (re)load Local Dispatch Table status-[0].
+06/21/26 19:44:42:230 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Scope : [2]
+06/21/26 19:44:42:230 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Setting scope to GM
+06/21/26 19:44:42:230 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | EndPoint requested: [IngestAnalytics]
+06/21/26 19:44:42:230 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Length of the URL: [0]
+06/21/26 19:44:42:230 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Returning from getEndpointAddr: [0]
+06/21/26 19:44:42:231 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Found client mkey.
+06/21/26 19:44:42:235 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Loading license references...
+06/21/26 19:44:42:235 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Found 0 license file(s)
+06/21/26 19:44:42:235 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | License store synchronization took 9.0 ms and succeed.
+06/21/26 19:44:42:235 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 10555 | Fetching App Launch Path of all LEIDS started
+06/21/26 19:44:42:239 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 10555 | App Launch Path cannot be fetched from the PayloadCode= {ILST-23.0.3-64-ADBEADBEADBEADBEADBEA} , pdbStatus : 8
+06/21/26 19:44:42:241 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 10555 | App Launch Path cannot be fetched from the PayloadCode= {IDSN-14.0.2-64-ADBEADBEADBEADBEADBEA} , pdbStatus : 8
+06/21/26 19:44:42:242 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 10555 | App Launch Path cannot be fetched from the PayloadCode= {LTRM-11.5-32-ADBEADBEADBEADBEADBEADB} , pdbStatus : 8
+06/21/26 19:44:42:244 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 10555 | App Launch Path cannot be fetched from the PayloadCode= {LRCC-4.4-32-ADBEADBEADBEADBEADBEADBE} , pdbStatus : 8
+06/21/26 19:44:42:244 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 10555 | Fetching App Launch Path of all LEIDS Ended
+06/21/26 19:44:42:244 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCSpecificRulesEngine |  |  | 10555 | Processing of specific rules started
+06/21/26 19:44:42:244 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCSpecificRulesEngine |  |  | 10555 | Processing of specific rules completed
+06/21/26 19:44:42:244 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCSpecificRulesEngine |  |  | 10555 | Processing of specific rules started
+06/21/26 19:44:42:244 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCSpecificRulesEngine |  |  | 10555 | Processing of specific rules completed
+06/21/26 19:44:42:244 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCSpecificRulesEngine |  |  | 10555 | Processing of specific rules started
+06/21/26 19:44:42:244 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCSpecificRulesEngine |  |  | 10555 | Processing of specific rules completed
+06/21/26 19:44:42:244 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCSpecificRulesEngine |  |  | 10555 | Processing of specific rules started
+06/21/26 19:44:42:244 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCSpecificRulesEngine |  |  | 10555 | Processing of specific rules completed
+06/21/26 19:44:42:244 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCGenericRulesEngine |  |  | 10555 | Processing of generic rules started
+06/21/26 19:44:42:244 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:244 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:244 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:244 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:244 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:244 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:244 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:244 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:245 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule started
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 10555 | Processing of hostfile rule completed
+06/21/26 19:44:42:246 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 10555 | Processing of Signature Rule started
+06/21/26 19:44:42:247 | [ERROR] | 1151 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 10555 | Failed to fetch appExecutablePath for LEID: , file: OOBE/PDApp/P6/adobe_oobelib.dylib. Error: 3
+06/21/26 19:44:42:247 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCCodeSignWrapper |  |  | 10555 | Invoked VerifyCodeSign for app: /Library/Application Support/Adobe/OOBE/PDApp/P6/adobe_oobelib.dylib
+06/21/26 19:44:42:247 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 10555 | Invalid signature found for file path : /Library/Application Support/Adobe/OOBE/PDApp/P6/adobe_oobelib.dylib and failure cause = 3 with signer name = 
+06/21/26 19:44:42:247 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 10555 | Processing the signature rule with default path configured in ProductInfo.xml LEID = 
+06/21/26 19:44:42:249 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 10555 | Default Path configured for LEID :  = []
+06/21/26 19:44:42:249 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 10555 | Path information not found for : OOBE/PDApp/P6/adobe_oobelib.dylib
+06/21/26 19:44:42:249 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 10555 | Processing of signature rule V2 completed
+06/21/26 19:44:42:249 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 10555 | Processing of Signature Rule started
+06/21/26 19:44:42:249 | [ERROR] | 1151 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 10555 | Failed to fetch appExecutablePath for LEID: , file: OOBE/PDApp/P7/adobe_oobelib.dylib. Error: 3
+06/21/26 19:44:42:249 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCCodeSignWrapper |  |  | 10555 | Invoked VerifyCodeSign for app: /Library/Application Support/Adobe/OOBE/PDApp/P7/adobe_oobelib.dylib
+06/21/26 19:44:42:249 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 10555 | Invalid signature found for file path : /Library/Application Support/Adobe/OOBE/PDApp/P7/adobe_oobelib.dylib and failure cause = 3 with signer name = 
+06/21/26 19:44:42:249 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 10555 | Processing the signature rule with default path configured in ProductInfo.xml LEID = 
+06/21/26 19:44:42:251 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 10555 | Default Path configured for LEID :  = []
+06/21/26 19:44:42:251 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 10555 | Path information not found for : OOBE/PDApp/P7/adobe_oobelib.dylib
+06/21/26 19:44:42:251 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 10555 | Processing of signature rule V2 completed
+06/21/26 19:44:42:251 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCGenericRulesEngine |  |  | 10555 | Processing of generic rules completed
+06/21/26 19:44:42:251 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Shutting down SLCore 2.0 Release (build 2.0.1.360321).
+06/21/26 19:44:42:251 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Service destruction took 0.1 ms and succeed.
+06/21/26 19:44:42:251 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 10555 | Processing of rules completed
+06/21/26 19:44:42:251 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 10555 | Processing of NGL rules started
+06/21/26 19:44:42:251 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 10555 | Exited successfully from CreateNGLAppLaunchPathMap
+06/21/26 19:44:42:251 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 10555 | Entered CreateNGLAppASNPMap function
+06/21/26 19:44:42:560 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 10555 | successfully fetched list of asnps 
+06/21/26 19:44:42:563 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 10555 | Processing of NGL rules completed
+06/21/26 19:44:42:563 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCOOCImpl |  |  | 10555 | getting ooc invocation agent
+06/21/26 19:44:42:563 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCOOCImpl |  |  | 10555 | checking if ooc enabled
+06/21/26 19:44:42:564 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Starting up SLCore 2.0 Release (build 2.0.1.360321).
+06/21/26 19:44:42:564 | [ERROR] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | user based licensing: 0
+06/21/26 19:44:42:564 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Service construction took 0.0 ms and succeed.
+06/21/26 19:44:42:564 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Shutting down SLCore 2.0 Release (build 2.0.1.360321).
+06/21/26 19:44:42:564 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Service destruction took 0.0 ms and succeed.
+06/21/26 19:44:42:564 | [INFO] | 1151 | AdobeGCClient |  | OSUtilitiesMac |  |  | 10555 | arm64 architecture value = 1
+06/21/26 19:44:42:764 | [INFO] | 1151 | AdobeGCClient |  | ACCC Util |  |  | 10555 | HeadLess Thor is installed.
+06/21/26 19:44:42:764 | [INFO] | 1151 | AdobeGCClient |  | ACCC Util |  |  | 10555 | Adobe Creative Cloud is not installed.
+06/21/26 19:44:42:770 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCPostRulesWorkflowImpl |  |  | 10555 | 	Payload cannot be fetched from the LEID , PCDClientStatus : 7
+06/21/26 19:44:42:772 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCPostRulesWorkflowImpl |  |  | 10555 | Payload cannot be fetched from the LEID , PCDClientStatus : 7
+06/21/26 19:44:42:773 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | Posting Rules data started
+06/21/26 19:44:42:774 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Dispatch table loaded from path: /Library/Application Support/Adobe/AdobeGCClient/AdobeGCClient.app/..//dispatchtable.xml 
+06/21/26 19:44:42:774 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | (re)load Local Dispatch Table status-[0].
+06/21/26 19:44:42:774 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Scope : [2]
+06/21/26 19:44:42:774 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Setting scope to GM
+06/21/26 19:44:42:774 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | AdobeIALClient 1.0 Release (build 1.0.6.3) initializing session...
+06/21/26 19:44:42:774 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCClientNSLookup |  |  | 10555 | Verifying if server domain is blocked
+06/21/26 19:44:42:775 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | EndPoint requested: [PostRulesData]
+06/21/26 19:44:42:775 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Length of the URL: [30]
+06/21/26 19:44:42:775 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Returning from getEndpointAddr: [0]
+06/21/26 19:44:42:775 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | EndPoint requested: [PostRulesData]
+06/21/26 19:44:42:775 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Length of the URL: [30]
+06/21/26 19:44:42:775 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | URL found [https://gcos.adobe.io/check/v1]
+06/21/26 19:44:42:775 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Returning from getEndpointAddr: [0]
+06/21/26 19:44:42:777 | [INFO] | 1151 | AdobeGCClient |  | ReplayDataWrapper |  |  | 10555 | ReplayData guid:7e9a06d0-396b-4002-91db-e8514d25f392, replay:ccc33640-305b-44be-a7e3-bc95ef6a2368, time:1782089082000
+06/21/26 19:44:42:777 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | HTTPCommunicationAgent::processMessage Type:[POST] URI:[https://gcos.adobe.io/check/v1] extURL:[].
+06/21/26 19:44:43:225 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | HTTP Request Status code 200.
+06/21/26 19:44:43:225 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | HTTPCommunicationAgent- Return Code:[0] response size-[199] time taken-[448.57]ms.
+06/21/26 19:44:43:225 | [INFO] | 1151 | AdobeGCClient |  | IALClient |  |  | 10555 | Parsing PostRule response successful
+06/21/26 19:44:43:225 | [INFO] | 1151 | AdobeGCClient |  | IALClient |  |  | 10555 | Parsing PostRule successful
+06/21/26 19:44:43:226 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | AdobeGC Posting rules data status - [0] took - [451.32]ms.
+06/21/26 19:44:43:226 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | Rules data successfully posted
+06/21/26 19:44:43:226 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | Closing AdobeIALClient 1.0 Release (build 1.0.6.3) session.
+06/21/26 19:44:43:226 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | Posting Rules data ended
+06/21/26 19:44:43:226 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCPostRulesWorkflowImpl |  |  | 10555 | No active LEID found, no actionData with <web> found. 'NGL:0,VLEID:,APPLEID:'
+06/21/26 19:44:43:226 | [DEBUG] | 1151 | AdobeGCClient |  | AdobeGCNotificationWorkflowImpl |  |  | 10555 | Posting rules succeeded but no wait duration, using default
+06/21/26 19:44:43:232 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCCheckSuppressPostRule |  |  | 10555 | SaveNextPostRuleRequestTimestampInSLCache Wait Period 21600
+06/21/26 19:44:43:233 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCCheckSuppressPostRule |  |  | 10555 | NextPostRulesRequestTimestamp Wait Period Xtnd 1782110683
+06/21/26 19:44:43:233 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCNotifAuditEvents |  |  | 10555 | Sending notification audit evens
+06/21/26 19:44:43:233 | [ERROR] | 1151 | AdobeGCClient |  | AdobeGCNotifAuditEvents |  |  | 10555 | Failed to fetch NextNotifAuditEventsTimestamp. Error: 3
+06/21/26 19:44:43:234 | [ERROR] | 1151 | AdobeGCClient |  | SQLiteServiceManagerLog |  |  | 10555 | sqlite3_get_table failed error code: 1, extended error code:1, error message: no such table: NotifAuditEvents
+06/21/26 19:44:43:234 | [ERROR] | 1151 | AdobeGCClient |  | AdobeGCNotifAuditEvents |  |  | 10555 | Failed to fetch notification audit events. Error: 2
+06/21/26 19:44:43:234 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Starting up SLCore 2.0 Release (build 2.0.1.360321).
+06/21/26 19:44:43:234 | [ERROR] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | user based licensing: 0
+06/21/26 19:44:43:234 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Service construction took 0.1 ms and succeed.
+06/21/26 19:44:43:235 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Shutting down SLCore 2.0 Release (build 2.0.1.360321).
+06/21/26 19:44:43:235 | [INFO] | 1151 | AdobeGCClient |  | SLCoreService |  |  | 10555 | Service destruction took 0.1 ms and succeed.
+06/21/26 19:44:43:238 | [ERROR] | 1151 | AdobeGCClient |  | AdobeGCMachineEvents |  |  | 10555 | Failed to fetch installer data
+06/21/26 19:44:43:238 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCValidatorAnalytics |  |  | 10555 | Fetching validator analytics
+06/21/26 19:44:43:239 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCValidatorAnalytics |  |  | 10555 | Successfully fetched validator analytics
+06/21/26 19:44:43:239 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCMachineEvents |  |  | 10555 | SetNextMachineEventsTimestamp 
+06/21/26 19:44:43:239 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCMachineEvents |  |  | 10555 | SetNextMachineEventsTimestamp Wait Period 86400
+06/21/26 19:44:43:240 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCMachineEvents |  |  | 10555 | SetNextMachineEventsTimestamp Wait Period Xtnd 1782175483
+06/21/26 19:44:43:240 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCMachineEvents |  |  | 10555 | Client not invoked by product launch. Skipping launch events
+06/21/26 19:44:43:240 | [ERROR] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | Sending machine events
+06/21/26 19:44:43:241 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Dispatch table loaded from path: /Library/Application Support/Adobe/AdobeGCClient/AdobeGCClient.app/..//dispatchtable.xml 
+06/21/26 19:44:43:241 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | (re)load Local Dispatch Table status-[0].
+06/21/26 19:44:43:241 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Scope : [2]
+06/21/26 19:44:43:241 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Setting scope to GM
+06/21/26 19:44:43:241 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | AdobeIALClient 1.0 Release (build 1.0.6.3) initializing session...
+06/21/26 19:44:43:241 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCClientNSLookup |  |  | 10555 | Verifying if server domain is blocked
+06/21/26 19:44:43:242 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | EndPoint requested: [MachineEvents]
+06/21/26 19:44:43:242 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Length of the URL: [38]
+06/21/26 19:44:43:242 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Returning from getEndpointAddr: [0]
+06/21/26 19:44:43:242 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | EndPoint requested: [MachineEvents]
+06/21/26 19:44:43:242 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Length of the URL: [38]
+06/21/26 19:44:43:242 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | URL found [https://gcos.adobe.io/machineevents/v1]
+06/21/26 19:44:43:242 | [INFO] |  |  |  | DispatchClientLib |  |  | 10555 | Returning from getEndpointAddr: [0]
+06/21/26 19:44:43:243 | [INFO] | 1151 | AdobeGCClient |  | ReplayDataWrapper |  |  | 10555 | ReplayData guid:7e9a06d0-396b-4002-91db-e8514d25f392, replay:ccc33640-305b-44be-a7e3-bc95ef6a2368, time:1782089082000
+06/21/26 19:44:43:244 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | HTTPCommunicationAgent::processMessage Type:[POST] URI:[https://gcos.adobe.io/machineevents/v1] extURL:[].
+06/21/26 19:44:43:665 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | HTTP Request Status code 200.
+06/21/26 19:44:43:667 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | HTTPCommunicationAgent- Return Code:[0] response size-[327] time taken-[422.85]ms.
+06/21/26 19:44:43:667 | [INFO] | 1151 | AdobeGCClient |  | IALClient |  |  | 10555 | Parsing response successful
+06/21/26 19:44:43:667 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | AdobeGC sending machine event- [0] took - [425.69]ms.
+06/21/26 19:44:43:667 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | machine events successfully sent to server
+06/21/26 19:44:43:667 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 10555 | Closing AdobeIALClient 1.0 Release (build 1.0.6.3) session.
+06/21/26 19:44:43:667 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCClientImpl |  |  | 10555 | Semaphore signalled
+06/21/26 19:44:43:669 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCScheduler |  |  | 10555 | going to add task to scheduler
+06/21/26 19:44:43:737 | [INFO] | 1151 | AdobeGCClient |  | AdobeGCScheduler |  |  | 10555 | gc invoker entry already exists
+06/21/26 19:44:43:738 | [INFO] | 1151 | AdobeGCClient |  | UMIUtils |  |  | 10555 | Successfully fetched UMI json string
+06/21/26 19:44:43:738 | [INFO] | 1151 | AdobeGCClient |  | UMIUtils |  |  | 10555 | Parsing of UMI data successful
+06/21/26 19:44:43:738 | [INFO] | 1151 | AdobeGCClient |  | GCClientMain |  |  | 10555 | Client request processing completed
+06/21/26 19:44:43:738 | [INFO] | 1151 | AdobeGCClient |  | AsyncTaskManager |  |  | 10555 | Out of 0 async tasks, completed:0, timedOut:0
+06/21/26 19:44:43:738 | [INFO] | 1151 | AdobeGCClient |  | GCClientMain |  |  | 10555 | *********** Adobe GCClient Launch Ended ************
+06/22/26 00:44:04:765 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCInvokerUtilityHelper |  |  | 484922 | inside getLatestGCApplication
+06/22/26 00:44:04:766 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdater |  |  | 484922 | ***********AdobeGC Updater library invoked = 9.1.0.50 ************
+06/22/26 00:44:04:766 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 484922 | Perform WF started
+06/22/26 00:44:04:766 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 484922 | Perform WF completed
+06/22/26 00:44:04:766 | [DEBUG] | 20058 | agcinvokerutility |  | AdobeGCInvokerUtilityHelper |  |  | 484922 | inside waitForCFUCallBack.
+06/22/26 00:44:04:766 | [DEBUG] | 20058 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 484931 | Trying to acquire the semaphore
+06/22/26 00:44:04:766 | [DEBUG] | 20058 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 484931 | Semaphore acquired
+06/22/26 00:44:04:766 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 484931 | Threaded CFU Started
+06/22/26 00:44:04:766 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdater |  |  | 484931 | Get client install path Started
+06/22/26 00:44:04:767 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdater |  |  | 484931 | Get client install path Ended
+06/22/26 00:44:04:767 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 484931 | Client sanitization started
+06/22/26 00:44:04:767 | [DEBUG] | 20058 | agcinvokerutility |  | AdobeGCCodeSignWrapper |  |  | 484931 | Invoked VerifyCodeSign for app: /Library/Application Support/Adobe/AdobeGCClient/AdobeGCClient.app
+06/22/26 00:44:04:992 | [DEBUG] | 20058 | agcinvokerutility |  | AdobeGCCodeSignWrapper |  |  | 484931 | Status returned is 0 
+06/22/26 00:44:04:992 | [DEBUG] | 20058 | agcinvokerutility |  | AdobeGCCodeSignWrapper |  |  | 484931 | Code signature is OK. 
+06/22/26 00:44:04:992 | [DEBUG] | 20058 | agcinvokerutility |  | AdobeGCCodeSignWrapper |  |  | 484931 | Completed VerifyCodeSign. 
+06/22/26 00:44:04:993 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCVersionWrapper |  |  | 484931 | Getting version of package at /Library/Application Support/Adobe/AdobeGCClient/AdobeGCClient.app
+06/22/26 00:44:04:994 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 484931 | Client sanitization ended
+06/22/26 00:44:04:994 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCClientHealthUtil |  |  | 484931 | Checking CEF dependencies
+06/22/26 00:44:04:995 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 484931 | Threaded CFU Ended
+06/22/26 00:44:04:995 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 484931 | Semaphore signalled
+06/22/26 00:44:05:839 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCInvokerUtilityHelper |  |  | 484922 | AdobeGC_CFUCallbackFn is invoked
+06/22/26 00:44:05:839 | [DEBUG] | 20058 | agcinvokerutility |  | AdobeGCInvokerUtilityHelper |  |  | 484922 | inside invokeGCApplication.
+06/22/26 00:44:05:840 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdater |  |  | 484922 | ***********AdobeGC Updater library invoked = 9.1.0.50 ************
+06/22/26 00:44:05:840 | [DEBUG] | 20058 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 484922 | Trying to acquire the semaphore
+06/22/26 00:44:05:840 | [DEBUG] | 20058 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 484922 | Semaphore acquired
+06/22/26 00:44:05:840 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 484922 | Perform WF started
+06/22/26 00:44:05:848 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 484922 | isOOCTargeted flag read
+06/22/26 00:44:05:858 | [ERROR] | 20058 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 484922 | Time flag read
+06/22/26 00:44:05:859 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 484922 | GCInvokerNextClientLaunchTimestamp from cache 1782174880
+06/22/26 00:44:05:859 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 484922 | GCInvokerNextClientLaunchTimestamp cached 1782174880 , curr 1782107045 res = 0
+06/22/26 00:44:05:859 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 484922 | Invocation agent is GC Invoker Utility at Scheduled-Time and time is not elapsed 
+06/22/26 00:44:05:859 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 484922 | Not invoking client
+06/22/26 00:44:05:859 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 484922 | Perform WF completed
+06/22/26 00:44:05:859 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 484922 | Semaphore signalled
+06/22/26 00:44:05:859 | [INFO] | 20058 | agcinvokerutility |  | AdobeGCUpdater |  |  | 484922 | ***********AdobeGC Updater library End*******************
+06/22/26 00:44:05:859 | [DEBUG] | 20058 | agcinvokerutility |  | AdobeGCInvokerUtilityHelper |  |  | 484922 | AdobeGC_ReleaseRef called.
+06/23/26 00:57:14:481 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCInvokerUtilityHelper |  |  | 2407496 | inside getLatestGCApplication
+06/23/26 00:57:14:483 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdater |  |  | 2407496 | ***********AdobeGC Updater library invoked = 9.1.0.50 ************
+06/23/26 00:57:14:483 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 2407496 | Perform WF started
+06/23/26 00:57:14:484 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 2407496 | Perform WF completed
+06/23/26 00:57:14:484 | [DEBUG] | 90707 | agcinvokerutility |  | AdobeGCInvokerUtilityHelper |  |  | 2407496 | inside waitForCFUCallBack.
+06/23/26 00:57:14:484 | [DEBUG] | 90707 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 2407627 | Trying to acquire the semaphore
+06/23/26 00:57:14:484 | [DEBUG] | 90707 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 2407627 | Semaphore acquired
+06/23/26 00:57:14:484 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 2407627 | Threaded CFU Started
+06/23/26 00:57:14:484 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdater |  |  | 2407627 | Get client install path Started
+06/23/26 00:57:14:484 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdater |  |  | 2407627 | Get client install path Ended
+06/23/26 00:57:14:484 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 2407627 | Client sanitization started
+06/23/26 00:57:14:484 | [DEBUG] | 90707 | agcinvokerutility |  | AdobeGCCodeSignWrapper |  |  | 2407627 | Invoked VerifyCodeSign for app: /Library/Application Support/Adobe/AdobeGCClient/AdobeGCClient.app
+06/23/26 01:14:03:413 | [DEBUG] | 90707 | agcinvokerutility |  | AdobeGCCodeSignWrapper |  |  | 2407627 | Status returned is 0 
+06/23/26 01:14:03:413 | [DEBUG] | 90707 | agcinvokerutility |  | AdobeGCCodeSignWrapper |  |  | 2407627 | Code signature is OK. 
+06/23/26 01:14:03:413 | [DEBUG] | 90707 | agcinvokerutility |  | AdobeGCCodeSignWrapper |  |  | 2407627 | Completed VerifyCodeSign. 
+06/23/26 01:14:03:425 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCVersionWrapper |  |  | 2407627 | Getting version of package at /Library/Application Support/Adobe/AdobeGCClient/AdobeGCClient.app
+06/23/26 01:14:03:426 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 2407627 | Client sanitization ended
+06/23/26 01:14:03:426 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCClientHealthUtil |  |  | 2407627 | Checking CEF dependencies
+06/23/26 01:14:03:428 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 2407627 | Threaded CFU Ended
+06/23/26 01:14:03:428 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterCFU |  |  | 2407627 | Semaphore signalled
+06/23/26 01:14:03:748 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCInvokerUtilityHelper |  |  | 2407496 | AdobeGC_CFUCallbackFn is invoked
+06/23/26 01:14:03:748 | [DEBUG] | 90707 | agcinvokerutility |  | AdobeGCInvokerUtilityHelper |  |  | 2407496 | inside invokeGCApplication.
+06/23/26 01:14:03:748 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdater |  |  | 2407496 | ***********AdobeGC Updater library invoked = 9.1.0.50 ************
+06/23/26 01:14:03:748 | [DEBUG] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | Trying to acquire the semaphore
+06/23/26 01:14:03:748 | [DEBUG] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | Semaphore acquired
+06/23/26 01:14:03:748 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | Perform WF started
+06/23/26 01:14:03:899 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | isOOCTargeted flag read
+06/23/26 01:14:04:078 | [ERROR] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | Time flag read
+06/23/26 01:14:04:078 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | GCInvokerNextClientLaunchTimestamp from cache 1782174880
+06/23/26 01:14:04:078 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | GCInvokerNextClientLaunchTimestamp cached 1782174880 , curr 1782195244 res = 1
+06/23/26 01:14:04:078 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterXMLWrapper |  |  | 2407496 | Get XML path Started
+06/23/26 01:14:04:078 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterXMLWrapper |  |  | 2407496 | Create XML Started
+06/23/26 01:14:04:078 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterXMLWrapper |  |  | 2407496 | Adding generic details Started
+06/23/26 01:14:04:078 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterXMLWrapper |  |  | 2407496 | Adding generic details Ended
+06/23/26 01:14:04:078 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterXMLWrapper |  |  | 2407496 | Create XML Ended
+06/23/26 01:14:04:078 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterXMLWrapper |  |  | 2407496 | Storing XML Started
+06/23/26 01:14:04:078 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterXMLWrapper |  |  | 2407496 | Storing XML Ended
+06/23/26 01:14:04:078 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterXMLWrapper |  |  | 2407496 | Get XML path Ended
+06/23/26 01:14:04:078 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | Invoking GC client started
+06/23/26 01:14:04:078 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | override path for acrobat is 0
+06/23/26 01:14:04:079 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdater |  |  | 2407496 | Get client install path Started
+06/23/26 01:14:04:079 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdater |  |  | 2407496 | Get client install path Ended
+06/23/26 01:14:04:079 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | path found is  /Library/Application Support/Adobe/AdobeGCClient/AdobeGCClient.app
+06/23/26 01:14:04:079 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | Invoking GC Client for caller id 12
+06/23/26 01:14:04:079 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | GC Client path = /Library/Application Support/Adobe/AdobeGCClient/AdobeGCClient.app/Contents/MacOS/AdobeGCClient
+06/23/26 01:14:04:079 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | Argument 1 is  = --xmlFilePath=/tmp/adobegc_gHvzSw
+06/23/26 01:14:04:079 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | Argument 2 is = --workflowInitiator=GCInvokerUtility
+06/23/26 01:14:04:139 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | Invoking GC client completed
+06/23/26 01:14:04:139 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | SaveGCInvokerNextLaunchTimestamp 
+06/23/26 01:14:04:139 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | SaveGCInvokerNextLaunchTimestamp Wait Period 86400
+06/23/26 01:14:04:139 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | SaveGCInvokerNextLaunchTimestamp Wait Period Xtnd 1782281644
+06/23/26 01:14:04:139 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | Perform WF completed
+06/23/26 01:14:04:139 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdaterIC |  |  | 2407496 | Semaphore signalled
+06/23/26 01:14:04:139 | [INFO] | 90707 | agcinvokerutility |  | AdobeGCUpdater |  |  | 2407496 | ***********AdobeGC Updater library End*******************
+06/23/26 01:14:04:139 | [DEBUG] | 90707 | agcinvokerutility |  | AdobeGCInvokerUtilityHelper |  |  | 2407496 | AdobeGC_ReleaseRef called.
+06/23/26 01:14:06:794 | [INFO] | 90716 | AdobeGCClient |  | GCClientMain |  |  | 2407952 | *********** Adobe GCClient Launched = 9.1.0.50 ************
+06/23/26 01:14:06:794 | [INFO] | 90716 | AdobeGCClient |  | GCClientMain |  |  | 2407952 | Initiating workflow
+06/23/26 01:14:06:794 | [INFO] | 90716 | AdobeGCClient |  | GCClientMain |  |  | 2407952 | Client request processing started
+06/23/26 01:14:06:795 | [INFO] | 90716 | AdobeGCClient |  | GCClientMain |  |  | 2407952 | Lock acquired, continue with the workflow
+06/23/26 01:14:06:795 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCClientImpl |  |  | 2407952 | Initializing client workflow
+06/23/26 01:14:06:795 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCClientImpl |  |  | 2407952 | Trying to acquire the semaphore
+06/23/26 01:14:06:796 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCClientImpl |  |  | 2407952 | Semaphore acquired
+06/23/26 01:14:06:806 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCClientImpl |  |  | 2407952 | Country is allowllisted
+06/23/26 01:14:06:806 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCClientImpl |  |  | 2407952 | Performing state data access test on all dbs
+06/23/26 01:14:06:806 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 2407952 | State data access test started
+06/23/26 01:14:06:806 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 2407952 | Performing a query to read data from AdobeNGLAppIDMap.db
+06/23/26 01:14:06:807 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 2407952 | Query succeeded in reading data from AdobeNGLAppIDMap.db
+06/23/26 01:14:06:807 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 2407952 | Performing a query to write test data into AdobeNGLAppIDMap.db
+06/23/26 01:14:06:812 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 2407952 | Query succeeded in writing test data into AdobeNGLAppIDMap.db
+06/23/26 01:14:06:812 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 2407952 | Performing a query to delete previosuly written test data from AdobeNGLAppIDMap.db
+06/23/26 01:14:06:813 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 2407952 | Query succeeded in delete test data from AdobeNGLAppIDMap.db
+06/23/26 01:14:06:813 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 2407952 | Reading test data from PrimaryPCD
+06/23/26 01:14:06:824 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 2407952 | Succeeded in reading test data into PrimaryPCD
+06/23/26 01:14:06:824 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 2407952 | Reading list of subdomains from CachePCD
+06/23/26 01:14:06:840 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 2407952 | Succeeded in reading subdomains from CachePCD
+06/23/26 01:14:06:840 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 2407952 | Writing test data into CachePCD
+06/23/26 01:14:06:841 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 2407952 | Succeeded in writing test data into CachePCD
+06/23/26 01:14:06:841 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 2407952 | Deleting test data previously written to CachePCD
+06/23/26 01:14:06:841 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCStateDataAccessTest |  |  | 2407952 | Succeeded in deleting test data from CachePCD
+06/23/26 01:14:06:841 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCNotifAuditEvents |  |  | 2407952 | Sending notification audit evens
+06/23/26 01:14:06:841 | [ERROR] | 90716 | AdobeGCClient |  | AdobeGCNotifAuditEvents |  |  | 2407952 | Failed to fetch NextNotifAuditEventsTimestamp. Error: 3
+06/23/26 01:14:06:842 | [ERROR] | 90716 | AdobeGCClient |  | SQLiteServiceManagerLog |  |  | 2407952 | sqlite3_get_table failed error code: 1, extended error code:1, error message: no such table: NotifAuditEvents
+06/23/26 01:14:06:842 | [ERROR] | 90716 | AdobeGCClient |  | AdobeGCNotifAuditEvents |  |  | 2407952 | Failed to fetch notification audit events. Error: 2
+06/23/26 01:14:06:843 | [INFO] | 90716 | AdobeGCClient |  | UMIUtils |  |  | 2407952 | Successfully fetched UMI json string
+06/23/26 01:14:06:844 | [INFO] | 90716 | AdobeGCClient |  | UMIUtils |  |  | 2407952 | Parsing of UMI data successful
+06/23/26 01:14:06:846 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCWorkflowImpl |  |  | 2407952 | istargeted flag read
+06/23/26 01:14:06:914 | [INFO] | 90716 | AdobeGCClient |  | AIDWrapper |  |  | 2407952 | AID library loaded successfully
+06/23/26 01:14:06:914 | [INFO] | 90716 | AdobeGCClient |  | AIDWrapper |  |  | 2407952 | Getting list of NGL based installed products
+06/23/26 01:14:06:944 | [WARN] | 90716 | AdobeGCClient |  | AIDWrapper |  |  | 2407952 | Memory not sufficient for fetching installed products from hyperdrive, size req = 2571
+06/23/26 01:14:06:954 | [INFO] | 90716 | AdobeGCClient |  | AIDWrapper |  |  | 2407952 | Successfully fetched list of installed products in updated memory.
+06/23/26 01:14:06:954 | [INFO] | 90716 | AdobeGCClient |  | AIDWrapper |  |  | 2407952 | AID response parsing started with filter: HD
+06/23/26 01:14:06:954 | [WARN] | 90716 | AdobeGCClient |  | AIDWrapper |  |  | 2407952 | Skipping non-HD InstallerType 'PIM', SAPCode:KCCCADS
+06/23/26 01:14:06:954 | [INFO] | 90716 | AdobeGCClient |  | AIDWrapper |  |  | 2407952 | AID response parsing completed
+06/23/26 01:14:06:954 | [INFO] | 90716 | AdobeGCClient |  | NGLAppIDLookup |  |  | 2407952 | Getting NGLAppId
+06/23/26 01:14:06:955 | [INFO] | 90716 | AdobeGCClient |  | NGLAppIDLookup |  |  | 2407952 | NGL App ID Not Found in local Database
+06/23/26 01:14:06:955 | [INFO] | 90716 | AdobeGCClient |  | NGLAppIDLookup |  |  | 2407952 | Returning NGLAppId
+06/23/26 01:14:06:955 | [INFO] | 90716 | AdobeGCClient |  | NGLAppIDLookup |  |  | 2407952 | Getting NGLAppId
+06/23/26 01:14:06:955 | [INFO] | 90716 | AdobeGCClient |  | NGLAppIDLookup |  |  | 2407952 | NGL App ID Not Found in local Database
+06/23/26 01:14:06:955 | [INFO] | 90716 | AdobeGCClient |  | NGLAppIDLookup |  |  | 2407952 | Returning NGLAppId
+06/23/26 01:14:06:958 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 2407952 | Getting machine id
+06/23/26 01:14:06:958 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Starting up SLCore 2.0 Release (build 2.0.1.360321).
+06/23/26 01:14:06:958 | [ERROR] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | user based licensing: 0
+06/23/26 01:14:06:958 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Service construction took 0.0 ms and succeed.
+06/23/26 01:14:06:959 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Shutting down SLCore 2.0 Release (build 2.0.1.360321).
+06/23/26 01:14:06:959 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Service destruction took 0.1 ms and succeed.
+06/23/26 01:14:06:960 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 2407952 | machine id is lvDX0jLK0gbZyF+P50wexKoQAyVqjuma
+06/23/26 01:14:06:961 | [INFO] | 90716 | AdobeGCClient |  | OSUtilitiesMac |  |  | 2407952 | arm64 architecture value = 1
+06/23/26 01:14:06:962 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 2407952 | Reading AGS service status
+06/23/26 01:14:06:967 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 2407952 | Reading AGM service status
+06/23/26 01:14:06:970 | [ERROR] | 90716 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 2407952 | Last updateCheck request status read : Success
+06/23/26 01:14:06:970 | [ERROR] | 90716 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 2407952 | Last update check attempted timestamp read : 1782067236000
+06/23/26 01:14:06:971 | [ERROR] | 90716 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 2407952 | Failed to read client source of installation: 3
+06/23/26 01:14:06:971 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 2407952 | Successfully fetched all replay write status records
+06/23/26 01:14:06:971 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 2407952 | Products installed on the machine, sending fetch rules
+06/23/26 01:14:06:971 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | Fetching Rules started
+06/23/26 01:14:06:973 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | __OOBELIB_LOG_FILE__
+06/23/26 01:14:06:973 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Dispatch table loaded from path: /Library/Application Support/Adobe/AdobeGCClient/AdobeGCClient.app/..//dispatchtable.xml 
+06/23/26 01:14:06:980 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | (re)load Local Dispatch Table status-[0].
+06/23/26 01:14:06:980 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Scope : [2]
+06/23/26 01:14:06:980 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Setting scope to GM
+06/23/26 01:14:06:980 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | AdobeIALClient 1.0 Release (build 1.0.6.3) initializing session...
+06/23/26 01:14:06:980 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCClientNSLookup |  |  | 2407952 | Verifying if server domain is blocked
+06/23/26 01:14:06:981 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | EndPoint requested: [FetchRulesV2]
+06/23/26 01:14:06:981 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Length of the URL: [30]
+06/23/26 01:14:06:981 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Returning from getEndpointAddr: [0]
+06/23/26 01:14:06:981 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | EndPoint requested: [FetchRulesV2]
+06/23/26 01:14:06:981 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Length of the URL: [30]
+06/23/26 01:14:06:981 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | URL found [https://gcos.adobe.io/rules/v2]
+06/23/26 01:14:06:981 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Returning from getEndpointAddr: [0]
+06/23/26 01:14:06:989 | [INFO] | 90716 | AdobeGCClient |  | ReplayDataWrapper |  |  | 2407952 | ReplayData guid:7e9a06d0-396b-4002-91db-e8514d25f392, replay:ccc33640-305b-44be-a7e3-bc95ef6a2368, time:1782089082000
+06/23/26 01:14:06:989 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | HTTPCommunicationAgent::processMessage Type:[POST] URI:[https://gcos.adobe.io/rules/v2] extURL:[].
+06/23/26 01:14:08:659 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | HTTP Request Status code 200.
+06/23/26 01:14:08:659 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | HTTPCommunicationAgent- Return Code:[0] response size-[3373] time taken-[1670.49]ms.
+06/23/26 01:14:08:668 | [INFO] | 90716 | AdobeGCClient |  | IALClient |  |  | 2407952 | successfully cleared replay write status from database
+06/23/26 01:14:08:688 | [INFO] | 90716 | AdobeGCClient |  | IALClient |  |  | 2407952 | Parsing FetchRule response successful
+06/23/26 01:14:08:688 | [INFO] | 90716 | AdobeGCClient |  | IALClient |  |  | 2407952 | Parsing successful
+06/23/26 01:14:08:688 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | AdobeGC Fetching rules status - [0] took - [1707.97]ms.
+06/23/26 01:14:08:688 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | Rules successfully fetched
+06/23/26 01:14:08:689 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | Closing AdobeIALClient 1.0 Release (build 1.0.6.3) session.
+06/23/26 01:14:08:689 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | Fetching Rules ended
+06/23/26 01:14:08:689 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCUtilities |  |  | 2407952 | Setting flag UninstallAGM
+06/23/26 01:14:08:695 | [INFO] | 90716 | AdobeGCClient |  | UMIUtils |  |  | 2407952 | Successfully fetched UMI json string
+06/23/26 01:14:08:695 | [INFO] | 90716 | AdobeGCClient |  | UMIUtils |  |  | 2407952 | Parsing of UMI data successful
+06/23/26 01:14:08:701 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 2407952 | Checking if update is required or not
+06/23/26 01:14:08:701 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 2407952 | Latest Client version: 9.1.0.50
+06/23/26 01:14:08:702 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCVersionWrapper |  |  | 2407952 | File at /Library/Application Support/Adobe/AdobeGCClient/gcupdater.dylib is not a package
+06/23/26 01:14:08:703 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCVersionWrapper |  |  | 2407952 | Version of file 9.1.0.50
+06/23/26 01:14:08:703 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCVersionWrapper |  |  | 2407952 | File at /Library/Application Support/Adobe/AdobeGCClient/AGSService is not a package
+06/23/26 01:14:08:704 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCVersionWrapper |  |  | 2407952 | Version of file 9.1.0.50
+06/23/26 01:14:08:704 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCVersionWrapper |  |  | 2407952 | File at /Library/Application Support/Adobe/AdobeGCClient/Adobe Genuine Software Monitor Service is not a package
+06/23/26 01:14:08:704 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCVersionWrapper |  |  | 2407952 | Version of file 9.1.0.50
+06/23/26 01:14:08:704 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCClientHealthUtil |  |  | 2407952 | Checking CEF dependencies
+06/23/26 01:14:08:704 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 2407952 | Client Health Status is 0
+06/23/26 01:14:08:704 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 2407952 | Update not Required
+06/23/26 01:14:08:704 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 2407952 | SetNextUpdateCheckDate 
+06/23/26 01:14:08:705 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 2407952 | SetNextUpdateCheckDate Wait Period 86400
+06/23/26 01:14:08:705 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCClientFetchRuleWFImpl |  |  | 2407952 | SetNextUpdateCheckDate Wait Period Xtnd 1782281648
+06/23/26 01:14:08:706 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCPostRulesWorkflowImpl |  |  | 2407952 | Machine is non- targeted; SaveIsTargetFlagInSLCache 
+06/23/26 01:14:08:706 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCPostRulesWorkflowImpl |  |  | 2407952 | Machine is non-OOC targeted; SaveIsTargetFlagInSLCache 
+06/23/26 01:14:08:707 | [ERROR] | 90716 | AdobeGCClient |  | AdobeGCCheckSuppressPostRule |  |  | 2407952 | Post Rule Request Time flag read
+06/23/26 01:14:08:707 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCCheckSuppressPostRule |  |  | 2407952 | LastPostRuleRequestDurationPassed from cache 1782110683
+06/23/26 01:14:08:707 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCCheckSuppressPostRule |  |  | 2407952 | LastPostRuleRequestDurationPassed cached 1782110683 , curr 1782195248 res = 1
+06/23/26 01:14:08:707 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCWorkflowImpl |  |  | 2407952 | No Active LEID found
+06/23/26 01:14:08:707 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCOOCImpl |  |  | 2407952 | checking if valid ooc invocation
+06/23/26 01:14:08:707 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCOOCImpl |  |  | 2407952 | checking if ooc enabled
+06/23/26 01:14:08:707 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCOOCImpl |  |  | 2407952 | checking if ooc enabled
+06/23/26 01:14:08:707 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 2407952 | Processing of rules started
+06/23/26 01:14:08:707 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Starting up SLCore 2.0 Release (build 2.0.1.360321).
+06/23/26 01:14:08:707 | [ERROR] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | user based licensing: 0
+06/23/26 01:14:08:707 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Service construction took 0.0 ms and succeed.
+06/23/26 01:14:08:707 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Syncing to license store...
+06/23/26 01:14:08:710 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Dispatch table loaded from path: /Library/Application Support/Adobe/AdobeGCClient/AdobeGCClient.app/..//dispatchtable.xml 
+06/23/26 01:14:08:710 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | (re)load Local Dispatch Table status-[0].
+06/23/26 01:14:08:710 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Scope : [2]
+06/23/26 01:14:08:710 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Setting scope to GM
+06/23/26 01:14:08:710 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | EndPoint requested: [IngestAnalytics]
+06/23/26 01:14:08:710 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Length of the URL: [0]
+06/23/26 01:14:08:710 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Returning from getEndpointAddr: [0]
+06/23/26 01:14:08:711 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Found client mkey.
+06/23/26 01:14:08:713 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Loading license references...
+06/23/26 01:14:08:713 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Found 0 license file(s)
+06/23/26 01:14:08:713 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | License store synchronization took 6.2 ms and succeed.
+06/23/26 01:14:08:713 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 2407952 | Fetching App Launch Path of all LEIDS started
+06/23/26 01:14:08:716 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 2407952 | App Launch Path cannot be fetched from the PayloadCode= {ILST-23.0.3-64-ADBEADBEADBEADBEADBEA} , pdbStatus : 8
+06/23/26 01:14:08:717 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 2407952 | App Launch Path cannot be fetched from the PayloadCode= {IDSN-14.0.2-64-ADBEADBEADBEADBEADBEA} , pdbStatus : 8
+06/23/26 01:14:08:717 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 2407952 | App Launch Path cannot be fetched from the PayloadCode= {LTRM-11.5-32-ADBEADBEADBEADBEADBEADB} , pdbStatus : 8
+06/23/26 01:14:08:718 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 2407952 | App Launch Path cannot be fetched from the PayloadCode= {LRCC-4.4-32-ADBEADBEADBEADBEADBEADBE} , pdbStatus : 8
+06/23/26 01:14:08:718 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 2407952 | Fetching App Launch Path of all LEIDS Ended
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCSpecificRulesEngine |  |  | 2407952 | Processing of specific rules started
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCSpecificRulesEngine |  |  | 2407952 | Processing of specific rules completed
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCSpecificRulesEngine |  |  | 2407952 | Processing of specific rules started
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCSpecificRulesEngine |  |  | 2407952 | Processing of specific rules completed
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCSpecificRulesEngine |  |  | 2407952 | Processing of specific rules started
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCSpecificRulesEngine |  |  | 2407952 | Processing of specific rules completed
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCSpecificRulesEngine |  |  | 2407952 | Processing of specific rules started
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCSpecificRulesEngine |  |  | 2407952 | Processing of specific rules completed
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCGenericRulesEngine |  |  | 2407952 | Processing of generic rules started
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:718 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule started
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCHostfileRuleImpl |  |  | 2407952 | Processing of hostfile rule completed
+06/23/26 01:14:08:719 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 2407952 | Processing of Signature Rule started
+06/23/26 01:14:08:720 | [ERROR] | 90716 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 2407952 | Failed to fetch appExecutablePath for LEID: , file: OOBE/PDApp/P6/adobe_oobelib.dylib. Error: 3
+06/23/26 01:14:08:720 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCCodeSignWrapper |  |  | 2407952 | Invoked VerifyCodeSign for app: /Library/Application Support/Adobe/OOBE/PDApp/P6/adobe_oobelib.dylib
+06/23/26 01:14:08:720 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 2407952 | Invalid signature found for file path : /Library/Application Support/Adobe/OOBE/PDApp/P6/adobe_oobelib.dylib and failure cause = 3 with signer name = 
+06/23/26 01:14:08:720 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 2407952 | Processing the signature rule with default path configured in ProductInfo.xml LEID = 
+06/23/26 01:14:08:721 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 2407952 | Default Path configured for LEID :  = []
+06/23/26 01:14:08:721 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 2407952 | Path information not found for : OOBE/PDApp/P6/adobe_oobelib.dylib
+06/23/26 01:14:08:721 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 2407952 | Processing of signature rule V2 completed
+06/23/26 01:14:08:721 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 2407952 | Processing of Signature Rule started
+06/23/26 01:14:08:721 | [ERROR] | 90716 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 2407952 | Failed to fetch appExecutablePath for LEID: , file: OOBE/PDApp/P7/adobe_oobelib.dylib. Error: 3
+06/23/26 01:14:08:721 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCCodeSignWrapper |  |  | 2407952 | Invoked VerifyCodeSign for app: /Library/Application Support/Adobe/OOBE/PDApp/P7/adobe_oobelib.dylib
+06/23/26 01:14:08:721 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 2407952 | Invalid signature found for file path : /Library/Application Support/Adobe/OOBE/PDApp/P7/adobe_oobelib.dylib and failure cause = 3 with signer name = 
+06/23/26 01:14:08:721 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 2407952 | Processing the signature rule with default path configured in ProductInfo.xml LEID = 
+06/23/26 01:14:08:722 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 2407952 | Default Path configured for LEID :  = []
+06/23/26 01:14:08:722 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 2407952 | Path information not found for : OOBE/PDApp/P7/adobe_oobelib.dylib
+06/23/26 01:14:08:722 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCSignatureRuleImpl |  |  | 2407952 | Processing of signature rule V2 completed
+06/23/26 01:14:08:722 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCGenericRulesEngine |  |  | 2407952 | Processing of generic rules completed
+06/23/26 01:14:08:722 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Shutting down SLCore 2.0 Release (build 2.0.1.360321).
+06/23/26 01:14:08:722 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Service destruction took 0.1 ms and succeed.
+06/23/26 01:14:08:722 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 2407952 | Processing of rules completed
+06/23/26 01:14:08:722 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 2407952 | Processing of NGL rules started
+06/23/26 01:14:08:722 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 2407952 | Exited successfully from CreateNGLAppLaunchPathMap
+06/23/26 01:14:08:722 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 2407952 | Entered CreateNGLAppASNPMap function
+06/23/26 01:14:08:850 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 2407952 | successfully fetched list of asnps 
+06/23/26 01:14:08:853 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCRulesEngine |  |  | 2407952 | Processing of NGL rules completed
+06/23/26 01:14:08:853 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCOOCImpl |  |  | 2407952 | getting ooc invocation agent
+06/23/26 01:14:08:853 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCOOCImpl |  |  | 2407952 | checking if ooc enabled
+06/23/26 01:14:08:853 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Starting up SLCore 2.0 Release (build 2.0.1.360321).
+06/23/26 01:14:08:853 | [ERROR] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | user based licensing: 0
+06/23/26 01:14:08:853 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Service construction took 0.0 ms and succeed.
+06/23/26 01:14:08:855 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Shutting down SLCore 2.0 Release (build 2.0.1.360321).
+06/23/26 01:14:08:855 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Service destruction took 0.0 ms and succeed.
+06/23/26 01:14:08:855 | [INFO] | 90716 | AdobeGCClient |  | OSUtilitiesMac |  |  | 2407952 | arm64 architecture value = 1
+06/23/26 01:14:08:942 | [INFO] | 90716 | AdobeGCClient |  | ACCC Util |  |  | 2407952 | HeadLess Thor is installed.
+06/23/26 01:14:08:942 | [INFO] | 90716 | AdobeGCClient |  | ACCC Util |  |  | 2407952 | Adobe Creative Cloud is not installed.
+06/23/26 01:14:08:944 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCPostRulesWorkflowImpl |  |  | 2407952 | 	Payload cannot be fetched from the LEID , PCDClientStatus : 7
+06/23/26 01:14:08:946 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCPostRulesWorkflowImpl |  |  | 2407952 | Payload cannot be fetched from the LEID , PCDClientStatus : 7
+06/23/26 01:14:08:946 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | Posting Rules data started
+06/23/26 01:14:08:946 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Dispatch table loaded from path: /Library/Application Support/Adobe/AdobeGCClient/AdobeGCClient.app/..//dispatchtable.xml 
+06/23/26 01:14:08:946 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | (re)load Local Dispatch Table status-[0].
+06/23/26 01:14:08:946 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Scope : [2]
+06/23/26 01:14:08:946 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Setting scope to GM
+06/23/26 01:14:08:947 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | AdobeIALClient 1.0 Release (build 1.0.6.3) initializing session...
+06/23/26 01:14:08:947 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCClientNSLookup |  |  | 2407952 | Verifying if server domain is blocked
+06/23/26 01:14:08:947 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | EndPoint requested: [PostRulesData]
+06/23/26 01:14:08:947 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Length of the URL: [30]
+06/23/26 01:14:08:947 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Returning from getEndpointAddr: [0]
+06/23/26 01:14:08:947 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | EndPoint requested: [PostRulesData]
+06/23/26 01:14:08:947 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Length of the URL: [30]
+06/23/26 01:14:08:947 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | URL found [https://gcos.adobe.io/check/v1]
+06/23/26 01:14:08:947 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Returning from getEndpointAddr: [0]
+06/23/26 01:14:08:948 | [INFO] | 90716 | AdobeGCClient |  | ReplayDataWrapper |  |  | 2407952 | ReplayData guid:7e9a06d0-396b-4002-91db-e8514d25f392, replay:7619e8c4-8523-49d6-9bf6-7f9802672165, time:1782195248000
+06/23/26 01:14:08:948 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | HTTPCommunicationAgent::processMessage Type:[POST] URI:[https://gcos.adobe.io/check/v1] extURL:[].
+06/23/26 01:14:09:446 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | HTTP Request Status code 200.
+06/23/26 01:14:09:447 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | HTTPCommunicationAgent- Return Code:[0] response size-[199] time taken-[498.92]ms.
+06/23/26 01:14:09:447 | [INFO] | 90716 | AdobeGCClient |  | IALClient |  |  | 2407952 | Parsing PostRule response successful
+06/23/26 01:14:09:447 | [INFO] | 90716 | AdobeGCClient |  | IALClient |  |  | 2407952 | Parsing PostRule successful
+06/23/26 01:14:09:447 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | AdobeGC Posting rules data status - [0] took - [500.52]ms.
+06/23/26 01:14:09:447 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | Rules data successfully posted
+06/23/26 01:14:09:447 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | Closing AdobeIALClient 1.0 Release (build 1.0.6.3) session.
+06/23/26 01:14:09:447 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | Posting Rules data ended
+06/23/26 01:14:09:447 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCPostRulesWorkflowImpl |  |  | 2407952 | No active LEID found, no actionData with <web> found. 'NGL:0,VLEID:,APPLEID:'
+06/23/26 01:14:09:447 | [DEBUG] | 90716 | AdobeGCClient |  | AdobeGCNotificationWorkflowImpl |  |  | 2407952 | Posting rules succeeded but no wait duration, using default
+06/23/26 01:14:09:452 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCCheckSuppressPostRule |  |  | 2407952 | SaveNextPostRuleRequestTimestampInSLCache Wait Period 21600
+06/23/26 01:14:09:452 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCCheckSuppressPostRule |  |  | 2407952 | NextPostRulesRequestTimestamp Wait Period Xtnd 1782216849
+06/23/26 01:14:09:452 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCNotifAuditEvents |  |  | 2407952 | Sending notification audit evens
+06/23/26 01:14:09:453 | [ERROR] | 90716 | AdobeGCClient |  | AdobeGCNotifAuditEvents |  |  | 2407952 | Failed to fetch NextNotifAuditEventsTimestamp. Error: 3
+06/23/26 01:14:09:453 | [ERROR] | 90716 | AdobeGCClient |  | SQLiteServiceManagerLog |  |  | 2407952 | sqlite3_get_table failed error code: 1, extended error code:1, error message: no such table: NotifAuditEvents
+06/23/26 01:14:09:453 | [ERROR] | 90716 | AdobeGCClient |  | AdobeGCNotifAuditEvents |  |  | 2407952 | Failed to fetch notification audit events. Error: 2
+06/23/26 01:14:09:453 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Starting up SLCore 2.0 Release (build 2.0.1.360321).
+06/23/26 01:14:09:453 | [ERROR] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | user based licensing: 0
+06/23/26 01:14:09:453 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Service construction took 0.0 ms and succeed.
+06/23/26 01:14:09:454 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Shutting down SLCore 2.0 Release (build 2.0.1.360321).
+06/23/26 01:14:09:454 | [INFO] | 90716 | AdobeGCClient |  | SLCoreService |  |  | 2407952 | Service destruction took 0.1 ms and succeed.
+06/23/26 01:14:09:457 | [ERROR] | 90716 | AdobeGCClient |  | AdobeGCMachineEvents |  |  | 2407952 | Failed to fetch installer data
+06/23/26 01:14:09:457 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCValidatorAnalytics |  |  | 2407952 | Fetching validator analytics
+06/23/26 01:14:09:457 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCValidatorAnalytics |  |  | 2407952 | Successfully fetched validator analytics
+06/23/26 01:14:09:457 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCMachineEvents |  |  | 2407952 | SetNextMachineEventsTimestamp 
+06/23/26 01:14:09:457 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCMachineEvents |  |  | 2407952 | SetNextMachineEventsTimestamp Wait Period 86400
+06/23/26 01:14:09:458 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCMachineEvents |  |  | 2407952 | SetNextMachineEventsTimestamp Wait Period Xtnd 1782281649
+06/23/26 01:14:09:458 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCMachineEvents |  |  | 2407952 | Client not invoked by product launch. Skipping launch events
+06/23/26 01:14:09:458 | [ERROR] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | Sending machine events
+06/23/26 01:14:09:458 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Dispatch table loaded from path: /Library/Application Support/Adobe/AdobeGCClient/AdobeGCClient.app/..//dispatchtable.xml 
+06/23/26 01:14:09:458 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | (re)load Local Dispatch Table status-[0].
+06/23/26 01:14:09:459 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Scope : [2]
+06/23/26 01:14:09:459 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Setting scope to GM
+06/23/26 01:14:09:459 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | AdobeIALClient 1.0 Release (build 1.0.6.3) initializing session...
+06/23/26 01:14:09:459 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCClientNSLookup |  |  | 2407952 | Verifying if server domain is blocked
+06/23/26 01:14:09:459 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | EndPoint requested: [MachineEvents]
+06/23/26 01:14:09:459 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Length of the URL: [38]
+06/23/26 01:14:09:459 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Returning from getEndpointAddr: [0]
+06/23/26 01:14:09:459 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | EndPoint requested: [MachineEvents]
+06/23/26 01:14:09:459 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Length of the URL: [38]
+06/23/26 01:14:09:459 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | URL found [https://gcos.adobe.io/machineevents/v1]
+06/23/26 01:14:09:459 | [INFO] |  |  |  | DispatchClientLib |  |  | 2407952 | Returning from getEndpointAddr: [0]
+06/23/26 01:14:09:460 | [INFO] | 90716 | AdobeGCClient |  | ReplayDataWrapper |  |  | 2407952 | ReplayData guid:7e9a06d0-396b-4002-91db-e8514d25f392, replay:7619e8c4-8523-49d6-9bf6-7f9802672165, time:1782195248000
+06/23/26 01:14:09:461 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | HTTPCommunicationAgent::processMessage Type:[POST] URI:[https://gcos.adobe.io/machineevents/v1] extURL:[].
+06/23/26 01:14:09:905 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | HTTP Request Status code 200.
+06/23/26 01:14:09:905 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | HTTPCommunicationAgent- Return Code:[0] response size-[327] time taken-[444.48]ms.
+06/23/26 01:14:09:905 | [INFO] | 90716 | AdobeGCClient |  | IALClient |  |  | 2407952 | Parsing response successful
+06/23/26 01:14:09:905 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | AdobeGC sending machine event- [0] took - [446.62]ms.
+06/23/26 01:14:09:905 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | machine events successfully sent to server
+06/23/26 01:14:09:905 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCIALWrapper |  |  | 2407952 | Closing AdobeIALClient 1.0 Release (build 1.0.6.3) session.
+06/23/26 01:14:09:905 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCClientImpl |  |  | 2407952 | Semaphore signalled
+06/23/26 01:14:09:905 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCScheduler |  |  | 2407952 | going to add task to scheduler
+06/23/26 01:14:09:981 | [INFO] | 90716 | AdobeGCClient |  | AdobeGCScheduler |  |  | 2407952 | gc invoker entry already exists
+06/23/26 01:14:09:982 | [INFO] | 90716 | AdobeGCClient |  | UMIUtils |  |  | 2407952 | Successfully fetched UMI json string
+06/23/26 01:14:09:983 | [INFO] | 90716 | AdobeGCClient |  | UMIUtils |  |  | 2407952 | Parsing of UMI data successful
+06/23/26 01:14:09:983 | [INFO] | 90716 | AdobeGCClient |  | GCClientMain |  |  | 2407952 | Client request processing completed
+06/23/26 01:14:09:983 | [INFO] | 90716 | AdobeGCClient |  | AsyncTaskManager |  |  | 2407952 | Out of 0 async tasks, completed:0, timedOut:0
+06/23/26 01:14:09:983 | [INFO] | 90716 | AdobeGCClient |  | GCClientMain |  |  | 2407952 | *********** Adobe GCClient Launch Ended ************
