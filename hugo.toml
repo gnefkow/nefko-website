@@ -1,7 +1,8 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://nefko.xyz/'
 languageCode = 'en-us'
 title = 'Kyle Becker'
 theme = 'nefkoPortfolio'
+enableRobotsTXT = true
 
 
 [params]
