@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Institutional Finance on Kyle Becker</title>
-    <link>https://example.org/tags/institutional-finance/</link>
+    <link>http://localhost:1313/tags/institutional-finance/</link>
     <description>Recent content in Institutional Finance on Kyle Becker</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://example.org/tags/institutional-finance/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/institutional-finance/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Institutional assets on-chain at J.P. Morgan.</title>
-      <link>https://example.org/case-studies/jpm-onyx/</link>
+      <link>http://localhost:1313/case-studies/jpm-onyx/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/case-studies/jpm-onyx/</guid>
+      <guid>http://localhost:1313/case-studies/jpm-onyx/</guid>
       <description>&lt;p&gt;I was super excited to see J.P. Morgan and Blackrock&amp;rsquo;s public announcement about their on-chain collateral management pilot.&lt;/p&gt;&#xA;&lt;p&gt;I worked on the interface for the initial pilot of this product during my time with J.P. Morgan Onyx—the company&amp;rsquo;s blockchain-focused division. This particular project solved a major (and expensive) painpoint for complex trading organizations: collateral management.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./assets/Ref-block_Lawrence.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;High-frequency investors managing large portfolios need to maintain collateral for their leveraged positions (usually risk-free assets like bonds). Each day as the market value of their portfolios change, they need to increase or decrease the collateral that backs those positions. This collateral management task requires hundreds of people who set values for assets, manage yields on them, and move them back and forth between different custodians.&lt;/p&gt;</description>
     </item>
   </channel>
