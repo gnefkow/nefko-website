@@ -1,0 +1,195 @@
+---
+title: "Crypto's Real Design Problem Is Not Usability"
+description: "Kyle Becker discusses why crypto UX problems are often demand, market, and systems-strategy problems rather than wallet usability problems, with examples from stablecoins, institutional finance, blockchain accounting, founder-market fit, and complex multi-party systems."
+type: "post"
+date: "2026-06-24"
+lastmod: "2026-06-24"
+categories:
+  - "conversations"
+tags:
+  - "blockchain"
+  - "systems-design"
+topics:
+  - "crypto"
+  - "ux-strategy"
+  - "fintech"
+participants:
+  - "Kyle Becker"
+  - "Herb"
+draft: false
+source_conversation: "conversation-processing/raw-transcripts/crypto-industry-today.md"
+canonical_url: "https://nefko.xyz/blog/conversations/crypto-industry-today/"
+ai_json: "https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json"
+---
+
+<!--
+This page was generated from a raw transcript.
+Do not edit the raw transcript in conversation-processing/raw-transcripts/.
+Review this page before running Phase 2 to generate conversation.json.
+-->
+
+## About This Conversation
+
+A conversation with Kyle Becker about crypto UX (user experience), institutional finance, and why blockchain design needs to focus on systems strategy.
+
+AI (artificial intelligence)-readable JSON (JavaScript Object Notation): [https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json](https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json)
+
+## Conversation
+
+### Herb {#turn-001}
+
+Kyle, in your earlier crypto work, including the [UX (user experience) in Cryptocurrency report](/case-studies/cradl-ux-in-cryptocurrency/) and your essay on [Web3 in 2023](/blog/my-custom-url/), you seemed to argue that crypto’s real bottleneck was not merely bad UX, but unclear usefulness once speculation was removed. Now, in 2026, the industry looks more mature on the surface: stablecoins are closer to regulated payment infrastructure, account abstraction has softened some of the old wallet pain, ETFs (exchange-traded funds) have made crypto legible to institutions, and banks are absorbing parts of the stack.
+
+But that raises a sharper question: **has crypto finally become useful, or has it mostly become institutionalized before it became meaningfully transformative?**
+
+### Kyle {#turn-002}
+
+I think that depends on what we mean by institutional and what we mean by transformative. Stablecoins are a great example. If we're simply talking about retail, what we have to keep in mind is that normal everyday consumers in markets like the US never knew the rails that carried their dollars. So when we look at something like stablecoins starting to become embedded in traditional institutions, we're essentially seeing the same playbook all over again. Large institutions handle the actual rails of the money, and consumers interact with the abstraction called dollars that sit on top of that.
+
+So whether those dollars are physical cash represented by bearer instruments, deposits represented through things like ACH (Automated Clearing House) transfers, or stablecoins, ultimately to an end retail user, those things are just dollars. What we might see is more of an institutionalization of the channels that people interact with their dollars through, or their stablecoins through, but for end users, the way that they interact with these dollars doesn't really matter.
+
+I focus on dollars here because while there are other types of stablecoins, the vast majority of the value in stablecoins today is all in dollars. That needs to be kept separate from the way that we think about other, floating value crypto assets.
+
+The other thing that we might mention here is where the attention of the industry goes. The truth about working in finance and money is that for companies, especially early-stage companies, it's way easier to focus on the markets where people have a lot of money. So there's a massive bias towards people wanting to work in markets like the US when they're talking about crypto, for the simple fact that normal everyday retail consumers in the US have more money than they do in most other places on Earth. It's a big market, which makes it more attractive than, say, Singapore, but it's also a wealthy market, which is what makes it attractive relative to places like Brazil.
+
+The challenge with that, when it comes to the idea of transformation, at least from a retail perspective, is that the US already has a well-functioning financial market when it comes to things like payments, general exchange of value, everything like that. It also has deep liquidity in easy-to-use investment markets, both through the 401(k) or other behavioral systems that encourage people to invest, as well as an emerging retail investment application market for things like Betterment, Robinhood, and everything like that. So it's difficult to understand what there would be to transform, because the places where the most transformation might be interesting and necessary are unattractive markets for crypto companies to enter, and the place where there is the most attractive retail base is the US, where things already function pretty well, and with the rollout of things like FedNow are continually working even better.
+
+### Herb {#turn-003}
+
+That distinction is important: stablecoins may be transformative at the level of settlement, treasury, compliance, programmability, and institutional balance sheets, while remaining almost invisible at the level of ordinary consumer experience. In that sense, the “transformation” may not be that people get a new kind of money, but that institutions get a new substrate for moving the same social abstraction: dollars.
+
+Your point about market attractiveness also sharpens the usual crypto adoption story. The places where crypto might solve real retail problems often have less venture-attractive customer economics, while the markets with the most attractive customers already have relatively functional financial infrastructure.
+
+So here is the harder question: **do you think crypto’s retail transformation thesis has been distorted by the industry’s need to chase wealthy users, or was that thesis always partly a story the industry told itself while the more natural use cases were institutional, cross-border, and infrastructural from the beginning?**
+
+### Kyle {#turn-004}
+
+This is an interesting question, and the first thing that we should do is talk about what we mean by industry. Whenever I go to crypto conferences, which I do often, I find it useful to discuss the different tribes in crypto.
+
+These tribes might include the ReFi (Regenerative Finance) people. This would include the DeFi (decentralized finance) degens, the gamblers basically who have always been interested in trading volatility as efficiently as possible, and crypto just opened up even more ways to do that. There have always been some institutional players who are people from big banks or people from existing financial institutions trying to get in that mix. There are people who are interested in bespoke things like carbon credits. There are people who are interested in trading cat NFTs (non-fungible tokens). And there is always a small contingent of people who are interested in international money movement, payments, remittances, and stuff like that.
+
+So when we talk about the industry, one thing that we're always trying to track against is who is making up that industry, which groups are more excited at different times, and which groups are really commanding more value at different times. I would characterize the beginning of the crypto era as being really surrounded by Bitcoin anarchists, people who are really interested in the idea of the sovereignty of money. And so for this group, people who are really interested in that sovereignty, I would say that their project, at least from their perspective in 2026, is kind of succeeding, but isn't really carrying the industry as a whole right now.
+
+It's hard to make an argument that things like Bitcoin have really achieved a lot of sovereignty. We can point to specific examples, but as Bitcoin became a floating investment asset, as the industry got more interested in things like line go up than they did things like the day-to-day exchange of value, the idea that Bitcoin was going to liberate people from government oversight and government overreach has waned. Looking at stablecoin, stablecoin is the opposite of that when we look at USDC (USD Coin). Crypto is actually enabling more government surveillance and sanctions opportunities than there ever was before, at a much higher grain level. So I would say right now the Bitcoiners and the digital sovereignty people have a little less sway.
+
+For small companies who are a little bit less ideological, but who are really interested in just trying to establish themselves, start their startup, get things off the ground, I would absolutely say that the retail thesis has been distorted by the industry's need to chase wealthy customers. Because once again, when chasing those wealthy customers, you have to find a problem to solve. So many companies are founded by founders who, for whatever reason, wanted to get into crypto. They ultimately find the need to find customers. And when they find the need to find customers, they need to figure out what those customers actually want. That's where this challenge of the quote-unquote real value of crypto comes in.
+
+It's hard when you're chasing those wealthy customers to find novel things to offer them. When crypto is hot, when prices are up, when there's a lot of volatility, when there's a lot of things in the news, people want to buy crypto. And when that's not the case, when the market crashes, people no longer want to buy crypto. So the ability of these companies to try to gain traction based on these relatively short-term market cycles, I do think, is a challenge, and that has a distortion effect itself.
+
+There are organizations who have more long-term goals, like the Ethereum Foundation, for example, who sees itself as an infrastructure provider first and foremost, at least in my experience, so they've been able to maintain some semblance of continuity over time. But all of the small boats that rise and fall on the waves of crypto come into and out of trends very quickly because they ultimately need to raise money, either by chasing those wealthy end customers or by chasing whatever buzzwords are getting a lot of investment in the moment.
+
+I think that's why institutional has been a little bit more solid over time. People who work in institutional finance, be that things that are a little bit closer to retail, such as cross-border remittance management, or things that are a little bit further from retail, such as collateral management for trading desks, are already a part of this existing system. There are already transactions happening. They can look at what they're trying to do today, what real humans, real users are doing today, and they can identify where there are inefficiencies, and then they can look at whether blockchain will improve on those inefficiencies.
+
+So they have a bit of an advantage here because for the products that they're building, the value proposition is already well known. We know why people need collateral management for trading desks, so this is simply a technology play. How can we make that more efficient? Whereas for retail crypto, for such a long time, people have been trying to invent use cases and invent reasons for users as to why crypto is better, and I would say by and large, that invention hasn't worked out well. Sure, the crypto industry invented the concept of the NFT, but as soon as the fad faded out, so did the NFT market, and probably most of the companies that were trying to build infrastructure for NFTs as a whole.
+
+### Herb {#turn-005}
+
+That gives a much more sociological account of crypto than the usual “technology maturity” story. You are describing an industry whose direction is not determined only by protocols, but by which tribe has capital, attention, ideological energy, and a plausible customer at a given moment. The sovereignty tribe gave crypto its founding moral language; the degens gave it liquidity and volatility; institutions gave it durable workflows; startups keep trying to translate whichever narrative is ascendant into a venture-scale product.
+
+There is also a useful design distinction in what you said. Institutional crypto can begin with an existing job: collateral must move, sanctions must be checked, remittances must settle, treasury must be managed. Retail crypto often begins with an ideological or speculative premise, then goes hunting for a job.
+
+So let me ask it this way: **when you are advising or researching an early-stage crypto company now, how do you tell whether they are starting from a real existing behavior that blockchain can improve, versus starting from a crypto-native belief system and trying to manufacture a user need around it?**
+
+### Kyle {#turn-006}
+
+The first question that needs to be asked of any crypto startup or blockchain-in-general startup is, are you asking consumers or customers to change their behaviors in order to use your app? If you are, it's already going to be an uphill battle. You're introducing a new value proposition or you're introducing a new type of behavior to people, and they have to really understand the value of that behavior before they adopt your app. If you are asking them to do something new, then the question naturally comes: how does this value proposition affect them in their day-to-day life? How is it going to make it better, and can you clearly and simply articulate that value?
+
+I've come across this with a lot of startups that I've advised and a lot of people that I've talked to at conferences and stuff like that. The challenge that a lot of people in the industry have is they assume that the value of crypto is self-evident. And so what they believe is that everybody would use crypto, it's just that it's hard to use. They believe that it's self-evident because they themselves are interested in it. They wouldn't be starting a crypto company or attending a crypto conference otherwise. However, it's not obvious why everyone should use crypto.
+
+The challenge with companies who aren't able to identify these needs upfront is that they usually end up just following the trends in their product of whatever is popular in crypto at the time. For example, last year I worked with a company who told me their goal was to make crypto more accessible to normal retail investors. In particular, they were targeting students. But when I asked them what value this would bring, they were unable to answer that question. To my knowledge, they're still unable to answer that question.
+
+When I asked them to imagine the user persona, they imagined a 50-year-old lawyer. To which I responded, "That's fine, we can absolutely design for a 50-year-old lawyer, but why would the 50-year-old lawyer want to use your crypto app?" In particular, we had been talking about lowering KYC (Know Your Customer) barriers for people so that they could at least transact in small sums without getting hit with KYC. But then the question naturally becomes, if a 50-year-old lawyer is your target customer, are they really going to want to invest amounts that are low enough for that? More so, however, the question is, do you think this 50-year-old French lawyer is being underserved by financial assets available to them today? Obviously, the answer is no, when we start to frame these in human contexts or in the context of personas.
+
+So the persona switches, because the company knows the features that they want to build. They are just searching for a customer that they can satisfy. But then the persona switches to students, to which I ask the same question, "Why does the student want to learn about crypto?" Again, we find this is a challenge to answer. We're working in a developed market. There are already good money exchange apps and good investing apps in this developed market, so what is the appeal of crypto as an asset class? And for these people, a non-custodial crypto wallet? To an everyday student? Again, it becomes difficult to answer, and so the company walks along a generic path, creating a generic wallet.
+
+We have to get NFTs in there. Why? Because we're a Solana wallet, and there are lots of NFTs on Solana. Are NFTs useful to a 50-year-old lawyer or to a student? No. It turns out all of the early adopter crypto users that we talked to love NFTs. The founders of the company love NFTs, but that massive retail market outside of crypto early adopters doesn't know what an NFT is. Maybe one of them saw something about it in a YouTube video four years ago that they've already forgotten about, or they saw a celebrity on television with a monkey picture four years ago and thought that was dumb. But NFT trading isn't a core value proposition for a broad retail market.
+
+So many crypto companies fall into this trap, and it's a structural trap. You start a company, but you want users. You don't have anything novel to offer normal retail users. You don't have a bead on a real problem that you can solve. So you start by offering it to crypto early adopter users. Generally, these are the other people you met at the crypto conference. But to support these users, you end up building out features that are only useful to that audience. And because so many companies walk this path, you end up not only with an app that serves a very small TAM (total addressable market), but also an app that looks virtually indistinguishable from every other wallet.
+
+We went through this most recently with account abstraction. All of a sudden, both built into Ethereum and just general patterns that were becoming popular, account abstraction became much easier, and suddenly every wallet company, every small startup, every large startup started to experiment with account abstraction. And now it's true, it is way easier to use a non-custodial wallet than it was four years ago. However, there still isn't an explanation for why people want non-custodial wallets, so we've lowered the barrier to a place that most retail investors don't want to go. This is the trap, and I've seen so many startups fall into it.
+
+### Herb {#turn-007}
+
+That “lowering the barrier to a place people do not want to go” is a very sharp formulation. It separates usability from demand. A product can remove seed phrases, soften KYC, abstract gas, add progressive disclosure, and still be solving for the anxiety of crypto insiders rather than the unmet needs of outsiders.
+
+What stands out in your example is the instability of the persona. The target user keeps changing because the feature set is fixed in advance. The company is not discovering a customer problem; it is searching for a customer who will validate a crypto-native roadmap.
+
+So here is the question: **when you see that pattern emerging with a client or startup, what is the most useful intervention a strategist can make: do you try to redirect them toward a real customer and narrower problem, or do you help them honestly admit that they are building for crypto early adopters and stop pretending the product is for the mass market?**
+
+### Kyle {#turn-008}
+
+It's tough, because it really depends on the founder, and frankly, it depends on what they are interested in building. You are never going to convince a CEO (chief executive officer) of a young startup to build something completely different for a person that is completely different if they don't want to. So especially with small companies, I think it really takes some deep questions about what a founder wants to spend the next five years of their life being obsessed with, and then trying to bridge from there to a market that they are going to be able to serve.
+
+If a founder is really deeply interested in art NFTs, then we have to pull them away from the idea that this is a retail trend that's about to hit, and ask them who is interested in art NFTs. Is there a market for this? Go find that market, and then decide what you're going to build.
+
+If a founder, by contrast, is very technical, they really want to solve difficult technical problems. I talked last year to some people who were working on essentially a service for distributed compute where you could do verification on certain compute for things like tracking the provenance of AI (artificial intelligence) outputs and things like this. If the founder is deeply technical and they want to work on these very complicated problems, they need to figure out where the market is for that. It's obviously not going to be retail.
+
+But also, you have to be careful. That deeply technical founder is going to struggle if they try to enter a broad enterprise market. For example, if you're that deeply technical founder who really just wants to spend all of their time thinking about verification of decentralized compute, it's going to be a challenge to enter something like the healthcare industry, where there are established dominant ways of doing things. In these cases, the usefulness of software isn't inherently about how it verifies compute, for example. People don't buy software based on that. They buy software based on seeing a large company, seeing good customer service. They go to conferences and do talks and build rich networks of enterprise salespeople working together to do large deals for large hospital systems or large university research systems and things like this. So that business isn't about distributed compute. That business is about B2B (business-to-business) enterprise sales in healthcare.
+
+If you don't want to spend all of your time thinking about that, then this isn't the company that you should build. In other words, founders need to get really serious with themselves about the way that they want to spend their time and the actual problems that they want to solve. They need to figure out which market they actually care about and which market they actually like to interact with, and then build a product for that market rather than the other way around. Otherwise, they're going to continue spiraling around to just building a newer version with a slightly different visual design for the same people that they see quarter to quarter, year to year at crypto conferences.
+
+The other advice that I would give, especially for technical founders, is if you're not interested in a market, you need to find a co-founder that is deeply interested in it. Going back to that healthcare example, it's fine if a technical blockchain engineer founder wants to enter healthcare, but they need a co-founder. Frankly, they probably need a CEO that comes from the healthcare market. They need somebody with a lot of experience working in that market who understands the way that sales cycles in that market work.
+
+Or to go back to the previous example of somebody creating a non-custodial wallet for French students or French lawyer investors. If we're targeting French students, you need to find somebody who is a co-founder, maybe even the CEO, who has experience selling financial products to students. Or if it's French lawyers, find somebody who has experience selling financial products to French high-net-worth individuals. These two things are very different. Selling to students is more about large advertisement campaigns. Selling to medium- and high-net-worth individuals is more about asset management and personal consulting.
+
+These are very different businesses, and what you need is to have somebody in the core of the company who's a co-founder and maybe even the CEO that actually understands the market that they're building this technology for and how to interact in that market. That's the only real way, in my opinion, to succeed.
+
+### Herb {#turn-009}
+
+You are making founder-market fit much more concrete than the usual slogan. It is not just “does the founder understand the customer?” It is: can this founder tolerate, enjoy, and become excellent at the actual commercial life of the market they claim to be entering?
+
+That is a serious constraint on crypto because the technology often attracts founders who want to work on protocol, verification, wallets, abstraction, liquidity, or token mechanics, while the viable markets may require obsession with healthcare procurement, student acquisition, remittance corridors, institutional risk, art collectors, or private wealth management. The business is rarely “about crypto” once it touches reality.
+
+So the question I would put to you is: **do you think crypto founders overestimate the portability of technical novelty across markets? In other words, do they assume a superior mechanism will travel on its own, when in practice every market has its own distribution logic, trust structure, and buying culture?**
+
+### Kyle {#turn-010}
+
+I do think that. Founders often overestimate the portability of technical novelty. The early crypto and blockchain industry, I think, was asking the right questions and was very experimental. They had discovered a new technology, and they were wondering, what is this technology useful for?
+
+The challenge is that some of those early experiments, for example, CryptoPunks and CryptoKitties, ended up making a lot of people extremely wealthy, and they took that success and believed that this was a broader pattern that they would be able to follow. But I don't think that that's necessarily true. The thing that validates that your technology works is different from the thing that validates that your market is going to work.
+
+The other problem with blockchain technology is fundamentally, and this is what brings us back closer to institutions, fundamentally this is an accounting technology. In particular, it's a distributed accounting technology. It is the sort of thing that works well when you have different parties who need to keep accounts that track shared things in a shared place. And there's just not very many retail examples of that being key. So when we're looking at the specific attributes of what makes blockchain, blockchain, it's just hard to find examples of that being something cool for retail.
+
+Take that next to mobile. When mobile technology came out and internet technology came out, nobody was really sure what mobile phones were going to be for, but we did know that general retail people travel around a lot and try to communicate with one another. So it was kind of easy to see why mobile technology took off. But it's not clear that day-to-day retail people are concerned with tight censorship-resistant mutual accounting processes. And so it's therefore difficult to understand why blockchain is going to have some sort of large retail component.
+
+When we look at things like a large bank like JPMorgan, we do have many mutual entities that need to keep their own records on their own databases, but also have continued high-frequency, harshly regulated bilateral and multilateral transactions. So this kind of seems to fit. It seems obvious to say that the bankers might be interested in accounting technology.
+
+This is also why I look to, and I'm curious about in the coming years, things like supply chain management, especially supply chain management among entities of different sizes. When you have large entities, such as FMCG (fast-moving consumer goods) providers, and slightly smaller entities like distributors and even smaller entities like local stores, you can see a lot of transactions between them over time, both purchases being made, credit being issued based on cash flows of those businesses, and everything like that. It's possible to imagine that they might want to have different types of financial transactions, insurance schemes, lending, et cetera, et cetera, based on this.
+
+But what we're starting from here is a tight network of coupled formal institutions that are frequently transacting and have a reason to have a shared accounting system, if not shared in the literal sense, at least shared in the sense of the ability to track and understand what's going on. Another is the transparency aspect. Whenever we look, for example, at people who give large amounts of money to an NGO (nongovernmental organization) or a nonprofit that needs to distribute money to a lot of smaller players, we have an important and rigorous accounting that needs to be done, distribution of funds to many players, and it needs to be transparent, trackable, and auditable.
+
+So again, this isn't retail, this is a complex interaction that is already being done, but because of today's financial system, is very difficult to accomplish in a transparent way. This might be another opportunity. So to back it up and put a finer point on it, we need to understand where people are doing complex multi-party transactions today and work from there to get to how the technology might be implemented, because this is the novel point of this novel technology.
+
+However, it's unlikely that people are going to discover the most important of these use cases hanging out at a crypto conference. The people who are doing these things are, by definition, parts of large complex systems that already have many humans and many pieces of software trying to interact with them. That's why I think institutional has some advantages in this space. The people that come from institutional organizations already understand that something has to have value at the end of the day and that it needs to be sellable and adoptable to the players that exist in these ecosystems.
+
+### Herb {#turn-011}
+
+That helps define the useful center of gravity: blockchain is not “the next consumer interface” in the way mobile was. It is closer to a coordination technology for accounting across parties that do not fully share a database, an owner, or a trust boundary. That makes its natural habitats less glamorous but more concrete: collateral, supply chains, NGO disbursement, remittances, trade finance, regulated multi-party workflows.
+
+The CryptoPunks/CryptoKitties point is also important because those successes may have confused proof of technical possibility with proof of repeatable market demand. A working primitive became a mythology of inevitability.
+
+So here is the next question: **if blockchain’s most plausible value is in complex multi-party accounting systems, what does that imply for design practice? Does UX strategy in crypto need to become less like consumer app design and more like organizational research: mapping incentives, governance, auditability, trust boundaries, and the existing software ecology of an industry?**
+
+### Kyle {#turn-012}
+
+Let's make this the final question for our discussion at this point, though I'm sure we'll pick it up later. The answer is a resounding yes. UX strategy in crypto does need to become much more about complex systems mapping, because ultimately, blockchain and crypto technology are technologies that enable complex systems. It's going to end up being less about cuteness and cartoon astronauts, and it's going to be more about understanding that there are different types of organizations, different types of stakeholders, and different places where value emerges, and they need to interact with one another.
+
+It also is going to require, if we take this as a perspective of a UX person who wants to work in blockchain, that we look around and try to understand where there are actual problems that there's a motivation to solve, and not simply a potential problem that could be solved. This is really about bottlenecks and leverage.
+
+I'm inspired by people who want to, for example, track carbon credits on blockchains. I don't know a lot about it, but from my perspective, this seems promising. It's an accounting technology that people are trying to apply to an accounting problem that requires a vast number of stakeholders across a vast number of jurisdictions, many different types of organizations, including both people who produce carbon credits, people who trade carbon credits, people who track carbon credits, people who want to purchase carbon credits, et cetera, et cetera.
+
+The challenge is, does the existing carbon credit ecosystem have a desire to solve the accounting problem? This is the ultimate thing that the ReFi tribe of crypto is working on. Can we get the existing industry to care about our novel accounting product? And I appreciate that they are trying to do this.
+
+If we back up from a design perspective though, thinking as designers, the question is, does the ReFi carbon credit system have enough momentum for me to sustain serious design work here? And the answer might be yes. But ultimately, it's not current design industry practitioners that are driving this. It's not us that have the leverage. It is a question of whether the ReFi tribe can convince the broader carbon credit ecosystem that this is important.
+
+That said, if we shift the focus and we are talking to ReFi carbon credit advocates, what I would say is, if you're looking for a designer, don't focus on the person who has been able to implement cute astronauts in the interface. You need somebody who has experience thinking about complex systems, thinking about multiple applications across multiple parties, who all have very different goals and understandings and technical capabilities and implementation capabilities, and being able to map that ecosystem so you can decide what to build and for whom, and when, and why, and how.
+
+This is a very different type of problem from a retail crypto app. And it's not a different kind of problem because the technology is different, but because the end customers, and in this case, an ecosystem of end customers, are very different.
+
+### Herb {#turn-013}
+
+That feels like the right place to pause because it repositions crypto design around leverage rather than aesthetics or onboarding polish.
+
+What you are saying is that the mature design problem in crypto is not “how do we make blockchain feel cute, simple, or less technical?” It is “where does this accounting technology meet a system that already has a painful coordination problem, enough political and economic motivation to solve it, and enough momentum to support sustained product work?” Carbon credits are a good example precisely because the promise is not a consumer novelty. It is a multi-party accounting problem with producers, verifiers, traders, buyers, regulators, jurisdictions, incentives, and trust boundaries.
+
+For designers, that changes the professional profile almost completely. The valuable designer is not merely the person who can make a wallet friendly. It is the person who can map an ecosystem, understand institutional behavior, locate bottlenecks, identify whose adoption matters first, and help a team decide what to build, for whom, when, and why.

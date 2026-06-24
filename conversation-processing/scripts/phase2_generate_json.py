@@ -1,0 +1,208 @@
+#!/usr/bin/env python3
+"""Phase 2: generate AI-readable JSON after the human page is reviewed.
+
+This script reads:
+
+- content/blog/conversations/<slug>/index.md
+- data/conversations/<slug>.yaml
+
+It writes:
+
+- content/blog/conversations/<slug>/conversation.json
+- static/ai/index.json
+- static/ai/topics/<topic>.json
+
+It also updates index.md so the human page links to conversation.json.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from pathlib import Path
+from typing import Any
+
+from conversation_common import (
+    AI_INDEX_DIR,
+    AI_TOPICS_DIR,
+    CONVERSATION_DATA_DIR,
+    CONVERSATIONS_DIR,
+    ConversationError,
+    parse_markdown_turns,
+    parse_simple_yaml,
+    project_relative,
+    public_conversation_url,
+    public_json_url,
+    read_frontmatter,
+    today_iso,
+    write_frontmatter,
+)
+
+
+def list_value(metadata: dict[str, Any], key: str) -> list[str]:
+    value = metadata.get(key, [])
+    if isinstance(value, list):
+        return [str(item) for item in value]
+    if value:
+        return [str(value)]
+    return []
+
+
+def scalar_value(metadata: dict[str, Any], key: str, default: str = "") -> str:
+    value = metadata.get(key, default)
+    if isinstance(value, list):
+        return ", ".join(str(item) for item in value)
+    return str(value)
+
+
+def build_payload(slug: str, metadata: dict[str, Any], turns: list[dict[str, str]]) -> dict:
+    conversation_path = CONVERSATIONS_DIR / slug / "index.md"
+    json_path = CONVERSATIONS_DIR / slug / "conversation.json"
+    metadata_path = CONVERSATION_DATA_DIR / f"{slug}.yaml"
+
+    return {
+        "id": scalar_value(metadata, "id", slug),
+        "title": scalar_value(metadata, "title", slug.replace("-", " ").title()),
+        "canonical_url": scalar_value(metadata, "canonical_url", public_conversation_url(slug)),
+        "json_url": scalar_value(metadata, "json_url", public_json_url(slug)),
+        "source_type": "ai_interview",
+        "participants": list_value(metadata, "participants") or ["Kyle Becker", "Herb"],
+        "summary": scalar_value(metadata, "summary"),
+        "topics": list_value(metadata, "topics"),
+        "keywords": list_value(metadata, "keywords"),
+        "industries": list_value(metadata, "industries"),
+        "concepts": list_value(metadata, "concepts"),
+        "audiences": list_value(metadata, "audiences"),
+        "key_claims": list_value(metadata, "key_claims"),
+        "notable_quotes": list_value(metadata, "notable_quotes"),
+        "conversation_turns": turns,
+        "source_files": {
+            "raw_conversation": scalar_value(metadata, "source_path"),
+            "raw_conversation_sha256": scalar_value(metadata, "source_sha256"),
+            "conversation": project_relative(conversation_path),
+            "json_payload": project_relative(json_path),
+            "metadata": project_relative(metadata_path),
+        },
+        "last_updated": today_iso(),
+    }
+
+
+def write_json(path: Path, payload: Any) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
+def update_markdown_json_link(index_path: Path, json_url: str) -> None:
+    frontmatter, body = read_frontmatter(index_path)
+    frontmatter["ai_json"] = json_url
+    frontmatter["lastmod"] = today_iso()
+
+    link_line = f"AI-readable JSON: [{json_url}]({json_url})"
+    if "AI-readable JSON: pending" in body:
+        body = body.replace("AI-readable JSON: pending", link_line, 1)
+    elif "AI-readable JSON:" not in body:
+        marker = "## Conversation"
+        if marker in body:
+            body = body.replace(marker, f"{link_line}\n\n{marker}", 1)
+        else:
+            body = f"{link_line}\n\n{body}"
+
+    index_path.write_text(write_frontmatter(frontmatter, body), encoding="utf-8")
+
+
+def collect_payloads() -> list[dict[str, Any]]:
+    payloads: list[dict[str, Any]] = []
+    for json_path in sorted(CONVERSATIONS_DIR.glob("*/conversation.json")):
+        payloads.append(json.loads(json_path.read_text(encoding="utf-8")))
+    return payloads
+
+
+def write_ai_indexes(payloads: list[dict[str, Any]]) -> None:
+    AI_INDEX_DIR.mkdir(parents=True, exist_ok=True)
+    AI_TOPICS_DIR.mkdir(parents=True, exist_ok=True)
+
+    resources = [
+        {
+            "id": payload.get("id", ""),
+            "title": payload.get("title", ""),
+            "canonical_url": payload.get("canonical_url", ""),
+            "json_url": payload.get("json_url", ""),
+            "summary": payload.get("summary", ""),
+            "topics": payload.get("topics", []),
+            "keywords": payload.get("keywords", []),
+            "last_updated": payload.get("last_updated", ""),
+        }
+        for payload in payloads
+    ]
+
+    write_json(
+        AI_INDEX_DIR / "index.json",
+        {
+            "title": "AI-readable content index for nefko.xyz",
+            "description": "Structured index of conversation payloads and other AI-readable resources.",
+            "generated_at": today_iso(),
+            "resources": resources,
+        },
+    )
+
+    by_topic: dict[str, list[dict[str, Any]]] = {}
+    for resource in resources:
+        for topic in resource.get("topics", []):
+            by_topic.setdefault(str(topic), []).append(resource)
+
+    for topic, topic_resources in sorted(by_topic.items()):
+        write_json(
+            AI_TOPICS_DIR / f"{topic}.json",
+            {
+                "topic": topic,
+                "generated_at": today_iso(),
+                "resources": topic_resources,
+            },
+        )
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Generate conversation.json and AI indexes from reviewed content."
+    )
+    parser.add_argument("slug", help="Conversation slug under content/blog/conversations/.")
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+    slug = args.slug
+
+    index_path = CONVERSATIONS_DIR / slug / "index.md"
+    metadata_path = CONVERSATION_DATA_DIR / f"{slug}.yaml"
+    json_path = CONVERSATIONS_DIR / slug / "conversation.json"
+
+    if not index_path.exists():
+        raise ConversationError(f"Conversation page not found: {project_relative(index_path)}")
+
+    metadata = parse_simple_yaml(metadata_path)
+    turns = parse_markdown_turns(index_path)
+    payload = build_payload(slug, metadata, turns)
+
+    write_json(json_path, payload)
+    update_markdown_json_link(index_path, str(payload["json_url"]))
+    write_ai_indexes(collect_payloads())
+
+    print("Phase 2 complete.")
+    print(f"- Wrote {project_relative(json_path)}")
+    print(f"- Updated {project_relative(index_path)} with JSON URL")
+    print(f"- Updated {project_relative(AI_INDEX_DIR / 'index.json')}")
+    print(f"- Updated topic indexes in {project_relative(AI_TOPICS_DIR)}")
+    return 0
+
+
+if __name__ == "__main__":
+    try:
+        raise SystemExit(main())
+    except ConversationError as error:
+        print(f"Error: {error}", file=sys.stderr)
+        raise SystemExit(1)

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Systems-Design on Kyle Becker</title>
+    <link>https://nefko.xyz/tags/systems-design/</link>
+    <description>Recent content in Systems-Design on Kyle Becker</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nefko.xyz/tags/systems-design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Crypto&#39;s Real Design Problem Is Not Usability</title>
+      <link>https://nefko.xyz/blog/conversations/crypto-industry-today/</link>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://nefko.xyz/blog/conversations/crypto-industry-today/</guid>
+      <description>&lt;h2 id=&#34;about-this-conversation&#34;&gt;About This Conversation&lt;/h2&gt;&#xA;&lt;p&gt;A conversation with Kyle Becker about crypto UX (user experience), institutional finance, and why blockchain design needs to focus on systems strategy.&lt;/p&gt;&#xA;&lt;p&gt;AI (artificial intelligence)-readable JSON (JavaScript Object Notation): &lt;a href=&#34;https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json&#34;&gt;https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;conversation&#34;&gt;Conversation&lt;/h2&gt;&#xA;&lt;h3 id=&#34;turn-001&#34;&gt;Herb&lt;/h3&gt;&#xA;&lt;p&gt;Kyle, in your earlier crypto work, including the &lt;a href=&#34;https://nefko.xyz/case-studies/cradl-ux-in-cryptocurrency/&#34;&gt;UX (user experience) in Cryptocurrency report&lt;/a&gt; and your essay on &lt;a href=&#34;https://nefko.xyz/blog/my-custom-url/&#34;&gt;Web3 in 2023&lt;/a&gt;, you seemed to argue that crypto’s real bottleneck was not merely bad UX, but unclear usefulness once speculation was removed. Now, in 2026, the industry looks more mature on the surface: stablecoins are closer to regulated payment infrastructure, account abstraction has softened some of the old wallet pain, ETFs (exchange-traded funds) have made crypto legible to institutions, and banks are absorbing parts of the stack.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
