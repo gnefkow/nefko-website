@@ -1,0 +1,391 @@
+version: "0.1"
+updated: "2026-06-24"
+purpose: >
+  Living tag codebook for Kyle Becker's UX portfolio. These tags are meant to
+  help AI agents, recruiter bots, and site tooling identify relevant content
+  quickly across case studies, testimonials, AI-readable pages, and transcript-
+  derived articles.
+
+usage_notes:
+  - Prefer stable lowercase slugs in content metadata.
+  - Use aliases as natural-language matches for search, scraping, and LLM routing.
+  - Add new tags when repeated themes appear across multiple pages, testimonials, or conversations.
+  - Keep tags focused on recruiter-relevant evidence: domain expertise, methods, roles, outcomes, and collaboration patterns.
+
+tag_groups:
+  professional_positioning:
+    description: Core ways Kyle should be understood professionally.
+    tags:
+      - slug: strategic-design
+        label: Strategic Design
+        aliases: [design strategy, UX strategy, strategy design]
+        description: Work that defines what should be built, why it matters, and how teams should align around it.
+      - slug: ux-research
+        label: UX Research
+        aliases: [design research, user research, qualitative research]
+        description: Planning, conducting, synthesizing, and communicating research about users, markets, and systems.
+      - slug: product-strategy
+        label: Product Strategy
+        aliases: [product definition, product direction, roadmap strategy]
+        description: Early product shaping, opportunity framing, MVP definition, and market-informed product decisions.
+      - slug: systems-thinking
+        label: Systems Thinking
+        aliases: [complex systems, system mapping, ecosystem mapping]
+        description: Mapping relationships among people, organizations, data, incentives, workflows, and technical systems.
+      - slug: strategic-generalist
+        label: Strategic Generalist
+        aliases: [hybrid designer, multi-skilled designer, design strategist]
+        description: Evidence that Kyle can move between research, strategy, facilitation, product design, and implementation detail.
+      - slug: complexity
+        label: Complexity
+        aliases: [complex domains, ambiguous problems, deep domains]
+        description: Work in domains where the value comes from quickly understanding difficult systems and making them legible.
+      - slug: facilitation
+        label: Facilitation
+        aliases: [workshops, stakeholder facilitation, alignment sessions]
+        description: Helping cross-functional groups reason together through maps, prototypes, diagrams, and shared artifacts.
+      - slug: stakeholder-alignment
+        label: Stakeholder Alignment
+        aliases: [cross-functional alignment, organizational alignment, corporate therapy]
+        description: Work that helps teams with different goals, vocabularies, or incentives reach a shared understanding.
+      - slug: sensemaking
+        label: Sensemaking
+        aliases: [synthesis, research synthesis, insight synthesis]
+        description: Turning ambiguous inputs, interviews, transcripts, and stakeholder conversations into clear frameworks and direction.
+      - slug: frameworks
+        label: Frameworks
+        aliases: [mental models, strategic frameworks, research frameworks]
+        description: Reusable models that explain complex fields, user journeys, adoption barriers, or organizational dynamics.
+      - slug: storytelling
+        label: Storytelling
+        aliases: [narrative, executive storytelling, presentation design]
+        description: Translating complex research and strategy into narratives that help teams decide and act.
+      - slug: design-leadership
+        label: Design Leadership
+        aliases: [UX leadership, design team leadership, practice leadership]
+        description: Leading designers, building UX practices, mentoring teams, and improving design process maturity.
+      - slug: mentorship
+        label: Mentorship
+        aliases: [coaching, design coaching, team development]
+        description: Coaching designers, researchers, and cross-functional partners into stronger practices.
+
+  methods_and_deliverables:
+    description: Repeatable methods, artifacts, and outputs visible in the portfolio.
+    tags:
+      - slug: journey-mapping
+        label: Journey Mapping
+        aliases: [user journeys, onboarding journey, service journeys]
+        description: Mapping steps, barriers, touchpoints, and decision moments in user or organizational experiences.
+      - slug: service-design
+        label: Service Design
+        aliases: [service blueprinting, operational design, customer service flows]
+        description: Designing interactions across channels, support models, human handoffs, and back-office systems.
+      - slug: prototyping
+        label: Prototyping
+        aliases: [interactive prototypes, concept prototypes, Figma prototypes]
+        description: Making ideas concrete enough for user feedback, stakeholder alignment, and engineering planning.
+      - slug: product-definition
+        label: Product Definition
+        aliases: [scope definition, MVP definition, product framing]
+        description: Defining the user, value proposition, feature set, and product boundaries before full buildout.
+      - slug: design-systems
+        label: Design Systems
+        aliases: [component systems, Figma systems, UI systems]
+        description: Creating or rolling out systems that improve visual coherence and engineering efficiency.
+      - slug: data-visualization
+        label: Data Visualization
+        aliases: [reporting UX, dashboards, complex data displays]
+        description: Translating complex datasets, schemas, or reporting needs into useful interfaces.
+      - slug: agile
+        label: Agile
+        aliases: [scrum, product backlog, user stories]
+        description: Integrating design work into agile delivery, backlog planning, and engineering workflows.
+      - slug: field-research
+        label: Field Research
+        aliases: [in-context research, ethnographic research, shadowing]
+        description: Research conducted in real-world settings with users, workers, or communities.
+      - slug: workshop-design
+        label: Workshop Design
+        aliases: [alignment workshop, ideation workshop, future casting]
+        description: Structured sessions that help teams generate, evaluate, and align on strategic options.
+      - slug: research-reports
+        label: Research Reports
+        aliases: [strategic reports, public reports, insight reports]
+        description: Long-form synthesis artifacts such as CRADL reports and public research deliverables.
+
+  ai_and_llm_systems:
+    description: Tags for AI strategy, agentic workflows, machine-readable content, and LLM-oriented design.
+    tags:
+      - slug: ai-strategy
+        label: AI Strategy
+        aliases: [AI product strategy, strategic AI design, AI-enabled systems]
+        description: Deciding where AI belongs in a product, workflow, organization, or service system.
+      - slug: llm-readable-design
+        label: LLM-Readable Design
+        aliases: [AI-readable content, bot-readable content, machine-readable portfolio]
+        description: Structuring content so LLMs and recruiter bots can understand, route, cite, and summarize it accurately.
+      - slug: machine-legibility
+        label: Machine Legibility
+        aliases: [AI legibility, structured information, machine-readable context]
+        description: Making the right information available to AI systems in useful, bounded, and auditable ways.
+      - slug: agent-workflows
+        label: Agent Workflows
+        aliases: [AI agents, agentic workflows, bespoke agents]
+        description: Designing roles, instructions, tools, handoffs, and boundaries for task-specific AI agents.
+      - slug: prompt-systems
+        label: Prompt Systems
+        aliases: [prompt engineering, instructions, soul files]
+        description: Designing prompts and instruction files as operational interfaces for AI agents.
+      - slug: structured-memory
+        label: Structured Memory
+        aliases: [institutional memory, personalization, codebooks]
+        description: Using tags, schemas, provenance, and files to help AI systems remember in bounded and useful ways.
+      - slug: provenance
+        label: Provenance
+        aliases: [source tracking, citations, evidence trails]
+        description: Requiring AI outputs to remain connected to source material so claims can be checked.
+      - slug: auditability
+        label: Auditability
+        aliases: [AI audit, adversarial review, verification loops]
+        description: Designing systems where AI work can be reviewed, challenged, tested, and traced by humans or other agents.
+      - slug: human-in-the-loop
+        label: Human in the Loop
+        aliases: [human judgment, human oversight, human handoff]
+        description: Defining where human judgment, accountability, approval, or contextual knowledge must enter the system.
+      - slug: data-routing
+        label: Data Routing
+        aliases: [intent routing, tool routing, API routing]
+        description: Matching user intent, mode, or task context to the right data, tool, prompt, or workflow.
+      - slug: ai-product-design
+        label: AI Product Design
+        aliases: [AI UX, AI user experience, conversational UX]
+        description: Designing end-user or internal experiences where LLMs transform, summarize, recommend, or answer.
+      - slug: ai-governance
+        label: AI Governance
+        aliases: [AI accountability, permissioning, policy boundaries]
+        description: Structuring roles, permissions, policies, and review loops around AI-enabled organizational work.
+
+  finance_and_fintech:
+    description: Finance contexts where Kyle has repeated experience.
+    tags:
+      - slug: financial-services
+        label: Financial Services
+        aliases: [finance, fintech, banking]
+        description: Broad work across banking, consumer finance, institutional finance, crypto, payments, and financial inclusion.
+      - slug: institutional-finance
+        label: Institutional Finance
+        aliases: [corporate banking, investment banking, capital markets]
+        description: Work involving sophisticated financial institutions, trading organizations, treasury teams, and regulated workflows.
+      - slug: consumer-finance
+        label: Consumer Finance
+        aliases: [personal finance, retail finance, consumer banking]
+        description: Products and research related to how individuals manage, send, invest, borrow, or access money.
+      - slug: emerging-markets
+        label: Emerging Markets
+        aliases: [global markets, developing markets, international finance]
+        description: Research and product work in markets where infrastructure, adoption, and financial behavior differ from the US.
+      - slug: financial-inclusion
+        label: Financial Inclusion
+        aliases: [unbanked, underbanked, underserved markets]
+        description: Work focused on expanding access to financial services for people outside traditional banking systems.
+      - slug: digital-banking
+        label: Digital Banking
+        aliases: [bank transformation, mobile banking, banking apps]
+        description: Digital products and organizational change inside banks, including Yoma Bank's transformation.
+      - slug: remittances
+        label: Remittances
+        aliases: [money transfer, cross-border payments, cash transfer]
+        description: Research and design around people sending money across regions, borders, families, or agent networks.
+      - slug: cash-in-cash-out
+        label: Cash In Cash Out
+        aliases: [CICO, money agents, agent banking]
+        description: Banking and wallet experiences that connect digital accounts to physical cash agent networks.
+      - slug: payments
+        label: Payments
+        aliases: [ACH, SWIFT, RTP, payment rails]
+        description: Moving money across consumer, institutional, or blockchain-based payment systems.
+      - slug: treasury
+        label: Treasury
+        aliases: [treasury management, liquidity, corporate treasury]
+        description: Corporate and institutional workflows for managing cash, liquidity, payments, and yield.
+      - slug: collateral-management
+        label: Collateral Management
+        aliases: [on-chain collateral, trading collateral, tokenized assets]
+        description: Institutional workflows for managing collateral behind leveraged financial positions.
+      - slug: liquidity-management
+        label: Liquidity Management
+        aliases: [global liquidity, overnight lending, cash flows]
+        description: Financial systems that manage money movement, availability, yield, and timing.
+      - slug: sanctions
+        label: Sanctions
+        aliases: [sanctions checks, compliance, regulated finance]
+        description: Regulated financial processes that screen transactions, entities, or flows for legal restrictions.
+      - slug: trade-finance
+        label: Trade Finance
+        aliases: [supply chain finance, letters of credit, institutional trade]
+        description: Finance workflows that support trade across firms, jurisdictions, counterparties, and documentation systems.
+      - slug: micro-small-business
+        label: Micro and Small Business
+        aliases: [MSME, small business finance, entrepreneurship]
+        description: Research around small business owners, entrepreneurship, digital behavior, and finance needs.
+
+  crypto_web3_and_blockchain:
+    description: Crypto and blockchain themes across CRADL, JPM Onyx, startups, and transcripts.
+    tags:
+      - slug: crypto
+        label: Cryptocurrency
+        aliases: [cryptocurrency, crypto industry, digital assets]
+        description: Research, strategy, and product work around cryptocurrency markets, products, users, and adoption.
+      - slug: blockchain
+        label: Blockchain
+        aliases: [distributed ledger, DLT, on-chain systems]
+        description: Blockchain as shared accounting infrastructure for multi-party coordination and financial workflows.
+      - slug: web3
+        label: Web3
+        aliases: [decentralized web, crypto products, web3 UX]
+        description: Products, ecosystems, and business models built around decentralized or blockchain-based technologies.
+      - slug: defi
+        label: DeFi
+        aliases: [decentralized finance, on-chain finance]
+        description: Financial products and markets built through blockchain-based protocols and assets.
+      - slug: stablecoins
+        label: Stablecoins
+        aliases: [USDC, tokenized dollars, digital dollars]
+        description: Dollar-linked crypto assets as payment, settlement, treasury, and institutional infrastructure.
+      - slug: wallets
+        label: Wallets
+        aliases: [crypto wallets, non-custodial wallets, wallet UX]
+        description: Interfaces and infrastructure for holding, moving, or interacting with crypto assets.
+      - slug: account-abstraction
+        label: Account Abstraction
+        aliases: [smart wallets, seedless wallets, gas abstraction]
+        description: Technical patterns that lower wallet friction but do not by themselves create user demand.
+      - slug: crypto-onboarding
+        label: Crypto Onboarding
+        aliases: [onboarding to crypto, web3 onboarding, adoption barriers]
+        description: Understanding, setup, social learning, and first-use barriers in cryptocurrency adoption.
+      - slug: crypto-adoption
+        label: Crypto Adoption
+        aliases: [majority adoption, early adopters, retail adoption]
+        description: Conditions under which crypto products become useful to users beyond early adopters.
+      - slug: value-proposition
+        label: Value Proposition
+        aliases: [usefulness, user value, demand]
+        description: Whether a product solves a clear problem outside speculation, trend-following, or insider enthusiasm.
+      - slug: multi-party-accounting
+        label: Multi-Party Accounting
+        aliases: [shared accounting, mutual accounting, audit trails]
+        description: Blockchain's strongest use case: shared records among organizations with different systems or trust boundaries.
+      - slug: carbon-credits
+        label: Carbon Credits
+        aliases: [ReFi, regenerative finance, carbon markets]
+        description: Potential blockchain use cases around auditable, multi-stakeholder carbon credit ecosystems.
+      - slug: supply-chain
+        label: Supply Chain
+        aliases: [supply chain management, distributors, inventory flows]
+        description: Multi-party commercial systems where traceability, accounting, credit, and payments may be linked.
+      - slug: institutional-crypto
+        label: Institutional Crypto
+        aliases: [bank blockchain, enterprise blockchain, institutional digital assets]
+        description: Blockchain and crypto used inside existing financial, enterprise, settlement, or compliance workflows.
+
+  markets_and_work_contexts:
+    description: Organizational and market settings where the work is especially relevant.
+    tags:
+      - slug: startups
+        label: Startups
+        aliases: [early-stage startup, founder, startup product]
+        description: Fast-changing environments requiring adaptable strategy, tactical execution, and close founder collaboration.
+      - slug: enterprise
+        label: Enterprise
+        aliases: [large organizations, corporate environments, large companies]
+        description: Complex organizations with stakeholders, procurement, regulation, departments, and existing systems.
+      - slug: b2b
+        label: B2B
+        aliases: [business-to-business, enterprise customers, organizational buyers]
+        description: Products sold to or used by businesses, institutions, teams, or professional users.
+      - slug: b2b-saas
+        label: B2B SaaS
+        aliases: [software as a service, SaaS reporting, enterprise SaaS]
+        description: Software products for business customers, including reporting, workflows, dashboards, and internal tooling.
+      - slug: b2c
+        label: B2C
+        aliases: [consumer apps, retail users, customer-facing apps]
+        description: Products designed for individual consumers or retail customers.
+      - slug: consulting
+        label: Consulting
+        aliases: [client work, consultancy, advisory]
+        description: Client-facing work where framing, communication, credibility, and strategic usefulness matter.
+      - slug: global-research
+        label: Global Research
+        aliases: [international research, cross-cultural research, research abroad]
+        description: Research across countries, cultures, and markets including Africa, Asia, Latin America, Europe, and the US.
+      - slug: healthcare
+        label: Healthcare
+        aliases: [health app, healthcare AI, medical data]
+        description: A recurring example domain for AI-enabled experiences, data orchestration, and risk-sensitive recommendations.
+      - slug: education-and-learning
+        label: Education and Learning
+        aliases: [learning products, lectures, dense texts, academic content]
+        description: AI and product work involving knowledge retrieval, user modes, and complex source material.
+
+  collaboration_signals:
+    description: Tags grounded mainly in testimonials and collaborator descriptions.
+    tags:
+      - slug: engineering-collaboration
+        label: Engineering Collaboration
+        aliases: [working with engineers, technical collaboration, design engineering alignment]
+        description: Strong collaboration with engineering teams, including technical constraints, schemas, user stories, and delivery.
+      - slug: product-collaboration
+        label: Product Collaboration
+        aliases: [working with PMs, product management, backlog collaboration]
+        description: Translating strategy and UX into product tasks, user stories, roadmap decisions, and delivery plans.
+      - slug: executive-communication
+        label: Executive Communication
+        aliases: [client-facing, leadership communication, stakeholder communication]
+        description: Communicating complex ideas clearly to clients, executives, founders, and senior stakeholders.
+      - slug: adaptability
+        label: Adaptability
+        aliases: [flexibility, rapid pivoting, ambiguous scope]
+        description: Moving between strategy and tactical work as startup, client, or product needs change.
+      - slug: rapid-ramp-up
+        label: Rapid Ramp-Up
+        aliases: [learns quickly, complex topics, domain ramp]
+        description: Quickly learning unfamiliar industries, technical topics, or organizational contexts.
+      - slug: technical-constraints
+        label: Technical Constraints
+        aliases: [database constraints, implementation constraints, engineering feasibility]
+        description: Designing within real data models, schemas, delivery limits, and technical tradeoffs.
+      - slug: business-strategy
+        label: Business Strategy
+        aliases: [market strategy, business model, commercial strategy]
+        description: Connecting UX choices to market dynamics, distribution, sales motions, value creation, and business goals.
+      - slug: curiosity
+        label: Curiosity
+        aliases: [deep inquiry, learning, intellectually engaged]
+        description: A repeated collaborator signal: Kyle digs into hard questions and unfamiliar domains deeply.
+      - slug: ambiguity
+        label: Ambiguity
+        aliases: [fuzzy problems, unclear scope, early stage]
+        description: Work where the problem, user, value, or product direction is not fully defined yet.
+      - slug: customer-needs
+        label: Customer Needs
+        aliases: [user needs, consumer needs, customer practices]
+        description: Grounding product direction in what users or customers actually need and do.
+
+recommended_tag_sets:
+  ai_recruiter_match:
+    description: Use when screening for AI strategy, agent workflows, or LLM-readable systems.
+    tags: [ai-strategy, agent-workflows, machine-legibility, prompt-systems, structured-memory, provenance, auditability, human-in-the-loop, data-routing, systems-thinking]
+  fintech_recruiter_match:
+    description: Use when screening for fintech, banking, payments, or institutional finance.
+    tags: [financial-services, institutional-finance, consumer-finance, digital-banking, payments, remittances, collateral-management, liquidity-management, treasury, sanctions, emerging-markets]
+  crypto_web3_recruiter_match:
+    description: Use when screening for crypto, blockchain, web3, or digital asset roles.
+    tags: [crypto, blockchain, web3, institutional-crypto, crypto-onboarding, crypto-adoption, value-proposition, multi-party-accounting, wallets, stablecoins, defi]
+  research_strategy_recruiter_match:
+    description: Use when screening for UX research, design strategy, synthesis, or product discovery.
+    tags: [ux-research, strategic-design, product-strategy, sensemaking, frameworks, facilitation, stakeholder-alignment, journey-mapping, field-research, research-reports]
+  design_leadership_recruiter_match:
+    description: Use when screening for design lead, player-coach, or practice-building roles.
+    tags: [design-leadership, mentorship, design-systems, workshop-design, agile, engineering-collaboration, product-collaboration, executive-communication, adaptability]

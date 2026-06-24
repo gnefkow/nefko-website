@@ -3,6 +3,8 @@ User-agent: *
 {{ if hugo.IsProduction -}}
 Allow: /
 Sitemap: {{ "/sitemap.xml" | urls.AbsURL }}
+# AI-readable resource catalog: {{ "/ai/index.json" | urls.AbsURL }}
+# LLM instructions: {{ "/llms.txt" | urls.AbsURL }}
 {{ else -}}
 Disallow: /
 {{ end -}}

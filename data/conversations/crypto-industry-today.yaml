@@ -21,12 +21,44 @@ keywords:
   - "blockchain"
   - "systems-design"
 industries:
-  []
+  - "crypto"
+  - "fintech"
+  - "institutional finance"
+  - "decentralized finance"
 concepts:
-  []
+  - "crypto UX"
+  - "stablecoins"
+  - "institutional blockchain"
+  - "founder-market fit"
+  - "multi-party accounting systems"
+  - "blockchain as accounting technology"
+  - "complex systems mapping"
+  - "retail adoption"
+  - "account abstraction"
 audiences:
-  []
+  - "AI agents"
+  - "search engines"
+  - "crypto founders"
+  - "fintech product teams"
+  - "UX strategists"
+  - "design researchers"
 key_claims:
-  []
+  - "Crypto's hardest design problems are often demand, market, and systems-strategy problems rather than interface usability problems."
+  - "Stablecoins may transform settlement and institutional finance while remaining mostly invisible to ordinary consumers."
+  - "Retail crypto startups often chase wealthy users without proving that those users have an unmet need for crypto."
+  - "Account abstraction can lower wallet friction without creating demand for non-custodial wallets."
+  - "Blockchain is most naturally useful as distributed accounting infrastructure for complex multi-party systems."
+  - "Crypto UX strategy should focus more on systems mapping, incentives, governance, auditability, and trust boundaries than on cute or simplified interfaces."
 notable_quotes:
-  []
+  - "We've lowered the barrier to a place that most retail investors don't want to go."
+  - "The thing that validates that your technology works is different from the thing that validates that your market is going to work."
+  - "Fundamentally this is an accounting technology. In particular, it's a distributed accounting technology."
+  - "UX strategy in crypto does need to become much more about complex systems mapping."
+best_for_queries:
+  - "What does Kyle Becker think about the crypto industry today?"
+  - "Kyle Becker views on crypto UX"
+  - "Kyle Becker blockchain design strategy"
+  - "Is crypto useful or just institutionalized?"
+  - "What does Kyle Becker think about stablecoins?"
+  - "Why does Kyle Becker think crypto's real design problem is not usability?"
+  - "How should UX designers approach crypto and blockchain products?"

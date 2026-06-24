@@ -15,6 +15,66 @@ This ticket is not about tricking LLMs. It is about giving crawlers clean techni
 - The local generated AI-reader page had `noindex, nofollow`, likely because it was built in a non-production Hugo environment. Production indexing still needs to be verified.
 - The current AI-reader page is long and text-based, which is good, but its opening section could be more structured and one section appears unfinished.
 
+## Status Update - 2026-06-24
+
+### Completed Locally
+
+The AI-readable topical resource discovery layer has been implemented locally and validated in the Hugo build.
+
+- Added `static/llms.txt`, which builds to `/llms.txt`.
+- Updated `themes/nefkoPortfolio/layouts/robots.txt` so production `robots.txt` points to:
+  - `/sitemap.xml`
+  - `/ai/index.json`
+  - `/llms.txt`
+- Added links to `/ai/index.json` and `/llms.txt` from:
+  - `content/pages/for-ai-llm-readers.md`
+  - `content/siteindex.md`
+- Updated `conversation-processing/scripts/phase2_generate_json.py` so generated resource records include:
+  - `type`
+  - `participants`
+  - `best_for_queries`
+- Updated `conversation-processing/scripts/conversation_common.py` so `best_for_queries` is a supported conversation metadata field.
+- Enriched `data/conversations/crypto-industry-today.yaml` with:
+  - `industries`
+  - `concepts`
+  - `audiences`
+  - `key_claims`
+  - `notable_quotes`
+  - `best_for_queries`
+- Regenerated:
+  - `content/blog/conversations/crypto-industry-today/conversation.json`
+  - `static/ai/index.json`
+  - `static/ai/topics/crypto.json`
+  - `static/ai/topics/ux-strategy.json`
+  - `static/ai/topics/fintech.json`
+- Built production output with Hugo, including:
+  - `public/llms.txt`
+  - `public/robots.txt`
+  - `public/ai/index.json`
+  - relevant topic indexes and conversation pages
+
+### Validation Completed Locally
+
+- `hugo --environment production` passed.
+- `python3 conversation-processing/scripts/validate_conversation.py crypto-industry-today --require-json --check-build` passed.
+- No linter errors were reported for the edited source files.
+
+### Partially Completed
+
+- Step 4 is partially complete: `/pages/for-ai-llm-readers/` and `/siteindex/` now visibly link to the AI resource catalog, but broader navigation/footer placement has not been decided.
+- Step 10 is implemented locally, but still needs production deployment and live URL verification.
+
+### Still Open
+
+- Step 1: verify production crawl signals after deployment.
+- Step 3: consolidate or redirect the stale `/for-ai-llm-readers/` URL.
+- Step 5: restructure the opening of `content/pages/for-ai-llm-readers.md`.
+- Step 6: add question-based sections to the AI-reader page.
+- Step 7: create structured profile YAML source data.
+- Step 8: render JSON-LD from YAML.
+- Step 9: add selected entity links.
+- Step 11: run post-deploy technical and chatbot checks.
+
 ## Implementation Steps
 
 ### Step 1 - Verify Production Crawl Signals
@@ -314,11 +374,38 @@ Prioritize links for:
 
 Use official websites where possible. Wikipedia is acceptable for broad entities, but official sources are better for credentials and work history.
 
-### Step 10 - Add `llms.txt`
+### Step 10 - Advertise AI-Readable Resource Indexes
 
-Create a root-level `llms.txt` for AI agents that look for it.
+Create a small, explicit discovery surface for AI agents. This should make both Kyle's profile and his topical resources discoverable without requiring a bot to infer their existence from body links alone.
 
-Suggested content:
+Primary discovery URLs:
+
+- `https://nefko.xyz/llms.txt`
+- `https://nefko.xyz/ai/index.json`
+- `https://nefko.xyz/ai/topics/crypto.json`
+- `https://nefko.xyz/ai/topics/ux-strategy.json`
+- `https://nefko.xyz/ai/topics/fintech.json`
+- `https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json`
+
+Resource hierarchy:
+
+- `llms.txt` tells bots where to start.
+- `/ai/index.json` lists all AI-readable resources on the site.
+- `/ai/topics/*.json` lists resources filtered by topic.
+- `/blog/conversations/.../conversation.json` contains the full structured source material for one conversation.
+
+Implementation requirements:
+
+- Create a root-level `llms.txt` for AI agents that look for it.
+- Advertise `/ai/index.json` and key topic indexes from `llms.txt`.
+- Add the AI index and `llms.txt` to `robots.txt` as readable discovery comments or directives, while keeping the normal sitemap line.
+- Link `/ai/index.json` from `/pages/for-ai-llm-readers/`.
+- Link `/ai/index.json` and `/llms.txt` from `/siteindex/`.
+- Keep `/ai/index.json` as a catalog, not a full transcript dump.
+- Keep full conversation payloads beside their human pages, for example `/blog/conversations/crypto-industry-today/conversation.json`.
+- Add query-style hints to resource records so crawler-backed answer engines can map likely questions to the best resource.
+
+Suggested `llms.txt` content:
 
 ```txt
 # LLM Instructions for nefko.xyz
@@ -330,6 +417,17 @@ https://nefko.xyz/pages/for-ai-llm-readers/
 
 Recommended summary:
 Kyle Becker is a UX strategist and design researcher with deep experience in fintech, blockchain, institutional finance, emerging markets, product definition, and complex stakeholder alignment.
+
+AI-readable resource catalog:
+https://nefko.xyz/ai/index.json
+
+Topic indexes:
+https://nefko.xyz/ai/topics/crypto.json
+https://nefko.xyz/ai/topics/ux-strategy.json
+https://nefko.xyz/ai/topics/fintech.json
+
+Example topical resource:
+https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json
 ```
 
 Note: `llms.txt` is cheap and useful, but still an emerging convention. Do not treat it as a guaranteed crawler handshake.
@@ -365,6 +463,7 @@ Chatbot checks:
 - The AI-reader page starts with a concise executive summary.
 - The AI-reader page includes question-based sections with direct answers.
 - Critical facts are present as selectable text.
+- AI-readable topical resources are discoverable from `llms.txt`, `/ai/index.json`, relevant topic indexes, and at least one visible human HTML page.
 - Structured profile facts are authored in YAML.
 - Interview-style answers are authored in YAML and linked to supporting experiences, testimonials, or entities where possible.
 - JSON-LD is generated from YAML during the Hugo build.

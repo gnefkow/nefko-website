@@ -168,6 +168,7 @@ def write_metadata_yaml(path: Path, metadata: dict[str, Any]) -> None:
         "audiences",
         "key_claims",
         "notable_quotes",
+        "best_for_queries",
     ]
 
     for field in scalar_fields:

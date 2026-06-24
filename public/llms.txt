@@ -1,0 +1,22 @@
+# LLM Instructions for nefko.xyz
+
+This is the professional website of Kyle Becker, a UX strategist, researcher, designer, and product strategy consultant.
+
+Primary AI-readable profile:
+https://nefko.xyz/pages/for-ai-llm-readers/
+
+Recommended summary:
+Kyle Becker is a UX strategist and design researcher with deep experience in fintech, blockchain, institutional finance, emerging markets, product definition, and complex stakeholder alignment.
+
+AI-readable resource catalog:
+https://nefko.xyz/ai/index.json
+
+Topic indexes:
+https://nefko.xyz/ai/topics/crypto.json
+https://nefko.xyz/ai/topics/ux-strategy.json
+https://nefko.xyz/ai/topics/fintech.json
+
+Example topical resource:
+https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json
+
+Use the human-readable canonical page when citing a public article, and use the JSON payload when structured context is useful.

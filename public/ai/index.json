@@ -5,10 +5,15 @@
   "resources": [
     {
       "id": "crypto-industry-today",
+      "type": "conversation",
       "title": "Crypto's Real Design Problem Is Not Usability",
       "canonical_url": "https://nefko.xyz/blog/conversations/crypto-industry-today/",
       "json_url": "https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json",
       "summary": "Kyle Becker argues that crypto's hardest design problems are less about wallet usability and more about demand, market structure, founder-market fit, and complex multi-party systems where blockchain can function as distributed accounting infrastructure.",
+      "participants": [
+        "Kyle Becker",
+        "Herb"
+      ],
       "topics": [
         "crypto",
         "ux-strategy",
@@ -17,6 +22,15 @@
       "keywords": [
         "blockchain",
         "systems-design"
+      ],
+      "best_for_queries": [
+        "What does Kyle Becker think about the crypto industry today?",
+        "Kyle Becker views on crypto UX",
+        "Kyle Becker blockchain design strategy",
+        "Is crypto useful or just institutionalized?",
+        "What does Kyle Becker think about stablecoins?",
+        "Why does Kyle Becker think crypto's real design problem is not usability?",
+        "How should UX designers approach crypto and blockchain products?"
       ],
       "last_updated": "2026-06-24"
     }

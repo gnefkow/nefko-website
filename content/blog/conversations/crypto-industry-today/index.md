@@ -16,7 +16,7 @@ topics:
 participants:
   - "Kyle Becker"
   - "Herb"
-draft: false
+draft: "false"
 source_conversation: "conversation-processing/raw-transcripts/crypto-industry-today.md"
 canonical_url: "https://nefko.xyz/blog/conversations/crypto-industry-today/"
 ai_json: "https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json"
@@ -33,6 +33,8 @@ Review this page before running Phase 2 to generate conversation.json.
 A conversation with Kyle Becker about crypto UX (user experience), institutional finance, and why blockchain design needs to focus on systems strategy.
 
 AI (artificial intelligence)-readable JSON (JavaScript Object Notation): [https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json](https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json)
+
+AI-readable JSON: [https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json](https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json)
 
 ## Conversation
 

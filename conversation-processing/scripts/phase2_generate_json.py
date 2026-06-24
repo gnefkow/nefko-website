@@ -76,6 +76,7 @@ def build_payload(slug: str, metadata: dict[str, Any], turns: list[dict[str, str
         "audiences": list_value(metadata, "audiences"),
         "key_claims": list_value(metadata, "key_claims"),
         "notable_quotes": list_value(metadata, "notable_quotes"),
+        "best_for_queries": list_value(metadata, "best_for_queries"),
         "conversation_turns": turns,
         "source_files": {
             "raw_conversation": scalar_value(metadata, "source_path"),
@@ -128,12 +129,15 @@ def write_ai_indexes(payloads: list[dict[str, Any]]) -> None:
     resources = [
         {
             "id": payload.get("id", ""),
+            "type": "conversation",
             "title": payload.get("title", ""),
             "canonical_url": payload.get("canonical_url", ""),
             "json_url": payload.get("json_url", ""),
             "summary": payload.get("summary", ""),
+            "participants": payload.get("participants", []),
             "topics": payload.get("topics", []),
             "keywords": payload.get("keywords", []),
+            "best_for_queries": payload.get("best_for_queries", []),
             "last_updated": payload.get("last_updated", ""),
         }
         for payload in payloads
