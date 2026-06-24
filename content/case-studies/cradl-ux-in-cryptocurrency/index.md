@@ -2,6 +2,7 @@
 id: 105
 title: UX in Cryptocurrency
 description: "An in-depth UX analysis for the Crypto Research and Design Lab."
+short-title: "Report: UX in Crypto"
 client: Crypto Research and Design Lab
 type: post
 featured_image: "Cradl_UX-in-Cryptocurrency.png"
@@ -10,6 +11,11 @@ categories:
 - blockchain
 - work
 - web3
+tags:
+- Design Research
+- Reports
+- Cryptocurrenty
+- Web3
 ---
 
 

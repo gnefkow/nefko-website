@@ -3,10 +3,17 @@ id: 74
 title: Institutional assets on-chain at J.P. Morgan.
 description: "Working on web3 tech at the world's largest bank."
 client: "J.P. Morgan"
+short-title: "Case Study: JPM"
 type: case-study
 categories:
 - work
 featured_image: "hero.png"
+tags:
+- Institutional Finance
+- Design Strategy
+- Cryptocurrenty
+- Web3
+- Blockchain
 ---
 
 

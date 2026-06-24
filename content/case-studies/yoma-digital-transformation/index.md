@@ -2,7 +2,9 @@
 id: 90
 title: A Digital Transformation in a Burmese Bank
 description: "Builing and leading a UX team in Myanmar’s 70% un-banked market."
+short-title: "Case Study: Yoma Bank"
 type: case-study
+featured_image: "hero.jpg"
 categories:
 - finance
 - emerging markets

@@ -1,0 +1,18 @@
+{{/*
+  home-hero-block: Home page intro heading and subtitle.
+
+  Parameters:
+  - title (required): Main heading.
+  - text (optional): Subtitle below the heading.
+*/}}
+{{ $title := .Get "title" }}
+{{ $text := .Get "text" }}
+
+<div class="home-hero-block">
+  {{ with $title }}
+    <h1 class="home-hero-block__title h1 mt0 mb2">{{ . }}</h1>
+  {{ end }}
+  {{ with $text }}
+    <h3 class="home-hero-block__text h3 mt0 mb0">{{ . }}</h3>
+  {{ end }}
+</div>

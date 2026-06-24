@@ -2,18 +2,22 @@
 {{/*
   This template is the same as the default and is here to demonstrate that if you have a content directory called "post" you can create a layouts directory, just for that section.
    */}}
-  <article class="pa3 pa4-ns nested-copy-line-height">
-    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "text-secondary" }}">
-      {{ .Content }}
-    </section>
-    <aside class="flex-ns mt5 flex-wrap justify-around">
-      {{ range .Paginator.Pages }}
-        <div class="w-100 w-30-l mb4 relative bg-primary">
-          {{ .Render "summary" }}
-        </div>
-      {{ end }}
-    </aside>
-    {{/* former internal template */}}
-    {{ partial "pagination.html" . }}
+  <article class="nested-copy-line-height">
+    <div class="page-gutter pv3 pv4-l">
+      <section class="cf f4 tc-l center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "text-secondary" }}">
+        {{ .Content }}
+      </section>
+    </div>
+    <div class="page-gutter">
+      <aside class="flex-ns mt5 flex-wrap justify-around">
+        {{ range .Paginator.Pages }}
+          <div class="w-100 w-30-l mb4 relative bg-primary">
+            {{ .Render "summary" }}
+          </div>
+        {{ end }}
+      </aside>
+      {{/* former internal template */}}
+      {{ partial "pagination.html" . }}
+    </div>
   </article>
 {{ end }}

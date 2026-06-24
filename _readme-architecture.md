@@ -62,6 +62,40 @@ max-width: 34em;
 max-width: 550px;
 ```
 
+### Page column layout (gutter + reading width)
+
+Tachyons sets `box-sizing: border-box` on most elements. **Do not put horizontal padding and `measure-wide` on the same element** — at the `60em` (960px) breakpoint, `ph5-l` padding eats into the `34em` cap and the content column suddenly narrows.
+
+**Use two layers instead:**
+
+```html
+<div class="page-gutter pv3 pv4-l">
+  <article class="measure-wide center ...">
+    <!-- content -->
+  </article>
+</div>
+```
+
+| Layer | Class | Job |
+|---|---|---|
+| Outer | `.page-gutter` | Horizontal inset only (`1rem`; `4rem` at `60em`) — full viewport width |
+| Inner | `.measure-wide` | Reading column max-width (`34em`) — **no horizontal padding** |
+
+**Rules:**
+- Layout templates (`home.html`, `list.html`, etc.) own the page column — not shortcodes.
+- Shortcodes render content only; do not duplicate `measure-wide` or `ph3 ph5-l` wrappers.
+- Full-bleed sections (e.g. testimonials carousel) break out of the article with `width: 100vw; margin-left: calc(-50vw + 50%)` and manage their own inner padding.
+
+`.page-gutter` is defined in `_styles.css` and mirrors the `ph3` / `ph5-l` scale.
+
+---
+
+## Typography
+
+Semantic heading and paragraph classes (`.h1`–`.h6`, `.p`, etc.) live in `_styles.css`.
+
+**Tachyons name collision:** In Tachyons, `.h1`–`.h6` are **height** utilities (e.g. `.h5` = `height: 16rem`). Our typography classes reuse those names for **font size**. `_styles.css` sets `height: auto` on `.h1`–`.h6` to override the Tachyons heights — but prefer `.p` / `.p-sm` for body text and subtitles rather than `.h5` on a `<p>` when a paragraph is what you mean.
+
 ---
 
 ## Animations — GSAP

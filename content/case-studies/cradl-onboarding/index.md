@@ -1,6 +1,7 @@
 ---
 id: 119
 title: Onboarding to Cryptocurrency
+short-title: "Report: CRADL Onboarding"
 description: "Human-centric research on onboarding to crypto: frameworks and field vignettes from CRADL."
 type: case-study
 featured_image: "hero.png"
@@ -9,6 +10,11 @@ categories:
 - crypto
 - blockchain
 - web3
+tags:
+- Design Research
+- Reports
+- Cryptocurrenty
+- Web3
 ---
 
 Onboarding to Cryptocurrency was a human-centric report I led with researchers from the Crypto Research and Design lab. in the report, we focused on the human side of what it was like to onboard to crypto through two key frameworks and three example vignettes from the field. 

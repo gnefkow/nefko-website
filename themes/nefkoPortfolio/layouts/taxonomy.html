@@ -1,16 +1,18 @@
 {{ define "main" }}
-  <article class="cf pa3 pa4-m pa4-l">
-    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links {{ $.Param "text_color" | compare.Default "text-secondary" }}">
-      <p>{{ lang.Translate "taxonomyPageList" . }}</p>
+  <article class="nested-copy-line-height">
+    <div class="page-gutter pv3 pv4-l">
+      <div class="measure-wide center f4 lh-copy nested-copy-line-height nested-links {{ $.Param "text_color" | compare.Default "text-secondary" }}">
+        <p>{{ lang.Translate "taxonomyPageList" . }}</p>
+      </div>
+    </div>
+    <div class="page-gutter">
+      <section class="flex-ns mt5 flex-wrap justify-around">
+        {{ range .Pages }}
+          <div class="w-100 mb4 relative bg-primary">
+            {{ .Render "summary" }}
+          </div>
+        {{ end }}
+      </section>
     </div>
   </article>
-  <div class="mw8 center">
-    <section class="flex-ns mt5 flex-wrap justify-around">
-      {{ range  .Pages }}
-        <div class="w-100 mb4 relative bg-primary">
-          {{ .Render "summary" }}
-        </div>
-      {{ end }}
-    </section>
-  </div>
 {{ end }}

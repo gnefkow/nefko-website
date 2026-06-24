@@ -1,28 +1,19 @@
 ---
-
 ---
 
-
-
-# UX Strategy, Research, and Design Consultant
-I help early stage teams align on product definition and launch.
-
-
-
+{{< home-hero-block
+  title="UX Strategy, Research, and Design Consultant"
+  text="I help early stage teams align on product definition and launch."
+>}}
 
 {{< testimonials-carousel >}}
-
-
 
 <!-- {{< logos-block >}}-->
 <!-- Doing a static logos block for now -->
 ![Client logos](/images/logos-static.png)
 
-
-
 {{< featured-case-studies
-  title="I help finance & web3 product teams explore new ideas through UX research & design."
-  text="For a consultant, focus means efficiency and depth—consultants who narrow their focus have less ramp-up time, can pull deeper insights from customer research, and can offer better advice based on experience working with similar clients."
+  title="Case Studies"
   pages="/case-studies/cradl-onboarding, /case-studies/cradl-ux-in-cryptocurrency, /case-studies/jpm-onyx,/case-studies/yoma-digital-transformation, "
 >}}
 
@@ -34,8 +25,3 @@ Experience Strategy (also known as UX Strategy) is a strategic approach to produ
 - **Early-stage prototyping** for user feedback, investor conversations, and internal alignment.
 - **Streamlined integration** with product/ UI/UX designers who will carry projects through detailed implementation.
 I focus on being a partner to (often very busy) product managers to help them develop robust strategies for their organizations.
-
-
-
-
-
