@@ -1,5 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://nefko.xyz/sitemap.xml
-# AI-readable resource catalog: https://nefko.xyz/ai/index.json
-# LLM instructions: https://nefko.xyz/llms.txt
+Disallow: /
