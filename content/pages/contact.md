@@ -32,12 +32,4 @@ I also respond pretty actively on Linkedin, Farcaster, or over email.
 
 
 
-**Farcaster:** @nefko
-
-
-
-
-**Email:** kylebecker.designer@gmail.com
-
-
 
