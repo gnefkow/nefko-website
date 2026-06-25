@@ -52,8 +52,6 @@
   </url><url>
     <loc>http://localhost:1313/_index-test-snippet/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/web3-healthtech-landscape/</loc>
-  </url><url>
     <loc>http://localhost:1313/case-studies/yoma-digital-transformation/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/blockchain/</loc>
@@ -72,6 +70,12 @@
   </url><url>
     <loc>http://localhost:1313/categories/finance/</loc>
   </url><url>
+    <loc>http://localhost:1313/tags/guidea/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/health/</loc>
+  </url><url>
+    <loc>http://localhost:1313/blog/web3-healthtech-landscape/</loc>
+  </url><url>
     <loc>http://localhost:1313/case-studies/jpm-onyx/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/institutional-finance/</loc>
@@ -81,6 +85,8 @@
     <loc>http://localhost:1313/categories/managment/</loc>
   </url><url>
     <loc>http://localhost:1313/case-studies/cradl-onboarding/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/opinions/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/reports/</loc>
   </url><url>

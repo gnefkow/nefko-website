@@ -1,5 +1,5 @@
 ---
-id: 119
+id: 325704503587
 title: How Web3 will shape the future of the healthtech landscape
 short-title: "Web3 Healthcare Landscape"
 description: "Design strategist Kyle Becker discusses how the siloed nature of health data today not only creates a bad patient experience, but locks out new health tech entrants. Early stage health companies could benefit from data coalitions with a web3 approach."
@@ -15,8 +15,6 @@ tags:
 - Web3
 - Guidea
 ---
-
-# **How Web3 will shape the future of the healthtech landscape**
 
 *Future winners in healthtech will compete with bespoke AI-driven experiences fueled by shared data. Web3 coalitions will offer a new way for healthtech apps to compete.*
 
