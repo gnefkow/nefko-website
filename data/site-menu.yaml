@@ -1,14 +1,30 @@
 # Explicit source of truth for the site menu.
 # Items render in the order written here.
+#
+# desktop: tab      — visible as a top-nav link on large breakpoints
+# desktop: overflow — hidden behind the "More" button on large breakpoints
+# On mobile, all items go into the menu overlay regardless of this flag.
 primary:
   - label: Home
     url: /
+    desktop: tab
+
+  - label: Case Studies
+    url: /case-studies/
+    desktop: tab
 
   - label: About
     url: /pages/about/
+    desktop: tab
 
   - label: Contact
     url: /pages/contact/
+    desktop: tab
 
   - label: For AI Readers
     url: /pages/for-ai-llm-readers/
+    desktop: overflow
+
+  - label: Links
+    url: /pages/links/
+    desktop: overflow

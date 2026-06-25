@@ -86,18 +86,35 @@ Recommended first version:
 primary:
   - label: Home
     url: /
+    desktop: tab
+
+  - label: Case Studies
+    url: /case-studies/
+    desktop: tab
 
   - label: About
     url: /pages/about/
+    desktop: tab
 
   - label: Contact
     url: /pages/contact/
+    desktop: tab
 
   - label: For AI Readers
     url: /pages/for-ai-llm-readers/
+    desktop: overflow
+
+  - label: Links
+    url: /pages/links/
+    desktop: overflow
 ```
 
-The `primary` group is the human-facing menu. A `utility` group can be added later if Nefko wants a secondary area for administrative or AI-readable pages.
+Each item has a `desktop` flag:
+
+- `tab` — visible as a top-nav link on large breakpoints (≥60em). These are server-rendered, always-visible links that crawlers and AI readers see immediately.
+- `overflow` — hidden behind the "More" button on large breakpoints. On mobile, all items go into the menu overlay regardless of this flag.
+
+A `utility` group can be added later if Nefko wants a secondary area for administrative or AI-readable pages.
 
 Implementation recommendation: include the utility links either in a visually secondary group near the bottom of the menu or in semantic HTML that is still crawlable. The menu should not become a complete sitemap unless we intentionally want it to feel like one for humans.
 
@@ -111,8 +128,8 @@ Implementation recommendation: include the utility links either in a visually se
 
 2. Build a new menu partial.
    - Add `themes/nefkoPortfolio/layouts/_partials/site-menu.html`.
-   - Render links from `.Site.Data.site_menu.primary`.
-   - If `utility` links exist, render `.Site.Data.site_menu.utility` as a secondary group.
+   - Render links from `(index .Site.Data "site-menu").primary`.
+   - If `utility` links exist, render `(index .Site.Data "site-menu").utility` as a secondary group.
    - Use semantic `<nav aria-label="Main menu">` and a real list (`ul` / `li`) so the structure is readable to humans, crawlers, and AI.
    - Mark the current page using `aria-current="page"` and a current-page CSS class.
 
@@ -142,13 +159,15 @@ Implementation recommendation: include the utility links either in a visually se
    - Follow the existing `site-nav-scroll.js` loading pattern from `head-additions.html` if that is where local scripts are currently loaded.
 
 7. Implement responsive layout.
-   - Desktop: close button top-left, menu items start lower in the overlay.
+   - Desktop / large breakpoint: right-aligned overlay panel with `max-width: 30em` (`measure`, approximately 480px), not a full-screen black overlay.
+   - Desktop close button stays top-left inside the panel, and menu items start lower in the panel.
    - Mobile: menu items start near the top; close button is centered, fixed to bottom, `bottom: 2em`.
    - Avoid duplicate desktop/mobile markup unless the behavior truly requires it.
 
 8. Implement list item states.
    - Default inactive: inverse secondary text.
    - Current page default: inverse primary text + left border.
+   - Case-study child pages should register the `Case Studies` menu item as current, while the link still points to `/case-studies/`.
    - Pointer-down / active: inverse primary text and dark surface if token decision permits.
    - Selected / focus-visible: visible border and accessible outline.
    - Ensure keyboard focus is at least as visible as hover / pointer states.

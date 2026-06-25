@@ -1,14 +1,43 @@
 {{- $shortTitle := .Params.short_title | default (index .Params "short-title") | default .Title -}}
-<nav class="site-header__inner" role="navigation" aria-label="{{ if .IsHome }}Home{{ else }}Page{{ end }}">
-  {{ if .IsHome }}
-    <a class="site-header__brand" href="{{ .Site.Home.RelPermalink }}">
-      <img class="site-header__logo" src="{{ "/images/logo-mark.svg" | relURL }}" width="24" height="24" alt="{{ .Site.Title }}">
-      <span class="site-header__name h5 fw3">{{ .Site.Title }}</span>
-    </a>
-  {{ else }}
-    <a class="site-header__back" href="{{ .Site.Home.RelPermalink }}">
-      <img class="site-header__back-icon" src="{{ "/images/icon-arrow-left.svg" | relURL }}" width="18" height="14" alt="">
-      <span class="site-header__back-label h5 fw5">{{ $shortTitle }}</span>
-    </a>
-  {{ end }}
+{{- $menu := index .Site.Data "site-menu" -}}
+<nav class="site-header__inner" role="navigation" aria-label="Primary site navigation">
+  <div class="site-header__primary">
+    {{ if .IsHome }}
+      <a class="site-header__brand" href="{{ .Site.Home.RelPermalink }}">
+        <img class="site-header__logo" src="{{ "/images/logo-mark.svg" | relURL }}" width="24" height="24" alt="{{ .Site.Title }}">
+        <span class="site-header__name h5 fw3">{{ .Site.Title }}</span>
+      </a>
+    {{ else }}
+      <a class="site-header__back" href="{{ .Site.Home.RelPermalink }}">
+        <img class="site-header__back-icon" src="{{ "/images/icon-arrow-left.svg" | relURL }}" width="18" height="14" alt="">
+        <span class="site-header__back-label h5 fw5">{{ $shortTitle }}</span>
+      </a>
+    {{ end }}
+  </div>
+
+  <div class="site-header__nav-group">
+    {{- with $menu.primary -}}
+    <ul class="site-header__tabs">
+      {{- range . -}}
+        {{- if eq .desktop "tab" -}}
+          {{- $isCaseStudiesItem := eq .url "/case-studies/" -}}
+          {{- $isCaseStudiesPage := eq $.Section "case-studies" -}}
+          {{- $isCurrent := or (eq .url $.RelPermalink) (and $isCaseStudiesItem $isCaseStudiesPage) -}}
+          <li class="site-header__tab-item">
+            <a
+              class="site-header__tab-link h6{{ if $isCurrent }} is-current{{ end }}"
+              href="{{ .url | relURL }}"
+              {{ if $isCurrent }}aria-current="page"{{ end }}
+            >{{ .label }}</a>
+          </li>
+        {{- end -}}
+      {{- end -}}
+    </ul>
+    {{- end -}}
+
+    <button class="site-header__menu-button h6" type="button" data-site-menu-open aria-controls="site-menu" aria-expanded="false">
+      <span class="site-header__menu-label--mobile">Menu</span>
+      <span class="site-header__menu-label--desktop">More</span>
+    </button>
+  </div>
 </nav>

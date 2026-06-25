@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Opinions on Kyle Becker</title>
-    <link>http://localhost:1313/categories/opinions/</link>
+    <link>https://nefko.xyz/categories/opinions/</link>
     <description>Recent content in Opinions on Kyle Becker</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/categories/opinions/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nefko.xyz/categories/opinions/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How Web3 will shape the future of the healthtech landscape</title>
-      <link>http://localhost:1313/blog/web3-healthtech-landscape/</link>
+      <link>https://nefko.xyz/blog/web3-healthtech-landscape/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/web3-healthtech-landscape/</guid>
-      <description>&lt;h1 id=&#34;how-web3-will-shape-the-future-of-the-healthtech-landscape&#34;&gt;&lt;strong&gt;How Web3 will shape the future of the healthtech landscape&lt;/strong&gt;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;em&gt;Future winners in healthtech will compete with bespoke AI-driven experiences fueled by shared data. Web3 coalitions will offer a new way for healthtech apps to compete.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Before an appointment last week, my wife tried to find the records from her blood test five months earlier. They came from a little clinic in our neighborhood (she couldn’t remember the name) who uploaded the results to a third-party &amp;ldquo;patient portal&amp;rdquo; (the name of which she also forgot). After an inbox search, a couple of broken portal links, some “contact us” links, a robo-phone system, and an oblivious call center associate—she was able to access to a PDF to share with her new physician (who, of course, introduced her to another portal full of PDFs).&lt;/p&gt;</description>
+      <guid>https://nefko.xyz/blog/web3-healthtech-landscape/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Future winners in healthtech will compete with bespoke AI-driven experiences fueled by shared data. Web3 coalitions will offer a new way for healthtech apps to compete.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Before an appointment last week, my wife tried to find the records from her blood test five months earlier. They came from a little clinic in our neighborhood (she couldn’t remember the name) who uploaded the results to a third-party &amp;ldquo;patient portal&amp;rdquo; (the name of which she also forgot). After an inbox search, a couple of broken portal links, some “contact us” links, a robo-phone system, and an oblivious call center associate—she was able to access to a PDF to share with her new physician (who, of course, introduced her to another portal full of PDFs).&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

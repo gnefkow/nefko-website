@@ -1,0 +1,41 @@
+{{- $menu := index .Site.Data "site-menu" -}}
+{{- with $menu.primary -}}
+<div class="site-menu" id="site-menu" hidden aria-hidden="true">
+  <div class="site-menu__panel" role="dialog" aria-modal="true" aria-label="Full site navigation">
+    <button class="site-menu__close" type="button" data-site-menu-close aria-label="Close menu">
+      <span class="site-menu__close-icon" aria-hidden="true"></span>
+    </button>
+
+    <nav class="site-menu__nav" aria-label="Site navigation">
+      <ul class="site-menu__list">
+        {{- range . -}}
+          {{- $isCaseStudiesItem := eq .url "/case-studies/" -}}
+          {{- $isCaseStudiesPage := eq $.Section "case-studies" -}}
+          {{- $isCurrent := or (eq .url $.RelPermalink) (and $isCaseStudiesItem $isCaseStudiesPage) -}}
+          <li class="site-menu__item{{ if eq .desktop "overflow" }} site-menu__item--overflow{{ end }}">
+            <a
+              class="site-menu__link{{ if $isCurrent }} is-current{{ end }}"
+              href="{{ .url | relURL }}"
+              {{ if $isCurrent }}aria-current="page"{{ end }}
+            >
+              {{ .label }}
+            </a>
+          </li>
+        {{- end -}}
+      </ul>
+    </nav>
+
+    {{- with $menu.utility -}}
+      <nav class="site-menu__utility" aria-label="Utility navigation">
+        <ul class="site-menu__utility-list">
+          {{- range . -}}
+            <li class="site-menu__utility-item">
+              <a class="site-menu__utility-link" href="{{ .url | relURL }}">{{ .label }}</a>
+            </li>
+          {{- end -}}
+        </ul>
+      </nav>
+    {{- end -}}
+  </div>
+</div>
+{{- end -}}
