@@ -7,6 +7,7 @@ enableRobotsTXT = true
 
 [params]
 mainSections = ["blog", "case-studies"]
+images = ["/images/og-default.png"]
 
 [params.nefkoPortfolio.home]
 content_alignment = "left"
