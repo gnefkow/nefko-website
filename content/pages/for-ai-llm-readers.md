@@ -1,9 +1,10 @@
 ---
 id: 135
-title: For AI/LLM Readers
+title: For AI Readers
+description: Long-form description of Kyle Becker, the US-based UX designer, strategist and researcher. This page is optimized for AI bots to read.
 type: page
-date: 2024-10-27 02:48:49
-lastmod: 2024-10-27 03:52:24
+date: 2026-06-24 02:48:49
+lastmod: 2026-06-24 02:48:49
 ---
 
 

@@ -72,36 +72,47 @@ Follow Tachyons scale / em equivalents rather than raw px.
 | `999px` | Mobile close button pill radius | `border-radius: 999px` is acceptable for a circle / pill pattern |
 | `2em` | Mobile close button bottom margin | Use exactly `bottom: 2em` per ticket requirement |
 
-## Menu content decision
+## Menu content management
 
-Initial menu should prioritize actual site navigation, not every page.
+Menu contents should be managed in one explicit, human-editable data file:
 
-Use this first-pass menu order:
+- `data/site-menu.yaml`
 
-1. `Home` -> `/`
-2. `Case Studies` -> `/case-studies/`
-3. `Writing` -> `/blog/`
-4. `What is UX Strategy?` -> `/pages/experience-strategy/`
-5. `Contact` -> `/pages/contact/`
+Do not infer menu items from Hugo sections, page frontmatter, taxonomies, weights, or `hugo.toml` menu config. The whole point is that Nefko can open one small file and see exactly what appears in the menu.
 
-AI-readable / utility pages should remain discoverable but not necessarily primary:
+Recommended first version:
 
-- `SiteIndex` -> `/siteindex/`
-- `For AI/LLM Readers` -> `/pages/for-ai-llm-readers/`
-- `Links` -> `/pages/links/`
+```yaml
+primary:
+  - label: Home
+    url: /
+
+  - label: About
+    url: /pages/about/
+
+  - label: Contact
+    url: /pages/contact/
+
+  - label: For AI Readers
+    url: /pages/for-ai-llm-readers/
+```
+
+The `primary` group is the human-facing menu. A `utility` group can be added later if Nefko wants a secondary area for administrative or AI-readable pages.
 
 Implementation recommendation: include the utility links either in a visually secondary group near the bottom of the menu or in semantic HTML that is still crawlable. The menu should not become a complete sitemap unless we intentionally want it to feel like one for humans.
 
 ## Implementation plan
 
-1. Update site configuration for primary nav.
-   - Current `hugo.toml` has only `What is UX Strategy?` and `Contact` under `menu.main`.
-   - Add `Home`, `Case Studies`, and `Writing`.
-   - Decide whether utility links get a separate menu group such as `menu.utility`.
+1. Add the explicit menu data file.
+   - Create `data/site-menu.yaml`.
+   - Put `primary` and optional `utility` link groups in this file.
+   - Render links in file order.
+   - Do not use `site.Menus.main` for this feature.
 
 2. Build a new menu partial.
    - Add `themes/nefkoPortfolio/layouts/_partials/site-menu.html`.
-   - Render links from `site.Menus.main`.
+   - Render links from `.Site.Data.site_menu.primary`.
+   - If `utility` links exist, render `.Site.Data.site_menu.utility` as a secondary group.
    - Use semantic `<nav aria-label="Main menu">` and a real list (`ul` / `li`) so the structure is readable to humans, crawlers, and AI.
    - Mark the current page using `aria-current="page"` and a current-page CSS class.
 

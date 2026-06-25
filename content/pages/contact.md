@@ -1,6 +1,7 @@
 ---
 id: 18
 title: Contact
+description: Contact information for Kyle Becker, US-based freelance UX designer, strategist, and researcher (formerly at frog Design and J.P. Morgan).
 type: page
 date: 2023-11-14 07:56:56
 lastmod: 2024-04-19 13:32:34

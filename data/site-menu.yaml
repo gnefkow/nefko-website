@@ -1,0 +1,14 @@
+# Explicit source of truth for the site menu.
+# Items render in the order written here.
+primary:
+  - label: Home
+    url: /
+
+  - label: About
+    url: /pages/about/
+
+  - label: Contact
+    url: /pages/contact/
+
+  - label: For AI Readers
+    url: /pages/for-ai-llm-readers/
