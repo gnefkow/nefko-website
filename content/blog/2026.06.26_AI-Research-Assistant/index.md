@@ -6,6 +6,8 @@ type: article
 date: "2026-06-26"
 lastmod: "2026-06-26"
 featured_image: "hero.png"
+images:
+- "/blog/2026.06.26_ai-research-assistant/hero.png"
 categories:
 - design-research
 - ai

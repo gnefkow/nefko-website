@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quantitative Research on Kyle Becker</title>
-    <link>http://localhost:1313/tags/quantitative-research/</link>
+    <link>https://nefko.xyz/tags/quantitative-research/</link>
     <description>Recent content in Quantitative Research on Kyle Becker</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/tags/quantitative-research/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nefko.xyz/tags/quantitative-research/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Doubling first time user retention for an established notebook app</title>
-      <link>http://localhost:1313/case-studies/rocketbook-1/rocketbook-1/</link>
+      <link>https://nefko.xyz/case-studies/rocketbook-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/case-studies/rocketbook-1/rocketbook-1/</guid>
-      <description>&lt;p&gt;Challenge:&lt;/p&gt;&#xA;&lt;p&gt;Role: Fractional Product Manager, Designer, Design Researcher&lt;/p&gt;&#xA;&lt;p&gt;John Lees, the head of Rocketbook had a problem: people were downloading the app, but not using it&amp;hellip; and nobody knew why. The company—part of BIC&amp;rsquo;s portfolio of acquisitions—offered a reusable notebook along with a free app. The product was straight forward: take notes on your physical notebook, scan it with the app, then wipe the notebook clean. Lees had a host of improvements in mind to improve the business,—including an app re-vamp—but first things first: how can we get people to use the app?&lt;/p&gt;</description>
+      <guid>https://nefko.xyz/case-studies/rocketbook-1/</guid>
+      <description>&lt;section class=&#34;case-study-summary&#34; aria-label=&#34;Case study summary&#34;&gt;&#xA;    &lt;dl class=&#34;case-study-summary__list&#34;&gt;&#xA;      &#xA;        &lt;div class=&#34;case-study-summary__item&#34;&gt;&#xA;          &lt;dt class=&#34;case-study-summary__label p-sm-heavy&#34;&gt;Challenge&lt;/dt&gt;&#xA;          &lt;dd class=&#34;case-study-summary__value p&#34;&gt;Rocketbook had strong seasonal app downloads, but many first-time users failed to complete their first scan or return after initial use.&lt;/dd&gt;&#xA;        &lt;/div&gt;&#xA;      &#xA;        &lt;div class=&#34;case-study-summary__item&#34;&gt;&#xA;          &lt;dt class=&#34;case-study-summary__label p-sm-heavy&#34;&gt;Role&lt;/dt&gt;&#xA;          &lt;dd class=&#34;case-study-summary__value p&#34;&gt;Fractional Product Manager, Designer, Design Researcher&lt;/dd&gt;&#xA;        &lt;/div&gt;&#xA;      &#xA;        &lt;div class=&#34;case-study-summary__item&#34;&gt;&#xA;          &lt;dt class=&#34;case-study-summary__label p-sm-heavy&#34;&gt;Result&lt;/dt&gt;&#xA;          &lt;dd class=&#34;case-study-summary__value p&#34;&gt;Second-month retention doubled from 30% to 60% after onboarding and key-flow improvements.&lt;/dd&gt;&#xA;        &lt;/div&gt;&#xA;      &#xA;    &lt;/dl&gt;&#xA;  &lt;/section&gt;&#xA;&#xA;&#xA;&lt;p&gt;John Lees, the head of Rocketbook had a problem: people were downloading the app, but not using it&amp;hellip; and nobody knew why. The company—part of BIC&amp;rsquo;s portfolio of acquisitions—offered a reusable notebook along with a free app. The product was straight forward: take notes on your physical notebook, scan it with the app, then wipe the notebook clean. Lees had a host of improvements in mind to improve the business,—including an app re-vamp—but first things first: how can we get people to use the app?&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
