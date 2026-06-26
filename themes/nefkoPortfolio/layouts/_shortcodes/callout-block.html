@@ -1,0 +1,25 @@
+{{/*
+  callout-block: Accent callout for important case study insights.
+
+  Parameters:
+  - eyebrow (optional): Small label above the main callout text.
+  - title (required): Main callout text.
+  - subtitle (optional): Supporting text below the title.
+*/}}
+{{ $eyebrow := .Get "eyebrow" }}
+{{ $title := .Get "title" }}
+{{ $subtitle := .Get "subtitle" }}
+
+{{ if or $eyebrow $title $subtitle }}
+  <aside class="callout-block" aria-label="Callout">
+    {{ with $eyebrow }}
+      <p class="callout-block__eyebrow p-sm-heavy">{{ . }}</p>
+    {{ end }}
+    {{ with $title }}
+      <p class="callout-block__title h4">{{ . | markdownify }}</p>
+    {{ end }}
+    {{ with $subtitle }}
+      <p class="callout-block__subtitle p">{{ . | markdownify }}</p>
+    {{ end }}
+  </aside>
+{{ end }}

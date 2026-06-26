@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Doubling first time user retention for an established notebook app | Kyle Becker</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="How I worked with Rocketbook&#39;s team to improve retention and set a vision for the future of the app">
+    <meta name="generator" content="Hugo 0.157.0">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/nefkoPortfolio/css/main.min.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/case-studies/rocketbook-1/rocketbook-1/">
+    
+
+    
+    
+    <meta property="og:url" content="http://localhost:1313/case-studies/rocketbook-1/rocketbook-1/">
+  <meta property="og:site_name" content="Kyle Becker">
+  <meta property="og:title" content="Doubling first time user retention for an established notebook app">
+  <meta property="og:description" content="How I worked with Rocketbook&#39;s team to improve retention and set a vision for the future of the app">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="case-studies">
+    <meta property="article:tag" content="Design">
+    <meta property="article:tag" content="Product Management">
+    <meta property="article:tag" content="Quantitative Research">
+    <meta property="article:tag" content="Mixpanel">
+    <meta property="article:tag" content="Figma">
+    <meta property="article:tag" content="Jira">
+    <meta property="og:image" content="http://localhost:1313/images/og-default.png">
+
+  <meta itemprop="name" content="Doubling first time user retention for an established notebook app">
+  <meta itemprop="description" content="How I worked with Rocketbook&#39;s team to improve retention and set a vision for the future of the app">
+  <meta itemprop="wordCount" content="1195">
+  <meta itemprop="image" content="http://localhost:1313/images/og-default.png">
+  <meta itemprop="keywords" content="Design,Product Management,Quantitative Research,Mixpanel,Figma,Jira">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/og-default.png">
+  <meta name="twitter:title" content="Doubling first time user retention for an established notebook app">
+  <meta name="twitter:description" content="How I worked with Rocketbook&#39;s team to improve retention and set a vision for the future of the app">
+
+	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/Observer.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/Draggable.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/InertiaPlugin.min.js" defer></script>
+<script src="/js/site-nav-scroll.js" defer></script>
+<script src="/js/site-menu.js" defer></script>
+
+  </head><body class="ma0 bg-primary text-primary  development is-page is-page page-rocketbook-1">
+    
+  <header class="site-header site-header--child">
+  <nav class="site-header__inner" role="navigation" aria-label="Primary site navigation">
+  <div class="site-header__primary">
+    
+      <a class="site-header__back" href="/">
+        <img class="site-header__back-icon" src="/images/icon-arrow-left.svg" width="18" height="14" alt="">
+        <span class="site-header__back-label h5 fw5">Case Study: Rocketbook</span>
+      </a>
+    
+  </div>
+
+  <div class="site-header__nav-group"><ul class="site-header__tabs"><li class="site-header__tab-item">
+            <a
+              class="site-header__tab-link h6"
+              href="/"
+              
+            >Home</a>
+          </li><li class="site-header__tab-item">
+            <a
+              class="site-header__tab-link h6 is-current"
+              href="/case-studies/"
+              aria-current="page"
+            >Case Studies</a>
+          </li><li class="site-header__tab-item">
+            <a
+              class="site-header__tab-link h6"
+              href="/pages/about/"
+              
+            >About</a>
+          </li><li class="site-header__tab-item">
+            <a
+              class="site-header__tab-link h6"
+              href="/pages/contact/"
+              
+            >Contact</a>
+          </li></ul><button class="site-header__menu-button h6" type="button" data-site-menu-open aria-controls="site-menu" aria-expanded="false">
+      <span class="site-header__menu-label--mobile">Menu</span>
+      <span class="site-header__menu-label--desktop">More</span>
+    </button>
+  </div>
+</nav>
+
+  <div class="site-menu" id="site-menu" hidden aria-hidden="true">
+  <div class="site-menu__panel" role="dialog" aria-modal="true" aria-label="Full site navigation">
+    <button class="site-menu__close" type="button" data-site-menu-close aria-label="Close menu">
+      <span class="site-menu__close-icon" aria-hidden="true"></span>
+    </button>
+
+    <nav class="site-menu__nav" aria-label="Site navigation">
+      <ul class="site-menu__list"><li class="site-menu__item">
+            <a
+              class="site-menu__link"
+              href="/"
+              
+            >
+              Home
+            </a>
+          </li><li class="site-menu__item">
+            <a
+              class="site-menu__link is-current"
+              href="/case-studies/"
+              aria-current="page"
+            >
+              Case Studies
+            </a>
+          </li><li class="site-menu__item">
+            <a
+              class="site-menu__link"
+              href="/pages/about/"
+              
+            >
+              About
+            </a>
+          </li><li class="site-menu__item">
+            <a
+              class="site-menu__link"
+              href="/pages/contact/"
+              
+            >
+              Contact
+            </a>
+          </li><li class="site-menu__item site-menu__item--overflow">
+            <a
+              class="site-menu__link"
+              href="/pages/for-ai-llm-readers/"
+              
+            >
+              For AI Readers
+            </a>
+          </li><li class="site-menu__item site-menu__item--overflow">
+            <a
+              class="site-menu__link"
+              href="/pages/links/"
+              
+            >
+              Links
+            </a>
+          </li></ul>
+    </nav></div>
+</div>
+</header>
+
+  
+
+
+
+    <main class="pb7" role="main">
+      
+  
+
+  <article class="page-rocketbook-1 flex-l mw7 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Case-Studies
+      </aside><div id="sharing" class="mt3 nefkoPortfolio-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Doubling first time user retention for an established notebook app</h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l">
+
+
+
+  
+  
+
+  
+  
+    
+    
+    
+      
+    
+  
+
+  
+  
+    
+    
+    
+      
+    
+  
+
+  
+  
+    
+    
+    
+      
+    
+  
+
+  
+  
+
+
+
+  <section class="case-study-summary" aria-label="Case study summary">
+    <dl class="case-study-summary__list">
+      
+        <div class="case-study-summary__item">
+          <dt class="case-study-summary__label p-sm-heavy">Challenge</dt>
+          <dd class="case-study-summary__value p">Rocketbook had strong seasonal app downloads, but many first-time users failed to complete their first scan or return after initial use.</dd>
+        </div>
+      
+        <div class="case-study-summary__item">
+          <dt class="case-study-summary__label p-sm-heavy">Role</dt>
+          <dd class="case-study-summary__value p">Fractional Product Manager, Designer, Design Researcher</dd>
+        </div>
+      
+        <div class="case-study-summary__item">
+          <dt class="case-study-summary__label p-sm-heavy">Result</dt>
+          <dd class="case-study-summary__value p">Second-month retention doubled from 30% to 60% after onboarding and key-flow improvements.</dd>
+        </div>
+      
+    </dl>
+  </section>
+
+
+<p>John Lees, the head of Rocketbook had a problem: people were downloading the app, but not using it&hellip; and nobody knew why. The company—part of BIC&rsquo;s portfolio of acquisitions—offered a reusable notebook along with a free app. The product was straight forward: take notes on your physical notebook, scan it with the app, then wipe the notebook clean. Lees had a host of improvements in mind to improve the business,—including an app re-vamp—but first things first: how can we get people to use the app?</p>
+<blockquote>
+<p>Rocketbook: Reusable notebooks with an app that enables users to scan and store. A number of &ldquo;smart&rdquo; features help power users quickly and efficiently scan their notebooks.</p>
+</blockquote>
+<p>That was our discussion on the first call. With the budget they had, the team had discussed hiring an agency, but they didn&rsquo;t want a powerpoint deliverable. They discussed hiring a junior designer, but then they&rsquo;d need to manage them (and it would take time to get through the HR process at a large company). When their head of engineering (and former collaborator of mine) Chris suggested a contractor, they reached out to me.</p>
+<p>Our timeline was also clear. Typical for retail products, <em>by far</em> the most imoprtant month of the year for Rocketbook was December: an influx of customers driven by both the Christmas rush, and (as a productivity product) the preperation for a fresh start on New Years&rsquo; resolutions to &ldquo;get organized.&rdquo; This mapped perfectly to the massive rise in Rocketbook App downloads&hellip; and the massive crash in usage come February. Could we improve the app in time to alter the wave?</p>
+<blockquote>
+<p>(Spoilers: We did. We doubled retention for first time users.)</p>
+</blockquote>
+<h3 id="strategy-or-implementation-yes"><strong>Strategy or implementation? Yes.</strong></h3>
+<hr>
+<p>The team explained that they were conflicted: they needed some short-term wins, but also a way to think longer term about the product strategy. Would we be able to balance it all at once? I put together a two-track plan. We would immediately start with a heuristic analysis to identify quick wins on the onboarding and overall usability of the app. Once that was rolling, we could take a step back and assess the broader strategic goals. With a quick contract in place I got started.</p>
+<blockquote>
+<p>Commitment type: Fractional → 25% of my time over a period of 10 months</p>
+</blockquote>
+<p>The key for me was to quickly identify our quick wins, get ahead of the dev team on designs, establish a rhythm in our sprints, and then begin to think more broadly about how the app could fit into a larger re-think of the business as a whole.</p>
+<h3 id="getting-our-quick-wins-with-a-heuristic-analysis"><strong>Getting our quick wins with a heuristic analysis.</strong></h3>
+<hr>
+<p>Some design questions take deep research. Others don&rsquo;t.</p>
+<p>In a few days I was able to turn around a quick <em>heuristic analysis</em> that identified several detailed aspects of the onboarding process that were likely causing drag for users in onboarding.</p>
+<blockquote>
+<p>Heuristic Analysis: having an experienced designer look at an app to identify whether it is using best practices. Heuristic analysis is less rigorous, but can be turned around quickly, especially from a designer with a lot of experience.</p>
+</blockquote>
+<p>The work also outlined some broader areas to focus on long-term: key flows, an information architecture re-vamp, and visual updates to be more consistent with the company&rsquo;s current brand language.</p>
+<p>&laquo;Image: screenshots from the heuristic analysis&raquo;</p>
+<p>With our quick-wins identified, I got started with a Jira clean-out and started working with the engineering team on the simple stuff. (As with most clients, Figma was also a bit of a disaster, so I worked with the team to get it organized cleaner hand-offs). I also set up access to the team&rsquo;s Mixpanel dashboard so I could start pulling quantitative reports to get a more nuanced view of the customer drop-off.</p>
+<h3 id="power-users-or-first-time-users-yes"><strong>Power users or first time users? Yes.</strong></h3>
+<hr>
+<p>With an engineering cadence in place, it was time to shift focus to the broader structural issues. I dug deeper into the mixpanel data to see exactly where things were breaking down. I could see that many users didn&rsquo;t even complete their first scan with the app. Many who did might scan, but never do anything with the scan. By month two, only 30% of users even opened the app again, and 95% of users had churned by month 12.</p>
+<p>Looking at the app, it wasn&rsquo;t hard to see why. Rocketbook&rsquo;s core business challenge was evident in its interface: the company wanted to grow its customer base, but its path from startup to acquisition was focused on a narrow band of super-power users.</p>
+<p>The core of the app experience was scanning: users loved their Rocketbook notebooks, and keeping these users happy lead the team toward spiraling complexity as a nest of toggles and switches in settings made for nearly infinite possibilities in the core experience. A quest for the &ldquo;least clicks&rdquo; for power users had led the team toward an impossible cliff for new users.</p>
+<p>Our new designs focused in three areas:</p>
+<ol>
+<li><strong>An updated information architecture</strong> that kept things more visibly organized and pushed unimportant features to the background.</li>
+<li><strong>A simplified key-flow</strong> that enabled power users to access sophisticated features, but didn&rsquo;t force complexity of new users.</li>
+<li><strong>A graduated system of how-to content</strong> so new users could start simple and gradually discover optimizations.</li>
+</ol>
+<h3 id="future-looking-research"><strong>Future-Looking Research</strong></h3>
+<p>As our more structural questions, we kicked off a series of research projects that would lay the foundations for the future strategic vision of Rocketbook.</p>
+<h2 id="a-dramatic-improvement-of-first-time-user-retention"><strong>A dramatic improvement of first time user retention</strong></h2>
+<p>We were able to launch an improved version of the Android app before our deadline (and iOS was on track to follow shortly after). Our key performance metric was new-user retention: did new users make it through their first scans? Did they come back? When we measured the data at the end of my engagement, the numbers were clear: second-month retention had doubled: jumping from 30% to 60%. A higher percentage of users were sticking with the app, and our delivery was on time to ship that improvement before Rocketbook&rsquo;s most important month of the year.</p>
+<p>&laquo;Image: graph of the retention spike&raquo;</p>
+<h2 id="an-uncertain-future"><strong>An uncertain future</strong></h2>
+<p>The next few months in the company proved the value of a two-track strategy. As BIC turned its focus to its core business, it re-evaluated its acquisitions—including Rocketbook. This led to a shake-up of the team and a period of marketing the company to potential buyers (it would eventually sell the company to Global Printing and Packaging (GPP)). While the far-reaching strategic research is an open question, one thing is not: improved usage.</p>
+<p>This is why it is so critical for project teams to think broadly while also shipping in the meantime. A north-star vision keeps us moving toward the future, but it can also be thrown off track by a shifting business landscape. A team that continuously ships small improvements <em>at the same time</em> they are contemplating a long-term strategy can lock in gains even in uncertain business environments.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/design/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Design</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/product-management/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Product Management</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/quantitative-research/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Quantitative Research</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/mixpanel/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Mixpanel</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/figma/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Figma</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/jira/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Jira</a>
+   </li>
+  
+</ul>
+
+      
+    </div></article>
+
+    </main>
+    <footer class="footer bg-tertiary bottom-0 w-100 pa3" role="contentinfo">
+  <nav class="flex flex-wrap justify-center" aria-label="Kyle Becker profile links">
+    <a class="text-secondary no-underline underline-hover pv2 ph3 mh1" href="https://www.linkedin.com/in/kyle-becker-44132223/" rel="me" aria-label="Kyle Becker on LinkedIn">LinkedIn</a>
+    <a class="text-secondary no-underline underline-hover pv2 ph3 mh1" href="https://github.com/gnefkow" rel="me" aria-label="Kyle Becker on GitHub">GitHub</a>
+    <a class="text-secondary no-underline underline-hover pv2 ph3 mh1" href="http://photography.gnefkow.com/" rel="me" aria-label="Kyle Becker's Photography Portfolio">Photography</a>
+    <a class="text-secondary no-underline underline-hover pv2 ph3 mh1" href="https://knowledgeinsociety.com/" rel="me" aria-label="Kyle Becker's Personal Blog about philosophical insights and reflections in design">Blog</a>
+  </nav>
+</footer>
+
+  </body>
+</html>

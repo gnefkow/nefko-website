@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Product Management on Kyle Becker</title>
+    <link>http://localhost:1313/tags/product-management/</link>
+    <description>Recent content in Product Management on Kyle Becker</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/tags/product-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Doubling first time user retention for an established notebook app</title>
+      <link>http://localhost:1313/case-studies/rocketbook-1/rocketbook-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/rocketbook-1/rocketbook-1/</guid>
+      <description>&lt;p&gt;Challenge:&lt;/p&gt;&#xA;&lt;p&gt;Role: Fractional Product Manager, Designer, Design Researcher&lt;/p&gt;&#xA;&lt;p&gt;John Lees, the head of Rocketbook had a problem: people were downloading the app, but not using it&amp;hellip; and nobody knew why. The company—part of BIC&amp;rsquo;s portfolio of acquisitions—offered a reusable notebook along with a free app. The product was straight forward: take notes on your physical notebook, scan it with the app, then wipe the notebook clean. Lees had a host of improvements in mind to improve the business,—including an app re-vamp—but first things first: how can we get people to use the app?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

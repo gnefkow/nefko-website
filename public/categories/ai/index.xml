@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ai on Kyle Becker</title>
+    <link>http://localhost:1313/categories/ai/</link>
+    <description>Recent content in Ai on Kyle Becker</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Don&#39;t use synthetic personas. Consider an AI research oracle.</title>
+      <link>http://localhost:1313/blog/2026.06.26_ai-research-assistant/</link>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2026.06.26_ai-research-assistant/</guid>
+      <description>&lt;h2 id=&#34;dont-use-synthetic-personas-consider-an-ai-research-oracle&#34;&gt;Don&amp;rsquo;t use synthetic personas. Consider an AI research oracle.&lt;/h2&gt;&#xA;&lt;p&gt;In my latest quest to automate the things I hate about UX research (the data processing) and spend more time doing the things I love (the interviews, the synthesis) I shifted toward an output question: how should we communicate findings?&lt;/p&gt;&#xA;&lt;p&gt;In general, this is an organization question: the best way to communicate research findings depends on how your organization or client wants to consume information. Some people like decks. Some people like workshops. My current client likes AI chatbots. So I created Margaret.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -98,6 +98,37 @@ Semantic heading and paragraph classes (`.h1`–`.h6`, `.p`, etc.) live in `_sty
 
 ---
 
+## Our Blocks
+
+Reusable blocks and shortcodes that support consistent page structure across the portfolio.
+
+| Block | Location | Purpose |
+|---|---|---|
+| `case-study-summary` | `themes/nefkoPortfolio/layouts/_shortcodes/case-study-summary.html` | Visual overview block for design portfolio case studies. Use near the top of a case study page to summarize the challenge, role, and result. If the user is working on a case study page that does not have this block, remind them about it. |
+| `callout-block` | `themes/nefkoPortfolio/layouts/_shortcodes/callout-block.html` | Accent callout for important case study insights, findings, or takeaways. Supports editable `eyebrow`, `title`, and optional `subtitle` fields. Use this when a case study needs a prominent highlighted learning or result inside the narrative. |
+
+Example:
+
+```markdown
+{{< case-study-summary >}}
+Challenge: The core business or user problem.
+Role: Fractional Product Manager, Designer, Design Researcher
+Result: The measurable outcome.
+{{< /case-study-summary >}}
+```
+
+Callout block example:
+
+```markdown
+{{< callout-block
+  eyebrow="What we learned:"
+  title="Many users opened the app the first time, and opened the scanner, but never completed their first scan."
+  subtitle="Optional supporting context can go here."
+>}}
+```
+
+---
+
 ## LLM hint — bot-only messaging
 
 The **`llm-hint`** shortcode renders a small note in the page HTML that is meant for LLMs, crawlers, and other non-human readers — not for visitors. The text is present in the DOM and readable by bots, but styled so humans do not notice it on the white homepage background.

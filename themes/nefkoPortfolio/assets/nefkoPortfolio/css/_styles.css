@@ -10,6 +10,7 @@
   --bg-secondary:       #f4f4f4;
   --bg-tertiary:        #e9e9e9;
   --bg-inverse-primary: #000000;
+  --accent-bright:      #ef0000;
 
   /* --- Colors: Text --- */
   --text-primary:           #000000;
@@ -26,6 +27,7 @@
 
   /* --- Effects --- */
   --shadow-header-scrolled: 0 14px 5.9px -12px rgba(0, 0, 0, 0.25);
+  --shadow-callout-block: 0.3125rem 0.25rem 0.89375rem 0 rgba(0, 0, 0, 0.25);
 
   /* --- Typography: Font Families --- */
   --font-family-body:    'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -292,6 +294,100 @@
 
 .home-hero-block__text {
   color: var(--text-primary);
+}
+
+/* Case study summary — reusable Challenge / Role / Result block */
+.case-study-summary {
+  box-sizing: border-box;
+  margin: 2rem 0 3rem;
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-secondary);
+  border-bottom: 1px solid var(--border-secondary);
+}
+
+.case-study-summary__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.case-study-summary__item {
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-primary);
+}
+
+.case-study-summary__item:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.case-study-summary__label {
+  margin: 0 0 0.25rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+}
+
+.case-study-summary__value {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.case-study-summary__value p {
+  margin: 0;
+}
+
+@media screen and (min-width: 60em) {
+  .case-study-summary__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .case-study-summary__item,
+  .case-study-summary__item:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+}
+
+/* Callout block — reusable accent insight block */
+.callout-block {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: var(--accent-bright);
+  box-shadow: var(--shadow-callout-block);
+  color: var(--text-inverse-primary);
+}
+
+.callout-block__eyebrow,
+.callout-block__title,
+.callout-block__subtitle {
+  color: var(--text-inverse-primary);
+}
+
+.callout-block__eyebrow {
+  margin: 0 0 0.25rem;
+  text-transform: uppercase;
+}
+
+.callout-block__title {
+  margin: 0;
+}
+
+.callout-block__title p,
+.callout-block__subtitle p {
+  margin: 0;
+}
+
+.callout-block__subtitle {
+  margin: 0.5rem 0 0;
+  font-size: var(--font-size-p);
+  line-height: var(--line-height-body);
 }
 
 /* Site header — minimal white nav (ticket 005) */

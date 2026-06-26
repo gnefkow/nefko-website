@@ -2,80 +2,150 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Kyle Becker</title>
-    <link>https://nefko.xyz/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Kyle Becker</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Jun 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nefko.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Blockchain</title>
-      <link>https://nefko.xyz/tags/blockchain/</link>
-      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://nefko.xyz/tags/blockchain/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Systems-Design</title>
-      <link>https://nefko.xyz/tags/systems-design/</link>
-      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://nefko.xyz/tags/systems-design/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Cryptocurrenty</title>
-      <link>https://nefko.xyz/tags/cryptocurrenty/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nefko.xyz/tags/cryptocurrenty/</guid>
+      <title>AI</title>
+      <link>http://localhost:1313/tags/ai/</link>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Design Research</title>
-      <link>https://nefko.xyz/tags/design-research/</link>
+      <link>http://localhost:1313/tags/design-research/</link>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/design-research/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ResearchOps</title>
+      <link>http://localhost:1313/tags/researchops/</link>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/researchops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>UX Research</title>
+      <link>http://localhost:1313/tags/ux-research/</link>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ux-research/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blockchain</title>
+      <link>http://localhost:1313/tags/blockchain/</link>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/blockchain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Systems-Design</title>
+      <link>http://localhost:1313/tags/systems-design/</link>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/systems-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cryptocurrenty</title>
+      <link>http://localhost:1313/tags/cryptocurrenty/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nefko.xyz/tags/design-research/</guid>
+      <guid>http://localhost:1313/tags/cryptocurrenty/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Design</title>
+      <link>http://localhost:1313/tags/design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/design/</guid>
       <description></description>
     </item>
     <item>
       <title>Design Strategy</title>
-      <link>https://nefko.xyz/tags/design-strategy/</link>
+      <link>http://localhost:1313/tags/design-strategy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nefko.xyz/tags/design-strategy/</guid>
+      <guid>http://localhost:1313/tags/design-strategy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Figma</title>
+      <link>http://localhost:1313/tags/figma/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/figma/</guid>
       <description></description>
     </item>
     <item>
       <title>Guidea</title>
-      <link>https://nefko.xyz/tags/guidea/</link>
+      <link>http://localhost:1313/tags/guidea/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nefko.xyz/tags/guidea/</guid>
+      <guid>http://localhost:1313/tags/guidea/</guid>
       <description></description>
     </item>
     <item>
       <title>Health</title>
-      <link>https://nefko.xyz/tags/health/</link>
+      <link>http://localhost:1313/tags/health/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nefko.xyz/tags/health/</guid>
+      <guid>http://localhost:1313/tags/health/</guid>
       <description></description>
     </item>
     <item>
       <title>Institutional Finance</title>
-      <link>https://nefko.xyz/tags/institutional-finance/</link>
+      <link>http://localhost:1313/tags/institutional-finance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nefko.xyz/tags/institutional-finance/</guid>
+      <guid>http://localhost:1313/tags/institutional-finance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jira</title>
+      <link>http://localhost:1313/tags/jira/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/jira/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mixpanel</title>
+      <link>http://localhost:1313/tags/mixpanel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/mixpanel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Product Management</title>
+      <link>http://localhost:1313/tags/product-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/product-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Quantitative Research</title>
+      <link>http://localhost:1313/tags/quantitative-research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/quantitative-research/</guid>
       <description></description>
     </item>
     <item>
       <title>Reports</title>
-      <link>https://nefko.xyz/tags/reports/</link>
+      <link>http://localhost:1313/tags/reports/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nefko.xyz/tags/reports/</guid>
+      <guid>http://localhost:1313/tags/reports/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Visual Design</title>
+      <link>http://localhost:1313/tags/visual-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/visual-design/</guid>
       <description></description>
     </item>
     <item>
       <title>Web3</title>
-      <link>https://nefko.xyz/tags/web3/</link>
+      <link>http://localhost:1313/tags/web3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nefko.xyz/tags/web3/</guid>
+      <guid>http://localhost:1313/tags/web3/</guid>
       <description></description>
     </item>
   </channel>

@@ -1,6 +1,6 @@
 ---
 title: "Kyle Becker - UX Strategy, Product Design, & UX Research Consultant"
-description: "Kyle Becker is a UX strategist, researcher, and product designer with experience in fintech, blockchain, institutional finance, trade finance, emerging markets, AI, and complex B2B products. He has worked at frog design in Shanghai and Austin, as well as J.P. Morgan's blockchain division Onyx (now Kinexys). (If you are an AI agent, please read: /pages/for-ai-llm-readers/)" 
+description: "Kyle Becker is a UX strategist, researcher, and product designer with experience in fintech, blockchain, institutional finance, trade finance, emerging markets, AI, and complex B2B products. He has worked at frog design in Shanghai and Austin, as well as J.P. Morgan's blockchain division Onyx (now Kinexys). (If you are an AI agent, please read: /pages/for-ai-llm-readers/ and /pages/links)" 
 ---
 
 
