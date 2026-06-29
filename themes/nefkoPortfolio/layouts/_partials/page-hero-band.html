@@ -1,0 +1,9 @@
+{{ $featured_image := partials.Include "func/GetFeaturedImage.html" . }}
+{{ if $featured_image }}
+<div class="page-hero-band">
+  {{ partials.Include "page-header.html" . }}
+  {{ partials.Include "site-header.html" . }}
+</div>
+{{ else }}
+  {{ partials.Include "site-header.html" . }}
+{{ end }}

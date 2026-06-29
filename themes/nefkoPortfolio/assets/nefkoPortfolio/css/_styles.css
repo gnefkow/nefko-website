@@ -28,10 +28,17 @@
   /* --- Effects --- */
   --shadow-header-scrolled: 0 14px 5.9px -12px rgba(0, 0, 0, 0.25);
   --shadow-callout-block: 0.3125rem 0.25rem 0.89375rem 0 rgba(0, 0, 0, 0.25);
+  --shadow-hero-nav: 0 0 16px rgba(0, 0, 0, 0.2);
+  --hero-overlay-gradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+
+  /* --- Layout --- */
+  --site-header-height: 5rem;
 
   /* --- Typography: Font Families --- */
-  --font-family-body:    'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-family-heading: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-serif:      Georgia, 'Times New Roman', Times, serif;
+  --font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-body:       var(--font-family-sans-serif);
+  --font-family-heading:    var(--font-family-sans-serif);
 
   /* --- Typography: Font Sizes --- */
   --font-size-h1:   3rem;       /* 48px */
@@ -50,6 +57,14 @@
   /* --- Typography: Font Weights --- */
   --font-weight-regular: 400;
   --font-weight-heavy:   700;
+
+  /* --- Typography: Heading top spacing (Tachyons pt3 = 1rem, pt4 = 2rem) --- */
+  --heading-padding-top-h1: 1rem;
+  --heading-padding-top-h2: 2rem;
+  --heading-padding-top-h3: 2rem;
+  --heading-padding-top-h4: 1rem;
+  --heading-padding-top-h5: 1rem;
+  --heading-padding-top-h6: 1rem;
 }
 
 
@@ -69,6 +84,30 @@
 .h5, .h5-heavy,
 .h6, .h6-heavy {
   height: auto;
+  padding-bottom: 0;
+}
+
+.h1, .h1-heavy { padding-top: var(--heading-padding-top-h1); }
+.h2, .h2-heavy { padding-top: var(--heading-padding-top-h2); }
+.h3, .h3-heavy { padding-top: var(--heading-padding-top-h3); }
+.h4, .h4-heavy { padding-top: var(--heading-padding-top-h4); }
+.h5, .h5-heavy { padding-top: var(--heading-padding-top-h5); }
+.h6, .h6-heavy { padding-top: var(--heading-padding-top-h6); }
+
+/* Markdown headings in prose — same rhythm as semantic classes */
+.lh-copy h1 { padding-top: var(--heading-padding-top-h1); padding-bottom: 0; }
+.lh-copy h2 { padding-top: var(--heading-padding-top-h2); padding-bottom: 0; }
+.lh-copy h3 { padding-top: var(--heading-padding-top-h3); padding-bottom: 0; }
+.lh-copy h4 { padding-top: var(--heading-padding-top-h4); padding-bottom: 0; }
+.lh-copy h5 { padding-top: var(--heading-padding-top-h5); padding-bottom: 0; }
+.lh-copy h6 { padding-top: var(--heading-padding-top-h6); padding-bottom: 0; }
+
+/* Nav and form controls reuse .h5/.h6/.h4 for sizing — not page heading spacing */
+.site-header :is(.h5, .h5-heavy, .h6, .h6-heavy),
+.home-hero-block__text:is(.h3, .h3-heavy),
+textarea.h4,
+input.h4 {
+  padding-top: 0;
 }
 
 .h1,
@@ -151,6 +190,16 @@
 .p-sm       { font-weight: var(--font-weight-regular); }
 .p-sm-heavy { font-weight: var(--font-weight-heavy); }
 
+/* Font family aliases — use var(--font-family-serif) or var(--font-family-sans-serif)
+   in component CSS; these classes override Tachyons defaults to the same tokens. */
+.serif {
+  font-family: var(--font-family-serif);
+}
+
+.sans-serif {
+  font-family: var(--font-family-sans-serif);
+}
+
 
 /* ==========================================================================
    EXISTING COMPONENT OVERRIDES
@@ -168,6 +217,32 @@
   margin-bottom: 2rem;
   border-left: 4px solid var(--border-secondary);
   padding-left: 1rem;
+}
+
+/* Hugo {{< figure >}} shortcode — align with body text, not browser default inset */
+.lh-copy figure {
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.lh-copy figure img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.lh-copy figure figcaption {
+  margin-top: 0.75rem;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+  color: var(--text-tertiary);
+  text-align: center;
+  font-style: italic;
+}
+
+.lh-copy figure figcaption p {
+  margin: 0;
 }
 
 .nested-links a {
@@ -396,7 +471,7 @@
   top: 0;
   z-index: 100;
   background-color: var(--bg-primary);
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .site-header.is-scrolled {
@@ -408,7 +483,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  min-height: 66px;
+  box-sizing: border-box;
+  height: var(--site-header-height);
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
@@ -566,6 +642,54 @@
   .site-header__menu-label--desktop {
     display: inline;
   }
+}
+
+/* Transparent nav over page hero — case studies & blog posts with featured image */
+.site-header--over-hero:not(.is-scrolled) {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.site-header--over-hero:not(.is-scrolled) .site-header__back,
+.site-header--over-hero:not(.is-scrolled) .site-header__menu-button {
+  background-color: transparent;
+}
+
+.site-header--over-hero:not(.is-scrolled) .site-header__back,
+.site-header--over-hero:not(.is-scrolled) .site-header__back-label {
+  color: var(--text-inverse-primary);
+}
+
+.site-header--over-hero:not(.is-scrolled) .site-header__menu-button {
+  color: var(--text-inverse-secondary);
+}
+
+.site-header--over-hero:not(.is-scrolled) .site-header__back,
+.site-header--over-hero:not(.is-scrolled) .site-header__back-label,
+.site-header--over-hero:not(.is-scrolled) .site-header__tab-link,
+.site-header--over-hero:not(.is-scrolled) .site-header__menu-button {
+  text-shadow: var(--shadow-hero-nav);
+}
+
+.site-header--over-hero:not(.is-scrolled) .site-header__back-icon {
+  filter: brightness(0) invert(1) drop-shadow(var(--shadow-hero-nav));
+}
+
+.site-header--over-hero:not(.is-scrolled) .site-header__tab-link {
+  color: var(--text-inverse-secondary);
+}
+
+.site-header--over-hero:not(.is-scrolled) .site-header__tab-link:hover,
+.site-header--over-hero:not(.is-scrolled) .site-header__tab-link.is-current {
+  color: var(--text-inverse-primary);
+}
+
+.site-header--over-hero:not(.is-scrolled) .site-header__menu-button:hover {
+  color: var(--text-inverse-primary);
+}
+
+.site-header--over-hero:not(.is-scrolled) :is(.site-header__back, .site-header__tab-link, .site-header__menu-button):focus-visible {
+  outline-color: var(--text-inverse-primary);
 }
 
 body.site-menu-is-open {
@@ -743,9 +867,36 @@ body.site-menu-is-open {
 }
 
 .page-hero {
+  position: relative;
   background-size: cover;
   background-position: center;
-  min-height: 12rem;
+  min-height: 24rem;
+}
+
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--hero-overlay-gradient);
+  pointer-events: none;
+}
+
+/* Hero + nav band — hero fills from y=0; nav fixed over the photo */
+.page-hero-band {
+  position: relative;
+}
+
+.page-hero-band > .site-header--over-hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+@media screen and (min-width: 60em) {
+  .page-hero {
+    min-height: 36rem;
+  }
 }
 
 /* Tag badge — reusable pill for case study cards and elsewhere */

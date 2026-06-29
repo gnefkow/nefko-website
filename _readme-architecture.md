@@ -52,7 +52,12 @@ Checklist for every new ticket:
 
 ### When Tachyons classes are used in component CSS
 
-Some components use inline `<style>` blocks (e.g. shortcodes). In these cases, reference the Tachyons `em` values directly rather than inventing pixel widths:
+Some components use inline `<style>` blocks in their shortcode templates (e.g. `testimonials-carousel`, `quote-block`). In these cases:
+
+- **Design tokens** (`var(--bg-inverse-primary)`, `var(--font-size-h5)`, etc.) live in `_styles.css` `:root` and typography classes.
+- **Component layout** (flex, gaps, max-width, BEM structure) lives in the shortcode's `<style>` block — not in `_styles.css`.
+
+Reference Tachyons `em` values for widths rather than inventing pixel widths:
 
 ```css
 /* Good — uses the Tachyons measure-wide equivalent */
@@ -106,6 +111,7 @@ Reusable blocks and shortcodes that support consistent page structure across the
 |---|---|---|
 | `case-study-summary` | `themes/nefkoPortfolio/layouts/_shortcodes/case-study-summary.html` | Visual overview block for design portfolio case studies. Use near the top of a case study page to summarize the challenge, role, and result. If the user is working on a case study page that does not have this block, remind them about it. |
 | `callout-block` | `themes/nefkoPortfolio/layouts/_shortcodes/callout-block.html` | Accent callout for important case study insights, findings, or takeaways. Supports editable `eyebrow`, `title`, and optional `subtitle` fields. Use this when a case study needs a prominent highlighted learning or result inside the narrative. |
+| `quote-block` | `layouts/shortcodes/quote-block.html` | Dark testimonial card with portrait, two-part quote, and attribution. Pulls from `content/testimonials/*.yaml` via `testimonial` and `quote` params. Use on case studies when highlighting a person's words. |
 
 Example:
 
@@ -126,6 +132,17 @@ Callout block example:
   subtitle="Optional supporting context can go here."
 >}}
 ```
+
+Quote block example:
+
+```markdown
+{{< quote-block
+  testimonial="tricia-wang"
+  quote="cradl-onboarding-quote"
+>}}
+```
+
+Optional `work` param selects which `worked-together` entry to use for title/company (default `0`).
 
 ---
 

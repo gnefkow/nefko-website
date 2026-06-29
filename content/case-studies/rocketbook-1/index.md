@@ -1,7 +1,7 @@
 ---
 id: 984985189456
 title: Doubling first time user retention for an established notebook app
-description: "How I worked with Rocketbook's team to improve retention and set a vision for the future of the app"
+description: "A case study about how Kyle Becker, a UX strategist, worked with Rocketbook to redesign and launch a new version of its app. The app struggled with low retention for first time users. Kyle led the effort to redesign and played a product management role. They launched the new app before the company's most important retail month of the year and new user retention doubled."
 client: "Rocketbook (BIC)"
 short-title: "Case Study: Rocketbook"
 type: case-study
@@ -28,6 +28,8 @@ Result: Second-month retention doubled from 30% to 60% after onboarding and key-
 
 
 John Lees, the head of Rocketbook had a problem: people were downloading the app, but not using it... and nobody knew why. The company—part of BIC's portfolio of acquisitions—offered a reusable notebook along with a free app. The product was straight forward: take notes on your physical notebook, scan it with the app, then wipe the notebook clean. Lees had a host of improvements in mind to improve the business,—including an app re-vamp—but first things first: how can we get people to use the app? 
+
+{{< quote-block testimonial="john-lees" quote="rocketbook-case-quote" >}}
 
 > Rocketbook: Reusable notebooks with an app that enables users to scan and store. A number of "smart" features help power users quickly and efficiently scan their notebooks. 
 
@@ -59,12 +61,24 @@ In a few days I was able to turn around a quick *heuristic analysis* that identi
 
 > Heuristic Analysis: having an experienced designer look at an app to identify whether it is using best practices. Heuristic analysis is less rigorous, but can be turned around quickly, especially from a designer with a lot of experience.
 
- The work also outlined some broader areas to focus on long-term: key flows, an information architecture re-vamp, and visual updates to be more consistent with the company's current brand language. 
+{{< 
+    figure src="./assets/heuristic-analysis.png" 
+    alt="Images from the heuristic analysis report." 
+    caption="My heuristic analysis identified several quick win areas of improvement in the app." 
+    >}}
 
-<<Image: screenshots from the heuristic analysis>>
+
+ The work also outlined some broader areas to focus on long-term: key flows, an information architecture re-vamp, and visual updates to be more consistent with the company's current brand language. 
 
 With our quick-wins identified, I got started with a Jira clean-out and started working with the engineering team on the simple stuff. (As with most clients, Figma was also a bit of a disaster, so I worked with the team to get it organized cleaner hand-offs). I also set up access to the team's Mixpanel dashboard so I could start pulling quantitative reports to get a more nuanced view of the customer drop-off. 
 
+{{< 
+    figure src="./assets/shorter-onboarding.png" 
+    alt="Share-out artifact instructions in Margaret's soul file" 
+    caption="Rocketbook's onboarding asked several unnecessary demographic questions of users and pushed them toward complex advanced features. We streamlined the flow to get users to complete their first scan more quickly." 
+    >}}
+
+With the goal of getting users to their first scan faster, we set about working on easy solutions first: stripping down the onboarging flow considerably and re-structuring the call to action for the first flow.
 
 
 ### **Power users or first time users? Yes.**
@@ -88,6 +102,23 @@ Our new designs focused in three areas:
 2. **A simplified key-flow** that enabled power users to access sophisticated features, but didn't force complexity of new users. 
 3. **A graduated system of how-to content** so new users could start simple and gradually discover optimizations. 
 
+The process was a careful removing of several complex features from the main flow so first time users (and users who might want a simpler, more transparent experience) would be able to scan and send more quickly.
+
+{{< 
+    figure src="./assets/streamlined-scan-flow.png" 
+    alt="Walkthrough of the screens in the updated 'scan' flow for the Rocketbook app." 
+    caption="Out updated flow was simpler and more transparen. Advanced features were tucked away into drawers, and core action buttons were made more prominent." 
+    >}}
+
+The core value proposition of Rocketbook was innovation and efficiency, so we *did* want users to discover advanced features over time. To introduce these features in a more progressive way, we created an "Optimize your Workflow" block on the home screen to introduce optimization features more gently and transparently.
+
+{{< 
+    figure src="./assets/progressive-learning.png" 
+    alt="Image showing the home screen of the app with call to action buttons for users to learn how to use advanced features." 
+    caption="Advanced features were switched off by default for first time users, and the home screen now offers tutorial explanations so users can learn about them more gently and transparently." 
+    >}}
+
+
 
 ### **Future-Looking Research**
 As our more structural questions, we kicked off a series of research projects that would lay the foundations for the future strategic vision of Rocketbook. 
@@ -96,7 +127,11 @@ As our more structural questions, we kicked off a series of research projects th
 ## **A dramatic improvement of first time user retention**
 We were able to launch an improved version of the Android app before our deadline (and iOS was on track to follow shortly after). Our key performance metric was new-user retention: did new users make it through their first scans? Did they come back? When we measured the data at the end of my engagement, the numbers were clear: second-month retention had doubled: jumping from 30% to 60%. A higher percentage of users were sticking with the app, and our delivery was on time to ship that improvement before Rocketbook's most important month of the year. 
 
-<<Image: graph of the retention spike>>
+{{< 
+    figure src="./assets/retention-increase.png" 
+    alt="Share-out artifact instructions in Margaret's soul file" 
+    caption="After we launched the new app, we found twice as many users were continuing to use in their second month." 
+    >}}
 
 ## **An uncertain future**
 The next few months in the company proved the value of a two-track strategy. As BIC turned its focus to its core business, it re-evaluated its acquisitions—including Rocketbook. This led to a shake-up of the team and a period of marketing the company to potential buyers (it would eventually sell the company to Global Printing and Packaging (GPP)). While the far-reaching strategic research is an open question, one thing is not: improved usage. 

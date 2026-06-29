@@ -79,7 +79,7 @@ Read more about these frameworks and our human-centric research-based examples i
 
 I led four reports during my time at CRADL. It was a wonderful experience—a rare one for me to focus solely on research (without combining it with practical UX design). 
 
-![](./assets/Ref-block_Tricia-Wang.png)
+{{< quote-block testimonial="tricia-wang" quote="cradl-onboarding-quote" >}}
 
 During my time with the organization, I had the pleasure of presenting my research at the Consensus conference in Austin, Texas, conducting research in several states in the United States, and working with an amazing team of researchers. 
 

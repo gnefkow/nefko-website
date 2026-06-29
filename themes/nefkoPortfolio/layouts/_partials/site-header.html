@@ -1,4 +1,5 @@
-<header class="site-header {{ if .IsHome }}site-header--home{{ else }}site-header--child{{ end }}">
+{{ $featured_image := partials.Include "func/GetFeaturedImage.html" . }}
+<header class="site-header {{ if .IsHome }}site-header--home{{ else }}site-header--child{{ end }}{{ if $featured_image }} site-header--over-hero{{ end }}">
   {{ partials.Include "site-navigation.html" . }}
   {{ partials.Include "site-menu.html" . }}
 </header>
