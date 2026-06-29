@@ -54,7 +54,7 @@
 
   <meta itemprop="name" content="Doubling first time user retention for an established notebook app">
   <meta itemprop="description" content="A case study about how Kyle Becker, a UX strategist, worked with Rocketbook to redesign and launch a new version of its app. The app struggled with low retention for first time users. Kyle led the effort to redesign and played a product management role. They launched the new app before the company&#39;s most important retail month of the year and new user retention doubled.">
-  <meta itemprop="wordCount" content="1544">
+  <meta itemprop="wordCount" content="1673">
   <meta itemprop="image" content="http://localhost:1313/images/og-default.png">
   <meta itemprop="keywords" content="Design,Product Management,Quantitative Research,Mixpanel,Figma,Jira,Visual Design">
   <meta name="twitter:card" content="summary_large_image">
@@ -65,7 +65,7 @@
 	
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/Observer.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/Draggable.min.js" defer></script>
@@ -270,19 +270,26 @@
   </section>
 
 
-<p>John Lees, the head of Rocketbook had a problem: people were downloading the app, but not using it&hellip; and nobody knew why. The company—part of BIC&rsquo;s portfolio of acquisitions—offered a reusable notebook along with a free app. The product was straight forward: take notes on your physical notebook, scan it with the app, then wipe the notebook clean. Lees had a host of improvements in mind to improve the business,—including an app re-vamp—but first things first: how can we get people to use the app?</p>
+<p>John Lees, a BIC executive, had a problem. Head of Rocketbook, one of the conglomerate&rsquo;s portfolio companies, he had been charged with revamping the product offering and finding profitability for the niche—but well-loved—brand of reusable notebooks. Part of the quandry was about the app: it had long been a part of the product offering, and downloads had always been high, but usage drop-off was steep. What was wrong with the app? How could they get people to use it?</p>
+<figure><img src="/case-studies/rocketbook-1/assets/photo_scan.png"
+    alt="Image of the Rocketbook app scanning a page in a Rocketbook notebook."><figcaption>
+      <p>Rocketbook sold reusable notebooks that came with a free app. The app enables users to scan their pages and send them, edit them, and easily send them to pre-congigured destinations. The notebooks boasted a niche group of super users, but a steep learning curve for new users.</p>
+    </figcaption>
+</figure>
+
+<p>That was the discussion on the first call. With the budget they had, the team had discussed hiring an agency, but they didn&rsquo;t want a powerpoint, <em>they needed someone that would work with engineering to build an app</em>. Hiring a junior in-house designer was off the table: to much of a management challenge and an HR headache. Their head of engineering had worked with me before in a previous role, so they reached out to me.</p>
 
 
 <style>
  
 
-.quote-block {
+.testimonial-block {
  
   box-sizing: border-box;
   width: 100%;
 }
 
-.quote-block__card {
+.testimonial-block__card {
  
   display: flex;
   flex-direction: row;
@@ -296,11 +303,11 @@
   border-radius: 1px;
 }
 
-.quote-block :is(.h6-heavy, .p-sm, .p-sm-heavy) {
+.testimonial-block :is(.p-sm, .p-sm-heavy) {
   padding-top: 0;
 }
 
-.quote-block__photo-wrap {
+.testimonial-block__photo-wrap {
   flex-shrink: 0;
   width: 4.5rem;
   height: 11.5rem;
@@ -308,7 +315,7 @@
   box-shadow: var(--shadow-callout-block);
 }
 
-.quote-block__photo {
+.testimonial-block__photo {
   display: block;
   width: 100%;
   height: 100%;
@@ -316,7 +323,7 @@
   object-position: center top;
 }
 
-.quote-block__content {
+.testimonial-block__content {
   flex: 1;
   min-width: 0;
   display: flex;
@@ -324,61 +331,63 @@
   gap: 1.5rem;
 }
 
-.quote-block__quotes {
+.testimonial-block__quotes {
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 0.375rem;
 }
 
-.quote-block__big-quote,
-.quote-block__small-quote,
-.quote-block__name,
-.quote-block__title,
-.quote-block__company {
+.testimonial-block__big-quote,
+.testimonial-block__small-quote,
+.testimonial-block__name,
+.testimonial-block__title,
+.testimonial-block__company {
   margin: 0;
   color: var(--text-inverse-primary);
   text-align: left;
 }
 
-.quote-block__big-quote {
+.serif .testimonial-block__big-quote,
+.testimonial-block__big-quote {
   font-size: 2rem;
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-serif-display);
+  font-weight: var(--font-weight-heavy);
 }
 
-.quote-block__small-quote {
+.testimonial-block__small-quote {
   font-style: italic;
   color: var(--text-inverse-secondary);
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-serif-text);
   font-size: 1rem;
 }
 
-.quote-block__name {
+.testimonial-block__name {
   display: flex;
   flex-wrap: wrap;
   gap: 0.125rem;
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-serif-text);
   font-size: var(--font-size-p);
   font-weight: var(--font-weight-heavy);
   line-height: var(--line-height-heading);
   color: var(--text-inverse-primary);
 }
 
-.quote-block__first-name,
-.quote-block__last-name {
+.testimonial-block__first-name,
+.testimonial-block__last-name {
   color: inherit;
   font: inherit;
 }
 
-.quote-block__title,
-.quote-block__company {
+.testimonial-block__title,
+.testimonial-block__company {
   color: var(--text-inverse-secondary);
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-serif-text);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-body);
 }
 
-.quote-block__attribution {
+.testimonial-block__attribution {
   display: flex;
   flex-direction: column;
   gap: 0.125rem;
@@ -386,11 +395,11 @@
 }
 
 @media screen and (max-width: 30em) {
-  .quote-block__card {
+  .testimonial-block__card {
     flex-direction: column;
   }
 
-  .quote-block__photo-wrap {
+  .testimonial-block__photo-wrap {
     width: 100%;
     height: 8rem;
   }
@@ -443,27 +452,27 @@
       
       
 
-      <div class="quote-block" role="group" aria-label="Testimonial from John Lees">
-        <div class="quote-block__card">
-          <div class="quote-block__photo-wrap">
-            <img class="quote-block__photo"
+      <div class="testimonial-block" role="group" aria-label="Testimonial from John Lees">
+        <div class="testimonial-block__card">
+          <div class="testimonial-block__photo-wrap">
+            <img class="testimonial-block__photo"
                  src="/images/testimonial-avatars/John-Lees.jpeg"
                  alt="John Lees"
                  loading="lazy" />
           </div>
-          <div class="quote-block__content">
-            <div class="quote-block__quotes">
-              <p class="quote-block__big-quote h6-heavy">A great leader with a terrific collaborative style, a keen ability to listen and lead.</p>
-              <p class="quote-block__small-quote p-sm">Kyle is an incredible resource. I hired him to help us fix a badly broken UX/UI model and what I got was excellent App product strategy, consumer needs understanding, UX/UI definitions, engineer project and task management and delivery of an outstanding result. Kyle transformed a very poor customer experience into an intuitive easy to lean and understand excellent customer experience. ... Most importantly Kyle is driven by curiosity to find the answers that will make a powerful difference. His enthusiasm is infectious.</p>
+          <div class="testimonial-block__content">
+            <div class="testimonial-block__quotes">
+              <p class="testimonial-block__big-quote serif-display">A great leader with a terrific collaborative style, a keen ability to listen and lead.</p>
+              <p class="testimonial-block__small-quote p-sm">Kyle is an incredible resource. I hired him to help us fix a badly broken UX/UI model and what I got was excellent App product strategy, consumer needs understanding, UX/UI definitions, engineer project and task management and delivery of an outstanding result. Kyle transformed a very poor customer experience into an intuitive easy to lean and understand excellent customer experience. ... Most importantly Kyle is driven by curiosity to find the answers that will make a powerful difference. His enthusiasm is infectious.</p>
             </div>
-            <div class="quote-block__attribution">
-              <div class="quote-block__name">
-                <span class="quote-block__first-name">John</span>
-                <span class="quote-block__last-name">Lees</span>
+            <div class="testimonial-block__attribution">
+              <div class="testimonial-block__name">
+                <span class="testimonial-block__first-name">John</span>
+                <span class="testimonial-block__last-name">Lees</span>
               </div>
               
-                <p class="quote-block__title">Vice President Rocket Innovations</p>
-                <p class="quote-block__company">BIC</p>
+                <p class="testimonial-block__title">Vice President Rocket Innovations</p>
+                <p class="testimonial-block__company">BIC</p>
               
             </div>
           </div>
@@ -473,27 +482,26 @@
   
 
 
-<blockquote>
-<p>Rocketbook: Reusable notebooks with an app that enables users to scan and store. A number of &ldquo;smart&rdquo; features help power users quickly and efficiently scan their notebooks.</p>
-</blockquote>
-<p>That was our discussion on the first call. With the budget they had, the team had discussed hiring an agency, but they didn&rsquo;t want a powerpoint deliverable. They discussed hiring a junior designer, but then they&rsquo;d need to manage them (and it would take time to get through the HR process at a large company). When their head of engineering (and former collaborator of mine) Chris suggested a contractor, they reached out to me.</p>
-<p>Our timeline was also clear. Typical for retail products, <em>by far</em> the most imoprtant month of the year for Rocketbook was December: an influx of customers driven by both the Christmas rush, and (as a productivity product) the preperation for a fresh start on New Years&rsquo; resolutions to &ldquo;get organized.&rdquo; This mapped perfectly to the massive rise in Rocketbook App downloads&hellip; and the massive crash in usage come February. Could we improve the app in time to alter the wave?</p>
+<h3 id="december-or-bust"><strong>December or bust.</strong></h3>
+<p>Our timeline was also clear. As a retail personal organization product, <em>by far</em> the most imoprtant month of the year for Rocketbook was December. The month brought an influx of customers driven by both the Christmas rush and New Years&rsquo; resolutions. Each year, this led to a rise in Rocketbook App downloads&hellip; and the massive crash in usage come February. The wave of customers downloaded the app in the first month, but by the second month 2/3rds hadn&rsquo;t opened it again. The first step in laying down a longer-term product strategy would be to try to retain these users: could we get people to keep opening the app long enough to establish a habit?</p>
 <blockquote>
 <p>(Spoilers: We did. We doubled retention for first time users.)</p>
 </blockquote>
 <h3 id="strategy-or-implementation-yes"><strong>Strategy or implementation? Yes.</strong></h3>
 <hr>
-<p>The team explained that they were conflicted: they needed some short-term wins, but also a way to think longer term about the product strategy. Would we be able to balance it all at once? I put together a two-track plan. We would immediately start with a heuristic analysis to identify quick wins on the onboarding and overall usability of the app. Once that was rolling, we could take a step back and assess the broader strategic goals. With a quick contract in place I got started.</p>
+<p>The team was conflicted: they needed some short-term wins, but also a way to think longer term about the product strategy, so I put together a two-track plan. We would immediately start with a <em><strong>heuristic analysis</strong></em> to identify quick wins on the onboarding and overall usability of the app. Once that was rolling, we could take a step back and assess the broader strategic goals. With a quick contract in place I got started.</p>
 <blockquote>
-<p>Commitment type: Fractional → 25% of my time over a period of 10 months</p>
+<p><em>Commitment:</em><br>
+<strong>Fractional:</strong> 25% of my time over a period of 10 months</p>
 </blockquote>
 <p>The key for me was to quickly identify our quick wins, get ahead of the dev team on designs, establish a rhythm in our sprints, and then begin to think more broadly about how the app could fit into a larger re-think of the business as a whole.</p>
-<h3 id="getting-our-quick-wins-with-a-heuristic-analysis"><strong>Getting our quick wins with a heuristic analysis.</strong></h3>
+<h2 id="getting-our-quick-wins-with-a-heuristic-analysis"><strong>Getting our quick wins with a heuristic analysis.</strong></h2>
 <hr>
 <p>Some design questions take deep research. Others don&rsquo;t.</p>
-<p>In a few days I was able to turn around a quick <em>heuristic analysis</em> that identified several detailed aspects of the onboarding process that were likely causing drag for users in onboarding.</p>
+<p>In a few days I was able to turn around a quick <em><strong>heuristic analysis</strong></em> that identified several detailed aspects of the onboarding process that were likely causing drag for users in onboarding.</p>
 <blockquote>
-<p>Heuristic Analysis: having an experienced designer look at an app to identify whether it is using best practices. Heuristic analysis is less rigorous, but can be turned around quickly, especially from a designer with a lot of experience.</p>
+<p><strong>Heuristic Analysis:</strong><br>
+Having an experienced designer look at an app to identify whether it is using best practices. Heuristic analysis is less rigorous, but can be turned around quickly, especially from a designer with a lot of experience.</p>
 </blockquote>
 <figure><img src="/case-studies/rocketbook-1/assets/heuristic-analysis.png"
     alt="Images from the heuristic analysis report."><figcaption>
@@ -502,17 +510,24 @@
 </figure>
 
 <p>The work also outlined some broader areas to focus on long-term: key flows, an information architecture re-vamp, and visual updates to be more consistent with the company&rsquo;s current brand language.</p>
-<p>With our quick-wins identified, I got started with a Jira clean-out and started working with the engineering team on the simple stuff. (As with most clients, Figma was also a bit of a disaster, so I worked with the team to get it organized cleaner hand-offs). I also set up access to the team&rsquo;s Mixpanel dashboard so I could start pulling quantitative reports to get a more nuanced view of the customer drop-off.</p>
+<p><strong>Setting up for Dev:</strong> With quick-wins identified, I cleaned and organized Jira, got Figma under control and implemented a new design toolkit, and added the engineering sprint meetings to my calendar.</p>
+<p><strong>Setting up for Quant User Analysis:</strong> I also set up access to the team&rsquo;s <em><strong>Mixpanel</strong></em> dashboard so I could start pulling quantitative reports to get a more nuanced view of the customer drop-off. We knew they weren&rsquo;t sticking around long enough to log in after a month, but when <em>exactly</em> were they dropping out? I wanted to find out.</p>
+<p><strong>Easy solutions first: Trim Onboarding.</strong> With the goal of getting users to their first scan faster, we set about working on easy solutions first: stripping down the onboarging flow considerably and re-structuring the call to action for the first flow.</p>
 <figure><img src="/case-studies/rocketbook-1/assets/shorter-onboarding.png"
     alt="Share-out artifact instructions in Margaret&#39;s soul file"><figcaption>
       <p>Rocketbook&rsquo;s onboarding asked several unnecessary demographic questions of users and pushed them toward complex advanced features. We streamlined the flow to get users to complete their first scan more quickly.</p>
     </figcaption>
 </figure>
 
-<p>With the goal of getting users to their first scan faster, we set about working on easy solutions first: stripping down the onboarging flow considerably and re-structuring the call to action for the first flow.</p>
-<h3 id="power-users-or-first-time-users-yes"><strong>Power users or first time users? Yes.</strong></h3>
+<p>Pulling things out of an app is quicker than putting them in, so I split out the onboarding tickets for engineering to start on.</p>
+<h2 id="power-users-or-first-time-users-yes"><strong>Power users or first time users? Yes.</strong></h2>
 <hr>
-<p>With an engineering cadence in place, it was time to shift focus to the broader structural issues. I dug deeper into the mixpanel data to see exactly where things were breaking down. I could see that many users didn&rsquo;t even complete their first scan with the app. Many who did might scan, but never do anything with the scan. By month two, only 30% of users even opened the app again, and 95% of users had churned by month 12.</p>
+<p>With an engineering cadence in place, it was time to shift focus to the broader structural issues. I dug deeper into the mixpanel data to see exactly where things were breaking down.</p>
+<blockquote>
+<p><strong>Signature Experience: Scan a page in your Rocketbook Notebook and send it</strong><br>
+Rocketbook sold a combination notebook + app. To relaly understand the flow, users needed to successfully scan a page and send it to a cloud destination.</p>
+</blockquote>
+<p>I could see that many users downloaded and logged into the app, but they <em>didn&rsquo;t even complete their first scan</em>. Of those who successfully scanned a page, many didn&rsquo;t do anything with it, they just closed the app <em>and never opened it again</em>. Only 30% of users who downloaded the app opened it again in their second mongh. By their 19th month, 95% had churned.</p>
 
 
 
@@ -530,9 +545,9 @@
   </aside>
 
 
-<p>Looking at the app, it wasn&rsquo;t hard to see why. Rocketbook&rsquo;s core business challenge was evident in its interface: the company wanted to grow its customer base, but its path from startup to acquisition was focused on a narrow band of super-power users.</p>
-<p>The core of the app experience was scanning: users loved their Rocketbook notebooks, and keeping these users happy lead the team toward spiraling complexity as a nest of toggles and switches in settings made for nearly infinite possibilities in the core experience. A quest for the &ldquo;least clicks&rdquo; for power users had led the team toward an impossible cliff for new users.</p>
-<p>Our new designs focused in three areas:</p>
+<p>Looking at the app, it wasn&rsquo;t hard to see why, Rocketbook&rsquo;s app UI told a story about the company&rsquo;s history: its path from startup to acquisition was focused on a narrow band of super-power users. Keeping these users happy lead the team toward spiraling complexity as a quest for the &ldquo;less clicks&rdquo; meant increasing amounts of hidden automations supported by a nest of toggles and switches in settings made for nearly infinite possibilities in the core experience.</p>
+<p>Power users continued to love the app. However, for a new user, things were opaque and baffling.</p>
+<p><strong>Our new designs focused in three areas:</strong></p>
 <ol>
 <li><strong>An updated information architecture</strong> that kept things more visibly organized and pushed unimportant features to the background.</li>
 <li><strong>A simplified key-flow</strong> that enabled power users to access sophisticated features, but didn&rsquo;t force complexity of new users.</li>

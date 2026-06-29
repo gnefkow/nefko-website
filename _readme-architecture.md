@@ -52,7 +52,7 @@ Checklist for every new ticket:
 
 ### When Tachyons classes are used in component CSS
 
-Some components use inline `<style>` blocks in their shortcode templates (e.g. `testimonials-carousel`, `quote-block`). In these cases:
+Some components use inline `<style>` blocks in their shortcode templates (e.g. `testimonials-carousel`, `testimonial-block`). In these cases:
 
 - **Design tokens** (`var(--bg-inverse-primary)`, `var(--font-size-h5)`, etc.) live in `_styles.css` `:root` and typography classes.
 - **Component layout** (flex, gaps, max-width, BEM structure) lives in the shortcode's `<style>` block — not in `_styles.css`.
@@ -111,7 +111,7 @@ Reusable blocks and shortcodes that support consistent page structure across the
 |---|---|---|
 | `case-study-summary` | `themes/nefkoPortfolio/layouts/_shortcodes/case-study-summary.html` | Visual overview block for design portfolio case studies. Use near the top of a case study page to summarize the challenge, role, and result. If the user is working on a case study page that does not have this block, remind them about it. |
 | `callout-block` | `themes/nefkoPortfolio/layouts/_shortcodes/callout-block.html` | Accent callout for important case study insights, findings, or takeaways. Supports editable `eyebrow`, `title`, and optional `subtitle` fields. Use this when a case study needs a prominent highlighted learning or result inside the narrative. |
-| `quote-block` | `layouts/shortcodes/quote-block.html` | Dark testimonial card with portrait, two-part quote, and attribution. Pulls from `content/testimonials/*.yaml` via `testimonial` and `quote` params. Use on case studies when highlighting a person's words. |
+| `testimonial-block` | `layouts/shortcodes/testimonial-block.html` | Dark testimonial card with portrait, two-part quote, and attribution. Pulls from `content/testimonials/*.yaml` via `testimonial` and `quote` params. Use on case studies when highlighting a person's words. |
 
 Example:
 
@@ -133,10 +133,10 @@ Callout block example:
 >}}
 ```
 
-Quote block example:
+Testimonial block example:
 
 ```markdown
-{{< quote-block
+{{< testimonial-block
   testimonial="tricia-wang"
   quote="cradl-onboarding-quote"
 >}}

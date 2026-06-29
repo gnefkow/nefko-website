@@ -27,15 +27,20 @@ Result: Second-month retention doubled from 30% to 60% after onboarding and key-
 
 
 
-John Lees, the head of Rocketbook had a problem: people were downloading the app, but not using it... and nobody knew why. The company—part of BIC's portfolio of acquisitions—offered a reusable notebook along with a free app. The product was straight forward: take notes on your physical notebook, scan it with the app, then wipe the notebook clean. Lees had a host of improvements in mind to improve the business,—including an app re-vamp—but first things first: how can we get people to use the app? 
+John Lees, a BIC executive, had a problem. Head of Rocketbook, one of the conglomerate's portfolio companies, he had been charged with revamping the product offering and finding profitability for the niche—but well-loved—brand of reusable notebooks. Part of the quandry was about the app: it had long been a part of the product offering, and downloads had always been high, but usage drop-off was steep. What was wrong with the app? How could they get people to use it?
 
-{{< quote-block testimonial="john-lees" quote="rocketbook-case-quote" >}}
+{{< 
+    figure src="./assets/photo_scan.png" 
+    alt="Image of the Rocketbook app scanning a page in a Rocketbook notebook." 
+    caption="Rocketbook sold reusable notebooks that came with a free app. The app enables users to scan their pages and send them, edit them, and easily send them to pre-congigured destinations. The notebooks boasted a niche group of super users, but a steep learning curve for new users." 
+    >}}
 
-> Rocketbook: Reusable notebooks with an app that enables users to scan and store. A number of "smart" features help power users quickly and efficiently scan their notebooks. 
+That was the discussion on the first call. With the budget they had, the team had discussed hiring an agency, but they didn't want a powerpoint, *they needed someone that would work with engineering to build an app*. Hiring a junior in-house designer was off the table: to much of a management challenge and an HR headache. Their head of engineering had worked with me before in a previous role, so they reached out to me. 
 
-That was our discussion on the first call. With the budget they had, the team had discussed hiring an agency, but they didn't want a powerpoint deliverable. They discussed hiring a junior designer, but then they'd need to manage them (and it would take time to get through the HR process at a large company). When their head of engineering (and former collaborator of mine) Chris suggested a contractor, they reached out to me. 
+{{< testimonial-block testimonial="john-lees" quote="rocketbook-case-quote" >}}
 
-Our timeline was also clear. Typical for retail products, *by far* the most imoprtant month of the year for Rocketbook was December: an influx of customers driven by both the Christmas rush, and (as a productivity product) the preperation for a fresh start on New Years' resolutions to "get organized." This mapped perfectly to the massive rise in Rocketbook App downloads... and the massive crash in usage come February. Could we improve the app in time to alter the wave?
+### **December or bust.**
+Our timeline was also clear. As a retail personal organization product, *by far* the most imoprtant month of the year for Rocketbook was December. The month brought an influx of customers driven by both the Christmas rush and New Years' resolutions. Each year, this led to a rise in Rocketbook App downloads... and the massive crash in usage come February. The wave of customers downloaded the app in the first month, but by the second month 2/3rds hadn't opened it again. The first step in laying down a longer-term product strategy would be to try to retain these users: could we get people to keep opening the app long enough to establish a habit?
 
 >(Spoilers: We did. We doubled retention for first time users.)
 
@@ -43,23 +48,25 @@ Our timeline was also clear. Typical for retail products, *by far* the most imop
 
 ---
 
-The team explained that they were conflicted: they needed some short-term wins, but also a way to think longer term about the product strategy. Would we be able to balance it all at once? I put together a two-track plan. We would immediately start with a heuristic analysis to identify quick wins on the onboarding and overall usability of the app. Once that was rolling, we could take a step back and assess the broader strategic goals. With a quick contract in place I got started.
+The team was conflicted: they needed some short-term wins, but also a way to think longer term about the product strategy, so I put together a two-track plan. We would immediately start with a ***heuristic analysis*** to identify quick wins on the onboarding and overall usability of the app. Once that was rolling, we could take a step back and assess the broader strategic goals. With a quick contract in place I got started.
 
-> Commitment type: Fractional → 25% of my time over a period of 10 months
+> *Commitment:*  
+> **Fractional:** 25% of my time over a period of 10 months
 
 The key for me was to quickly identify our quick wins, get ahead of the dev team on designs, establish a rhythm in our sprints, and then begin to think more broadly about how the app could fit into a larger re-think of the business as a whole. 
 
 
 
-### **Getting our quick wins with a heuristic analysis.**
+## **Getting our quick wins with a heuristic analysis.**
 
 ---
 
 Some design questions take deep research. Others don't. 
 
-In a few days I was able to turn around a quick *heuristic analysis* that identified several detailed aspects of the onboarding process that were likely causing drag for users in onboarding. 
+In a few days I was able to turn around a quick ***heuristic analysis*** that identified several detailed aspects of the onboarding process that were likely causing drag for users in onboarding. 
 
-> Heuristic Analysis: having an experienced designer look at an app to identify whether it is using best practices. Heuristic analysis is less rigorous, but can be turned around quickly, especially from a designer with a lot of experience.
+> **Heuristic Analysis:**  
+> Having an experienced designer look at an app to identify whether it is using best practices. Heuristic analysis is less rigorous, but can be turned around quickly, especially from a designer with a lot of experience.
 
 {{< 
     figure src="./assets/heuristic-analysis.png" 
@@ -70,7 +77,11 @@ In a few days I was able to turn around a quick *heuristic analysis* that identi
 
  The work also outlined some broader areas to focus on long-term: key flows, an information architecture re-vamp, and visual updates to be more consistent with the company's current brand language. 
 
-With our quick-wins identified, I got started with a Jira clean-out and started working with the engineering team on the simple stuff. (As with most clients, Figma was also a bit of a disaster, so I worked with the team to get it organized cleaner hand-offs). I also set up access to the team's Mixpanel dashboard so I could start pulling quantitative reports to get a more nuanced view of the customer drop-off. 
+**Setting up for Dev:** With quick-wins identified, I cleaned and organized Jira, got Figma under control and implemented a new design toolkit, and added the engineering sprint meetings to my calendar.
+
+**Setting up for Quant User Analysis:** I also set up access to the team's ***Mixpanel*** dashboard so I could start pulling quantitative reports to get a more nuanced view of the customer drop-off. We knew they weren't sticking around long enough to log in after a month, but when *exactly* were they dropping out? I wanted to find out.
+
+**Easy solutions first: Trim Onboarding.** With the goal of getting users to their first scan faster, we set about working on easy solutions first: stripping down the onboarging flow considerably and re-structuring the call to action for the first flow.
 
 {{< 
     figure src="./assets/shorter-onboarding.png" 
@@ -78,25 +89,30 @@ With our quick-wins identified, I got started with a Jira clean-out and started 
     caption="Rocketbook's onboarding asked several unnecessary demographic questions of users and pushed them toward complex advanced features. We streamlined the flow to get users to complete their first scan more quickly." 
     >}}
 
-With the goal of getting users to their first scan faster, we set about working on easy solutions first: stripping down the onboarging flow considerably and re-structuring the call to action for the first flow.
+Pulling things out of an app is quicker than putting them in, so I split out the onboarding tickets for engineering to start on. 
 
 
-### **Power users or first time users? Yes.**
+## **Power users or first time users? Yes.**
 
 ---
 
-With an engineering cadence in place, it was time to shift focus to the broader structural issues. I dug deeper into the mixpanel data to see exactly where things were breaking down. I could see that many users didn't even complete their first scan with the app. Many who did might scan, but never do anything with the scan. By month two, only 30% of users even opened the app again, and 95% of users had churned by month 12.
+With an engineering cadence in place, it was time to shift focus to the broader structural issues. I dug deeper into the mixpanel data to see exactly where things were breaking down. 
+
+> **Signature Experience: Scan a page in your Rocketbook Notebook and send it**  
+> Rocketbook sold a combination notebook + app. To relaly understand the flow, users needed to successfully scan a page and send it to a cloud destination.
+
+I could see that many users downloaded and logged into the app, but they *didn't even complete their first scan*. Of those who successfully scanned a page, many didn't do anything with it, they just closed the app *and never opened it again*. Only 30% of users who downloaded the app opened it again in their second mongh. By their 19th month, 95% had churned.
 
 {{< callout-block
   eyebrow="What we learned:"
   title="Many users opened the app the first time, and opened the scanner, but never completed their first scan."
 >}}
 
-Looking at the app, it wasn't hard to see why. Rocketbook's core business challenge was evident in its interface: the company wanted to grow its customer base, but its path from startup to acquisition was focused on a narrow band of super-power users. 
+Looking at the app, it wasn't hard to see why, Rocketbook's app UI told a story about the company's history: its path from startup to acquisition was focused on a narrow band of super-power users. Keeping these users happy lead the team toward spiraling complexity as a quest for the "less clicks" meant increasing amounts of hidden automations supported by a nest of toggles and switches in settings made for nearly infinite possibilities in the core experience.
 
-The core of the app experience was scanning: users loved their Rocketbook notebooks, and keeping these users happy lead the team toward spiraling complexity as a nest of toggles and switches in settings made for nearly infinite possibilities in the core experience. A quest for the "least clicks" for power users had led the team toward an impossible cliff for new users. 
+Power users continued to love the app. However, for a new user, things were opaque and baffling. 
 
-Our new designs focused in three areas:
+**Our new designs focused in three areas:**
 
 1. **An updated information architecture** that kept things more visibly organized and pushed unimportant features to the background. 
 2. **A simplified key-flow** that enabled power users to access sophisticated features, but didn't force complexity of new users. 

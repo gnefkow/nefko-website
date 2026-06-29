@@ -63,7 +63,7 @@
 	
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/Observer.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/Draggable.min.js" defer></script>
@@ -248,13 +248,13 @@ With this framework in mind, we illustrate several moments when real people over
 <style>
  
 
-.quote-block {
+.testimonial-block {
  
   box-sizing: border-box;
   width: 100%;
 }
 
-.quote-block__card {
+.testimonial-block__card {
  
   display: flex;
   flex-direction: row;
@@ -268,11 +268,11 @@ With this framework in mind, we illustrate several moments when real people over
   border-radius: 1px;
 }
 
-.quote-block :is(.h6-heavy, .p-sm, .p-sm-heavy) {
+.testimonial-block :is(.p-sm, .p-sm-heavy) {
   padding-top: 0;
 }
 
-.quote-block__photo-wrap {
+.testimonial-block__photo-wrap {
   flex-shrink: 0;
   width: 4.5rem;
   height: 11.5rem;
@@ -280,7 +280,7 @@ With this framework in mind, we illustrate several moments when real people over
   box-shadow: var(--shadow-callout-block);
 }
 
-.quote-block__photo {
+.testimonial-block__photo {
   display: block;
   width: 100%;
   height: 100%;
@@ -288,7 +288,7 @@ With this framework in mind, we illustrate several moments when real people over
   object-position: center top;
 }
 
-.quote-block__content {
+.testimonial-block__content {
   flex: 1;
   min-width: 0;
   display: flex;
@@ -296,61 +296,63 @@ With this framework in mind, we illustrate several moments when real people over
   gap: 1.5rem;
 }
 
-.quote-block__quotes {
+.testimonial-block__quotes {
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 0.375rem;
 }
 
-.quote-block__big-quote,
-.quote-block__small-quote,
-.quote-block__name,
-.quote-block__title,
-.quote-block__company {
+.testimonial-block__big-quote,
+.testimonial-block__small-quote,
+.testimonial-block__name,
+.testimonial-block__title,
+.testimonial-block__company {
   margin: 0;
   color: var(--text-inverse-primary);
   text-align: left;
 }
 
-.quote-block__big-quote {
+.serif .testimonial-block__big-quote,
+.testimonial-block__big-quote {
   font-size: 2rem;
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-serif-display);
+  font-weight: var(--font-weight-heavy);
 }
 
-.quote-block__small-quote {
+.testimonial-block__small-quote {
   font-style: italic;
   color: var(--text-inverse-secondary);
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-serif-text);
   font-size: 1rem;
 }
 
-.quote-block__name {
+.testimonial-block__name {
   display: flex;
   flex-wrap: wrap;
   gap: 0.125rem;
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-serif-text);
   font-size: var(--font-size-p);
   font-weight: var(--font-weight-heavy);
   line-height: var(--line-height-heading);
   color: var(--text-inverse-primary);
 }
 
-.quote-block__first-name,
-.quote-block__last-name {
+.testimonial-block__first-name,
+.testimonial-block__last-name {
   color: inherit;
   font: inherit;
 }
 
-.quote-block__title,
-.quote-block__company {
+.testimonial-block__title,
+.testimonial-block__company {
   color: var(--text-inverse-secondary);
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-serif-text);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-body);
 }
 
-.quote-block__attribution {
+.testimonial-block__attribution {
   display: flex;
   flex-direction: column;
   gap: 0.125rem;
@@ -358,11 +360,11 @@ With this framework in mind, we illustrate several moments when real people over
 }
 
 @media screen and (max-width: 30em) {
-  .quote-block__card {
+  .testimonial-block__card {
     flex-direction: column;
   }
 
-  .quote-block__photo-wrap {
+  .testimonial-block__photo-wrap {
     width: 100%;
     height: 8rem;
   }
@@ -409,27 +411,27 @@ With this framework in mind, we illustrate several moments when real people over
       
       
 
-      <div class="quote-block" role="group" aria-label="Testimonial from Tricia Wang">
-        <div class="quote-block__card">
-          <div class="quote-block__photo-wrap">
-            <img class="quote-block__photo"
+      <div class="testimonial-block" role="group" aria-label="Testimonial from Tricia Wang">
+        <div class="testimonial-block__card">
+          <div class="testimonial-block__photo-wrap">
+            <img class="testimonial-block__photo"
                  src="/images/testimonial-avatars/Tricia-Wang.jpeg"
                  alt="Tricia Wang"
                  loading="lazy" />
           </div>
-          <div class="quote-block__content">
-            <div class="quote-block__quotes">
-              <p class="quote-block__big-quote h6-heavy">Kyle was a key leader on our design research team.</p>
-              <p class="quote-block__small-quote p-sm">his ability to quickly ramp up on complex topics in Web3 and cryptocurrency enabled him to fluently build rapport with industry participants in ways that revealed the human stories underneath. In synthesis, he is able to work at multiple levels of depth with a topic to understand implications from the the minute level of individual experience to the broader systemic ways trends affect communities, industries and societies.</p>
+          <div class="testimonial-block__content">
+            <div class="testimonial-block__quotes">
+              <p class="testimonial-block__big-quote serif-display">Kyle was a key leader on our design research team.</p>
+              <p class="testimonial-block__small-quote p-sm">his ability to quickly ramp up on complex topics in Web3 and cryptocurrency enabled him to fluently build rapport with industry participants in ways that revealed the human stories underneath. In synthesis, he is able to work at multiple levels of depth with a topic to understand implications from the the minute level of individual experience to the broader systemic ways trends affect communities, industries and societies.</p>
             </div>
-            <div class="quote-block__attribution">
-              <div class="quote-block__name">
-                <span class="quote-block__first-name">Tricia</span>
-                <span class="quote-block__last-name">Wang</span>
+            <div class="testimonial-block__attribution">
+              <div class="testimonial-block__name">
+                <span class="testimonial-block__first-name">Tricia</span>
+                <span class="testimonial-block__last-name">Wang</span>
               </div>
               
-                <p class="quote-block__title">Executive Director</p>
-                <p class="quote-block__company">Crypto Research and Development Lab (CRADL)</p>
+                <p class="testimonial-block__title">Executive Director</p>
+                <p class="testimonial-block__company">Crypto Research and Development Lab (CRADL)</p>
               
             </div>
           </div>

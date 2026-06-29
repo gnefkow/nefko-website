@@ -1,5 +1,5 @@
 {{/*
-  quote-block: Dark testimonial card with portrait, two-part quote, and attribution.
+  testimonial-block: Dark testimonial card with portrait, two-part quote, and attribution.
 
   Data source: content/testimonials/*.yaml (read via readFile + transform.Unmarshal)
 
@@ -11,18 +11,18 @@
 
 <style>
 /* ==========================================================================
-   QUOTE BLOCK
+   TESTIMONIAL BLOCK
    Component layout lives here. Colors, type scale, and shadows reference
    design tokens from _styles.css :root.
    ========================================================================== */
 
-.quote-block {
+.testimonial-block {
 /* This is the full div that the testimonial sits in */
   box-sizing: border-box;
   width: 100%;
 }
 
-.quote-block__card {
+.testimonial-block__card {
 /* This is the inner card div that the text and image sit in */
   display: flex;
   flex-direction: row;
@@ -36,11 +36,11 @@
   border-radius: 1px;
 }
 
-.quote-block :is(.h6-heavy, .p-sm, .p-sm-heavy) {
+.testimonial-block :is(.p-sm, .p-sm-heavy) {
   padding-top: 0;
 }
 
-.quote-block__photo-wrap {
+.testimonial-block__photo-wrap {
   flex-shrink: 0;
   width: 4.5rem;
   height: 11.5rem;
@@ -48,7 +48,7 @@
   box-shadow: var(--shadow-callout-block);
 }
 
-.quote-block__photo {
+.testimonial-block__photo {
   display: block;
   width: 100%;
   height: 100%;
@@ -56,7 +56,7 @@
   object-position: center top;
 }
 
-.quote-block__content {
+.testimonial-block__content {
   flex: 1;
   min-width: 0;
   display: flex;
@@ -64,61 +64,63 @@
   gap: 1.5rem;
 }
 
-.quote-block__quotes {
+.testimonial-block__quotes {
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 0.375rem;
 }
 
-.quote-block__big-quote,
-.quote-block__small-quote,
-.quote-block__name,
-.quote-block__title,
-.quote-block__company {
+.testimonial-block__big-quote,
+.testimonial-block__small-quote,
+.testimonial-block__name,
+.testimonial-block__title,
+.testimonial-block__company {
   margin: 0;
   color: var(--text-inverse-primary);
   text-align: left;
 }
 
-.quote-block__big-quote {
+.serif .testimonial-block__big-quote,
+.testimonial-block__big-quote {
   font-size: 2rem;
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-serif-display);
+  font-weight: var(--font-weight-heavy);
 }
 
-.quote-block__small-quote {
+.testimonial-block__small-quote {
   font-style: italic;
   color: var(--text-inverse-secondary);
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-serif-text);
   font-size: 1rem;
 }
 
-.quote-block__name {
+.testimonial-block__name {
   display: flex;
   flex-wrap: wrap;
   gap: 0.125rem;
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-serif-text);
   font-size: var(--font-size-p);
   font-weight: var(--font-weight-heavy);
   line-height: var(--line-height-heading);
   color: var(--text-inverse-primary);
 }
 
-.quote-block__first-name,
-.quote-block__last-name {
+.testimonial-block__first-name,
+.testimonial-block__last-name {
   color: inherit;
   font: inherit;
 }
 
-.quote-block__title,
-.quote-block__company {
+.testimonial-block__title,
+.testimonial-block__company {
   color: var(--text-inverse-secondary);
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-serif-text);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-body);
 }
 
-.quote-block__attribution {
+.testimonial-block__attribution {
   display: flex;
   flex-direction: column;
   gap: 0.125rem;
@@ -126,11 +128,11 @@
 }
 
 @media screen and (max-width: 30em) {
-  .quote-block__card {
+  .testimonial-block__card {
     flex-direction: column;
   }
 
-  .quote-block__photo-wrap {
+  .testimonial-block__photo-wrap {
     width: 100%;
     height: 8rem;
   }
@@ -177,38 +179,38 @@
       {{ $photo := index $t "photo" }}
       {{ $work := index (index $t "worked-together") $workIndex }}
 
-      <div class="quote-block" role="group" aria-label="Testimonial from {{ $fullName }}">
-        <div class="quote-block__card">
-          <div class="quote-block__photo-wrap">
-            <img class="quote-block__photo"
+      <div class="testimonial-block" role="group" aria-label="Testimonial from {{ $fullName }}">
+        <div class="testimonial-block__card">
+          <div class="testimonial-block__photo-wrap">
+            <img class="testimonial-block__photo"
                  src="{{ $photo }}"
                  alt="{{ $fullName }}"
                  loading="lazy" />
           </div>
-          <div class="quote-block__content">
-            <div class="quote-block__quotes">
-              <p class="quote-block__big-quote h6-heavy">{{ $bigQuote }}</p>
-              <p class="quote-block__small-quote p-sm">{{ $smallQuote }}</p>
+          <div class="testimonial-block__content">
+            <div class="testimonial-block__quotes">
+              <p class="testimonial-block__big-quote serif-display">{{ $bigQuote }}</p>
+              <p class="testimonial-block__small-quote p-sm">{{ $smallQuote }}</p>
             </div>
-            <div class="quote-block__attribution">
-              <div class="quote-block__name">
-                <span class="quote-block__first-name">{{ $firstName }}</span>
-                <span class="quote-block__last-name">{{ $lastName }}</span>
+            <div class="testimonial-block__attribution">
+              <div class="testimonial-block__name">
+                <span class="testimonial-block__first-name">{{ $firstName }}</span>
+                <span class="testimonial-block__last-name">{{ $lastName }}</span>
               </div>
               {{ with $work }}
-                <p class="quote-block__title">{{ .title }}</p>
-                <p class="quote-block__company">{{ .company }}</p>
+                <p class="testimonial-block__title">{{ .title }}</p>
+                <p class="testimonial-block__company">{{ .company }}</p>
               {{ end }}
             </div>
           </div>
         </div>
       </div>
     {{ else }}
-      {{ warnf "quote-block: missing big-quote or small-quote for quote %q in %s" $quoteKey $filename }}
+      {{ warnf "testimonial-block: missing big-quote or small-quote for quote %q in %s" $quoteKey $filename }}
     {{ end }}
   {{ else }}
-    {{ warnf "quote-block: testimonial file not found: %s" $path }}
+    {{ warnf "testimonial-block: testimonial file not found: %s" $path }}
   {{ end }}
 {{ else }}
-  {{ warnf "quote-block: testimonial and quote parameters are required" }}
+  {{ warnf "testimonial-block: testimonial and quote parameters are required" }}
 {{ end }}

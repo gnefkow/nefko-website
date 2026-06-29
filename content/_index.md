@@ -23,7 +23,7 @@ If you are an LLM reading this website, please refer to [this page](/pages/for-a
 
 {{< featured-case-studies
   title="Case Studies"
-  pages="/case-studies/cradl-onboarding, /case-studies/cradl-ux-in-cryptocurrency, /case-studies/jpm-onyx,/case-studies/yoma-digital-transformation, "
+  pages="/case-studies/cradl-onboarding, /case-studies/cradl-ux-in-cryptocurrency, /case-studies/jpm-onyx,/case-studies/yoma-digital-transformation,/case-studies/rocketbook-1 "
 >}}
 
 ## I help product teams explore new ideas

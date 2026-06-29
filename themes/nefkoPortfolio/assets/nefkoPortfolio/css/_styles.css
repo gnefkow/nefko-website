@@ -35,8 +35,9 @@
   --site-header-height: 5rem;
 
   /* --- Typography: Font Families --- */
-  --font-family-serif:      Georgia, 'Times New Roman', Times, serif;
-  --font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-serif-display: 'Libre Caslon Display', Georgia, 'Times New Roman', Times, serif;
+  --font-family-serif-text:    'Libre Caslon Text', Georgia, 'Times New Roman', Times, serif;
+  --font-family-sans-serif:    'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-family-body:       var(--font-family-sans-serif);
   --font-family-heading:    var(--font-family-sans-serif);
 
@@ -190,14 +191,36 @@ input.h4 {
 .p-sm       { font-weight: var(--font-weight-regular); }
 .p-sm-heavy { font-weight: var(--font-weight-heavy); }
 
-/* Font family aliases — use var(--font-family-serif) or var(--font-family-sans-serif)
-   in component CSS; these classes override Tachyons defaults to the same tokens. */
-.serif {
-  font-family: var(--font-family-serif);
+/*
+  Font family aliases — override Tachyons defaults to design tokens.
+  In component CSS, use var(--font-family-serif-display), var(--font-family-serif-text),
+  or var(--font-family-sans-serif) directly.
+
+  Cascade: .sans-serif and explicit .serif-* beat tag-aware .serif defaults.
+*/
+.sans-serif,
+.serif .sans-serif {
+  font-family: var(--font-family-sans-serif);
 }
 
-.sans-serif {
-  font-family: var(--font-family-sans-serif);
+.serif-display,
+.serif .serif-display {
+  font-family: var(--font-family-serif-display);
+}
+
+.serif-text,
+.serif .serif-text {
+  font-family: var(--font-family-serif-text);
+}
+
+.serif:is(h1, h2, h3, h4, h5, h6):not(.sans-serif):not(.serif-text),
+.serif :is(h1, h2, h3, h4, h5, h6):not(.sans-serif):not(.serif-text) {
+  font-family: var(--font-family-serif-display);
+}
+
+.serif:is(p, li, blockquote, dd, figcaption, td, th):not(.sans-serif):not(.serif-display),
+.serif :is(p, li, blockquote, dd, figcaption, td, th):not(.sans-serif):not(.serif-display) {
+  font-family: var(--font-family-serif-text);
 }
 
 
@@ -365,6 +388,7 @@ input.h4 {
 
 .home-hero-block__title {
   color: var(--text-primary);
+  font-family: var(--font-family-serif-display);
 }
 
 .home-hero-block__text {
