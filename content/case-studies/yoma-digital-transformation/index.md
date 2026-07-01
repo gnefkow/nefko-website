@@ -1,7 +1,8 @@
 ---
 id: 90
 title: A Digital Transformation in a Burmese Bank
-description: "Builing and leading a UX team in Myanmar’s 70% un-banked market."
+description: "A case study overview of UX strategist Kyle Becker's work at Yoma Bank. Yoma Bank was focused on Myanmar;s under-served retail banking population. Kyle led the UI/UX team for over a year as the underwent a digital transformation." 
+subtitle: "Builing and leading a UX team in Myanmar’s 70% un-banked market."
 short-title: "Case Study: Yoma Bank"
 type: case-study
 featured_image: "hero.jpg"
@@ -21,18 +22,11 @@ Emerging market finance is my favorite space to work in, so when my friend and f
 
  The population of Myanmar has traditionally been underserved by its banks—at the time of my arrival, about 70% of the population was un-banked and many who did have bank accounts didn't use them. Banking infrastructure was also dated with few digitized processes. For these reasons, Yoma Bank was undergoing a digital transformation through the establishment of a new digital division that would focus on retail banking adoption. The broader service design team—including the UX team which I would lead—was a part of this division. 
 
-
-
-
-
-
 ![](./assets/app-tea-shop_1024x682.jpg)
 *Early designs for our flagship consumer app being used in their natural environment: the tea shop.*
 
 
  In my time at the bank, I build, trained, and led a team of local designers helping them embed design in the agile design process which maintained a handful of app experiences for different banking functions. I also led the design of the bank's flagship consumer app which would launch during my time in Myanmar as a an MVP to help the bank maintain its competitive position. Under the care of the team I left behind, the app has grown into the full-features vision that we developed back in 2018.
-
-
 
 
 ![](./assets/Ref-block_Mark-Flaming.png)

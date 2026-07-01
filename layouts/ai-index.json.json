@@ -1,0 +1,8 @@
+{{- $resources := partial "func/get-ai-catalog-resources.html" . -}}
+{{- dict
+  "title" "AI-readable content index for nefko.xyz"
+  "description" "Catalog of structured AI-readable resources on nefko.xyz. Fetch json_url payloads for full records."
+  "generated_at" (now.Format "2006-01-02")
+  "count" (len $resources)
+  "resources" $resources
+  | jsonify -}}

@@ -14,7 +14,6 @@ from pathlib import Path
 from typing import Any
 
 from conversation_common import (
-    AI_INDEX_DIR,
     CONVERSATION_DATA_DIR,
     CONVERSATIONS_DIR,
     RAW_TRANSCRIPTS_DIR,
@@ -117,6 +116,12 @@ def validate_slug(slug: str, *, require_json: bool) -> list[str]:
     elif "pending" not in str(frontmatter.get("ai_json", "")):
         warnings.append("conversation.json is missing, but ai_json is not marked pending.")
 
+    require(
+        str(metadata.get("status", "")) == "published",
+        "data/conversations metadata status should be published for Hugo catalog inclusion",
+        errors,
+    )
+
     for field in ["title", "description", "summary"]:
         if not metadata.get(field):
             warnings.append(f"Metadata field is empty: {field}")
@@ -125,18 +130,6 @@ def validate_slug(slug: str, *, require_json: bool) -> list[str]:
         value = metadata.get(field, [])
         if not value:
             warnings.append(f"Metadata list is empty: {field}")
-
-    if json_path.exists():
-        ai_index_path = AI_INDEX_DIR / "index.json"
-        require(ai_index_path.exists(), "Missing static/ai/index.json", errors)
-        if ai_index_path.exists():
-            ai_index = json.loads(ai_index_path.read_text(encoding="utf-8"))
-            resources = ai_index.get("resources", [])
-            require(
-                any(resource.get("id") == slug for resource in resources),
-                "static/ai/index.json does not include this conversation",
-                errors,
-            )
 
     for warning in warnings:
         print(f"Warning: {warning}", file=sys.stderr)
@@ -175,6 +168,15 @@ def validate_build_outputs(slug: str) -> list[str]:
         require(
             expected_json in html,
             f"Built human page does not link to {expected_json}",
+            errors,
+        )
+
+    if ai_index_path.exists():
+        ai_index = json.loads(ai_index_path.read_text(encoding="utf-8"))
+        resources = ai_index.get("resources", [])
+        require(
+            any(resource.get("id") == slug for resource in resources),
+            "Built /ai/index.json catalog does not include this conversation",
             errors,
         )
 

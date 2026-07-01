@@ -1,0 +1,42 @@
+{{- $person := site.Data.profile.person -}}
+{{- $experiences := partial "func/get-profile-experiences.html" . -}}
+{{- $records := slice -}}
+{{- range $experiences -}}
+  {{- $record := dict
+    "id" .id
+    "type" .type
+    "title" .title
+    "role" .role
+    "organization" .organization
+    "organization_entity_id" .organization_entity_id
+    "years" .years
+    "start_year" .start_year
+    "end_year" .end_year
+    "location" .location
+    "summary" (strings.TrimSpace .summary)
+    "domains" .domains
+    "keywords" .keywords
+    "methods" .methods
+    "related_case_study" .related_case_study
+    "related_testimonials" .related_testimonials
+  -}}
+  {{- with .parent_experience_id -}}
+    {{- $record = merge $record (dict "parent_experience_id" .) -}}
+  {{- end -}}
+  {{- with .client -}}
+    {{- $record = merge $record (dict "client" .) -}}
+  {{- end -}}
+  {{- with .outcomes -}}
+    {{- $record = merge $record (dict "outcomes" (strings.TrimSpace .)) -}}
+  {{- end -}}
+  {{- $records = $records | append $record -}}
+{{- end -}}
+{{- dict
+  "title" "Kyle Becker experience records"
+  "description" "Structured work history and professional episodes for Kyle Becker."
+  "person_id" $person.id
+  "person_url" $person.url
+  "generated_at" (now.Format "2006-01-02")
+  "count" (len $records)
+  "experiences" $records
+  | jsonify -}}

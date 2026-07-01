@@ -346,6 +346,7 @@ input.h4 {
 
 .featured-block__card-title {
   color: var(--text-primary);
+  padding-top: 0;
 }
 
 .featured-block__card-description {

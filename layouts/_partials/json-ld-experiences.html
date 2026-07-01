@@ -1,0 +1,36 @@
+{{/* OrganizationRole JSON-LD from data/profile/experiences/ */}}
+{{- $person := site.Data.profile.person -}}
+{{- $experiences := partial "func/get-profile-experiences.html" . -}}
+{{- if and $person (gt (len $experiences) 0) -}}
+  {{- $roles := slice -}}
+  {{- range $experiences -}}
+    {{- $org := dict "@type" "Organization" "name" .organization -}}
+    {{- with .organization_entity_id -}}
+      {{- $org = merge $org (dict "@id" (printf "%s#%s" $person.url .)) -}}
+    {{- end -}}
+    {{- $role := dict
+      "@type" "OrganizationRole"
+      "@id" (printf "%s#experience-%s" $person.url .id)
+      "roleName" .role
+      "name" .title
+      "description" (strings.TrimSpace .summary)
+      "memberOf" $org
+    -}}
+    {{- with .start_year -}}
+      {{- $role = merge $role (dict "startDate" (printf "%d-01-01" .)) -}}
+    {{- end -}}
+    {{- with .end_year -}}
+      {{- $role = merge $role (dict "endDate" (printf "%d-12-31" .)) -}}
+    {{- end -}}
+    {{- with .related_case_study -}}
+      {{- $role = merge $role (dict "url" (. | absURL)) -}}
+    {{- end -}}
+    {{- $roles = $roles | append $role -}}
+  {{- end -}}
+  {{- $graph := dict
+    "@context" "https://schema.org"
+    "@graph" (append (slice (dict "@type" "Person" "@id" $person.id)) $roles)
+  -}}
+  {{- $json := $graph | jsonify -}}
+  {{- printf "<script type=\"application/ld+json\">%s</script>" $json | safeHTML -}}
+{{- end -}}

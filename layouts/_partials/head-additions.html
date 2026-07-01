@@ -8,3 +8,7 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/InertiaPlugin.min.js" defer></script>
 <script src="{{ "/js/site-nav-scroll.js" | relURL }}" defer></script>
 <script src="{{ "/js/site-menu.js" | relURL }}" defer></script>
+{{ if or .IsHome (and .IsPage (eq .File.ContentBaseName "for-ai-llm-readers")) }}
+  {{ partial "json-ld-profile.html" . }}
+  {{ partial "json-ld-experiences.html" . }}
+{{ end }}

@@ -1,14 +1,1 @@
-<div class="w-100 mb4 nested-copy-line-height relative bg-primary">
-  <div class="mb3 pa4 text-tertiary overflow-hidden bg-primary">
-    {{with .CurrentSection.Title }}<span class="f6 db">{{ . }}</span>{{end}}
-    <h1 class="f3 text-primary">
-      <a href="{{ .RelPermalink }}" class="link text-primary dim">
-        {{ .Title }}
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      {{ .Summary }}
-    </div>
-    <a href="{{.RelPermalink}}" class="ba border-secondary bg-tertiary br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">{{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}</a>
-  </div>
-</div>
+{{ partial "featured-block-card.html" . }}

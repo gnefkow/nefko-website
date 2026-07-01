@@ -1,0 +1,34 @@
+id: yoma-bank
+title: UX Lead
+role: UX Lead
+organization: Yoma Bank
+organization_entity_id: yoma-bank
+years: "2018–2019"
+start_year: 2018
+end_year: 2019
+location: Yangon, Myanmar
+type: employment
+status: published
+
+summary: >
+  Led UX during a retail banking digital transformation in an emerging market,
+  including agile delivery and customer research across Myanmar.
+
+domains:
+  - emerging market finance
+  - retail banking
+  - fintech
+
+keywords:
+  - digital transformation
+  - agile
+  - retail banking
+  - field research
+
+methods:
+  - qualitative research
+  - service design
+  - scrum
+
+related_case_study: /case-studies/yoma-digital-transformation/
+related_testimonials: []

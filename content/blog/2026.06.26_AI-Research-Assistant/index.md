@@ -1,7 +1,8 @@
 ---
 title: "Don't use synthetic personas. Consider an AI research oracle."
 short-title: "AI Research Oracle"
-description: "A practical look at using AI in design research without creating synthetic personas: how a research-sharing bot named Margaret routes through structured evidence, qualifies answers, and helps teams access research responsibly."
+subtitle: "Don't have your AI impersonate users, use it to communicate insights."
+description: "UX strategist Kyle Becker provides a practical look at using AI in design research without creating synthetic personas: how a research-sharing bot named Margaret routes through structured evidence, qualifies answers, and helps teams access research responsibly."
 type: article
 date: "2026-06-26"
 lastmod: "2026-06-26"

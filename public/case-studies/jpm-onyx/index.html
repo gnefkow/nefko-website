@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
     <title>Institutional assets on-chain at J.P. Morgan. | Kyle Becker</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Working on web3 tech at the world&#39;s largest bank.">
+    <meta name="description" content="Overview of design strategist Kyle Becker&#39;s work inside J.P. Morgan&#39;s blockchain division Onyx. This article discusses a tokenized collateral management system that launched, and gives an overview of other projects he contributed to at the world&#39;s largest bank.">
     <meta name="generator" content="Hugo 0.157.0">
     
     
     
-      <meta name="robots" content="noindex, nofollow">
+      <meta name="robots" content="index, follow">
     
     
 
     
-<link rel="stylesheet" href="/nefkoPortfolio/css/main.min.css" >
+<link rel="stylesheet" href="/nefkoPortfolio/css/main.min.0b9ede96f2b1d449d42b766d38f690016cd59c90140fdf28bdeff8692145612b.css" >
 
 
 
@@ -32,15 +32,15 @@
     
 
     
-      <link rel="canonical" href="http://localhost:1313/case-studies/jpm-onyx/">
+      <link rel="canonical" href="https://nefko.xyz/case-studies/jpm-onyx/">
     
 
     
     
-    <meta property="og:url" content="http://localhost:1313/case-studies/jpm-onyx/">
+    <meta property="og:url" content="https://nefko.xyz/case-studies/jpm-onyx/">
   <meta property="og:site_name" content="Kyle Becker">
   <meta property="og:title" content="Institutional assets on-chain at J.P. Morgan.">
-  <meta property="og:description" content="Working on web3 tech at the world&#39;s largest bank.">
+  <meta property="og:description" content="Overview of design strategist Kyle Becker&#39;s work inside J.P. Morgan&#39;s blockchain division Onyx. This article discusses a tokenized collateral management system that launched, and gives an overview of other projects he contributed to at the world&#39;s largest bank.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="case-studies">
@@ -49,18 +49,21 @@
     <meta property="article:tag" content="Cryptocurrenty">
     <meta property="article:tag" content="Web3">
     <meta property="article:tag" content="Blockchain">
-    <meta property="og:image" content="http://localhost:1313/images/og-default.png">
+    <meta property="og:image" content="https://nefko.xyz/images/og-default.png">
 
   <meta itemprop="name" content="Institutional assets on-chain at J.P. Morgan.">
-  <meta itemprop="description" content="Working on web3 tech at the world&#39;s largest bank.">
-  <meta itemprop="wordCount" content="403">
-  <meta itemprop="image" content="http://localhost:1313/images/og-default.png">
+  <meta itemprop="description" content="Overview of design strategist Kyle Becker&#39;s work inside J.P. Morgan&#39;s blockchain division Onyx. This article discusses a tokenized collateral management system that launched, and gives an overview of other projects he contributed to at the world&#39;s largest bank.">
+  <meta itemprop="wordCount" content="557">
+  <meta itemprop="image" content="https://nefko.xyz/images/og-default.png">
   <meta itemprop="keywords" content="Institutional Finance,Design Strategy,Cryptocurrenty,Web3,Blockchain">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/images/og-default.png">
+  <meta name="twitter:image" content="https://nefko.xyz/images/og-default.png">
   <meta name="twitter:title" content="Institutional assets on-chain at J.P. Morgan.">
-  <meta name="twitter:description" content="Working on web3 tech at the world&#39;s largest bank.">
+  <meta name="twitter:description" content="Overview of design strategist Kyle Becker&#39;s work inside J.P. Morgan&#39;s blockchain division Onyx. This article discusses a tokenized collateral management system that launched, and gives an overview of other projects he contributed to at the world&#39;s largest bank.">
 
+      
+      
+    
 	
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,7 +75,8 @@
 <script src="/js/site-nav-scroll.js" defer></script>
 <script src="/js/site-menu.js" defer></script>
 
-  </head><body class="ma0 bg-primary text-primary  development is-page is-page page-jpm-onyx">
+
+  </head><body class="ma0 bg-primary text-primary  production is-page is-page page-jpm-onyx">
     
   
 
@@ -210,7 +214,206 @@
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l"><p>I was super excited to see J.P. Morgan and Blackrock&rsquo;s public announcement about their on-chain collateral management pilot.</p>
 <p>I worked on the interface for the initial pilot of this product during my time with J.P. Morgan Onyx—the company&rsquo;s blockchain-focused division. This particular project solved a major (and expensive) painpoint for complex trading organizations: collateral management.</p>
-<p><img src="./assets/Ref-block_Lawrence.png" alt=""></p>
+
+
+<style>
+ 
+
+.testimonial-block {
+ 
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.testimonial-block__card {
+ 
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5rem;
+  box-sizing: border-box;
+  margin: 2rem;
+  padding: 1rem;
+  background-color: var(--bg-inverse-primary);
+  box-shadow: var(--shadow-callout-block);
+  border-radius: 1px;
+}
+
+.testimonial-block :is(.p-sm, .p-sm-heavy) {
+  padding-top: 0;
+}
+
+.testimonial-block__photo-wrap {
+  flex-shrink: 0;
+  width: 4.5rem;
+  height: 11.5rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-callout-block);
+}
+
+.testimonial-block__photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.testimonial-block__content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.testimonial-block__quotes {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.testimonial-block__big-quote,
+.testimonial-block__small-quote,
+.testimonial-block__name,
+.testimonial-block__title,
+.testimonial-block__company {
+  margin: 0;
+  color: var(--text-inverse-primary);
+  text-align: left;
+}
+
+.serif .testimonial-block__big-quote,
+.testimonial-block__big-quote {
+  font-size: 2rem;
+  font-family: var(--font-family-serif-display);
+  font-weight: var(--font-weight-heavy);
+}
+
+.testimonial-block__small-quote {
+  font-style: italic;
+  color: var(--text-inverse-secondary);
+  font-family: var(--font-family-serif-text);
+  font-size: 1rem;
+}
+
+.testimonial-block__name {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.125rem;
+  font-family: var(--font-family-serif-text);
+  font-size: var(--font-size-p);
+  font-weight: var(--font-weight-heavy);
+  line-height: var(--line-height-heading);
+  color: var(--text-inverse-primary);
+}
+
+.testimonial-block__first-name,
+.testimonial-block__last-name {
+  color: inherit;
+  font: inherit;
+}
+
+.testimonial-block__title,
+.testimonial-block__company {
+  color: var(--text-inverse-secondary);
+  font-family: var(--font-family-serif-text);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+}
+
+.testimonial-block__attribution {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  margin: 0;
+}
+
+@media screen and (max-width: 30em) {
+  .testimonial-block__card {
+    flex-direction: column;
+  }
+
+  .testimonial-block__photo-wrap {
+    width: 100%;
+    height: 8rem;
+  }
+}
+</style>
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+  
+    
+    
+
+    
+    
+    
+      
+        
+      
+        
+      
+        
+          
+            
+          
+          
+            
+          
+        
+      
+    
+
+    
+      
+      
+      
+      
+      
+
+      <div class="testimonial-block" role="group" aria-label="Testimonial from Lawrence Lipkin">
+        <div class="testimonial-block__card">
+          <div class="testimonial-block__photo-wrap">
+            <img class="testimonial-block__photo"
+                 src="/images/testimonial-avatars/Lawrence-Lipkin.jpeg"
+                 alt="Lawrence Lipkin"
+                 loading="lazy" />
+          </div>
+          <div class="testimonial-block__content">
+            <div class="testimonial-block__quotes">
+              <p class="testimonial-block__big-quote serif-display">able to learn complex domains quickly, and uses his superb story-telling skills to re-shape and re-frame business ideas into cohesive narratives that enable cross-functional teams to collaborate more effectively.</p>
+              <p class="testimonial-block__small-quote p-sm">I had the pleasure of working with him on multiple innovation initiatives for JP Morgan Onyx. Kyle is &#39;ahead of the curve&#39; on integrating multiple design skills to solve problems from a human centered perspective.  He is naturally curious, able to learn complex domains quickly, and uses his superb story-telling skills to re-shape and re-frame business ideas into cohesive narratives that enable cross-functional teams to collaborate more effectively.  He showed great skill at all kinds of research and UX/UI problem solving as well, but in his case: the whole is greater than the sum of the parts.  He has a great sense of humor, ethical compass and thirst for solving complex problems.</p>
+            </div>
+            <div class="testimonial-block__attribution">
+              <div class="testimonial-block__name">
+                <span class="testimonial-block__first-name">Lawrence</span>
+                <span class="testimonial-block__last-name">Lipkin</span>
+              </div>
+              
+                <p class="testimonial-block__title">Executive Director, Design, Corporate &amp; Investment Bank Platform Services</p>
+                <p class="testimonial-block__company">J.P. Morgan</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  
+
+
 <p>High-frequency investors managing large portfolios need to maintain collateral for their leveraged positions (usually risk-free assets like bonds). Each day as the market value of their portfolios change, they need to increase or decrease the collateral that backs those positions. This collateral management task requires hundreds of people who set values for assets, manage yields on them, and move them back and forth between different custodians.</p>
 <p>This is fundamentally an accounting problem, and one that distributed ledger technology (like blockchains) can help out with. By managing this collateral with on-chain assets (rather than traditional assets that need to be transferred and cleared on traditional rails), calculations and transactions can happen much faster.</p>
 <p>It is exciting to see this public announcement. During my time at J.P. Morgan, I worked on eight or nine projects, but most remained highly confidential. It is amazing to see something out in the public.</p>

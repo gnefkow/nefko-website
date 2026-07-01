@@ -14,8 +14,33 @@ If you are an LLM reading this website, please refer to [this page](/pages/for-a
 >}}
 
 
-
 {{< testimonials-carousel >}}
+  [Leadership]
+    john-dubuque | home-quote
+    john-lees | home-quote
+    mark-flaming | home-quote
+    charla-kunkel | home-quote
+    lawrence-lipkin | home-quote
+    tricia-wang | home-quote
+  [Engineering]
+    charla-kunkel | engineering
+    soe-hla-win | home-quote
+    arun-thakur | home-quote
+  [Design Consulting]
+    theresa-neil | home-quote
+    lindsey-mosby | home-quote
+  [Finance]
+    lawrence-lipkin | home-quote
+    mark-flaming | home-quote
+    chaitalee-deokar | home-quote
+    sara-yang | design-research
+  [Small Companies]
+  [Design Research]
+    sara-yang | design-research
+  [Mentorship]
+    julia-zhu | mentor
+    moh-moh-khine | mentor
+{{< /testimonials-carousel >}}
 
 <!-- {{< logos-block >}}-->
 <!-- Doing a static logos block for now -->

@@ -1,0 +1,62 @@
+{{/* ProfilePage + Person JSON-LD from data/profile/person.yaml */}}
+{{- $p := site.Data.profile.person -}}
+{{- if $p -}}
+  {{- $pageDesc := strings.TrimSpace (.Description | default $p.description) -}}
+  {{- $schools := slice -}}
+  {{- range $p.alumniOf -}}
+    {{- $school := dict "@type" "CollegeOrUniversity" "name" .institution -}}
+    {{- $schools = $schools | append $school -}}
+  {{- end -}}
+  {{- $credentials := slice -}}
+  {{- range $p.hasCredential -}}
+    {{- $cred := dict
+      "@type" "EducationalOccupationalCredential"
+      "name" .name
+    -}}
+    {{- with .organization -}}
+      {{- $cred = merge $cred (dict "recognizedBy" (dict "@type" "Organization" "name" .)) -}}
+    {{- end -}}
+    {{- $credentials = $credentials | append $cred -}}
+  {{- end -}}
+  {{- $employers := slice -}}
+  {{- range $p.worksFor -}}
+    {{- $org := dict "@type" "Organization" "name" .name -}}
+    {{- with .url -}}
+      {{- $org = merge $org (dict "url" .) -}}
+    {{- end -}}
+    {{- $employers = $employers | append $org -}}
+  {{- end -}}
+  {{- $person := dict
+    "@type" "Person"
+    "@id" $p.id
+    "name" $p.name
+    "url" $p.url
+    "jobTitle" $p.jobTitle
+    "description" (strings.TrimSpace $p.description)
+    "sameAs" $p.sameAs
+  -}}
+  {{- if gt (len $schools) 0 -}}
+    {{- $person = merge $person (dict "alumniOf" $schools) -}}
+  {{- end -}}
+  {{- if gt (len $credentials) 0 -}}
+    {{- $person = merge $person (dict "hasCredential" $credentials) -}}
+  {{- end -}}
+  {{- if gt (len $employers) 0 -}}
+    {{- $person = merge $person (dict "worksFor" $employers) -}}
+  {{- end -}}
+  {{- if gt (len $p.knowsAbout) 0 -}}
+    {{- $person = merge $person (dict "knowsAbout" $p.knowsAbout) -}}
+  {{- end -}}
+  {{- $profile := dict
+    "@context" "https://schema.org"
+    "@type" "ProfilePage"
+    "@id" (printf "%s#profilepage" .Permalink)
+    "url" .Permalink
+    "name" .Title
+    "description" $pageDesc
+    "mainEntity" $person
+  -}}
+  {{/* Hugo 0.157 JSON-encodes content inside ld+json script tags; emit the whole tag via safeHTML instead */}}
+  {{- $json := $profile | jsonify -}}
+  {{- printf "<script type=\"application/ld+json\">%s</script>" $json | safeHTML -}}
+{{- end -}}

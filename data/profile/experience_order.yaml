@@ -1,0 +1,22 @@
+# Ordered list of experience record ids for templates that need explicit sequencing.
+# Default fallback: sort by start_year descending, then title.
+#
+# Field schema (each file in experiences/):
+#   id, title, role, organization, organization_entity_id
+#   years, start_year, end_year (end_year null = ongoing)
+#   location, summary, domains, keywords, methods
+#   related_case_study, related_testimonials, outcomes, notes
+#   status: draft | published
+#   type: employment | freelance | research | education | project
+#   parent_experience_id: (optional) id of parent tenure, e.g. frog-austin-ey → frog-austin
+
+order:
+  - rocketbook
+  - sugarcane-finance
+  - cradl
+  - jpm-onyx
+  - grid-ai
+  - yoma-bank
+  - frog-shanghai
+  - medsana
+  - frog-austin

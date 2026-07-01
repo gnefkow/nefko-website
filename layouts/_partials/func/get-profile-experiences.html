@@ -1,0 +1,28 @@
+{{/* Returns published experience records in display order. */}}
+{{- $experiences := site.Data.profile.experiences | default dict -}}
+{{- $ordered := slice -}}
+{{- $seen := dict -}}
+
+{{- with site.Data.profile.experience_order.order -}}
+  {{- range . -}}
+    {{- with index $experiences . -}}
+      {{- if eq .status "published" -}}
+        {{- $ordered = $ordered | append . -}}
+        {{- $seen = merge $seen (dict .id true) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $rest := slice -}}
+{{- range $experiences -}}
+  {{- if and (eq .status "published") (not (index $seen .id)) -}}
+    {{- $rest = $rest | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- $rest = sort $rest "start_year" "desc" -}}
+{{- range $rest -}}
+  {{- $ordered = $ordered | append . -}}
+{{- end -}}
+
+{{- return $ordered -}}

@@ -6,13 +6,15 @@
       </div>
     </div>
     <div class="page-gutter">
-      <section class="flex-ns mt5 flex-wrap justify-around">
-        {{ range .Pages }}
-          <div class="w-100 mb4 relative bg-primary">
-            {{ .Render "summary" }}
-          </div>
-        {{ end }}
-      </section>
+      <div class="measure-wide center">
+        <div class="featured-block cf text-primary mt5">
+          <ul class="featured-block__list list pl0 mt0 mb0">
+            {{ range .Pages }}
+              {{ .Render "summary" }}
+            {{ end }}
+          </ul>
+        </div>
+      </div>
     </div>
   </article>
 {{ end }}

@@ -1,0 +1,45 @@
+{{/*
+  featured-block-card: Single entry card for featured-block lists.
+  Expects a Page context (.).
+
+  Card blurb: subtitle (site cards) → description (SEO/social fallback) → Summary.
+*/}}
+{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+{{ $rawTags := .Params.tags }}
+{{ $tags := slice }}
+{{ if $rawTags }}
+  {{ if reflect.IsSlice $rawTags }}
+    {{ $tags = $rawTags }}
+  {{ else }}
+    {{ $tags = split $rawTags "," }}
+  {{ end }}
+{{ end }}
+<li class="featured-block__item">
+  <a href="{{ .RelPermalink }}" class="featured-block__card link db no-underline color-inherit">
+    <div class="featured-block__card-surface">
+      {{ if $featured_image }}
+        <div class="featured-block__card-image">
+          <img src="{{ $featured_image }}" alt="" class="featured-block__card-img" />
+        </div>
+      {{ end }}
+      <div class="featured-block__card-body">
+        <h3 class="featured-block__card-title h4-heavy mt0 mb1">{{ .Title }}</h3>
+        <div class="featured-block__card-meta">
+          {{ with or .Params.subtitle .Params.description .Summary }}
+            <p class="featured-block__card-description p text-tertiary mt0 mb0">{{ . }}</p>
+          {{ end }}
+          {{ if $tags }}
+            <div class="featured-block__tags">
+              {{ range $tags }}
+                {{ $tag := trim . " " }}
+                {{ if $tag }}
+                  <span class="tag f7">{{ $tag }}</span>
+                {{ end }}
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </a>
+</li>

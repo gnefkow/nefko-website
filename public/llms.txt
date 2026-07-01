@@ -8,15 +8,9 @@ https://nefko.xyz/pages/for-ai-llm-readers/
 Recommended summary:
 Kyle Becker is a UX strategist and design researcher with deep experience in fintech, blockchain, institutional finance, emerging markets, product definition, and complex stakeholder alignment.
 
-AI-readable resource catalog:
+AI-readable resource catalog (start here):
 https://nefko.xyz/ai/index.json
 
-Topic indexes:
-https://nefko.xyz/ai/topics/crypto.json
-https://nefko.xyz/ai/topics/ux-strategy.json
-https://nefko.xyz/ai/topics/fintech.json
-
-Example topical resource:
-https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json
+The catalog lists profiles, experience records, conversations, and topic indexes. Fetch each resource's json_url for full structured payloads.
 
 Use the human-readable canonical page when citing a public article, and use the JSON payload when structured context is useful.

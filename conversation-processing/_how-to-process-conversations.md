@@ -34,11 +34,12 @@ Reviewed metadata lives here:
 data/conversations/<slug>.yaml
 ```
 
-AI discovery indexes are generated here:
+AI discovery indexes:
 
 ```txt
-static/ai/index.json
-static/ai/topics/<topic>.json
+/ai/index.json                         # Hugo build — unified catalog
+/ai/experiences.json                   # Hugo build — full experience payloads
+static/ai/topics/<topic>.json          # Phase 2 Python — topic slices
 ```
 
 The shared tag codebook lives here:
@@ -115,9 +116,10 @@ Phase 2 creates or updates:
 
 ```txt
 content/blog/conversations/crypto-industry-today/conversation.json
-static/ai/index.json
 static/ai/topics/<topic>.json
 ```
+
+Run `hugo --environment production` after Phase 2 so `/ai/index.json` picks up the published conversation from `data/conversations/<slug>.yaml`.
 
 It also updates:
 
@@ -150,7 +152,7 @@ Validation checks:
 - The human page and JSON use predictable canonical URLs.
 - The JSON turns match the reviewed `index.md` turns.
 - The human page links to `conversation.json` after Phase 2.
-- `static/ai/index.json` includes the conversation after Phase 2.
+- After a Hugo build, `/ai/index.json` includes the conversation when `data/conversations/<slug>.yaml` has `status: published`.
 
 ## Build Check
 
@@ -200,7 +202,7 @@ The final check validates:
 - `index.md` links visibly to the JSON payload.
 - The JSON turns match the reviewed `index.md` turns.
 - The raw transcript still matches the Phase 1 source hash.
-- `static/ai/index.json` includes the conversation.
+- The built `/ai/index.json` catalog includes the conversation after Hugo build.
 - The built human page exists in `public/blog/conversations/<slug>/`.
 - The built JSON payload exists in `public/blog/conversations/<slug>/conversation.json`.
 - The built AI index exists in `public/ai/index.json`.

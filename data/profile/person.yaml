@@ -1,0 +1,73 @@
+# Schema.org Person — rendered by layouts/_partials/json-ld-profile.html
+name: Kyle Becker
+jobTitle: UX Strategy, Research, and Design Consultant
+id: https://nefko.xyz/#kyle-becker
+url: https://nefko.xyz/
+
+description: >
+  Kyle Becker is a UX strategist, researcher, and product designer tht works as a freelance consultant with companies. Most of his work as a freelancer has been with small, early stage startups contracting directly, or subcontracting through design firms. In the past, he has worked with frog design, Yoma Bank, J.P. Morgan Onyx, and Crypto Research and Design Lab (CRADL). He has conducted user research in the US, El Salvador, Nigeria, Rwanda, Kenya, Indonesia, and Myanmar. In the past few years, much of his work has centered around AI, blockchain experiences, and emerging market finance.
+
+# Kyle: expand this list when ready
+
+worksFor:
+  - type: company
+    name: Nefko Studio (freelance)
+    url: https://www.nefko.xyz/
+
+knowsAbout:
+  - UX Strategy
+  - UX Research
+  - UX Design
+  - Design Research
+  - Design Consulting
+  - AI
+  - Blockchain
+  - Emerging Market Finance
+  - Product Strategy
+  - Figma
+  - Cursor AI
+  - Atlassian
+  - User Research
+  - Qualitative User Research
+  - Mixpanel
+  - Quantitative User Research
+  - User Testing
+  - User Feedback
+  - User Journey Maps
+  - User Flow
+  - User Persona
+  - User Story
+  - User Task
+  - User Scenario
+
+alumniOf:
+  - type: degree
+    name: B.F.A. in Design
+    institution: University of Kansas
+    year: 2011
+  - type: degree
+    name: MBA
+    institution: University of Illinois
+    year: 2022
+
+hasCredential:
+  - type: certification
+    name: Certified Scrum Master
+    organization: Scrum Alliance
+    year: 2015
+  - type: certification
+    name: Certified Scrum Product Owner
+    organization: Scrum Alliance
+    year: 2015
+  - type: certification
+    name: Full Stack Web Development Bootcamp
+    organization: University of Pennsylvania
+    year: 2022
+
+sameAs:
+  - https://www.linkedin.com/in/kyle-becker-44132223/
+  - https://github.com/gnefkow
+  - https://www.gnefkow.com/
+  - https://www.portfolio.gnefkow.com/
+  - http://photography.gnefkow.com/
+  - https://knowledgeinsociety.com/

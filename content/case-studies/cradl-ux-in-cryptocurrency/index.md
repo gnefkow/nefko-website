@@ -1,7 +1,8 @@
 ---
 id: 105
 title: UX in Cryptocurrency
-description: "An in-depth UX analysis for the Crypto Research and Design Lab."
+description: "A case study on the report lead by UX strategist Kyle Becker on the state of user experience for cryptocurrency. Work was conducted for the Crypto Research and Design Lab, a World Economic Forum initiative lead by Tricia Wang, Sheila Warren, and Lauren Serota."
+subtitle: "An in-depth UX analysis for the Crypto Research and Design Lab."
 short-title: "Report: UX in Crypto"
 client: Crypto Research and Design Lab
 type: post
@@ -105,16 +106,11 @@ On the UX side, however, we focused on the weakness of the experience going from
 We believe that strong experience bridges are the only thing that will help the industry succeed without losing sight of its ethos. 
 
 
-
-
-
-
-
 ## **Working with CRADL**
 --------------------------------------------------
 I led four reports during my time at CRADL. It was a wonderful experience—a rare one for me to focus solely on research (without combining it with practical UX design). 
 
-![](./assets/Ref-block_Tricia-Wang.png)
+{{< testimonial-block testimonial="tricia-wang" quote="cradl-onboarding-quote" >}}
 
 During my time with the organization, I had the pleasure of presenting my research at the Consensus conference in Austin, Texas, conducting research in several states in the United States, and working with an amazing team of researchers. 
 

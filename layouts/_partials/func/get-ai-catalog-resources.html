@@ -1,0 +1,69 @@
+{{/* Builds the lightweight /ai/index.json resource catalog. */}}
+{{- $resources := slice -}}
+{{- $person := site.Data.profile.person -}}
+{{- $base := site.BaseURL | strings.TrimSuffix "/" -}}
+
+{{- $resources = $resources | append (dict
+  "id" "kyle-becker-profile"
+  "type" "profile"
+  "title" "For AI Readers"
+  "canonical_url" (printf "%s/pages/for-ai-llm-readers/" $base)
+  "summary" (strings.TrimSpace $person.description)
+) -}}
+
+{{- $experiences := partial "func/get-profile-experiences.html" . -}}
+{{- $resources = $resources | append (dict
+  "id" "kyle-becker-experiences"
+  "type" "experience_index"
+  "title" "Kyle Becker experience records"
+  "json_url" (printf "%s/ai/experiences.json" $base)
+  "summary" "Structured work history and professional episodes for Kyle Becker."
+  "count" (len $experiences)
+) -}}
+
+{{- $conversations := slice -}}
+{{- range site.Data.conversations -}}
+  {{- if eq .status "published" -}}
+    {{- $conversations = $conversations | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- $conversations = sort $conversations "date" "desc" -}}
+{{- range $conversations -}}
+  {{- $resources = $resources | append (dict
+    "id" .id
+    "type" "conversation"
+    "title" .title
+    "canonical_url" .canonical_url
+    "json_url" .json_url
+    "summary" (strings.TrimSpace .summary)
+    "participants" .participants
+    "topics" .topics
+    "keywords" .keywords
+    "best_for_queries" .best_for_queries
+    "last_updated" .date
+  ) -}}
+{{- end -}}
+
+{{- $topics := slice -}}
+{{- range $conversations -}}
+  {{- range .topics -}}
+    {{- if not (in $topics .) -}}
+      {{- $topics = $topics | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $topics = sort $topics -}}
+{{- range $topics -}}
+  {{- $topicFile := printf "static/ai/topics/%s.json" . -}}
+  {{- if fileExists $topicFile -}}
+    {{- $resources = $resources | append (dict
+      "id" (printf "topic-%s" .)
+      "type" "topic_index"
+      "title" (printf "Topic: %s" .)
+      "json_url" (printf "%s/ai/topics/%s.json" $base .)
+      "topic" .
+    ) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $resources -}}

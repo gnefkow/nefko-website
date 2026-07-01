@@ -2,10 +2,7 @@ first-name: Charla
 last-name: Kunkel
 photo: /images/testimonial-avatars/Charla-Kunkel.jpg
 worked-together: 
-  - title: Senior Technologist
-    company: frog Design
-    relationship: Projects
-  - title: Head of Product and Engineering 
+  - title: VP of Engineering and Product 
     company: Quantified AI
     relationship: Client
 tags: Engineer, Product, Start Up, Leadership, AI, Engineers
@@ -23,7 +20,7 @@ full-quote: |
   This is my second time working with Kyle and each time I'm so impressed with his ability to manage complex design tasks and deliver real value on every project. I highly recommend him for roles requiring expertise in rapid, precise, and flexible design execution.
 key-quotes:
   - home-quote: |
-      Kyle is highly adaptable and can perform a lot of different functions at high quality. He works across multiple tracks of work collaborating with different stakeholders. His understanding of agile enabled him to balance innovative design with the flexibility to adapt to changing requirements—a must in our fast-paced startup.
+      Kyle is highly adaptable and... works across multiple tracks collaborating with different stakeholders, balanc[ing] innovative design with the flexibility to adapt to changing requirements—a must in our fast-paced startup.
   - engineering: |
       Kyle's ability to understand and work within complex database requirements is rare among designers. One of Kyle's key projects involved developing detailed reporting visualizations for highly complex datasets that would bring a lot of value to our B2B customers. He demonstrated remarkable skill utilizing the provided database schema to infer meaningful data patterns, have rich collaborative conversations with engineers, and translate intricate schemas into actionable and intuitive visualizations.
   - ambidexterity: |

@@ -1,27 +1,79 @@
 {{/*
   testimonials-carousel: Filterable carousel of testimonials with full-quote modal.
 
-  Data source: content/testimonials/*.yaml (read via readDir + transform.Unmarshal)
-  Categories: hardcoded below (Leadership, Product, Engineers, Designers)
+  Configuration: inner content on the shortcode call (not readDir).
+  Testimonial data: content/testimonials/*.yaml (read via readFile per slide)
+
+  Usage:
+  {{< testimonials-carousel >}}
+    [Leadership]
+      john-dubuque | ambidexterity
+      john-lees | enthusiasm
+    [Engineers]
+      charla-kunkel | engineering
+  {{< /testimonials-carousel >}}
+
+  - [Tab Label] defines a filter tab (label and order)
+  - testimonial-slug | version — one slide; version is a key in key-quotes
 
   Sub-components:
-  1. Filter bar — "Working with" label + scrollable category tabs
+  1. Filter bar — scrollable category tabs
   2. Slide viewport — one testimonial card visible at a time
   3. Navigation — arrow buttons + pagination dots
   4. Modal — full-quote overlay triggered by "Read Full quote"
 */}}
 
-{{ $dir := "content/testimonials" }}
-{{ $testimonials := slice }}
-{{ range readDir $dir }}
-  {{ if and (not .IsDir) (strings.HasSuffix .Name ".yaml") }}
-    {{ $raw := readFile (printf "%s/%s" $dir .Name) }}
-    {{ $data := $raw | transform.Unmarshal }}
-    {{ $testimonials = $testimonials | append $data }}
+{{/* ---- Parse inner content into tabs + slides ---- */}}
+{{ $sc := .Scratch }}
+{{ $sc.Set "tabs" (slice) }}
+{{ $sc.Set "currentLabel" "" }}
+{{ $sc.Set "currentSlides" (slice) }}
+
+{{ range split .Inner "\n" }}
+  {{ $line := strings.TrimSpace . }}
+  {{ if $line }}
+    {{ if and (strings.HasPrefix $line "[") (strings.HasSuffix $line "]") (gt (len $line) 2) }}
+      {{ $prevLabel := $sc.Get "currentLabel" }}
+      {{ $prevSlides := $sc.Get "currentSlides" }}
+      {{ if and $prevLabel (gt (len $prevSlides) 0) }}
+        {{ $tabs := $sc.Get "tabs" }}
+        {{ $sc.Set "tabs" ($tabs | append (dict "label" $prevLabel "slides" $prevSlides)) }}
+      {{ else if and $prevLabel (eq (len $prevSlides) 0) }}
+        {{ warnf "testimonials-carousel: tab %q has no slides — omitted" $prevLabel }}
+      {{ end }}
+      {{ $sc.Set "currentLabel" (strings.TrimSpace (strings.TrimSuffix "]" (strings.TrimPrefix "[" $line))) }}
+      {{ $sc.Set "currentSlides" (slice) }}
+    {{ else if strings.Contains $line "|" }}
+      {{ $currentLabel := $sc.Get "currentLabel" }}
+      {{ if not $currentLabel }}
+        {{ warnf "testimonials-carousel: slide %q before any [Tab] header — skipped" $line }}
+      {{ else }}
+        {{ $parts := split $line "|" }}
+        {{ $slug := strings.TrimSpace (index $parts 0) }}
+        {{ $version := strings.TrimSpace (index $parts 1) }}
+        {{ if and $slug $version }}
+          {{ $slides := $sc.Get "currentSlides" }}
+          {{ $sc.Set "currentSlides" ($slides | append (dict "testimonial" $slug "version" $version)) }}
+        {{ else }}
+          {{ warnf "testimonials-carousel: invalid slide line %q — skipped" $line }}
+        {{ end }}
+      {{ end }}
+    {{ else }}
+      {{ warnf "testimonials-carousel: unrecognized line %q — skipped" $line }}
+    {{ end }}
   {{ end }}
 {{ end }}
 
-{{ $categories := slice "Leadership" "Product" "Engineers" "Designers" }}
+{{ $finalLabel := $sc.Get "currentLabel" }}
+{{ $finalSlides := $sc.Get "currentSlides" }}
+{{ if and $finalLabel (gt (len $finalSlides) 0) }}
+  {{ $tabs := $sc.Get "tabs" }}
+  {{ $sc.Set "tabs" ($tabs | append (dict "label" $finalLabel "slides" $finalSlides)) }}
+{{ else if and $finalLabel (eq (len $finalSlides) 0) }}
+  {{ warnf "testimonials-carousel: tab %q has no slides — omitted" $finalLabel }}
+{{ end }}
+
+{{ $tabs := $sc.Get "tabs" }}
 
 <style>
 /* ==========================================================================
@@ -59,18 +111,6 @@
   max-width: 30em;
 }
 
-.testimonials-carousel__filter-label {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-h5);
-  font-weight: var(--font-weight-heavy);
-  color: var(--text-inverse-primary);
-  white-space: nowrap;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  padding-right: 0.25rem;
-}
-
 .testimonials-carousel__tabs-wrap {
   overflow-x: auto;
   overflow-y: hidden;
@@ -88,7 +128,7 @@
 
 .testimonials-carousel__tab {
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-h5);
+  font-size: var(--font-size-h6);
   font-weight: var(--font-weight-heavy);
   color: var(--text-inverse-secondary);
   background: none;
@@ -370,15 +410,14 @@
 
     {{/* ---- Filter Bar ---- */}}
     <div class="testimonials-carousel__filter">
-      <span class="testimonials-carousel__filter-label">Working with</span>
       <div class="testimonials-carousel__tabs-wrap">
         <div class="testimonials-carousel__tabs" role="tablist">
-          {{ range $i, $cat := $categories }}
+          {{ range $i, $tab := $tabs }}
             <button class="testimonials-carousel__tab{{ if eq $i 0 }} testimonials-carousel__tab--active{{ end }}"
-                    data-category="{{ $cat }}"
+                    data-category="{{ $tab.label }}"
                     role="tab"
                     aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}">
-              {{ $cat }}
+              {{ $tab.label }}
             </button>
           {{ end }}
         </div>
@@ -388,54 +427,75 @@
     {{/* ---- Slide Viewport ---- */}}
     <div class="testimonials-carousel__viewport">
       <div class="testimonials-carousel__strip">
-      {{ range $i, $t := $testimonials }}
+      {{ $slideIdx := 0 }}
+      {{ range $tabs }}
+        {{ $tabLabel := .label }}
+        {{ range .slides }}
+          {{ $filename := .testimonial }}
+          {{ if not (strings.HasSuffix $filename ".yaml") }}
+            {{ $filename = printf "%s.yaml" $filename }}
+          {{ end }}
+          {{ $path := printf "content/testimonials/%s" $filename }}
+          {{ $versionKey := .version }}
 
-        {{/* Extract home-quote from key-quotes list */}}
-        {{ $homeQuote := "" }}
-        {{ with index $t "key-quotes" }}
-          {{ range . }}
-            {{ with index . "home-quote" }}
-              {{ $homeQuote = strings.TrimSpace . }}
+          {{ if fileExists $path }}
+            {{ $raw := readFile $path }}
+            {{ $t := $raw | transform.Unmarshal }}
+
+            {{/* Extract quote by configured version key */}}
+            {{ $quoteText := "" }}
+            {{ with index $t "key-quotes" }}
+              {{ range . }}
+                {{ with index . $versionKey }}
+                  {{ $quoteText = strings.TrimSpace (printf "%v" .) }}
+                {{ end }}
+              {{ end }}
             {{ end }}
+
+            {{ if $quoteText }}
+              {{ $work := index (index $t "worked-together") 0 }}
+              {{ $firstName := strings.TrimSpace (index $t "first-name") }}
+              {{ $lastName  := strings.TrimSpace (index $t "last-name") }}
+              {{ $fullName  := printf "%s %s" $firstName $lastName }}
+
+              <div class="testimonials-carousel__slide"
+                   data-tab="{{ $tabLabel }}"
+                   data-index="{{ $slideIdx }}">
+
+                <span class="testimonials-carousel__quote-mark" aria-hidden="true">&ldquo;</span>
+
+                <div class="testimonials-carousel__quote-body">
+                  <p class="testimonials-carousel__quote-text">{{ $quoteText }}</p>
+                  <button class="testimonials-carousel__read-more" type="button">Read Full quote</button>
+                </div>
+
+                <div class="testimonials-carousel__attribution">
+                  <img class="testimonials-carousel__avatar"
+                       src="{{ index $t "photo" }}"
+                       alt="{{ $fullName }}"
+                       loading="lazy" />
+                  <div class="testimonials-carousel__person">
+                    <span class="testimonials-carousel__name">{{ $fullName }}</span>
+                    <span class="testimonials-carousel__context">{{ $work.title }} when we worked together at {{ $work.company }}</span>
+                  </div>
+                </div>
+
+                {{/* Hidden full-quote content for modal */}}
+                <div class="testimonials-carousel__full-quote" hidden>
+                  <div class="modal-name">{{ $fullName }}</div>
+                  <div class="modal-context">{{ $firstName }} was a {{ $work.title }} when I worked with them at {{ $work.company }}</div>
+                  <div class="modal-text">{{ (index $t "full-quote") | markdownify }}</div>
+                </div>
+
+              </div>
+              {{ $slideIdx = add $slideIdx 1 }}
+            {{ else }}
+              {{ warnf "testimonials-carousel: missing key-quotes version %q in %s" $versionKey $filename }}
+            {{ end }}
+          {{ else }}
+            {{ warnf "testimonials-carousel: missing file %s" $path }}
           {{ end }}
         {{ end }}
-
-        {{/* First worked-together entry for attribution context */}}
-        {{ $work := index (index $t "worked-together") 0 }}
-        {{ $firstName := strings.TrimSpace (index $t "first-name") }}
-        {{ $lastName  := strings.TrimSpace (index $t "last-name") }}
-        {{ $fullName  := printf "%s %s" $firstName $lastName }}
-
-        <div class="testimonials-carousel__slide"
-             data-tags="{{ index $t "tags" }}"
-             data-index="{{ $i }}">
-
-          <span class="testimonials-carousel__quote-mark" aria-hidden="true">&ldquo;</span>
-
-          <div class="testimonials-carousel__quote-body">
-            <p class="testimonials-carousel__quote-text">{{ $homeQuote }}</p>
-            <button class="testimonials-carousel__read-more" type="button">Read Full quote</button>
-          </div>
-
-          <div class="testimonials-carousel__attribution">
-            <img class="testimonials-carousel__avatar"
-                 src="{{ index $t "photo" }}"
-                 alt="{{ $fullName }}"
-                 loading="lazy" />
-            <div class="testimonials-carousel__person">
-              <span class="testimonials-carousel__name">{{ $fullName }}</span>
-              <span class="testimonials-carousel__context">{{ $firstName }} was a {{ $work.title }} when I worked with them at {{ $work.company }}</span>
-            </div>
-          </div>
-
-          {{/* Hidden full-quote content for modal */}}
-          <div class="testimonials-carousel__full-quote" hidden>
-            <div class="modal-name">{{ $fullName }}</div>
-            <div class="modal-context">{{ $firstName }} was a {{ $work.title }} when I worked with them at {{ $work.company }}</div>
-            <div class="modal-text">{{ (index $t "full-quote") | markdownify }}</div>
-          </div>
-
-        </div>
       {{ end }}
       </div>
     </div>
@@ -496,11 +556,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var result = [];
     var cat = category.toLowerCase();
     allSlides.forEach(function (slide, i) {
-      var tags = slide.getAttribute('data-tags')
-        .split(',')
-        .map(function (t) { return t.trim().toLowerCase(); })
-        .filter(function (t) { return t !== ''; });
-      if (tags.indexOf(cat) !== -1) {
+      var tab = slide.getAttribute('data-tab');
+      if (tab && tab.toLowerCase() === cat) {
         result.push(i);
       }
     });

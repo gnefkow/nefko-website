@@ -1,7 +1,8 @@
 ---
 id: 74
 title: Institutional assets on-chain at J.P. Morgan.
-description: "Working on web3 tech at the world's largest bank."
+description: "Overview of design strategist Kyle Becker's work inside J.P. Morgan's blockchain division Onyx. This article discusses a tokenized collateral management system that launched, and gives an overview of other projects he contributed to at the world's largest bank."
+subtitle: "Working on web3 tech at the world's largest bank."
 client: "J.P. Morgan"
 short-title: "Case Study: JPM"
 type: case-study
@@ -21,7 +22,8 @@ I was super excited to see J.P. Morgan and Blackrock's public announcement about
 
 I worked on the interface for the initial pilot of this product during my time with J.P. Morgan Onyx—the company's blockchain-focused division. This particular project solved a major (and expensive) painpoint for complex trading organizations: collateral management.
 
-![](./assets/Ref-block_Lawrence.png)
+
+{{< testimonial-block testimonial="lawrence-lipkin" quote="jpm-case-quote" >}}
 
 High-frequency investors managing large portfolios need to maintain collateral for their leveraged positions (usually risk-free assets like bonds). Each day as the market value of their portfolios change, they need to increase or decrease the collateral that backs those positions. This collateral management task requires hundreds of people who set values for assets, manage yields on them, and move them back and forth between different custodians.
 

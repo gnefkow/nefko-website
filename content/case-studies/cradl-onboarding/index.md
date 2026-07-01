@@ -2,7 +2,8 @@
 id: 119
 title: Onboarding to Cryptocurrency
 short-title: "Report: CRADL Onboarding"
-description: "Human-centric research on onboarding to crypto: frameworks and field vignettes from CRADL."
+description: "A case study on the report lead by UX strategist Kyle Becker on the user onboarding for cryptocurrenty applications. It introduces a framework for all apps to think about onboarding that goes beyond simple screen-based UI patterns. Work was conducted for the Crypto Research and Design Lab, a World Economic Forum initiative lead by Tricia Wang, Sheila Warren, and Lauren Serota."
+subtitle: "Human-centric research on onboarding to crypto: frameworks and field vignettes from CRADL."
 type: case-study
 featured_image: "hero.png"
 categories:

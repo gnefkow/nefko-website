@@ -1,0 +1,33 @@
+id: medsana
+title: CEO / Co-founder
+role: CEO / Co-founder
+organization: MedicSana
+organization_entity_id: medsana
+years: "2015–2017"
+start_year: 2015
+end_year: 2017
+location: Mexico
+type: employment
+status: published
+
+summary: >
+  Co-founded a healthtech startup focused on remittances and cross-border
+  healthcare payments.
+
+domains:
+  - healthtech
+  - emerging markets
+  - payments
+
+keywords:
+  - startup
+  - healthcare
+  - remittances
+  - product leadership
+
+methods:
+  - product strategy
+  - stakeholder alignment
+
+related_case_study:
+related_testimonials: []

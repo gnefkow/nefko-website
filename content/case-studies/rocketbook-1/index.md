@@ -2,6 +2,7 @@
 id: 984985189456
 title: Doubling first time user retention for an established notebook app
 description: "A case study about how Kyle Becker, a UX strategist, worked with Rocketbook to redesign and launch a new version of its app. The app struggled with low retention for first time users. Kyle led the effort to redesign and played a product management role. They launched the new app before the company's most important retail month of the year and new user retention doubled."
+subtitle: "A strategic reorienting of the Rocketbook app."
 client: "Rocketbook (BIC)"
 short-title: "Case Study: Rocketbook"
 type: case-study

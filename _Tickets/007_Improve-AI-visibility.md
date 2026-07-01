@@ -70,8 +70,8 @@ The AI-readable topical resource discovery layer has been implemented locally an
 - Step 3: consolidate or redirect the stale `/for-ai-llm-readers/` URL.
 - Step 5: restructure the opening of `content/pages/for-ai-llm-readers.md`.
 - Step 6: add question-based sections to the AI-reader page.
-- Step 7: create structured profile YAML source data.
-- Step 8: render JSON-LD from YAML.
+- Step 7: create structured profile YAML source data. **v1 delivered via [007.6](007.6_Person-JSON-LD.md).**
+- Step 8: render JSON-LD from YAML. **v1 delivered via [007.6](007.6_Person-JSON-LD.md).**
 - Step 9: add selected entity links.
 - Step 11: run post-deploy technical and chatbot checks.
 
@@ -163,6 +163,8 @@ For each section:
 - Use natural language, not keyword stuffing.
 
 ### Step 7 - Create YAML Source Data for Structured Profile Facts
+
+> **v1 implemented in [007.6 - Person JSON-LD](007.6_Person-JSON-LD.md)** (`data/profile/person.yaml` only; experience/testimonial datasets deferred).
 
 Use YAML as the human-authored source of truth for structured profile data, then render it into JSON-LD during the Hugo build.
 
@@ -326,6 +328,8 @@ Keep the first version small:
 
 ### Step 8 - Render JSON-LD from YAML During Build
 
+> **v1 implemented in [007.6 - Person JSON-LD*](007.6_Person-JSON-LD.md)* (homepage + AI-reader page, `Person` + `ProfilePage` only).
+
 Add JSON-LD so crawlers and extraction systems have a structured representation of the profile.
 
 Recommended schema:
@@ -471,3 +475,4 @@ Chatbot checks:
 - Any FAQ-style JSON-LD maps to Q&A content that is visible to human readers.
 - `llms.txt` exists at the site root.
 - Post-deploy chatbot tests are documented.
+
