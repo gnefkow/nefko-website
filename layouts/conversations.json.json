@@ -1,0 +1,24 @@
+{{- $meta := site.Data.ai.endpoints.conversations -}}
+{{- $items := partial "func/get-profile-conversations.html" . -}}
+{{- $records := slice -}}
+{{- range $items -}}
+  {{- $records = $records | append (dict
+    "id" .id
+    "title" .title
+    "canonical_url" .canonical_url
+    "json_url" .json_url
+    "summary" (strings.TrimSpace .summary)
+    "participants" .participants
+    "topics" .topics
+    "keywords" .keywords
+    "best_for_queries" .best_for_queries
+    "last_updated" .date
+  ) -}}
+{{- end -}}
+{{- dict
+  "title" $meta.title
+  "description" (strings.TrimSpace $meta.description)
+  "generated_at" (now.Format "2006-01-02")
+  "count" (len $records)
+  "conversations" $records
+  | jsonify -}}

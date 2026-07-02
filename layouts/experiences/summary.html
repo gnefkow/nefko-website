@@ -1,0 +1,11 @@
+{{/* Use front-matter summary only — never .Summary (long bodies can break Hugo). */}}
+<li class="featured-block__item">
+  <a href="{{ .RelPermalink }}" class="featured-block__card link db no-underline color-inherit">
+    <div class="featured-block__card-inner pa3 pa4-l">
+      <h3 class="featured-block__card-title h4-heavy mt0 mb1">{{ .Title }}</h3>
+      {{ with .Params.summary }}
+        <p class="featured-block__card-description p text-tertiary mt0 mb0">{{ . }}</p>
+      {{ end }}
+    </div>
+  </a>
+</li>

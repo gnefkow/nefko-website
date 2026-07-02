@@ -1,0 +1,38 @@
+---
+id: jpm-onyx
+title: Design Strategist
+role: Design Strategist
+organization: J.P. Morgan Onyx
+organization_entity_id: jpm-onyx
+years: "2021"
+start_year: 2021
+end_year: 2021
+type: employment
+status: published
+
+summary: >
+  UX strategy and design for institutional blockchain products in J.P. Morgan's
+  Onyx division (now Kinexys), including collateral management workflows.
+
+domains:
+  - institutional finance
+  - blockchain
+  - fintech
+
+keywords:
+  - trade finance
+  - collateral management
+  - design strategy
+  - institutional blockchain
+
+methods:
+  - design strategy
+  - stakeholder alignment
+  - prototyping
+
+related_case_study: /case-studies/jpm-onyx/
+related_testimonials: []
+
+notes: Division is now branded Kinexys.
+---
+...coming soon

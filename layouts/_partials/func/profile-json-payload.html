@@ -1,0 +1,34 @@
+{{/* Structured profile payload from data/profile/person.yaml (not for-ai-llm-readers prose). */}}
+{{- $p := site.Data.profile.person -}}
+{{- $meta := site.Data.ai.endpoints.profile -}}
+{{- $payload := dict
+  "title" $meta.title
+  "description" (strings.TrimSpace $meta.description)
+  "generated_at" (now.Format "2006-01-02")
+  "id" $p.id
+  "name" $p.name
+  "jobTitle" $p.jobTitle
+  "url" $p.url
+  "bio" (strings.TrimSpace $p.description)
+  "knowsAbout" ($p.knowsAbout | default slice)
+  "worksFor" ($p.worksFor | default slice)
+  "alumniOf" ($p.alumniOf | default slice)
+  "hasCredential" ($p.hasCredential | default slice)
+  "sameAs" ($p.sameAs | default slice)
+-}}
+{{- with $p.disambiguating_description -}}
+  {{- $payload = merge $payload (dict "disambiguating_description" (strings.TrimSpace .)) -}}
+{{- end -}}
+{{- with $p.alternate_name -}}
+  {{- $payload = merge $payload (dict "alternate_name" .) -}}
+{{- end -}}
+{{- with $p.home_location -}}
+  {{- $payload = merge $payload (dict "home_location" .) -}}
+{{- end -}}
+{{- with $p.github -}}
+  {{- $payload = merge $payload (dict "github" (printf "https://github.com/%s" .)) -}}
+{{- end -}}
+{{- with $p.commonly_confused_with -}}
+  {{- $payload = merge $payload (dict "commonly_confused_with" .) -}}
+{{- end -}}
+{{- return $payload -}}

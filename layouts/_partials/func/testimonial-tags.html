@@ -1,0 +1,21 @@
+{{/* Normalizes testimonial tags param to a string slice. */}}
+{{- $tags := . -}}
+{{- $result := slice -}}
+{{- if $tags -}}
+  {{- if reflect.IsSlice $tags -}}
+    {{- range $tags -}}
+      {{- $t := strings.TrimSpace (printf "%v" .) -}}
+      {{- if $t -}}
+        {{- $result = $result | append $t -}}
+      {{- end -}}
+    {{- end -}}
+  {{- else -}}
+    {{- range split (strings.TrimSpace (printf "%v" $tags)) "," -}}
+      {{- $t := strings.TrimSpace . -}}
+      {{- if $t -}}
+        {{- $result = $result | append $t -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $result -}}

@@ -1,0 +1,13 @@
+{{/* Returns published testimonial Pages, sorted by last name. */}}
+{{- $section := site.GetPage "section" "testimonials" -}}
+{{- $pages := slice -}}
+{{- if $section -}}
+  {{- range $section.Pages -}}
+    {{- $status := .Params.status | default "published" -}}
+    {{- if eq $status "published" -}}
+      {{- $pages = $pages | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $pages = sort $pages "Params.last-name" "asc" -}}
+{{- return $pages -}}

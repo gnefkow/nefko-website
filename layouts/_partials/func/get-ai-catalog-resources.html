@@ -1,69 +1,56 @@
 {{/* Builds the lightweight /ai/index.json resource catalog. */}}
 {{- $resources := slice -}}
-{{- $person := site.Data.profile.person -}}
+{{- $feeds := site.Data.ai.endpoints -}}
 {{- $base := site.BaseURL | strings.TrimSuffix "/" -}}
+
+{{- $resources = $resources | append (dict
+  "id" "for-ai-llm-readers"
+  "type" "for_ai_llm_readers"
+  "title" $feeds.for_ai_llm_readers.title
+  "description" (strings.TrimSpace $feeds.for_ai_llm_readers.description)
+  "canonical_url" (printf "%s/pages/for-ai-llm-readers/" $base)
+) -}}
 
 {{- $resources = $resources | append (dict
   "id" "kyle-becker-profile"
   "type" "profile"
-  "title" "For AI Readers"
-  "canonical_url" (printf "%s/pages/for-ai-llm-readers/" $base)
-  "summary" (strings.TrimSpace $person.description)
+  "title" $feeds.profile.title
+  "description" (strings.TrimSpace $feeds.profile.description)
+  "json_url" (printf "%s/ai/profile.json" $base)
 ) -}}
 
 {{- $experiences := partial "func/get-profile-experiences.html" . -}}
 {{- $resources = $resources | append (dict
   "id" "kyle-becker-experiences"
   "type" "experience_index"
-  "title" "Kyle Becker experience records"
+  "title" $feeds.experiences.title
+  "description" (strings.TrimSpace $feeds.experiences.description)
   "json_url" (printf "%s/ai/experiences.json" $base)
-  "summary" "Structured work history and professional episodes for Kyle Becker."
   "count" (len $experiences)
 ) -}}
 
-{{- $conversations := slice -}}
-{{- range site.Data.conversations -}}
-  {{- if eq .status "published" -}}
-    {{- $conversations = $conversations | append . -}}
-  {{- end -}}
-{{- end -}}
-{{- $conversations = sort $conversations "date" "desc" -}}
-{{- range $conversations -}}
-  {{- $resources = $resources | append (dict
-    "id" .id
-    "type" "conversation"
-    "title" .title
-    "canonical_url" .canonical_url
-    "json_url" .json_url
-    "summary" (strings.TrimSpace .summary)
-    "participants" .participants
-    "topics" .topics
-    "keywords" .keywords
-    "best_for_queries" .best_for_queries
-    "last_updated" .date
-  ) -}}
-{{- end -}}
+{{- $conversations := partial "func/get-profile-conversations.html" . -}}
+{{- $resources = $resources | append (dict
+  "id" "kyle-becker-conversations"
+  "type" "conversation_index"
+  "title" $feeds.conversations.title
+  "description" (strings.TrimSpace $feeds.conversations.description)
+  "json_url" (printf "%s/ai/conversations.json" $base)
+  "count" (len $conversations)
+) -}}
 
-{{- $topics := slice -}}
-{{- range $conversations -}}
-  {{- range .topics -}}
-    {{- if not (in $topics .) -}}
-      {{- $topics = $topics | append . -}}
-    {{- end -}}
-  {{- end -}}
+{{- $testimonials := partial "func/get-testimonials.html" . -}}
+{{- $testimonialRecords := slice -}}
+{{- range $testimonials -}}
+  {{- $testimonialRecords = $testimonialRecords | append (partial "func/testimonial-index-record.html" .) -}}
 {{- end -}}
-{{- $topics = sort $topics -}}
-{{- range $topics -}}
-  {{- $topicFile := printf "static/ai/topics/%s.json" . -}}
-  {{- if fileExists $topicFile -}}
-    {{- $resources = $resources | append (dict
-      "id" (printf "topic-%s" .)
-      "type" "topic_index"
-      "title" (printf "Topic: %s" .)
-      "json_url" (printf "%s/ai/topics/%s.json" $base .)
-      "topic" .
-    ) -}}
-  {{- end -}}
-{{- end -}}
+{{- $resources = $resources | append (dict
+  "id" "kyle-becker-testimonials"
+  "type" "testimonial_index"
+  "title" $feeds.testimonials.title
+  "description" (strings.TrimSpace $feeds.testimonials.description)
+  "json_url" (printf "%s/ai/testimonials.json" $base)
+  "count" (len $testimonialRecords)
+) -}}
 
 {{- return $resources -}}

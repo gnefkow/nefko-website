@@ -1,0 +1,16 @@
+{{- $person := site.Data.profile.person -}}
+{{- $meta := site.Data.ai.endpoints.testimonials -}}
+{{- $pages := partial "func/get-testimonials.html" . -}}
+{{- $records := slice -}}
+{{- range $pages -}}
+  {{- $records = $records | append (partial "func/testimonial-index-record.html" .) -}}
+{{- end -}}
+{{- dict
+  "title" $meta.title
+  "description" (strings.TrimSpace $meta.description)
+  "person_id" $person.id
+  "person_url" $person.url
+  "generated_at" (now.Format "2006-01-02")
+  "count" (len $records)
+  "testimonials" $records
+  | jsonify -}}

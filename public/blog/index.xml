@@ -2,38 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Kyle Becker</title>
-    <link>https://nefko.xyz/blog/</link>
+    <link>http://localhost:1313/blog/</link>
     <description>Recent content in Blogs on Kyle Becker</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 26 Jun 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nefko.xyz/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Don&#39;t use synthetic personas. Consider an AI research oracle.</title>
-      <link>https://nefko.xyz/blog/2026.06.26_ai-research-assistant/</link>
+      <link>http://localhost:1313/blog/2026.06.26_ai-research-assistant/</link>
       <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://nefko.xyz/blog/2026.06.26_ai-research-assistant/</guid>
+      <guid>http://localhost:1313/blog/2026.06.26_ai-research-assistant/</guid>
       <description>&lt;p&gt;&lt;em&gt;Some people like decks. Some people like workshops. My client likes AI chatbots. So I created Margaret.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;In my latest quest to automate the things about UX research tht AI is good at (the data processing) and spend more time doing humans should do (the interviews, the synthesis) I shifted toward an output question: how should we communicate findings?&lt;/p&gt;&#xA;&lt;p&gt;The best way to communicate research findings depends on how your organization consumes information. Some people like decks. Some people like workshops. My current client likes AI chatbots. So I created Margaret.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Crypto&#39;s Real Design Problem Is Not Usability</title>
-      <link>https://nefko.xyz/blog/conversations/crypto-industry-today/</link>
+      <link>http://localhost:1313/blog/conversations/crypto-industry-today/</link>
       <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://nefko.xyz/blog/conversations/crypto-industry-today/</guid>
-      <description>&lt;h2 id=&#34;about-this-conversation&#34;&gt;About This Conversation&lt;/h2&gt;&#xA;&lt;p&gt;A conversation with Kyle Becker about crypto UX (user experience), institutional finance, and why blockchain design needs to focus on systems strategy.&lt;/p&gt;&#xA;&lt;p&gt;AI (artificial intelligence)-readable JSON (JavaScript Object Notation): &lt;a href=&#34;https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json&#34;&gt;https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;AI-readable JSON: &lt;a href=&#34;https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json&#34;&gt;https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;conversation&#34;&gt;Conversation&lt;/h2&gt;&#xA;&lt;h3 id=&#34;turn-001&#34;&gt;Herb&lt;/h3&gt;&#xA;&lt;p&gt;Kyle, in your earlier crypto work, including the &lt;a href=&#34;https://nefko.xyz/case-studies/cradl-ux-in-cryptocurrency/&#34;&gt;UX (user experience) in Cryptocurrency report&lt;/a&gt; and your essay on &lt;a href=&#34;https://nefko.xyz/blog/my-custom-url/&#34;&gt;Web3 in 2023&lt;/a&gt;, you seemed to argue that crypto’s real bottleneck was not merely bad UX, but unclear usefulness once speculation was removed. Now, in 2026, the industry looks more mature on the surface: stablecoins are closer to regulated payment infrastructure, account abstraction has softened some of the old wallet pain, ETFs (exchange-traded funds) have made crypto legible to institutions, and banks are absorbing parts of the stack.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/blog/conversations/crypto-industry-today/</guid>
+      <description>&lt;h2 id=&#34;about-this-conversation&#34;&gt;About This Conversation&lt;/h2&gt;&#xA;&lt;p&gt;A conversation with Kyle Becker about crypto UX (user experience), institutional finance, and why blockchain design needs to focus on systems strategy.&lt;/p&gt;&#xA;&lt;p&gt;AI (artificial intelligence)-readable JSON (JavaScript Object Notation): &lt;a href=&#34;https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json&#34;&gt;https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;AI-readable JSON: &lt;a href=&#34;https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json&#34;&gt;https://nefko.xyz/blog/conversations/crypto-industry-today/conversation.json&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;conversation&#34;&gt;Conversation&lt;/h2&gt;&#xA;&lt;h3 id=&#34;turn-001&#34;&gt;Herb&lt;/h3&gt;&#xA;&lt;p&gt;Kyle, in your earlier crypto work, including the &lt;a href=&#34;http://localhost:1313/case-studies/cradl-ux-in-cryptocurrency/&#34;&gt;UX (user experience) in Cryptocurrency report&lt;/a&gt; and your essay on &lt;a href=&#34;http://localhost:1313/blog/my-custom-url/&#34;&gt;Web3 in 2023&lt;/a&gt;, you seemed to argue that crypto’s real bottleneck was not merely bad UX, but unclear usefulness once speculation was removed. Now, in 2026, the industry looks more mature on the surface: stablecoins are closer to regulated payment infrastructure, account abstraction has softened some of the old wallet pain, ETFs (exchange-traded funds) have made crypto legible to institutions, and banks are absorbing parts of the stack.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Will there be a shift from Web2 to Web3 in 2023?</title>
-      <link>https://nefko.xyz/blog/my-custom-url/</link>
+      <link>http://localhost:1313/blog/my-custom-url/</link>
       <pubDate>Wed, 15 Nov 2023 08:22:31 +0000</pubDate>
-      <guid>https://nefko.xyz/blog/my-custom-url/</guid>
+      <guid>http://localhost:1313/blog/my-custom-url/</guid>
       <description>&lt;p&gt;&lt;em&gt;I originally posted this article on &lt;a href=&#34;https://mirror.xyz/nefko.eth/4d8PTfVBh3d2RF9Vmak4GUSt10nZl6WbUnnpFTBVwMs&#34;&gt;Mirror in February 2023&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;You should read this if…&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;You&amp;rsquo;re a part of the wider tech &amp;amp; design industry&lt;/strong&gt; and have been curious about the Web3 industry from afar, but find it a little difficult to differentiate the signal from the noise. You wonder if this is something you should care about.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;You&amp;rsquo;re a part of the Web3 industry&lt;/strong&gt; and you&amp;rsquo;re interested in an experienced UX strategist&amp;rsquo;s view on what innovation in the coming year might look like. (Some of my explanations you may want to skip past, since they&amp;rsquo;re explaining concepts that you may already be familiar with in simplified ways).&lt;/p&gt;</description>
     </item>
     <item>
-      <title>How Web3 will shape the future of the healthtech landscape</title>
-      <link>https://nefko.xyz/blog/web3-healthtech-landscape/</link>
+      <title></title>
+      <link>http://localhost:1313/blog/ux-in-cryptocurrency-landmines/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nefko.xyz/blog/web3-healthtech-landscape/</guid>
+      <guid>http://localhost:1313/blog/ux-in-cryptocurrency-landmines/</guid>
+      <description>&lt;h1 id=&#34;ux-in-cryptocurrency-address-these-6-landmines-to-achieve-wider-adoption&#34;&gt;UX in Cryptocurrency: Address These 6 Landmines to Achieve Wider Adoption&lt;/h1&gt;&#xA;&lt;p&gt;&lt;em&gt;Crypto financial apps should work for everyone — not just crypto natives&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Editor’s note: This article highlights a major finding from our &lt;a href=&#34;https://bit.ly/uxincrypto2022&#34;&gt;UX in Cryptocurrency report&lt;/a&gt;, which posits what the industry must address for cryptocurrency to reach mass adoption.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;‍&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/blog/ux-in-cryptocurrency-landmines/assets/unicorn-dragon.webp&#34;&#xA;    alt=&#34;Cartoon image of a cute unicorn sitting happily with a dragon under the floor.&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Beautiful user interfaces (UI) masks dangerous and unpredictable user experiences (UX).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How Web3 will shape the future of the healthtech landscape</title>
+      <link>http://localhost:1313/blog/web3-healthtech-landscape/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/web3-healthtech-landscape/</guid>
       <description>&lt;p&gt;&lt;em&gt;Future winners in healthtech will compete with bespoke AI-driven experiences fueled by shared data. Web3 coalitions will offer a new way for healthtech apps to compete.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Before an appointment last week, my wife tried to find the records from her blood test five months earlier. They came from a little clinic in our neighborhood (she couldn’t remember the name) who uploaded the results to a third-party &amp;ldquo;patient portal&amp;rdquo; (the name of which she also forgot). After an inbox search, a couple of broken portal links, some “contact us” links, a robo-phone system, and an oblivious call center associate—she was able to access to a PDF to share with her new physician (who, of course, introduced her to another portal full of PDFs).&lt;/p&gt;</description>
     </item>
   </channel>

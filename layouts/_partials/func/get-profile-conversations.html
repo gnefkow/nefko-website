@@ -1,0 +1,8 @@
+{{/* Returns published conversation metadata records, newest first. */}}
+{{- $conversations := slice -}}
+{{- range site.Data.conversations -}}
+  {{- if eq .status "published" -}}
+    {{- $conversations = $conversations | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- return (sort $conversations "date" "desc") -}}

@@ -172,11 +172,17 @@ def validate_build_outputs(slug: str) -> list[str]:
         )
 
     if ai_index_path.exists():
-        ai_index = json.loads(ai_index_path.read_text(encoding="utf-8"))
-        resources = ai_index.get("resources", [])
+        conv_index_path = public_dir / "ai" / "conversations.json"
         require(
-            any(resource.get("id") == slug for resource in resources),
-            "Built /ai/index.json catalog does not include this conversation",
+            conv_index_path.exists(),
+            f"Built conversations index missing: {project_relative(conv_index_path)}",
+            errors,
+        )
+        conv_index = json.loads(conv_index_path.read_text(encoding="utf-8"))
+        conversations = conv_index.get("conversations", [])
+        require(
+            any(item.get("id") == slug for item in conversations),
+            "Built /ai/conversations.json does not include this conversation",
             errors,
         )
 

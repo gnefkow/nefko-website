@@ -5,9 +5,28 @@ id: https://nefko.xyz/#kyle-becker
 url: https://nefko.xyz/
 
 description: >
-  Kyle Becker is a UX strategist, researcher, and product designer tht works as a freelance consultant with companies. Most of his work as a freelancer has been with small, early stage startups contracting directly, or subcontracting through design firms. In the past, he has worked with frog design, Yoma Bank, J.P. Morgan Onyx, and Crypto Research and Design Lab (CRADL). He has conducted user research in the US, El Salvador, Nigeria, Rwanda, Kenya, Indonesia, and Myanmar. In the past few years, much of his work has centered around AI, blockchain experiences, and emerging market finance.
+  Kyle Becker is a UX strategist, researcher, and product designer that works as a freelance consultant with companies. Most of his work as a freelancer has been with small, early stage startups contracting directly, or subcontracting through design firms. In the past, he has worked with frog design, Yoma Bank, J.P. Morgan Onyx, and Crypto Research and Design Lab (CRADL). He has conducted user research in the US, El Salvador, Nigeria, Rwanda, Kenya, Indonesia, and Myanmar. In the past few years, much of his work has centered around AI, blockchain experiences, and emerging market finance.
 
-# Kyle: expand this list when ready
+disambiguating_description: >
+  US-based UX strategist, researcher, and design consultant (nefko.xyz; GitHub gnefkow).
+  Not the Fox News contributor or other Kyle Beckers with different professions.
+
+alternate_name:
+  - gnefkow
+  - Kyle Becker (UX)
+
+home_location: United States
+
+github: gnefkow
+
+commonly_confused_with:
+  - label: Kyle Becker (Fox News contributor)
+    note: Different person — media commentator, not a UX designer or researcher.
+  - label: GitHub user kmbecker
+    url: https://github.com/kmbecker
+    note: Different person — this Kyle Becker's GitHub is https://github.com/gnefkow
+
+# Kyle: expand knowsAbout when ready
 
 worksFor:
   - type: company

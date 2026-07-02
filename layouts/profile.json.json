@@ -1,0 +1,1 @@
+{{- partial "func/profile-json-payload.html" . | jsonify -}}

@@ -1,4 +1,4 @@
-{{/* OrganizationRole JSON-LD from data/profile/experiences/ */}}
+{{/* OrganizationRole JSON-LD from content/experiences/ */}}
 {{- $person := site.Data.profile.person -}}
 {{- $experiences := partial "func/get-profile-experiences.html" . -}}
 {{- if and $person (gt (len $experiences) 0) -}}
@@ -23,7 +23,13 @@
       {{- $role = merge $role (dict "endDate" (printf "%d-12-31" .)) -}}
     {{- end -}}
     {{- with .related_case_study -}}
-      {{- $role = merge $role (dict "url" (. | absURL)) -}}
+      {{- $studyURL := . -}}
+      {{- if reflect.IsSlice . -}}
+        {{- $studyURL = index . 0 -}}
+      {{- end -}}
+      {{- with $studyURL -}}
+        {{- $role = merge $role (dict "url" (. | absURL)) -}}
+      {{- end -}}
     {{- end -}}
     {{- $roles = $roles | append $role -}}
   {{- end -}}

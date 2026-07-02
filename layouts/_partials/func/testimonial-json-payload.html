@@ -1,0 +1,48 @@
+{{/* Full AI-readable payload for one testimonial page. */}}
+{{- $page := . -}}
+{{- $id := partial "func/testimonial-id.html" $page -}}
+{{- $data := partial "func/read-testimonial-data.html" $id -}}
+{{- $firstName := index $data "first-name" | default "" -}}
+{{- $lastName := index $data "last-name" | default "" -}}
+{{- $name := strings.TrimSpace (printf "%s %s" $firstName $lastName) -}}
+{{- $work := dict -}}
+{{- with index $data "worked-together" -}}
+  {{- if gt (len .) 0 -}}
+    {{- $work = index . 0 -}}
+  {{- end -}}
+{{- end -}}
+{{- $summary := "" -}}
+{{- with index $data "key-quotes" -}}
+  {{- range . -}}
+    {{- with index . "home-quote" -}}
+      {{- $summary = strings.TrimSpace . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $summary -}}
+  {{- with index $data "full-quote" -}}
+    {{- $summary = strings.TrimSpace . | truncate 240 -}}
+  {{- end -}}
+{{- end -}}
+{{- $payload := dict
+  "id" $id
+  "name" $name
+  "first_name" $firstName
+  "last_name" $lastName
+  "title" ($work.title | default "")
+  "organization" ($work.company | default "")
+  "relationship" ($work.relationship | default "")
+  "tags" (partial "func/testimonial-tags.html" (index $data "tags"))
+  "summary" $summary
+  "photo" (index $data "photo" | default "")
+  "full_quote" (strings.TrimSpace (index $data "full-quote" | default ""))
+  "worked_together" (index $data "worked-together" | default slice)
+  "key_quotes" (index $data "key-quotes" | default slice)
+  "related_experiences" (partial "func/testimonial-related-experiences.html" $id)
+  "canonical_url" $page.Permalink
+  "generated_at" (now.Format "2006-01-02")
+-}}
+{{- with $page.OutputFormats.Get "JSON" -}}
+  {{- $payload = merge $payload (dict "json_url" .Permalink) -}}
+{{- end -}}
+{{- return $payload -}}

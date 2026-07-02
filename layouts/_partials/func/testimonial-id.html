@@ -1,0 +1,5 @@
+{{/* Returns stable testimonial id from page params or bundle directory name. */}}
+{{- $page := . -}}
+{{- $p := $page.Params -}}
+{{- $dir := strings.TrimSuffix "/" $page.File.Dir -}}
+{{- return ($p.id | default (path.Base $dir)) -}}

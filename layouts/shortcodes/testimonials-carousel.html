@@ -431,16 +431,10 @@
       {{ range $tabs }}
         {{ $tabLabel := .label }}
         {{ range .slides }}
-          {{ $filename := .testimonial }}
-          {{ if not (strings.HasSuffix $filename ".yaml") }}
-            {{ $filename = printf "%s.yaml" $filename }}
-          {{ end }}
-          {{ $path := printf "content/testimonials/%s" $filename }}
+          {{ $t := partial "func/read-testimonial-data.html" .testimonial }}
           {{ $versionKey := .version }}
 
-          {{ if fileExists $path }}
-            {{ $raw := readFile $path }}
-            {{ $t := $raw | transform.Unmarshal }}
+          {{ if gt (len $t) 0 }}
 
             {{/* Extract quote by configured version key */}}
             {{ $quoteText := "" }}
@@ -490,10 +484,10 @@
               </div>
               {{ $slideIdx = add $slideIdx 1 }}
             {{ else }}
-              {{ warnf "testimonials-carousel: missing key-quotes version %q in %s" $versionKey $filename }}
+              {{ warnf "testimonials-carousel: missing key-quotes version %q in %s" $versionKey .testimonial }}
             {{ end }}
           {{ else }}
-            {{ warnf "testimonials-carousel: missing file %s" $path }}
+            {{ warnf "testimonials-carousel: missing file %s" .testimonial }}
           {{ end }}
         {{ end }}
       {{ end }}

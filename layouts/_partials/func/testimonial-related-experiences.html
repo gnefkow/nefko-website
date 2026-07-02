@@ -1,0 +1,22 @@
+{{/* Derives experience pointers that reference a testimonial slug. */}}
+{{- $testimonialID := . -}}
+{{- $refs := slice -}}
+{{- $section := site.GetPage "section" "experiences" -}}
+{{- if $section -}}
+  {{- range where $section.Pages "Params.status" "published" -}}
+    {{- $id := .Params.id | default .File.ContentBaseName -}}
+    {{- $related := .Params.related_testimonials | default slice -}}
+    {{- if in $related $testimonialID -}}
+      {{- $ref := dict
+        "id" $id
+        "title" .Params.title
+        "canonical_url" .Permalink
+      -}}
+      {{- with .OutputFormats.Get "JSON" -}}
+        {{- $ref = merge $ref (dict "json_url" .Permalink) -}}
+      {{- end -}}
+      {{- $refs = $refs | append $ref -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $refs -}}

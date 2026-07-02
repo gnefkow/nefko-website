@@ -1,0 +1,40 @@
+{{/* Card row for /ai/testimonials.json from a testimonial Page. */}}
+{{- $page := . -}}
+{{- $id := partial "func/testimonial-id.html" $page -}}
+{{- $data := partial "func/read-testimonial-data.html" $id -}}
+{{- $firstName := index $data "first-name" | default "" -}}
+{{- $lastName := index $data "last-name" | default "" -}}
+{{- $name := strings.TrimSpace (printf "%s %s" $firstName $lastName) -}}
+{{- $work := dict -}}
+{{- with index $data "worked-together" -}}
+  {{- if gt (len .) 0 -}}
+    {{- $work = index . 0 -}}
+  {{- end -}}
+{{- end -}}
+{{- $summary := "" -}}
+{{- with index $data "key-quotes" -}}
+  {{- range . -}}
+    {{- with index . "home-quote" -}}
+      {{- $summary = strings.TrimSpace . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $summary -}}
+  {{- with index $data "full-quote" -}}
+    {{- $summary = strings.TrimSpace . | truncate 240 -}}
+  {{- end -}}
+{{- end -}}
+{{- $record := dict
+  "id" $id
+  "name" $name
+  "title" ($work.title | default "")
+  "organization" ($work.company | default "")
+  "relationship" ($work.relationship | default "")
+  "tags" (partial "func/testimonial-tags.html" (index $data "tags"))
+  "summary" $summary
+  "canonical_url" $page.Permalink
+-}}
+{{- with $page.OutputFormats.Get "JSON" -}}
+  {{- $record = merge $record (dict "json_url" .Permalink) -}}
+{{- end -}}
+{{- return $record -}}

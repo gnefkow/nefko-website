@@ -1,0 +1,34 @@
+{{ define "header" }}
+  {{ partial "page-hero-band.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  {{- $id := partial "func/testimonial-id.html" . -}}
+  {{- $data := partial "func/read-testimonial-data.html" $id -}}
+  {{- $firstName := index $data "first-name" | default "" -}}
+  {{- $lastName := index $data "last-name" | default "" -}}
+  {{- $work := dict -}}
+  {{- with index $data "worked-together" -}}
+    {{- if gt (len .) 0 -}}
+      {{- $work = index . 0 -}}
+    {{- end -}}
+  {{- end -}}
+  <article class="testimonial-page mw7 center ph3 pb5">
+    <header class="mt4 mb4">
+      {{ with $work.company }}<p class="f6 tracked ttu text-tertiary mb2">{{ . }}</p>{{ end }}
+      <h1 class="f2 mt0 mb2">{{ $firstName }} {{ $lastName }}</h1>
+      {{ with $work.title }}<p class="f5 mt0 mb0">{{ . }}</p>{{ end }}
+      {{ with $work.relationship }}<p class="f6 mt2 mb0 text-tertiary">{{ . }}</p>{{ end }}
+    </header>
+
+    {{ with index $data "full-quote" }}
+      <section class="testimonial-page__body mb4">
+        <p class="f5 lh-copy">{{ strings.TrimSpace . | markdownify }}</p>
+      </section>
+    {{ end }}
+
+    {{ with .OutputFormats.Get "JSON" }}
+      <p class="f6 mt4"><a href="{{ .Permalink }}">AI-readable JSON</a></p>
+    {{ end }}
+  </article>
+{{ end }}

@@ -1,0 +1,31 @@
+{{ define "header" }}
+  {{ partial "page-hero-band.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <article class="experience-page mw7 center ph3 pb5">
+    <header class="mt4 mb4">
+      <p class="f6 tracked ttu text-tertiary mb2">{{ .Params.organization }}{{ with .Params.years }} · {{ . }}{{ end }}</p>
+      <h1 class="f2 mt0 mb2">{{ .Params.title }}</h1>
+      {{ with .Params.role }}<p class="f5 mt0 mb0">{{ . }}</p>{{ end }}
+      {{ with .Params.summary }}<p class="f5 mt3 mb0">{{ . }}</p>{{ end }}
+    </header>
+
+    {{ $body := strings.TrimSpace .RawContent -}}
+    {{ if and $body (ne $body "...coming soon") }}
+      <section class="experience-page__body mb4">
+        {{ .Content }}
+      </section>
+    {{ end }}
+
+    {{ with .Params.related_case_study }}
+      {{ $studies := . }}
+      {{ if not (reflect.IsSlice $studies) }}
+        {{ $studies = slice $studies }}
+      {{ end }}
+      {{ range $studies }}
+        <p class="f6 mt4"><a href="{{ . }}">Related portfolio case study</a></p>
+      {{ end }}
+    {{ end }}
+  </article>
+{{ end }}

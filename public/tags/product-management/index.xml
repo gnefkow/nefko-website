@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Product Management on Kyle Becker</title>
-    <link>https://nefko.xyz/tags/product-management/</link>
+    <link>http://localhost:1313/tags/product-management/</link>
     <description>Recent content in Product Management on Kyle Becker</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://nefko.xyz/tags/product-management/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/product-management/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Doubling first time user retention for an established notebook app</title>
-      <link>https://nefko.xyz/case-studies/rocketbook-1/</link>
+      <link>http://localhost:1313/case-studies/rocketbook-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nefko.xyz/case-studies/rocketbook-1/</guid>
+      <guid>http://localhost:1313/case-studies/rocketbook-1/</guid>
       <description>&lt;section class=&#34;case-study-summary&#34; aria-label=&#34;Case study summary&#34;&gt;&#xA;    &lt;dl class=&#34;case-study-summary__list&#34;&gt;&#xA;      &#xA;        &lt;div class=&#34;case-study-summary__item&#34;&gt;&#xA;          &lt;dt class=&#34;case-study-summary__label p-sm-heavy&#34;&gt;Challenge&lt;/dt&gt;&#xA;          &lt;dd class=&#34;case-study-summary__value p&#34;&gt;Rocketbook had strong seasonal app downloads, but many first-time users failed to complete their first scan or return after initial use.&lt;/dd&gt;&#xA;        &lt;/div&gt;&#xA;      &#xA;        &lt;div class=&#34;case-study-summary__item&#34;&gt;&#xA;          &lt;dt class=&#34;case-study-summary__label p-sm-heavy&#34;&gt;Role&lt;/dt&gt;&#xA;          &lt;dd class=&#34;case-study-summary__value p&#34;&gt;Fractional Product Manager, Designer, Design Researcher&lt;/dd&gt;&#xA;        &lt;/div&gt;&#xA;      &#xA;        &lt;div class=&#34;case-study-summary__item&#34;&gt;&#xA;          &lt;dt class=&#34;case-study-summary__label p-sm-heavy&#34;&gt;Result&lt;/dt&gt;&#xA;          &lt;dd class=&#34;case-study-summary__value p&#34;&gt;Second-month retention doubled from 30% to 60% after onboarding and key-flow improvements.&lt;/dd&gt;&#xA;        &lt;/div&gt;&#xA;      &#xA;    &lt;/dl&gt;&#xA;  &lt;/section&gt;&#xA;&#xA;&#xA;&lt;p&gt;John Lees, a BIC executive, had a problem. Head of Rocketbook, one of the conglomerate&amp;rsquo;s portfolio companies, he had been charged with revamping the product offering and finding profitability for the niche—but well-loved—brand of reusable notebooks. Part of the quandry was about the app: it had long been a part of the product offering, and downloads had always been high, but usage drop-off was steep. What was wrong with the app? How could they get people to use it?&lt;/p&gt;</description>
     </item>
   </channel>

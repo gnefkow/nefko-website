@@ -1,0 +1,40 @@
+# Human-edited titles and descriptions for Hugo-generated AI JSON endpoints.
+# Used by catalog rows in /ai/index.json and by each index/payload layout.
+
+
+catalog:
+  title: AI-readable content index for nefko.xyz
+  description: >
+    Catalog of structured AI-readable resources on nefko.xyz.
+    Read each resource title and description, then fetch json_url when structured data is needed.
+
+for_ai_llm_readers:
+  title: For AI Readers
+  description: >
+    Long-form prose biography for LLM and human readers. Narrative depth and positioning;
+    not structured JSON. Use canonical_url to read the full page.
+
+profile:
+  title: Kyle Becker profile
+  description: >
+    Structured identity record from person.yaml: job title, bio, knowsAbout, worksFor,
+    education, credentials, sameAs, and disambiguation (who this Kyle Becker is not).
+    Fetch json_url for the payload.
+
+experiences:
+  title: Kyle Becker experience records
+  description: >
+    Work episodes with dates, domains, keywords, and methods. Each row links to a
+    deeper JSON narrative when available. Fetch json_url for the index.
+
+conversations:
+  title: Kyle Becker conversation records
+  description: >
+    Index of AI-readable conversation articles. Fetch json_url for the index, then
+    each conversation json_url for the full transcript payload.
+
+testimonials:
+  title: Kyle Becker testimonial records
+  description: >
+    Collaborator testimonials with attribution, tags, and full quotes. Each row links
+    to a deeper JSON payload. Fetch json_url for the index.

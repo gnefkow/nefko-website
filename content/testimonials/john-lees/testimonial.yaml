@@ -1,0 +1,22 @@
+first-name: John
+last-name: Lees
+photo: /images/testimonial-avatars/John-Lees.jpeg
+worked-together: 
+  - title: Vice President Rocket Innovations
+    company: BIC
+    relationship: Client
+tags: CEO, Startup, Leadership, Large Corporation
+full-quote: |
+  Kyle is an incredible resource. I hired him to help us fix a badly broken UX/UI model and what I got was excellent App product strategy, consumer needs understanding, UX/UI definitions, engineer project and task management and delivery of an outstanding result. Kyle transformed a very poor customer experience into an intuitive easy to lean and understand excellent customer experience. He is a great leader with a terrific collaborative style, a keen ability to listen and lead. Most importantly Kyle is driven by curiosity to find the answers that will make a powerful difference. His enthusiasm is infectious. Please do not hire Kyle as I want him to be fully available for my next project with him.
+key-quotes:
+- home-quote: |
+    Kyle is an incredible resource.  I hired him to help us fix a badly broken UX/UI model and what I got was excellent App product strategy, consumer needs understanding, UX/UI definitions, engineer project and task management and delivery of an outstanding result.
+- enthusiasm: |
+    Kyle is driven by curiosity to find the answers that will make a powerful difference. His enthusiasm is infectious.
+- curiosity: |
+    Kyle is driven by curiosity to find the answers that will make a powerful difference.
+- strategy: |
+    Kyle is an incredible resource.  I hired him to help us fix a badly broken UX/UI model and what I got was excellent App product strategy, consumer needs understanding, UX/UI definitions, engineer project and task management and delivery of an outstanding result.
+- rocketbook-case-quote:
+    big-quote: "A great leader with a terrific collaborative style, a keen ability to listen and lead."
+    small-quote: "Kyle is an incredible resource. I hired him to help us fix a badly broken UX/UI model and what I got was excellent App product strategy, consumer needs understanding, UX/UI definitions, engineer project and task management and delivery of an outstanding result. Kyle transformed a very poor customer experience into an intuitive easy to lean and understand excellent customer experience. ... Most importantly Kyle is driven by curiosity to find the answers that will make a powerful difference. His enthusiasm is infectious."

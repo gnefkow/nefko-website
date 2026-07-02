@@ -1,0 +1,36 @@
+{{/* Card row for /ai/experiences.json from an experience Page. */}}
+{{- $page := . -}}
+{{- $p := $page.Params -}}
+{{- $id := $p.id | default $page.File.ContentBaseName -}}
+{{- $record := dict
+  "id" $id
+  "type" $p.type
+  "title" $p.title
+  "role" $p.role
+  "organization" $p.organization
+  "organization_entity_id" $p.organization_entity_id
+  "years" $p.years
+  "start_year" $p.start_year
+  "end_year" $p.end_year
+  "location" $p.location
+  "summary" (strings.TrimSpace ($p.summary | default ""))
+  "domains" ($p.domains | default slice)
+  "keywords" ($p.keywords | default slice)
+  "methods" ($p.methods | default slice)
+  "related_case_study" ($p.related_case_study | default "")
+  "related_testimonials" (partial "func/resolve-testimonial-refs.html" ($p.related_testimonials | default slice))
+  "canonical_url" $page.Permalink
+-}}
+{{- with $page.OutputFormats.Get "JSON" -}}
+  {{- $record = merge $record (dict "json_url" .Permalink) -}}
+{{- end -}}
+{{- with $p.parent_experience_id -}}
+  {{- $record = merge $record (dict "parent_experience_id" .) -}}
+{{- end -}}
+{{- with $p.client -}}
+  {{- $record = merge $record (dict "client" .) -}}
+{{- end -}}
+{{- with $p.outcomes -}}
+  {{- $record = merge $record (dict "outcomes" (strings.TrimSpace .)) -}}
+{{- end -}}
+{{- return $record -}}

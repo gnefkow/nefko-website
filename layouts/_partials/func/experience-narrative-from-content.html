@@ -1,0 +1,28 @@
+{{/* Parses experience markdown body into a narrative dict (## headings → keys). */}}
+{{- $page := . -}}
+{{- $raw := strings.TrimSpace $page.RawContent -}}
+{{- $narrative := dict -}}
+{{- $placeholder := or (eq $raw "...coming soon") (eq $raw "") -}}
+{{- if not $placeholder -}}
+  {{- $parts := split $raw "## " -}}
+  {{- if eq (len $parts) 1 -}}
+    {{- $narrative = dict "content" (strings.TrimSpace $page.Plain) -}}
+  {{- else -}}
+    {{- with strings.TrimSpace (index $parts 0) -}}
+      {{- $narrative = merge $narrative (dict "content" .) -}}
+    {{- end -}}
+    {{- range after 1 $parts -}}
+      {{- $chunk := strings.TrimSpace . -}}
+      {{- if $chunk -}}
+        {{- $lines := split $chunk "\n" -}}
+        {{- $heading := index $lines 0 | strings.TrimSpace -}}
+        {{- $key := $heading | lower | replaceRE `\*` "" | replaceRE `-` `_` | replaceRE `\s+` `_` | strings.TrimSpace -}}
+        {{- $text := strings.TrimSpace (delimit (after 1 $lines) "\n") -}}
+        {{- if and $key $text -}}
+          {{- $narrative = merge $narrative (dict $key $text) -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $narrative -}}

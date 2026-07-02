@@ -147,15 +147,9 @@
 {{ end }}
 
 {{ if and $testimonialParam $quoteKey }}
-  {{ $filename := $testimonialParam }}
-  {{ if not (strings.HasSuffix $filename ".yaml") }}
-    {{ $filename = printf "%s.yaml" $filename }}
-  {{ end }}
-  {{ $path := printf "content/testimonials/%s" $filename }}
+  {{ $t := partial "func/read-testimonial-data.html" $testimonialParam }}
 
-  {{ if fileExists $path }}
-    {{ $raw := readFile $path }}
-    {{ $t := $raw | transform.Unmarshal }}
+  {{ if gt (len $t) 0 }}
 
     {{ $bigQuote := "" }}
     {{ $smallQuote := "" }}
@@ -206,10 +200,10 @@
         </div>
       </div>
     {{ else }}
-      {{ warnf "testimonial-block: missing big-quote or small-quote for quote %q in %s" $quoteKey $filename }}
+      {{ warnf "testimonial-block: missing big-quote or small-quote for quote %q in %s" $quoteKey $testimonialParam }}
     {{ end }}
   {{ else }}
-    {{ warnf "testimonial-block: testimonial file not found: %s" $path }}
+    {{ warnf "testimonial-block: testimonial file not found: %s" $testimonialParam }}
   {{ end }}
 {{ else }}
   {{ warnf "testimonial-block: testimonial and quote parameters are required" }}

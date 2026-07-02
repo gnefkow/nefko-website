@@ -1,0 +1,40 @@
+---
+id: rocketbook
+title: Fractional PM / Designer / Researcher
+role: Fractional PM / Designer / Researcher
+organization: Rocketbook (BIC)
+organization_entity_id: rocketbook
+years: "2023–2024"
+start_year: 2023
+end_year: 2024
+location: Remote
+type: freelance
+status: published
+
+summary: >
+  Fractional product, design, and research work on consumer app retention and onboarding for Rocketbook under BIC.
+
+domains:
+  - consumer products
+  - mobile apps
+
+keywords:
+  - onboarding
+  - retention
+  - product management
+  - UX research
+
+methods:
+  - user research
+  - product design
+  - analytics
+
+tools:
+  - Jira
+  - Mixpanel
+  - Figma
+
+related_case_study: /case-studies/rocketbook-1/
+related_testimonials: [john-lees]
+---
+...coming soon

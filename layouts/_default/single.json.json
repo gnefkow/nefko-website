@@ -1,0 +1,5 @@
+{{- if eq .Section "experiences" -}}
+  {{- partial "func/experience-json-payload.html" . | jsonify -}}
+{{- else if eq .Section "testimonials" -}}
+  {{- partial "func/testimonial-json-payload.html" . | jsonify -}}
+{{- end -}}

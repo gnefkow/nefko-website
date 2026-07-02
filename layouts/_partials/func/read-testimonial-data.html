@@ -1,0 +1,30 @@
+{{/* Reads and unmarshals a testimonial source file by slug. Returns dict or empty dict. */}}
+{{- $slug := . -}}
+{{- $filename := $slug -}}
+{{- if strings.HasSuffix $filename ".yaml" -}}
+  {{- $filename = strings.TrimSuffix ".yaml" $filename -}}
+{{- end -}}
+{{- if strings.HasSuffix $filename ".md" -}}
+  {{- $filename = strings.TrimSuffix ".md" $filename -}}
+{{- end -}}
+{{- $paths := slice
+  (printf "content/testimonials/%s/testimonial.yaml" $filename)
+  (printf "content/testimonials/%s/index.md" $filename)
+  (printf "content/testimonials/%s.yaml" $filename)
+-}}
+{{- $data := dict -}}
+{{- range $paths -}}
+  {{- if and (eq (len $data) 0) (fileExists .) -}}
+    {{- $raw := readFile . -}}
+    {{- if strings.HasSuffix . ".md" -}}
+      {{- $parts := split $raw "---" -}}
+      {{- if ge (len $parts) 2 -}}
+        {{- $yaml := strings.TrimSpace (index $parts 1) -}}
+        {{- $data = $yaml | transform.Unmarshal -}}
+      {{- end -}}
+    {{- else -}}
+      {{- $data = $raw | transform.Unmarshal -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $data -}}

@@ -1,0 +1,29 @@
+{{/* Resolves testimonial slug slice to pointer dicts with json_url. */}}
+{{- $slugs := . | default slice -}}
+{{- $refs := slice -}}
+{{- $section := site.GetPage "section" "testimonials" -}}
+{{- if $section -}}
+  {{- $byID := dict -}}
+  {{- range $section.Pages -}}
+    {{- $id := partial "func/testimonial-id.html" . -}}
+    {{- $byID = merge $byID (dict $id .) -}}
+  {{- end -}}
+  {{- range $slugs -}}
+    {{- $slug := strings.TrimSpace (printf "%v" .) -}}
+    {{- with index $byID $slug -}}
+      {{- $data := partial "func/read-testimonial-data.html" $slug -}}
+      {{- $firstName := index $data "first-name" | default "" -}}
+      {{- $lastName := index $data "last-name" | default "" -}}
+      {{- $ref := dict
+        "id" $slug
+        "name" (strings.TrimSpace (printf "%s %s" $firstName $lastName))
+        "canonical_url" .Permalink
+      -}}
+      {{- with .OutputFormats.Get "JSON" -}}
+        {{- $ref = merge $ref (dict "json_url" .Permalink) -}}
+      {{- end -}}
+      {{- $refs = $refs | append $ref -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $refs -}}

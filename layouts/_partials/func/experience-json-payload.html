@@ -1,0 +1,41 @@
+{{/* Full AI-readable payload for one experience page. */}}
+{{- $page := . -}}
+{{- $p := $page.Params -}}
+{{- $id := $p.id | default $page.File.ContentBaseName -}}
+{{- $payload := dict
+  "id" $id
+  "type" $p.type
+  "title" $p.title
+  "role" $p.role
+  "organization" $p.organization
+  "organization_entity_id" $p.organization_entity_id
+  "years" $p.years
+  "start_year" $p.start_year
+  "end_year" $p.end_year
+  "location" $p.location
+  "summary" (strings.TrimSpace ($p.summary | default ""))
+  "domains" ($p.domains | default slice)
+  "keywords" ($p.keywords | default slice)
+  "methods" ($p.methods | default slice)
+  "related_case_study" ($p.related_case_study | default "")
+  "related_testimonials" (partial "func/resolve-testimonial-refs.html" ($p.related_testimonials | default slice))
+  "canonical_url" $page.Permalink
+  "generated_at" (now.Format "2006-01-02")
+-}}
+{{- with $page.OutputFormats.Get "JSON" -}}
+  {{- $payload = merge $payload (dict "json_url" .Permalink) -}}
+{{- end -}}
+{{- with $p.parent_experience_id -}}
+  {{- $payload = merge $payload (dict "parent_experience_id" .) -}}
+{{- end -}}
+{{- with $p.client -}}
+  {{- $payload = merge $payload (dict "client" .) -}}
+{{- end -}}
+{{- with $p.outcomes -}}
+  {{- $payload = merge $payload (dict "outcomes" (strings.TrimSpace .)) -}}
+{{- end -}}
+{{- $narrative := partial "func/experience-narrative-from-content.html" $page -}}
+{{- if gt (len $narrative) 0 -}}
+  {{- $payload = merge $payload (dict "narrative" $narrative) -}}
+{{- end -}}
+{{- return $payload -}}

@@ -1,4 +1,0 @@
-06/23/26 01:14:08:708 | [INFO] |  |  |  | AnalyticsClientLib |  |  | 2407952 | Creating Log Instance of type 0
-06/23/26 01:14:08:710 | [INFO] |  |  |  | AnalyticsClientLib |  |  | 2407952 | createUpdateDb Completed
-06/23/26 01:14:08:710 | [ERROR] |  |  |  | AnalyticsClientLib |  |  | 2407952 | Endpoint not present in dispatch table!! Analytics would be sent.
-06/23/26 01:14:08:713 | [ERROR] |  |  |  | AnalyticsClientLib |  |  | 2407952 | Closing Database handler session

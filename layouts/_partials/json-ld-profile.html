@@ -47,6 +47,15 @@
   {{- if gt (len $p.knowsAbout) 0 -}}
     {{- $person = merge $person (dict "knowsAbout" $p.knowsAbout) -}}
   {{- end -}}
+  {{- with $p.disambiguating_description -}}
+    {{- $person = merge $person (dict "disambiguatingDescription" (strings.TrimSpace .)) -}}
+  {{- end -}}
+  {{- with $p.alternate_name -}}
+    {{- $person = merge $person (dict "alternateName" .) -}}
+  {{- end -}}
+  {{- with $p.home_location -}}
+    {{- $person = merge $person (dict "homeLocation" (dict "@type" "Country" "name" .)) -}}
+  {{- end -}}
   {{- $profile := dict
     "@context" "https://schema.org"
     "@type" "ProfilePage"

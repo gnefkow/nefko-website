@@ -1,28 +1,40 @@
-{{/* Returns published experience records in display order. */}}
-{{- $experiences := site.Data.profile.experiences | default dict -}}
+{{/* Returns published experience index records (dicts) in display order. */}}
+{{- $section := site.GetPage "section" "experiences" -}}
 {{- $ordered := slice -}}
-{{- $seen := dict -}}
+{{- if $section -}}
+  {{- $pages := where $section.Pages "Params.status" "published" -}}
+  {{- $byID := dict -}}
+  {{- range $pages -}}
+    {{- $id := .Params.id | default .File.ContentBaseName -}}
+    {{- $byID = merge $byID (dict $id .) -}}
+  {{- end -}}
 
-{{- with site.Data.profile.experience_order.order -}}
-  {{- range . -}}
-    {{- with index $experiences . -}}
-      {{- if eq .status "published" -}}
+  {{- $seen := dict -}}
+  {{- with site.Data.profile.experience_order.order -}}
+    {{- range . -}}
+      {{- $id := . -}}
+      {{- with index $byID $id -}}
         {{- $ordered = $ordered | append . -}}
-        {{- $seen = merge $seen (dict .id true) -}}
+        {{- $seen = merge $seen (dict $id true) -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
-{{- end -}}
 
-{{- $rest := slice -}}
-{{- range $experiences -}}
-  {{- if and (eq .status "published") (not (index $seen .id)) -}}
-    {{- $rest = $rest | append . -}}
+  {{- $rest := slice -}}
+  {{- range $pages -}}
+    {{- $id := .Params.id | default .File.ContentBaseName -}}
+    {{- if not (index $seen $id) -}}
+      {{- $rest = $rest | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $rest = sort $rest "Params.start_year" "desc" -}}
+  {{- range $rest -}}
+    {{- $ordered = $ordered | append . -}}
   {{- end -}}
 {{- end -}}
-{{- $rest = sort $rest "start_year" "desc" -}}
-{{- range $rest -}}
-  {{- $ordered = $ordered | append . -}}
-{{- end -}}
 
-{{- return $ordered -}}
+{{- $records := slice -}}
+{{- range $ordered -}}
+  {{- $records = $records | append (partial "func/experience-index-record.html" .) -}}
+{{- end -}}
+{{- return $records -}}
